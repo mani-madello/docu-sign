@@ -94,7 +94,7 @@ function changeZoom(value: number) {
   text-shadow: 0 0 0 #ffffff;
 
   svg {
-    color: #a0298e;
+    color: #ffffff;
   }
 }
 
