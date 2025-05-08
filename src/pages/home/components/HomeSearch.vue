@@ -8,11 +8,11 @@ const searchIconColor = ref('#CCCCCC');
 const isShowClose = computed(() => keyword.value);
 
 function focus() {
-  searchIconColor.value = '#B7EC5D';
+  searchIconColor.value = '#b7ec5d';
 }
 
 function blur() {
-  searchIconColor.value = '#CCCCCC';
+  searchIconColor.value = '#ffffff';
 }
 
 function clear() {

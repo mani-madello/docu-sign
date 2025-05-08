@@ -1,13 +1,13 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["../chunks/SignEncryption-qXNtzy3g.js","../chunks/SignPassword.vue_vue_type_script_setup_true_lang-DvOPUrgh.js","../chunks/vendor-C8V6AyHD.js","../chunks/@component-hook/pdf-canvas-DoR1skRj.js","../chunks/UploadPassword-D5TXRV9J.js"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["../chunks/SignEncryption-DMDbHRFr.js","../chunks/SignPassword.vue_vue_type_script_setup_true_lang-Cw1fSFOa.js","../chunks/vendor-DdwyfI_m.js","../chunks/@component-hook/pdf-canvas-gI5qE1lT.js","../chunks/UploadPassword-C5jnQgS0.js"])))=>i.map(i=>d[i]);
 var __typeError = (msg) => {
   throw TypeError(msg);
 };
 var __accessCheck = (obj, member, msg) => member.has(obj) || __typeError("Cannot " + msg);
 var __privateGet = (obj, member, getter) => (__accessCheck(obj, member, "read from private field"), getter ? getter.call(obj) : member.get(obj));
 var __privateAdd = (obj, member, value) => member.has(obj) ? __typeError("Cannot add the same private member more than once") : member instanceof WeakSet ? member.add(obj) : member.set(obj, value);
-import { d as A, r as S, c as U, a as _, f as F, e as o, b as n, u as be, t as c, j as dt, k as y, l as fe, m as G, p as Z, q as L, F as X, s as at, v as l, T as Jt, i as Lt, x as me, g as J, y as Dt, z as Fe, A as Le, B as Ae, C as Ee, D as Ie, E as Ze, G as nt, h as he, H as Oe, I as Qt, J as qe, K as ge, L as ft, M as it, N as Re, O as Ve, P as ve, w as zt, n as Wt, Q as He, R as Ue, S as ce, U as Ne, V as gt, W as We, o as te, X as yt, Y as st, Z as ct, _ as ee, $ as Ge, a0 as Ke, a1 as de, a2 as ue, a3 as Ye, a4 as Xe, a5 as Je, a6 as Qe, a7 as ti } from "../chunks/vendor-C8V6AyHD.js";
-import { useFabric as ei, __tla as __tla_0 } from "../chunks/@component-hook/pdf-canvas-DoR1skRj.js";
-let we, vt, W, O, Ct, mt;
+import { d as I, c as U, u as ue, a as p, f as L, e as o, t as c, b as n, r as S, j as dt, k as C, l as _e, i as At, m as E, T as pe, p as be, g as X, q as $t, s as ze, v as Fe, x as Ae, y as Le, z as Ee, A as Ie, B as at, C as Z, D as l, E as K, h as fe, F as Ze, G as Xt, H as J, I as Oe, J as me, K as ft, L as it, M as qe, N as Ve, O as he, w as Tt, n as Nt, P as Re, Q as He, R as ae, S as Ue, U as gt, V as Ne, o as Jt, W as nt, X as yt, Y as st, Z as ct, _ as Qt, $ as We, a0 as Ge, a1 as ne, a2 as le, a3 as Ke, a4 as Ye, a5 as Xe, a6 as Je, a7 as Qe } from "../chunks/vendor-DdwyfI_m.js";
+import { useFabric as ti, __tla as __tla_0 } from "../chunks/@component-hook/pdf-canvas-gI5qE1lT.js";
+let ve, vt, W, O, zt, mt;
 let __tla = Promise.all([
   (() => {
     try {
@@ -20,209 +20,130 @@ let __tla = Promise.all([
   (function() {
     const e = document.createElement("link").relList;
     if (e && e.supports && e.supports("modulepreload")) return;
-    for (const s of document.querySelectorAll('link[rel="modulepreload"]')) r(s);
-    new MutationObserver((s) => {
-      for (const a of s) if (a.type === "childList") for (const u of a.addedNodes) u.tagName === "LINK" && u.rel === "modulepreload" && r(u);
+    for (const r of document.querySelectorAll('link[rel="modulepreload"]')) s(r);
+    new MutationObserver((r) => {
+      for (const a of r) if (a.type === "childList") for (const u of a.addedNodes) u.tagName === "LINK" && u.rel === "modulepreload" && s(u);
     }).observe(document, {
       childList: true,
       subtree: true
     });
-    function i(s) {
+    function i(r) {
       const a = {};
-      return s.integrity && (a.integrity = s.integrity), s.referrerPolicy && (a.referrerPolicy = s.referrerPolicy), s.crossOrigin === "use-credentials" ? a.credentials = "include" : s.crossOrigin === "anonymous" ? a.credentials = "omit" : a.credentials = "same-origin", a;
+      return r.integrity && (a.integrity = r.integrity), r.referrerPolicy && (a.referrerPolicy = r.referrerPolicy), r.crossOrigin === "use-credentials" ? a.credentials = "include" : r.crossOrigin === "anonymous" ? a.credentials = "omit" : a.credentials = "same-origin", a;
     }
-    function r(s) {
-      if (s.ep) return;
-      s.ep = true;
-      const a = i(s);
-      fetch(s.href, a);
+    function s(r) {
+      if (r.ep) return;
+      r.ep = true;
+      const a = i(r);
+      fetch(r.href, a);
     }
   })();
-  let ii, si, ri, oi, ai, Ft, ni, li, ci, di;
-  ii = "" + new URL("logo_darkbg_horizontal-OYE7k2dq.png", import.meta.url).href;
-  si = [
-    "title"
-  ];
-  ri = [
-    "href",
-    "fill"
-  ];
-  O = A({
-    __name: "SignIcon",
-    props: {
-      name: {},
-      hoverColor: {
-        default: "hover:text-primary"
-      },
-      prefix: {
-        default: "icon"
-      },
-      color: {
-        default: "#4D4D4D"
-      },
-      hoverChangeSvg: {
-        type: Boolean,
-        default: false
-      }
-    },
-    setup(t) {
-      const e = S(false), i = U(() => {
-        const r = `#${t.prefix}-ic_${t.name}`;
-        return t.hoverChangeSvg && e.value && !t.name.includes("_h") ? `${r}_h` : r;
-      });
-      return (r, s) => (n(), _("svg", {
-        "aria-hidden": "true",
-        title: i.value,
-        class: F([
-          "cursor-pointer",
-          {
-            [`transition-[color_transform] ${r.hoverColor}`]: !r.hoverChangeSvg
-          }
-        ]),
-        onMouseenter: s[0] || (s[0] = (a) => e.value = true),
-        onMouseleave: s[1] || (s[1] = (a) => e.value = false)
-      }, [
-        o("use", {
-          href: i.value,
-          fill: r.color
-        }, null, 8, ri)
-      ], 42, si));
-    }
-  });
-  oi = 20 * 1024 * 1024;
-  ai = {
-    "en-US": "English",
-    "zh-TW": "\u7E41\u9AD4\u4E2D\u6587",
-    "zh-CN": "\u7B80\u4F53\u4E2D\u6587",
-    "ja-JP": "\u65E5\u672C\u8A9E",
-    "ko-KR": "\uD55C\uAD6D\uC5B4",
-    "fr-FR": "Fran\xE7ais",
-    "de-DE": "Deutsch",
-    "es-ES": "Espa\xF1ol",
-    "it-IT": "Italiano",
-    "ru-RU": "\u0420\u0443\u0441\u0441\u043A\u0438\u0439",
-    "pt-PT": "Portugu\xEAs",
-    "nl-NL": "Nederlands",
-    "sv-SE": "Svenska",
-    "no-NO": "Norsk",
-    "da-DK": "Dansk",
-    "fi-FI": "Suomi",
-    "pl-PL": "Polski",
-    "tr-TR": "T\xFCrk\xE7e",
-    "ar-SA": "\u0627\u0644\u0639\u0631\u0628\u064A\u0629",
-    "he-IL": "\u05E2\u05D1\u05E8\u05D9\u05EA",
-    "hi-IN": "\u0939\u093F\u0928\u094D\u0926\u0940"
-  };
-  Ft = 15;
-  ni = Array.isArray;
-  li = (t) => Object.prototype.toString.call(t).slice(8, -1).toLowerCase();
-  ci = (t) => li(t) === "object";
-  di = (t, e) => Object.hasOwn(t, e);
-  function ui(t, e = 500) {
+  const ei = Array.isArray, ii = (t) => Object.prototype.toString.call(t).slice(8, -1).toLowerCase(), si = (t) => ii(t) === "object", ri = (t, e) => Object.hasOwn(t, e);
+  function oi(t, e = 500) {
     if (typeof t != "function") throw new TypeError("The first argument is not a function.");
     let i = 0;
-    return function(...r) {
-      const s = Date.now();
-      s - i < e || (t.apply(this, r), i = s);
+    return function(...s) {
+      const r = Date.now();
+      r - i < e || (t.apply(this, s), i = r);
     };
   }
-  Ct = function(t = 500) {
+  zt = function(t = 500) {
     return new Promise((e) => setTimeout(e, t));
   };
-  function ie() {
+  function te() {
     return window.innerWidth > 768;
   }
-  function _i(t) {
-    const [e, i] = new Date(t).toLocaleString("en-GB").split(","), [r, s, a] = e.split("/");
-    return `${a}-${s}-${r} ${i}`;
+  function ai(t) {
+    const [e, i] = new Date(t).toLocaleString("en-GB").split(","), [s, r, a] = e.split("/");
+    return `${a}-${r}-${s} ${i}`;
   }
-  function pi(t) {
+  function ni(t) {
     let e = window.devicePixelRatio;
-    const i = window.matchMedia(`(resolution: ${e}dppx)`), r = () => {
-      const s = window.devicePixelRatio;
-      s !== e && (e = s, t(s));
+    const i = window.matchMedia(`(resolution: ${e}dppx)`), s = () => {
+      const r = window.devicePixelRatio;
+      r !== e && (e = r, t(r));
     };
-    return i.addEventListener("change", r), () => {
-      i.removeEventListener("change", r);
+    return i.addEventListener("change", s), () => {
+      i.removeEventListener("change", s);
     };
   }
-  let bi, fi, mi, N, hi, gi, vi, ki, wi, yi, Ci, xi, Pi, Si, $i, Di, ke, ji, Mi, Bi, ye, Ti, zi, Vt, Fi, jt, lt;
-  bi = [
+  let li, ci, di, N, ui, _i, pi, bi, fi, mi, hi, ge, gi, vi, ki, ke, wi, yi, Vt, xi, Dt, lt;
+  li = [
     "value"
   ];
-  fi = [
+  ci = [
     "value"
   ];
-  mi = A({
+  di = I({
     __name: "SignStep",
     setup(t) {
-      const e = be(), i = U(() => e.name === "upload"), r = U(() => e.name === "signature"), s = U(() => e.name === "complete");
-      return (a, u) => (n(), _("div", {
-        class: F([
+      const e = ue(), i = U(() => e.name === "upload"), s = U(() => e.name === "signature"), r = U(() => e.name === "complete");
+      return (a, u) => (n(), p("div", {
+        class: L([
           "sign-step",
           {
-            "opacity-0": !i.value && !r.value && !s.value
+            "opacity-0": !i.value && !s.value && !r.value
           }
         ])
       }, [
         o("div", {
-          class: F([
+          class: L([
             "sign-step-dot",
             {
               "sign-step-dot-light": i.value
             },
             {
-              "sign-step-dot-complete": r.value || s.value
+              "sign-step-dot-complete": s.value || r.value
             }
           ])
         }, [
           o("span", {
-            class: F([
+            class: L([
               "sign-step-text",
-              i.value ? "text-primary" : "text-gray-40"
+              i.value ? "text-primary" : ""
             ])
           }, c(a.$t("upload_file_lower")), 3)
         ], 2),
         o("progress", {
           class: "sign-step-bar",
-          value: r.value || s.value ? 100 : 0,
+          value: s.value || r.value ? 100 : 0,
           max: "100"
-        }, null, 8, bi),
+        }, null, 8, li),
         o("div", {
-          class: F([
+          class: L([
             "sign-step-dot",
             {
-              "sign-step-dot-light": r.value
+              "sign-step-dot-light": s.value
             },
             {
-              "sign-step-dot-complete": s.value
+              "sign-step-dot-complete": r.value
             }
           ])
         }, [
           o("span", {
-            class: F([
+            class: L([
               "sign-step-text",
-              r.value ? "text-primary" : "text-gray-40"
+              s.value ? "text-primary" : ""
             ])
           }, c(a.$t("sign_file_lower")), 3)
         ], 2),
         o("progress", {
           class: "sign-step-bar",
-          value: s.value ? 100 : 0,
+          value: r.value ? 100 : 0,
           max: "100"
-        }, null, 8, fi),
+        }, null, 8, ci),
         o("div", {
-          class: F([
+          class: L([
             "sign-step-dot",
             {
-              "sign-step-dot-light": s.value
+              "sign-step-dot-light": r.value
             }
           ])
         }, [
           o("span", {
-            class: F([
+            class: L([
               "sign-step-text",
-              s.value ? "text-primary" : "text-gray-40"
+              r.value ? "text-primary" : ""
             ])
           }, c(a.$t("sign_completed_lower")), 3)
         ], 2)
@@ -231,164 +152,65 @@ let __tla = Promise.all([
   });
   N = (t, e) => {
     const i = t.__vccOpts || t;
-    for (const [r, s] of e) i[r] = s;
+    for (const [s, r] of e) i[s] = r;
     return i;
   };
-  hi = N(mi, [
+  ui = N(di, [
     [
       "__scopeId",
-      "data-v-daabe63b"
+      "data-v-361ff071"
     ]
   ]);
-  gi = {
+  _i = {
     class: "app-header"
   };
-  vi = {
-    class: "flex items-center gap-2 md:gap-4"
-  };
-  ki = {
-    class: "app-header-language"
-  };
-  wi = [
-    "onClick"
-  ];
-  yi = {
-    href: "https://github.com/tzuyi0817/PDF-signature",
-    target: "_blank",
-    rel: "noopener noreferrer"
-  };
-  Ci = A({
+  pi = I({
     name: "AppHeader",
     __name: "index",
     setup(t) {
-      const e = S(false), i = S(false), { locale: r } = dt();
-      let s = null, a = false;
-      async function u(f) {
-        r.value = f, localStorage.setItem("pdf-signature-i18n", f), a = true, await Ct(0), e.value = false;
-      }
-      async function b() {
-        a || (s && (clearTimeout(s), s = null), i.value = true, await Ct(0), e.value = true);
-      }
-      function p() {
-        s = setTimeout(() => {
-          e.value = false;
-        }, 150);
-      }
-      function v(f) {
-        f.propertyName !== "scale" || e.value || (i.value = false, a = false);
-      }
-      return (f, C) => {
-        const k = fe("router-link");
-        return n(), _("header", gi, [
-          y(k, {
+      S(false);
+      const { locale: e } = dt();
+      return (i, s) => {
+        const r = _e("router-link");
+        return n(), p("header", _i, [
+          C(r, {
             to: "/"
-          }, {
-            default: G(() => C[0] || (C[0] = [
-              o("img", {
-                src: ii,
-                class: "w-36 md:w-[228px]",
-                alt: "logo"
-              }, null, -1)
-            ])),
-            _: 1
           }),
-          y(hi),
-          o("div", vi, [
-            o("div", {
-              class: "relative",
-              onMouseover: b,
-              onMouseleave: p
-            }, [
-              y(O, {
-                name: "global",
-                class: "app-header-icon text-gray-40 mt-0.5"
-              }),
-              i.value ? (n(), _("div", {
-                key: 0,
-                class: F([
-                  "app-header-menu-arrow app-header-transition",
-                  {
-                    "opacity-0 scale-y-0": !e.value
-                  }
-                ])
-              }, null, 2)) : Z("", true),
-              (n(), L(Jt, {
-                to: "body"
-              }, [
-                i.value ? (n(), _("div", {
-                  key: 0,
-                  class: F([
-                    "app-header-menu app-header-transition",
-                    {
-                      "scale-y-0 opacity-0": !e.value
-                    }
-                  ]),
-                  onTransitionend: v,
-                  onMouseover: b,
-                  onMouseleave: p
-                }, [
-                  o("ul", ki, [
-                    (n(true), _(X, null, at(l(ai), ($, w) => (n(), _("li", {
-                      key: w,
-                      class: F([
-                        "text-gray-50",
-                        {
-                          "text-black bg-primary": l(r) === w
-                        }
-                      ]),
-                      onClick: (x) => u(w)
-                    }, c($), 11, wi))), 128))
-                  ])
-                ], 34)) : Z("", true)
-              ]))
-            ], 32),
-            o("a", yi, [
-              y(O, {
-                name: "github",
-                class: "app-header-icon text-gray-40"
-              })
-            ])
-          ])
+          C(ui)
         ]);
       };
     }
   });
-  xi = N(Ci, [
+  bi = N(pi, [
     [
       "__scopeId",
-      "data-v-ac66d94b"
+      "data-v-99af3524"
     ]
   ]);
-  Pi = "" + new URL("bg_decorate-CGBiDQAU.svg", import.meta.url).href;
-  Si = {
+  fi = {
     class: "app-footer"
   };
-  $i = A({
+  mi = I({
     name: "AppFooter",
     __name: "index",
     setup(t) {
-      return (e, i) => (n(), _("div", Si, i[0] || (i[0] = [
-        o("img", {
-          src: Pi,
-          alt: "background decorate"
-        }, null, -1)
-      ])));
+      return (e, i) => (n(), p("div", fi));
     }
   });
-  Di = N($i, [
+  hi = N(mi, [
     [
       "__scopeId",
-      "data-v-16975abc"
+      "data-v-2c9b572c"
     ]
   ]);
-  ke = "" + new URL("loading-ClOqHxNk.gif", import.meta.url).href;
-  ji = {
+  ge = "" + new URL("loading-ClOqHxNk.gif", import.meta.url).href;
+  gi = {
     class: "sign-popup-box"
   };
-  Mi = {
+  vi = {
     class: "border-b-2 border-primary py-1 px-4 text-center font-medium md:pb-4"
   };
-  Bi = A({
+  ki = I({
     __name: "SignPopup",
     props: {
       title: {}
@@ -399,36 +221,36 @@ let __tla = Promise.all([
     ],
     setup(t, { emit: e }) {
       const i = e;
-      return Lt(() => i("childMounted")), (r, s) => (n(), L(Jt, {
+      return At(() => i("childMounted")), (s, r) => (n(), E(pe, {
         to: "body"
       }, [
         o("div", {
           class: "sign-popup mask",
-          onClick: s[0] || (s[0] = J((a) => r.$emit("closePopup"), [
+          onClick: r[0] || (r[0] = X((a) => s.$emit("closePopup"), [
             "self"
           ]))
         }, [
-          o("div", ji, [
-            o("h5", Mi, c(r.title), 1),
-            me(r.$slots, "default", {}, void 0)
+          o("div", gi, [
+            o("h5", vi, c(s.title), 1),
+            be(s.$slots, "default", {}, void 0)
           ])
         ])
       ]));
     }
   });
-  we = N(Bi, [
+  ve = N(ki, [
     [
       "__scopeId",
       "data-v-61522e0f"
     ]
   ]);
-  ye = Object.freeze(Object.defineProperty({
+  ke = Object.freeze(Object.defineProperty({
     __proto__: null,
-    default: we
+    default: ve
   }, Symbol.toStringTag, {
     value: "Module"
   }));
-  Ti = {
+  wi = {
     loading: {
       isShow: false,
       title: "",
@@ -438,18 +260,18 @@ let __tla = Promise.all([
     },
     filePassword: ""
   };
-  mt = Dt("pdf_signature_config", {
+  mt = $t("pdf_signature_config", {
     state: () => ({
-      ...Ti
+      ...wi
     }),
     actions: {
-      toggleLoading({ isShow: t, title: e = "", content: i = "", isProcess: r = false, completeness: s = 0 }) {
+      toggleLoading({ isShow: t, title: e = "", content: i = "", isProcess: s = false, completeness: r = 0 }) {
         this.loading = {
           isShow: t,
           title: e,
           content: i,
-          isProcess: r,
-          completeness: s
+          isProcess: s,
+          completeness: r
         };
       },
       setLoadingCompleteness(t) {
@@ -460,12 +282,12 @@ let __tla = Promise.all([
       }
     }
   });
-  zi = {
+  yi = {
     imageList: []
   };
-  Vt = Dt("pdf_signature_image", {
+  Vt = $t("pdf_signature_image", {
     state: () => ({
-      ...zi
+      ...yi
     }),
     actions: {
       addImage(t) {
@@ -482,12 +304,12 @@ let __tla = Promise.all([
       ]
     }
   });
-  Fi = {
+  xi = {
     literalList: []
   };
-  jt = Dt("pdf_signature_literal", {
+  Dt = $t("pdf_signature_literal", {
     state: () => ({
-      ...Fi
+      ...xi
     }),
     actions: {
       addLiteral(t) {
@@ -510,16 +332,16 @@ let __tla = Promise.all([
     ARCHIVE_LIST: "pdf_signature_archive",
     TRASH_LIST: "pdf_signature_trash"
   };
-  function Mt(t, e) {
-    return Le(t, e);
+  function jt(t, e) {
+    return Fe(t, e);
   }
-  function Bt(t, e, i) {
-    return Fe(t, Tt(e), i);
+  function Mt(t, e, i) {
+    return ze(t, Bt(e), i);
   }
-  function Tt(t) {
-    return ni(t) ? t.map((e) => Tt(e)) : Ae(t) || Ee(t) || Ie(t) ? Tt(Ze(t)) : ci(t) ? Object.keys(t).reduce((e, i) => (di(t, i) && (e[i] = Tt(t[i])), e), {}) : t;
+  function Bt(t) {
+    return ei(t) ? t.map((e) => Bt(e)) : Ae(t) || Le(t) || Ee(t) ? Bt(Ie(t)) : si(t) ? Object.keys(t).reduce((e, i) => (ri(t, i) && (e[i] = Bt(t[i])), e), {}) : t;
   }
-  const Li = {
+  const Ci = {
     currentPDF: {
       PDFId: "",
       name: "",
@@ -533,14 +355,14 @@ let __tla = Promise.all([
     PDFList: [],
     archiveList: [],
     trashList: []
-  }, Ai = Dt("pdf_signature_pdf", {
+  }, Pi = $t("pdf_signature_pdf", {
     state: () => ({
-      ...Li
+      ...Ci
     }),
     getters: {},
     actions: {
       async getCurrentPDF() {
-        const t = await Mt(lt.CURRENT_PDF);
+        const t = await jt(lt.CURRENT_PDF);
         t && (this.currentPDF = t);
       },
       setCurrentPDF(t) {
@@ -563,10 +385,10 @@ let __tla = Promise.all([
         return this.currentPDF.canvas = t, this.updateCurrentPDFIdb();
       },
       updateCurrentPDFIdb() {
-        return Bt(lt.CURRENT_PDF, this.currentPDF);
+        return Mt(lt.CURRENT_PDF, this.currentPDF);
       },
       async getPDF() {
-        const t = await Mt(lt.PDF_LIST);
+        const t = await jt(lt.PDF_LIST);
         t && (this.PDFList = t);
       },
       addPDF(t) {
@@ -582,10 +404,10 @@ let __tla = Promise.all([
         return this.PDFList = this.PDFList.filter(({ PDFId: e }) => t !== e), this.updatePDFIdb();
       },
       updatePDFIdb() {
-        return Bt(lt.PDF_LIST, this.PDFList);
+        return Mt(lt.PDF_LIST, this.PDFList);
       },
       async getArchive() {
-        const t = await Mt(lt.ARCHIVE_LIST);
+        const t = await jt(lt.ARCHIVE_LIST);
         t && (this.archiveList = t);
       },
       addArchive(t) {
@@ -609,10 +431,10 @@ let __tla = Promise.all([
         ]);
       },
       updateArchiveIdb() {
-        return Bt(lt.ARCHIVE_LIST, this.archiveList);
+        return Mt(lt.ARCHIVE_LIST, this.archiveList);
       },
       async getTrash() {
-        const t = await Mt(lt.TRASH_LIST);
+        const t = await jt(lt.TRASH_LIST);
         t && (this.trashList = t);
       },
       addTrash(t, e) {
@@ -622,7 +444,7 @@ let __tla = Promise.all([
         }), this.updateTrashIdb();
       },
       batchAddTrash(t, e) {
-        for (const i of t) e === "file" && (this.PDFList = this.PDFList.filter(({ PDFId: r }) => i.PDFId !== r)), e === "archive" && (this.archiveList = this.archiveList.filter(({ PDFId: r }) => i.PDFId !== r)), this.trashList.unshift({
+        for (const i of t) e === "file" && (this.PDFList = this.PDFList.filter(({ PDFId: s }) => i.PDFId !== s)), e === "archive" && (this.archiveList = this.archiveList.filter(({ PDFId: s }) => i.PDFId !== s)), this.trashList.unshift({
           ...i,
           trashDate: Date.now()
         });
@@ -651,19 +473,19 @@ let __tla = Promise.all([
         return this.trashList = this.trashList.filter(({ trashDate: i }) => i ? e - i < 2592e6 : true), this.updateTrashIdb();
       },
       updateTrashIdb() {
-        return Bt(lt.TRASH_LIST, this.trashList);
+        return Mt(lt.TRASH_LIST, this.trashList);
       }
     }
-  }), Ei = Object.freeze(Object.defineProperty({
+  }), Si = Object.freeze(Object.defineProperty({
     __proto__: null,
-    usePdfStore: Ai
+    usePdfStore: Pi
   }, Symbol.toStringTag, {
     value: "Module"
-  })), Ii = {
+  })), $i = {
     signatureList: []
-  }, Gt = Dt("pdf_signature_signature", {
+  }, Wt = $t("pdf_signature_signature", {
     state: () => ({
-      ...Ii
+      ...$i
     }),
     actions: {
       addSignature(t) {
@@ -679,39 +501,39 @@ let __tla = Promise.all([
         "signatureList"
       ]
     }
-  }), { usePdfStore: Y } = Ei, Zi = {
+  }), { usePdfStore: Y } = Si, Di = {
     class: "flex flex-col gap-8 items-center py-8"
-  }, Oi = {
-    class: "text-center text-gray-40"
-  }, qi = {
+  }, ji = {
+    class: "text-center"
+  }, Mi = {
     key: 0,
     class: "w-[90%] h-2 rounded bg-gray-30"
-  }, Ri = {
+  }, Bi = {
     class: "text-center mt-1 text-sm md:text-base"
-  }, Vi = A({
+  }, Ti = I({
     __name: "SignLoading",
     setup(t) {
-      const { loading: e } = nt(mt());
-      return (i, r) => l(e).isShow ? (n(), L(we, {
+      const { loading: e } = at(mt());
+      return (i, s) => l(e).isShow ? (n(), E(ve, {
         key: 0,
         title: i.$t(l(e).title)
       }, {
-        default: G(() => [
-          o("div", Zi, [
-            r[0] || (r[0] = o("img", {
-              src: ke,
+        default: K(() => [
+          o("div", Di, [
+            s[0] || (s[0] = o("img", {
+              src: ge,
               class: "w-[60%]",
               alt: "loading gif"
             }, null, -1)),
-            o("h5", Oi, c(i.$t(l(e).content)), 1),
-            l(e).isProcess ? (n(), _("div", qi, [
+            o("h5", ji, c(i.$t(l(e).content)), 1),
+            l(e).isProcess ? (n(), p("div", Mi, [
               o("div", {
                 class: "h-full bg-primary transition-all rounded",
-                style: he({
+                style: fe({
                   width: `${l(e).completeness}%`
                 })
               }, null, 4),
-              o("p", Ri, c(`${i.$t("download_progress")} ${Math.floor(l(e).completeness)}%`), 1)
+              o("p", Bi, c(`${i.$t("download_progress")} ${Math.floor(l(e).completeness)}%`), 1)
             ])) : Z("", true)
           ])
         ]),
@@ -720,13 +542,13 @@ let __tla = Promise.all([
         "title"
       ])) : Z("", true);
     }
-  }), Hi = A({
+  }), zi = I({
     __name: "SignReload",
     setup(t) {
       function e() {
         window.location.reload();
       }
-      return (i, r) => (n(), L(Jt, {
+      return (i, s) => (n(), E(pe, {
         to: "#loading-reload"
       }, [
         o("button", {
@@ -735,19 +557,19 @@ let __tla = Promise.all([
         }, c(i.$t("prompt.error_occurred")), 1)
       ]));
     }
-  }), Ce = Symbol("inject-router");
-  class Ui {
+  }), we = Symbol("inject-router");
+  class Fi {
     constructor() {
       __privateAdd(this, _t, /* @__PURE__ */ new Map());
     }
     publish(e) {
       var _a;
       if (!__privateGet(this, _t).has(e)) return;
-      (_a = __privateGet(this, _t).get(e)) == null ? void 0 : _a.forEach((r) => r());
+      (_a = __privateGet(this, _t).get(e)) == null ? void 0 : _a.forEach((s) => s());
     }
     subscribe(e, i) {
-      const r = __privateGet(this, _t).get(e);
-      r ? r.add(i) : __privateGet(this, _t).set(e, /* @__PURE__ */ new Set([
+      const s = __privateGet(this, _t).get(e);
+      s ? s.add(i) : __privateGet(this, _t).set(e, /* @__PURE__ */ new Set([
         i
       ]));
     }
@@ -762,60 +584,112 @@ let __tla = Promise.all([
     }
   }
   _t = new WeakMap();
-  const Kt = new Ui(), Yt = Ni("onAfterLeave");
-  function Ni(t) {
+  const Gt = new Fi(), Kt = Ai("onAfterLeave");
+  function Ai(t) {
     return (e) => {
       var _a;
-      const r = (_a = Oe(Ce).value) == null ? void 0 : _a.name;
-      if (!r) throw new Error("Route name is not defined");
-      const s = `${t}-${String(r)}`, a = () => {
-        e(), Kt.unsubscribe(s, a);
+      const s = (_a = Ze(we).value) == null ? void 0 : _a.name;
+      if (!s) throw new Error("Route name is not defined");
+      const r = `${t}-${String(s)}`, a = () => {
+        e(), Gt.unsubscribe(r, a);
       };
-      Kt.subscribe(s, a);
+      Gt.subscribe(r, a);
     };
   }
   function wt(t, e) {
-    Kt.publish(`${t}-${e}`);
+    Gt.publish(`${t}-${e}`);
   }
-  const Wi = A({
+  let Li, Ei, Ii, Zi, Oi, qi, Vi, Ri, Hi, Ui, Ni, Wi, Gi, Ki, Yi, Xi, St;
+  Li = I({
     __name: "App",
     setup(t) {
-      const e = Qt(), i = S(""), r = S("");
-      return e.beforeEach((s, a) => {
-        i.value = String(s.name), r.value = String(a.name);
-      }), (s, a) => {
-        const u = fe("router-view");
-        return n(), _(X, null, [
-          y(l(xi)),
-          y(u, null, {
-            default: G(({ Component: b }) => [
-              y(qe, {
+      const e = Xt(), i = S(""), s = S("");
+      return e.beforeEach((r, a) => {
+        i.value = String(r.name), s.value = String(a.name);
+      }), (r, a) => {
+        const u = _e("router-view");
+        return n(), p(J, null, [
+          C(l(bi)),
+          C(u, null, {
+            default: K(({ Component: b }) => [
+              C(Oe, {
                 name: "slide-fade",
                 mode: "out-in",
-                onBeforeEnter: a[0] || (a[0] = (p) => l(wt)("onBeforeEnter", i.value)),
-                onEnter: a[1] || (a[1] = (p) => l(wt)("onEnter", i.value)),
-                onAfterEnter: a[2] || (a[2] = (p) => l(wt)("onAfterEnter", i.value)),
-                onBeforeLeave: a[3] || (a[3] = (p) => l(wt)("onBeforeLeave", r.value)),
-                onLeave: a[4] || (a[4] = (p) => l(wt)("onLeave", r.value)),
-                onAfterLeave: a[5] || (a[5] = (p) => l(wt)("onAfterLeave", r.value))
+                onBeforeEnter: a[0] || (a[0] = (_) => l(wt)("onBeforeEnter", i.value)),
+                onEnter: a[1] || (a[1] = (_) => l(wt)("onEnter", i.value)),
+                onAfterEnter: a[2] || (a[2] = (_) => l(wt)("onAfterEnter", i.value)),
+                onBeforeLeave: a[3] || (a[3] = (_) => l(wt)("onBeforeLeave", s.value)),
+                onLeave: a[4] || (a[4] = (_) => l(wt)("onLeave", s.value)),
+                onAfterLeave: a[5] || (a[5] = (_) => l(wt)("onAfterLeave", s.value))
               }, {
-                default: G(() => [
-                  (n(), L(ge(b)))
+                default: K(() => [
+                  (n(), E(me(b)))
                 ]),
                 _: 2
               }, 1024)
             ]),
             _: 1
           }),
-          y(l(Di)),
-          y(Vi),
-          y(Hi)
+          C(l(hi)),
+          C(Ti),
+          C(zi)
         ], 64);
       };
     }
-  }), Gi = {
+  });
+  Ei = [
+    "title"
+  ];
+  Ii = [
+    "href",
+    "fill"
+  ];
+  O = I({
+    __name: "SignIcon",
+    props: {
+      name: {},
+      hoverColor: {
+        default: "hover:text-primary"
+      },
+      prefix: {
+        default: "icon"
+      },
+      color: {
+        default: "#ffffff"
+      },
+      hoverChangeSvg: {
+        type: Boolean,
+        default: false
+      }
+    },
+    setup(t) {
+      const e = S(false), i = U(() => {
+        const s = `#${t.prefix}-ic_${t.name}`;
+        return t.hoverChangeSvg && e.value && !t.name.includes("_h") ? `${s}_h` : s;
+      });
+      return (s, r) => (n(), p("svg", {
+        "aria-hidden": "true",
+        title: i.value,
+        class: L([
+          "cursor-pointer",
+          {
+            [`transition-[color_transform] ${s.hoverColor}`]: !s.hoverChangeSvg
+          }
+        ]),
+        onMouseenter: r[0] || (r[0] = (a) => e.value = true),
+        onMouseleave: r[1] || (r[1] = (a) => e.value = false)
+      }, [
+        o("use", {
+          href: i.value,
+          fill: s.color
+        }, null, 8, Ii)
+      ], 42, Ei));
+    }
+  });
+  Zi = {
     class: "flex gap-3"
-  }, Ki = A({
+  };
+  Oi = I({
     name: "BatchOperation",
     __name: "index",
     props: {
@@ -827,47 +701,49 @@ let __tla = Promise.all([
       "openWarnPopup"
     ],
     setup(t, { emit: e }) {
-      const i = e, { batchAddArchive: r, batchAddTrash: s, batchReductionArchive: a, batchReductionTrash: u } = Y();
+      const i = e, { batchAddArchive: s, batchAddTrash: r, batchReductionArchive: a, batchReductionTrash: u } = Y();
       async function b() {
-        await r(t.batch), i("clearBatch");
+        await s(t.batch), i("clearBatch");
       }
-      async function p() {
-        await s(t.batch, t.type), i("clearBatch");
+      async function _() {
+        await r(t.batch, t.type), i("clearBatch");
       }
       async function v() {
         t.type === "archive" ? await a(t.batch) : await u(t.batch), i("clearBatch");
       }
-      return (f, C) => (n(), _("div", Gi, [
-        f.type === "file" ? (n(), L(O, {
+      return (h, y) => (n(), p("div", Zi, [
+        h.type === "file" ? (n(), E(O, {
           key: 0,
           name: "archive",
           class: "w-6 h-6",
           onClick: b
         })) : Z("", true),
-        f.type === "archive" || f.type === "trash" ? (n(), L(O, {
+        h.type === "archive" || h.type === "trash" ? (n(), E(O, {
           key: 1,
           name: "reduction",
           class: "w-6 h-6",
           onClick: v
         })) : Z("", true),
-        f.type === "file" || f.type === "archive" ? (n(), L(O, {
+        h.type === "file" || h.type === "archive" ? (n(), E(O, {
           key: 2,
           name: "trash",
           class: "w-6 h-6",
-          onClick: p
+          onClick: _
         })) : Z("", true),
-        f.type === "trash" ? (n(), L(O, {
+        h.type === "trash" ? (n(), E(O, {
           key: 3,
           name: "trash",
           class: "w-6 h-6",
-          onClick: C[0] || (C[0] = (k) => f.$emit("openWarnPopup"))
+          onClick: y[0] || (y[0] = (k) => h.$emit("openWarnPopup"))
         })) : Z("", true)
       ]));
     }
-  }), Yi = [
+  });
+  qi = [
     "id",
     "aria-checked"
-  ], Xi = A({
+  ];
+  Vi = I({
     name: "Checkbox",
     __name: "index",
     props: {
@@ -885,13 +761,13 @@ let __tla = Promise.all([
       "update:modelValue"
     ]),
     setup(t, { emit: e }) {
-      const i = it(t, "modelValue"), r = e, s = Re();
+      const i = it(t, "modelValue"), s = e, r = qe();
       function a() {
-        i.value === true || i.value === "mixed" ? i.value = false : i.value = true, r("change", i.value);
+        i.value === true || i.value === "mixed" ? i.value = false : i.value = true, s("change", i.value);
       }
-      return (u, b) => (n(), _("label", {
-        id: l(s),
-        class: F([
+      return (u, b) => (n(), p("label", {
+        id: l(r),
+        class: L([
           "checkbox-container",
           {
             checked: i.value === true,
@@ -905,18 +781,26 @@ let __tla = Promise.all([
         o("span", {
           class: "checkmark"
         }, null, -1)
-      ]), 10, Yi));
+      ]), 10, qi));
     }
-  }), Ji = N(Xi, [
+  });
+  Ri = N(Vi, [
     [
       "__scopeId",
       "data-v-7ce7a363"
     ]
-  ]), Qi = "data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='20'%20cy='20'%20r='10.75'%20stroke='white'%20stroke-width='2.5'/%3e%3cpath%20d='M16%2024L23.7782%2016.2218'%20stroke='white'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M24%2024L16.2218%2016.2218'%20stroke='white'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", ts = 2e3, es = 8, is = 50, ss = [
+  ]);
+  Hi = "data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='20'%20cy='20'%20r='10.75'%20stroke='white'%20stroke-width='2.5'/%3e%3cpath%20d='M16%2024L23.7782%2016.2218'%20stroke='white'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M24%2024L16.2218%2016.2218'%20stroke='white'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e";
+  Ui = 2e3;
+  Ni = 8;
+  Wi = 50;
+  Gi = [
     "data-id"
-  ], rs = {
+  ];
+  Ki = {
     class: "highlight text-white truncate w-fit"
-  }, os = A({
+  };
+  Yi = I({
     name: "Toast",
     __name: "index",
     props: {
@@ -924,11 +808,11 @@ let __tla = Promise.all([
         default: ""
       },
       duration: {
-        default: ts
+        default: Ui
       },
       id: {},
       zIndex: {
-        default: is
+        default: Wi
       },
       type: {
         default: "success"
@@ -940,89 +824,91 @@ let __tla = Promise.all([
       "mounted"
     ],
     setup(t, { expose: e, emit: i }) {
-      Ve((h) => ({
-        "13ac8a4e": h.zIndex,
-        "3c5118be": $.value
+      Ve((m) => ({
+        "13ac8a4e": m.zIndex,
+        "3c5118be": j.value
       }));
-      const r = t, s = i, a = S(false), u = S(0), b = S(false), p = ve("toastRef");
-      let v = new ResizeObserver(g), f = null;
-      const C = U(() => {
+      const s = t, r = i, a = S(false), u = S(0), b = S(false), _ = he("toastRef");
+      let v = new ResizeObserver(g), h = null;
+      const y = U(() => {
         var _a, _b;
-        const h = ds(r.id);
-        if (!h) return 0;
-        const { component: D } = h;
-        return (((_b = (_a = D.exposed) == null ? void 0 : _a.offsetBottom) == null ? void 0 : _b.value) ?? 0) + es;
-      }), k = U(() => C.value + u.value), $ = U(() => `${C.value}px`), w = U(() => b.value ? "fade-leave-to" : a.value ? "fade-enter-to" : "fade-enter-from");
-      function x() {
-        r.duration !== 0 && (f = setTimeout(() => {
+        const m = es(s.id);
+        if (!m) return 0;
+        const { component: $ } = m;
+        return (((_b = (_a = $.exposed) == null ? void 0 : _a.offsetBottom) == null ? void 0 : _b.value) ?? 0) + Ni;
+      }), k = U(() => y.value + u.value), j = U(() => `${y.value}px`), w = U(() => b.value ? "fade-leave-to" : a.value ? "fade-enter-to" : "fade-enter-from");
+      function P() {
+        s.duration !== 0 && (h = setTimeout(() => {
           M();
-        }, r.duration));
+        }, s.duration));
       }
       function M() {
-        b.value = true, s("close"), f && (clearTimeout(f), f = null);
+        b.value = true, r("close"), h && (clearTimeout(h), h = null);
       }
       function T() {
-        b.value && s("closed");
+        b.value && r("closed");
       }
       function g() {
-        p.value && (u.value = p.value.offsetHeight);
+        _.value && (u.value = _.value.offsetHeight);
       }
-      return zt(p, (h, D) => {
-        D && (v == null ? void 0 : v.unobserve(D)), h && (v == null ? void 0 : v.observe(h));
-      }), Lt(async () => {
-        p.value && (await Wt(), s("mounted", p.value.getBoundingClientRect().height), await Wt(), x(), a.value = true);
-      }), He(() => {
+      return Tt(_, (m, $) => {
+        $ && (v == null ? void 0 : v.unobserve($)), m && (v == null ? void 0 : v.observe(m));
+      }), At(async () => {
+        _.value && (await Nt(), r("mounted", _.value.getBoundingClientRect().height), await Nt(), P(), a.value = true);
+      }), Re(() => {
         v && (v.disconnect(), v = null);
       }), e({
         close: M,
         offsetBottom: k
-      }), (h, D) => (n(), _("div", {
+      }), (m, $) => (n(), p("div", {
         ref_key: "toastRef",
-        ref: p,
-        class: F([
+        ref: _,
+        class: L([
           "toast",
-          h.type,
+          m.type,
           w.value
         ]),
-        "data-id": h.id,
+        "data-id": m.id,
         role: "alert",
         onTransitionend: T
       }, [
-        o("p", rs, c(h.message), 1),
+        o("p", Ki, c(m.message), 1),
         o("img", {
-          src: Qi,
+          src: Hi,
           class: "cursor-pointer w-10 h-10",
           alt: "close toast icon",
           onClick: M
         })
-      ], 42, ss));
+      ], 42, Gi));
     }
-  }), as = N(os, [
+  });
+  Xi = N(Yi, [
     [
       "__scopeId",
       "data-v-e24dbb69"
     ]
-  ]), $t = Ue([]);
-  let ns = 0;
-  function ls(t) {
+  ]);
+  St = He([]);
+  let Ji = 0;
+  function Qi(t) {
     var _a;
-    const e = `toast-${++ns}`, i = typeof t == "string" ? {
+    const e = `toast-${++Ji}`, i = typeof t == "string" ? {
       message: t
     } : t;
-    let r = document.createElement("div");
-    const s = {
+    let s = document.createElement("div");
+    const r = {
       ...i,
       id: e,
       onClose: () => {
       },
       onClosed: () => {
         var _a2;
-        r && ce(null, r), r = null, cs(e), (_a2 = i.onClosed) == null ? void 0 : _a2.call(i);
+        s && ae(null, s), s = null, ts(e), (_a2 = i.onClosed) == null ? void 0 : _a2.call(i);
       },
       onMounted: () => {
       }
-    }, a = y(as, s);
-    ce(a, r), r.firstElementChild && document.body.append(r.firstElementChild);
+    }, a = C(Xi, r);
+    ae(a, s), s.firstElementChild && document.body.append(s.firstElementChild);
     const u = a.component, b = ((_a = u.exposed) == null ? void 0 : _a.close) ?? (() => {
     });
     return {
@@ -1032,29 +918,29 @@ let __tla = Promise.all([
     };
   }
   W = function(t) {
-    const e = ls(t);
-    return $t.push(e), {
+    const e = Qi(t);
+    return St.push(e), {
       close: e.close
     };
   };
-  function cs(t) {
-    const e = $t.findIndex((i) => i.id === t);
-    e !== -1 && $t.splice(e, 1);
+  function ts(t) {
+    const e = St.findIndex((i) => i.id === t);
+    e !== -1 && St.splice(e, 1);
   }
-  function ds(t) {
-    const e = $t.findIndex((i) => i.id === t);
-    return e <= 0 ? null : $t[e - 1];
+  function es(t) {
+    const e = St.findIndex((i) => i.id === t);
+    return e <= 0 ? null : St[e - 1];
   }
-  const Ht = (t) => t && typeof t == "object" && !Array.isArray(t), Xt = (t, ...e) => {
+  const Rt = (t) => t && typeof t == "object" && !Array.isArray(t), Yt = (t, ...e) => {
     if (!e.length) return t;
     const i = e.shift();
-    if (Ht(t) && Ht(i)) for (const r in i) Ht(i[r]) ? (t[r] || Object.assign(t, {
-      [r]: {}
-    }), Xt(t[r], i[r])) : Object.assign(t, {
-      [r]: i[r]
+    if (Rt(t) && Rt(i)) for (const s in i) Rt(i[s]) ? (t[s] || Object.assign(t, {
+      [s]: {}
+    }), Yt(t[s], i[s])) : Object.assign(t, {
+      [s]: i[s]
     });
-    return Xt(t, ...e);
-  }, us = Xt({}, {
+    return Yt(t, ...e);
+  }, is = Yt({}, {
     "ar-SA": {
       add_commonly_use_text: {
         t: 0,
@@ -5017,7 +4903,7 @@ let __tla = Promise.all([
                 t: 3
               }
             ],
-            s: "Come and create a new file"
+            s: "Upload a document for sign"
           }
         },
         deleted_projects: {
@@ -25405,121 +25291,121 @@ let __tla = Promise.all([
         }
       }
     }
-  }), se = Ne({
+  }), ee = Ue({
     locale: localStorage.getItem("pdf-signature-i18n") ?? navigator.language,
     fallbackLocale: "en-US",
-    messages: us
-  }), _s = {
+    messages: is
+  }), ss = {
     install(t) {
-      t.config.errorHandler = (e, i, r) => {
-        console.error("Global error handling:", e), console.error("The error occurred in:", i), console.error("The error message:", r), Ut();
-      }, window.addEventListener("error", ({ message: e, filename: i, lineno: r, colno: s, error: a }) => (console.error("Error caught:", {
+      t.config.errorHandler = (e, i, s) => {
+        console.error("Global error handling:", e), console.error("The error occurred in:", i), console.error("The error message:", s), Ht();
+      }, window.addEventListener("error", ({ message: e, filename: i, lineno: s, colno: r, error: a }) => (console.error("Error caught:", {
         message: e,
         filename: i,
-        lineno: r,
-        colno: s,
+        lineno: s,
+        colno: r,
         error: a
-      }), Ut(), true)), window.addEventListener("unhandledrejection", (e) => {
-        console.error("Catch errors thrown by unhandled Promise", e.reason), Ut();
+      }), Ht(), true)), window.addEventListener("unhandledrejection", (e) => {
+        console.error("Catch errors thrown by unhandled Promise", e.reason), Ht();
       });
     }
   };
-  function Ut() {
-    const { t } = se.global, e = document.querySelector("#loading-reload");
+  function Ht() {
+    const { t } = ee.global, e = document.querySelector("#loading-reload");
     W({
       message: t("prompt.error_occurred"),
       type: "error"
     }), !(!e || !(e instanceof HTMLElement)) && (e.style.display = "flex");
   }
-  function ps(t, e) {
-    return new FontFace(t, `url(/font/${e})`).load().then((r) => {
-      document.fonts.add(r), document.body.style.fontFamily = t;
+  function rs(t, e) {
+    return new FontFace(t, `url(/font/${e})`).load().then((s) => {
+      document.fonts.add(s), document.body.style.fontFamily = t;
     });
   }
-  const bs = "" + new URL("bg_decorate-CGBiDQAU.svg", import.meta.url).href, fs = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.8973%2042.2716C21.2028%2043.1178%2022.1265%2043.5723%2025.0593%2043.5723H47.0189C67.1022%2043.5723%2089.5156%2043.9242%20107.696%2043.5723C114.329%2043.4438%20118.962%2044.1761%20124.223%2041.1697C126.179%2040.0522%20128.077%2037.0964%20129.181%2035.1097C130.391%2032.9321%20130.808%2029.873%20129.966%2026.6729C129.024%2023.0934%20126.834%2019.9659%20123.672%2018.5824C118.535%2016.3352%20117.924%2017.1843%20113.756%2016.6737C108.844%2016.072%20104.735%2016.7564%20101.085%2016.7564H92.8207C91.3333%2016.7564%2088.2136%2016.6737%2088.2136%2016.6737C88.2136%2016.6737%2078.4404%2016.3845%2073.6695%2016.3845C68.1405%2016.3845%2062.5234%2016.3787%2057.012%2016.3787C46.5387%2016.3787%2036.5998%2015.5266%2026.161%2016.3787C20.1295%2016.8711%2015.2647%2016.9713%2011.8374%2021.8878C9.44848%2025.3147%209.08273%2029.0498%209.6337%2032.3552C10.2413%2036.0006%2011.8373%2037.8643%2014.1499%2040.0395C14.7658%2040.6189%2015.3852%2041.3566%2017.8973%2042.2716Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M22.8557%2040.3027C22.708%2046.6555%2022.8419%2058.072%2022.8419%2064.4318C22.8419%2071.7728%2022.8419%2079.1137%2022.8419%2086.4547C22.8419%2090.924%2022.8419%2095.3933%2022.8419%2099.8626C22.8419%20103.911%2022.5759%20111.245%2024.5417%20116.094C27.6074%20123.656%2034.6737%20123.511%2041.2895%20123.511C50.5931%20123.511%2059.8967%20123.511%2069.2003%20123.511C74.4607%20123.511%2079.7266%20123.883%2085.0047%20123.883C90.4346%20123.883%2099.3066%20124.95%20104.39%20123.256C110.135%20121.341%20113.391%20120.11%20115.408%20116.094C116.793%20113.339%20117.544%20102.224%20117.164%2096.2612C116.872%2091.669%20117.028%2087.9876%20117.164%2084.4783C117.559%2074.2948%20117.064%2067.1636%20117.522%2058.4475C117.662%2055.8026%20117.019%2053.9924%20117.164%2051.3682C117.3%2048.9218%20116.793%2041.7082%20116.793%2039.3027'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M55.9294%2070.9037C57.1749%2070.837%2059.314%2070.9948%2061.4306%2070.6091C64.1624%2070.1113%2065.6913%2070.3807%2068.032%2070.2553C70.5148%2070.1223%2072.0634%2070.1702%2075.1836%2069.8723C80.1236%2069.4008%2080.4168%2069.7574%2083.4442%2069.5952'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", ms = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M22.0571%2012.4497C23.3897%2011.0975%2027.3055%209.85066%2030.0895%209.27763C33.473%208.5812%2037.1868%208.79672%2040.632%208.83179C50.3019%208.93023%2063.6079%208.78722%2073.2636%208.83178C91.2312%208.9147%2094.1866%208.05573%20104.891%209.27763C115.596%2010.4995%20117.736%2011.7005%20122.467%2017.419C125.474%2021.0532%20126.305%2031.474%20126.305%2035.034V72.6746C126.305%2083.8705%20126.98%2090.4195%20125.976%20105.476C125.339%20109.861%20125.496%20115.414%20123.466%20119.28C119.649%20126.549%20109.409%20130.211%20104.891%20130.211H79.7899C66.8103%20130.211%2060.713%20131.286%2047.6604%20131.286C37.9108%20131.286%2031.8379%20132.176%2025.5713%20128.598C19.9386%20125.382%2017.5389%20122.683%2014.5268%20115.692C12.6731%20111.391%2013.1066%20105.221%2012.9993%20103.325C12.6677%2097.4641%2013.1783%2092.0674%2012.9666%2086.1717C12.4731%2072.4258%2012.1979%2058.4031%2012.9993%2044.6682C13.5373%2035.4483%2012.2062%2028.3163%2015.9875%2019.9778C17.3264%2015.676%2020.7364%2013.7899%2022.0571%2012.4497Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M8%20100.636C18.0405%2089.9465%2024.3907%2080.6421%2031.04%2074.8218C33.7043%2072.4898%2036.6642%2070.634%2039.5746%2068.692C40.9639%2067.765%2042.4043%2066.8967%2044.016%2066.5332C45.5391%2066.1898%2047.1386%2065.7111%2048.6814%2066.3467C51.5019%2067.5086%2053.6106%2070.5957%2055.4618%2073.0095C57.7258%2075.9617%2059.7103%2079.5336%2061.1722%2083.0038C62.4308%2085.9914%2064.2267%2089.9465%2064.2267%2089.9465C64.2267%2089.9465%2067.5687%2095.2586%2068.7449%2096.8226C69.3019%2097.5632%2072.5017%2098.2443%2073.2632%2097.9477C76.6962%2096.6106%2076.7751%2096.8085%2079.2875%2094.1174C80.284%2093.05%2082.7413%2089.9465%2084.8097%2087.731C86.3158%2086.1178%2088.505%2084.0366%2090.8316%2082.7906C93.0767%2081.5882%2096.0472%2081.7048%2098.3644%2082.7906C101.602%2084.3078%20103.226%2086.0187%20105.761%2088.7339C108.578%2091.7509%20111.815%2094.5458%20115.191%2096.8226C116.424%2097.6543%20117.9%2098.4279%20119.259%2099.0213C120.245%2099.4516%20120.955%2099.5609%20123.968%20100.636C127.084%20101.749%20128.5%20103.385%20132%20103.863'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M78.9387%2042.3295C77.7432%2044.0368%2077.334%2046.4893%2077.2789%2049.2967C77.2377%2051.3993%2078.0288%2054.6216%2078.0288%2054.6216C78.3143%2056.3035%2081.4702%2059.8159%2082.9152%2060.3076C84.5561%2060.8658%2086.1122%2062.0229%2087.8211%2062.156C90.373%2062.3548%2092.7922%2062.7052%2094.8495%2061.3831C99.8697%2058.1567%20101.101%2055.2912%20101.376%2049.5532C101.522%2046.5053%20100.591%2044.5412%2098.8657%2042.0249C96.1276%2038.0311%2092.8414%2036.6478%2088.2815%2036.3276C85.9331%2036.1627%2083.7024%2037.0765%2081.7968%2038.7987C80.4711%2039.9969%2079.9754%2040.8489%2078.9387%2042.3295Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", hs = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M32.2158%2092.7849C33.807%2094.5848%2037.064%2099.4962%2042.8388%20102.884C47.0091%20105.33%2050.301%20106.453%2055.4121%20107.669C62.4685%20109.348%2067.8268%20108.854%2073.9589%20108.662C80.5079%20108.457%2082.8997%20105.351%2089.1425%20103.341C91.118%20102.705%2093.2034%20101.975%2094.9794%20100.886C97.2727%2099.4783%2099.2495%2095.1507%20101.291%2093.4103C105.528%2089.7982%20109.179%2085.2878%20110.776%2079.9067C113.024%2072.3335%20113.625%2061.4052%20113.023%2053.511C112.68%2049.0131%20110.526%2045.2867%20108.657%2041.3045C107.684%2039.2331%20106.694%2037.1631%20105.217%2035.3981C104.057%2034.0116%20102.67%2032.8514%20101.395%2031.5763C99.282%2029.463%2096.847%2026.9934%2094.493%2025.233C91.656%2021.9564%2086.894%2020.8771%2083.555%2019.5814C75.8728%2016.6002%2067.4696%2014.9132%2059.1535%2016.7872C53.9676%2017.9559%2048.6984%2020.4413%2044.0402%2022.9368C39.1748%2025.5433%2034.9565%2029.24%2031.1735%2033.244C27.6174%2037.008%2026.3651%2041.0554%2023.4891%2045.3695C22.0727%2047.4941%2020.5128%2054.2416%2020.5128%2056.8804C20.5128%2063.6727%2019.7441%2069.0489%2021.816%2075.4827C23.1147%2079.5155%2025.1002%2083.212%2027.5023%2086.6585C28.9532%2088.7402%2030.5328%2090.8812%2032.2158%2092.7849Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M95.5413%2095.6855C98.4422%2099.4567%20101.772%20100.647%20104.459%20104.574C105.743%20106.452%20110.384%20112.105%20112.339%20113.309C114.61%20114.706%20116.287%20117.973%20119.114%20120.301'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M77.594%2027.3027C79.4731%2027.6685%2081.3555%2028.0267%2083.1563%2028.7522C85.3903%2029.6523%2087.3708%2031.0914%2089.37%2032.4975C92.2609%2034.5308%2095.2121%2036.755%2097.3579%2039.787C100.402%2044.0878%20102.603%2047.9394%20103.756%2053.8685C104.702%2058.7391%20104.737%2063.3802%20103.756%2066.5739'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M37.426%2085.0547C40.3347%2091.2008%2046.2391%2094.2199%2052.0576%2097.2882'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", gs = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15%2039.8833C17.5%2039.8833%2020.5%2039.7924%2020.5%2039.7924C20.5%2039.7924%2029.872%2039.5742%2034.0063%2039.5742C39.9053%2039.5742%2045.8044%2039.5742%2051.7035%2039.5742C56.1682%2039.5742%2062.6329%2039.5742%2067.0976%2039.5742C75.7673%2039.5742%2078.4247%2039.7924%2087.0858%2039.7924C100.603%2039.7924%20112.436%2039.8832%20126%2039.8832'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M48.0752%2039C48.0752%2033.3427%2047.906%2026.7393%2048.0752%2021.0968C48.1078%2020.0094%2048.4693%2018.9773%2048.5114%2017.9076C48.5661%2016.5158%2048.9123%2016.8415%2051.4741%2016.4087C53.5724%2015.8274%2055.7756%2016.0367%2057.9681%2016.0367C61.4896%2016.0367%2064.9903%2016.0123%2068.4966%2016.2174C70.0828%2016.3102%2071.6934%2016.2102%2073.2823%2016.228C74.9405%2016.2467%2076.5969%2016.5518%2078.2618%2016.6214C80.484%2016.7142%2082.6812%2016.8021%2084.9133%2016.8021C87.1525%2016.8021%2090.3764%2016.4928%2092.5526%2016.4194C93.8768%2016.3747%2093.5943%2021.7948%2093.6794%2022.9146C93.9248%2026.1444%2094%2030.2186%2094%2033.4509C94%2035.3088%2093.7819%2041.1797%2093.7819%2043'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M30%2035C30%2036.1871%2030.2187%2043.3205%2030.2187%2044.5345C30.2187%2046.8984%2030.1856%2049.5525%2030.5467%2051.893C31.4233%2057.5754%2030.8747%2063.5893%2030.8747%2069.3172C30.8747%2071.8369%2031.2303%2074.353%2031.3242%2076.8726C31.4959%2081.4807%2032.2162%2085.3052%2032.5147%2090.7282C32.8968%2097.6671%2032.3462%20101.587%2032.7942%20108.522C33.1104%20113.417%2033.7904%20120.39%2034.9019%20122.131C36.0134%20123.872%2043.3799%20123.762%2044.4688%20123.762C48.0403%20122.857%2055.1129%20123.762%2058.9316%20123.762C66.8081%20123.762%2071.848%20123.261%2079.6994%20123.872C84.4124%20124.24%2089.051%20123.716%2093.7309%20123.54C96.6568%20123.43%20102.98%20124.357%20105.669%20123.146C107.679%20122.241%20107.799%20117.622%20107.799%20113.001C107.799%20108.991%20107.953%20105.124%20108.145%20101.809C108.579%2094.3379%20108.899%2088.7109%20109.378%2080.318C109.979%2069.8038%20110.056%2062.6519%20110.179%2053.6668C110.231%2049.8878%20111%2043.8477%20111%2040.0923'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M58.6807%2065.4473C58.6807%2068.815%2059.2792%2072.1775%2059.5534%2075.5322C60.0362%2081.4398%2059.9898%2087.4023%2059.9898%2093.3264C59.9898%2097.933%2060.208%20102.514%2060.208%20107.121'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M80.9521%2067.1855C80.4987%2076.9134%2080.4748%2086.6247%2080.2479%2096.3484C80.2084%2098.0434%2080.5278%2099.7148%2080.4468%20101.454'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", vs = "" + new URL("loading-ClOqHxNk.gif", import.meta.url).href, ks = "" + new URL("sign_pic-CrpHI1KR.jpg", import.meta.url).href;
-  function ws(t) {
+  const os = "" + new URL("bg_decorate-CGBiDQAU.svg", import.meta.url).href, as = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.8973%2042.2716C21.2028%2043.1178%2022.1265%2043.5723%2025.0593%2043.5723H47.0189C67.1022%2043.5723%2089.5156%2043.9242%20107.696%2043.5723C114.329%2043.4438%20118.962%2044.1761%20124.223%2041.1697C126.179%2040.0522%20128.077%2037.0964%20129.181%2035.1097C130.391%2032.9321%20130.808%2029.873%20129.966%2026.6729C129.024%2023.0934%20126.834%2019.9659%20123.672%2018.5824C118.535%2016.3352%20117.924%2017.1843%20113.756%2016.6737C108.844%2016.072%20104.735%2016.7564%20101.085%2016.7564H92.8207C91.3333%2016.7564%2088.2136%2016.6737%2088.2136%2016.6737C88.2136%2016.6737%2078.4404%2016.3845%2073.6695%2016.3845C68.1405%2016.3845%2062.5234%2016.3787%2057.012%2016.3787C46.5387%2016.3787%2036.5998%2015.5266%2026.161%2016.3787C20.1295%2016.8711%2015.2647%2016.9713%2011.8374%2021.8878C9.44848%2025.3147%209.08273%2029.0498%209.6337%2032.3552C10.2413%2036.0006%2011.8373%2037.8643%2014.1499%2040.0395C14.7658%2040.6189%2015.3852%2041.3566%2017.8973%2042.2716Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M22.8557%2040.3027C22.708%2046.6555%2022.8419%2058.072%2022.8419%2064.4318C22.8419%2071.7728%2022.8419%2079.1137%2022.8419%2086.4547C22.8419%2090.924%2022.8419%2095.3933%2022.8419%2099.8626C22.8419%20103.911%2022.5759%20111.245%2024.5417%20116.094C27.6074%20123.656%2034.6737%20123.511%2041.2895%20123.511C50.5931%20123.511%2059.8967%20123.511%2069.2003%20123.511C74.4607%20123.511%2079.7266%20123.883%2085.0047%20123.883C90.4346%20123.883%2099.3066%20124.95%20104.39%20123.256C110.135%20121.341%20113.391%20120.11%20115.408%20116.094C116.793%20113.339%20117.544%20102.224%20117.164%2096.2612C116.872%2091.669%20117.028%2087.9876%20117.164%2084.4783C117.559%2074.2948%20117.064%2067.1636%20117.522%2058.4475C117.662%2055.8026%20117.019%2053.9924%20117.164%2051.3682C117.3%2048.9218%20116.793%2041.7082%20116.793%2039.3027'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M55.9294%2070.9037C57.1749%2070.837%2059.314%2070.9948%2061.4306%2070.6091C64.1624%2070.1113%2065.6913%2070.3807%2068.032%2070.2553C70.5148%2070.1223%2072.0634%2070.1702%2075.1836%2069.8723C80.1236%2069.4008%2080.4168%2069.7574%2083.4442%2069.5952'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", ns = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M22.0571%2012.4497C23.3897%2011.0975%2027.3055%209.85066%2030.0895%209.27763C33.473%208.5812%2037.1868%208.79672%2040.632%208.83179C50.3019%208.93023%2063.6079%208.78722%2073.2636%208.83178C91.2312%208.9147%2094.1866%208.05573%20104.891%209.27763C115.596%2010.4995%20117.736%2011.7005%20122.467%2017.419C125.474%2021.0532%20126.305%2031.474%20126.305%2035.034V72.6746C126.305%2083.8705%20126.98%2090.4195%20125.976%20105.476C125.339%20109.861%20125.496%20115.414%20123.466%20119.28C119.649%20126.549%20109.409%20130.211%20104.891%20130.211H79.7899C66.8103%20130.211%2060.713%20131.286%2047.6604%20131.286C37.9108%20131.286%2031.8379%20132.176%2025.5713%20128.598C19.9386%20125.382%2017.5389%20122.683%2014.5268%20115.692C12.6731%20111.391%2013.1066%20105.221%2012.9993%20103.325C12.6677%2097.4641%2013.1783%2092.0674%2012.9666%2086.1717C12.4731%2072.4258%2012.1979%2058.4031%2012.9993%2044.6682C13.5373%2035.4483%2012.2062%2028.3163%2015.9875%2019.9778C17.3264%2015.676%2020.7364%2013.7899%2022.0571%2012.4497Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M8%20100.636C18.0405%2089.9465%2024.3907%2080.6421%2031.04%2074.8218C33.7043%2072.4898%2036.6642%2070.634%2039.5746%2068.692C40.9639%2067.765%2042.4043%2066.8967%2044.016%2066.5332C45.5391%2066.1898%2047.1386%2065.7111%2048.6814%2066.3467C51.5019%2067.5086%2053.6106%2070.5957%2055.4618%2073.0095C57.7258%2075.9617%2059.7103%2079.5336%2061.1722%2083.0038C62.4308%2085.9914%2064.2267%2089.9465%2064.2267%2089.9465C64.2267%2089.9465%2067.5687%2095.2586%2068.7449%2096.8226C69.3019%2097.5632%2072.5017%2098.2443%2073.2632%2097.9477C76.6962%2096.6106%2076.7751%2096.8085%2079.2875%2094.1174C80.284%2093.05%2082.7413%2089.9465%2084.8097%2087.731C86.3158%2086.1178%2088.505%2084.0366%2090.8316%2082.7906C93.0767%2081.5882%2096.0472%2081.7048%2098.3644%2082.7906C101.602%2084.3078%20103.226%2086.0187%20105.761%2088.7339C108.578%2091.7509%20111.815%2094.5458%20115.191%2096.8226C116.424%2097.6543%20117.9%2098.4279%20119.259%2099.0213C120.245%2099.4516%20120.955%2099.5609%20123.968%20100.636C127.084%20101.749%20128.5%20103.385%20132%20103.863'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M78.9387%2042.3295C77.7432%2044.0368%2077.334%2046.4893%2077.2789%2049.2967C77.2377%2051.3993%2078.0288%2054.6216%2078.0288%2054.6216C78.3143%2056.3035%2081.4702%2059.8159%2082.9152%2060.3076C84.5561%2060.8658%2086.1122%2062.0229%2087.8211%2062.156C90.373%2062.3548%2092.7922%2062.7052%2094.8495%2061.3831C99.8697%2058.1567%20101.101%2055.2912%20101.376%2049.5532C101.522%2046.5053%20100.591%2044.5412%2098.8657%2042.0249C96.1276%2038.0311%2092.8414%2036.6478%2088.2815%2036.3276C85.9331%2036.1627%2083.7024%2037.0765%2081.7968%2038.7987C80.4711%2039.9969%2079.9754%2040.8489%2078.9387%2042.3295Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", ls = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M32.2158%2092.7849C33.807%2094.5848%2037.064%2099.4962%2042.8388%20102.884C47.0091%20105.33%2050.301%20106.453%2055.4121%20107.669C62.4685%20109.348%2067.8268%20108.854%2073.9589%20108.662C80.5079%20108.457%2082.8997%20105.351%2089.1425%20103.341C91.118%20102.705%2093.2034%20101.975%2094.9794%20100.886C97.2727%2099.4783%2099.2495%2095.1507%20101.291%2093.4103C105.528%2089.7982%20109.179%2085.2878%20110.776%2079.9067C113.024%2072.3335%20113.625%2061.4052%20113.023%2053.511C112.68%2049.0131%20110.526%2045.2867%20108.657%2041.3045C107.684%2039.2331%20106.694%2037.1631%20105.217%2035.3981C104.057%2034.0116%20102.67%2032.8514%20101.395%2031.5763C99.282%2029.463%2096.847%2026.9934%2094.493%2025.233C91.656%2021.9564%2086.894%2020.8771%2083.555%2019.5814C75.8728%2016.6002%2067.4696%2014.9132%2059.1535%2016.7872C53.9676%2017.9559%2048.6984%2020.4413%2044.0402%2022.9368C39.1748%2025.5433%2034.9565%2029.24%2031.1735%2033.244C27.6174%2037.008%2026.3651%2041.0554%2023.4891%2045.3695C22.0727%2047.4941%2020.5128%2054.2416%2020.5128%2056.8804C20.5128%2063.6727%2019.7441%2069.0489%2021.816%2075.4827C23.1147%2079.5155%2025.1002%2083.212%2027.5023%2086.6585C28.9532%2088.7402%2030.5328%2090.8812%2032.2158%2092.7849Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M95.5413%2095.6855C98.4422%2099.4567%20101.772%20100.647%20104.459%20104.574C105.743%20106.452%20110.384%20112.105%20112.339%20113.309C114.61%20114.706%20116.287%20117.973%20119.114%20120.301'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M77.594%2027.3027C79.4731%2027.6685%2081.3555%2028.0267%2083.1563%2028.7522C85.3903%2029.6523%2087.3708%2031.0914%2089.37%2032.4975C92.2609%2034.5308%2095.2121%2036.755%2097.3579%2039.787C100.402%2044.0878%20102.603%2047.9394%20103.756%2053.8685C104.702%2058.7391%20104.737%2063.3802%20103.756%2066.5739'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M37.426%2085.0547C40.3347%2091.2008%2046.2391%2094.2199%2052.0576%2097.2882'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", cs = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15%2039.8833C17.5%2039.8833%2020.5%2039.7924%2020.5%2039.7924C20.5%2039.7924%2029.872%2039.5742%2034.0063%2039.5742C39.9053%2039.5742%2045.8044%2039.5742%2051.7035%2039.5742C56.1682%2039.5742%2062.6329%2039.5742%2067.0976%2039.5742C75.7673%2039.5742%2078.4247%2039.7924%2087.0858%2039.7924C100.603%2039.7924%20112.436%2039.8832%20126%2039.8832'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M48.0752%2039C48.0752%2033.3427%2047.906%2026.7393%2048.0752%2021.0968C48.1078%2020.0094%2048.4693%2018.9773%2048.5114%2017.9076C48.5661%2016.5158%2048.9123%2016.8415%2051.4741%2016.4087C53.5724%2015.8274%2055.7756%2016.0367%2057.9681%2016.0367C61.4896%2016.0367%2064.9903%2016.0123%2068.4966%2016.2174C70.0828%2016.3102%2071.6934%2016.2102%2073.2823%2016.228C74.9405%2016.2467%2076.5969%2016.5518%2078.2618%2016.6214C80.484%2016.7142%2082.6812%2016.8021%2084.9133%2016.8021C87.1525%2016.8021%2090.3764%2016.4928%2092.5526%2016.4194C93.8768%2016.3747%2093.5943%2021.7948%2093.6794%2022.9146C93.9248%2026.1444%2094%2030.2186%2094%2033.4509C94%2035.3088%2093.7819%2041.1797%2093.7819%2043'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M30%2035C30%2036.1871%2030.2187%2043.3205%2030.2187%2044.5345C30.2187%2046.8984%2030.1856%2049.5525%2030.5467%2051.893C31.4233%2057.5754%2030.8747%2063.5893%2030.8747%2069.3172C30.8747%2071.8369%2031.2303%2074.353%2031.3242%2076.8726C31.4959%2081.4807%2032.2162%2085.3052%2032.5147%2090.7282C32.8968%2097.6671%2032.3462%20101.587%2032.7942%20108.522C33.1104%20113.417%2033.7904%20120.39%2034.9019%20122.131C36.0134%20123.872%2043.3799%20123.762%2044.4688%20123.762C48.0403%20122.857%2055.1129%20123.762%2058.9316%20123.762C66.8081%20123.762%2071.848%20123.261%2079.6994%20123.872C84.4124%20124.24%2089.051%20123.716%2093.7309%20123.54C96.6568%20123.43%20102.98%20124.357%20105.669%20123.146C107.679%20122.241%20107.799%20117.622%20107.799%20113.001C107.799%20108.991%20107.953%20105.124%20108.145%20101.809C108.579%2094.3379%20108.899%2088.7109%20109.378%2080.318C109.979%2069.8038%20110.056%2062.6519%20110.179%2053.6668C110.231%2049.8878%20111%2043.8477%20111%2040.0923'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M58.6807%2065.4473C58.6807%2068.815%2059.2792%2072.1775%2059.5534%2075.5322C60.0362%2081.4398%2059.9898%2087.4023%2059.9898%2093.3264C59.9898%2097.933%2060.208%20102.514%2060.208%20107.121'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M80.9521%2067.1855C80.4987%2076.9134%2080.4748%2086.6247%2080.2479%2096.3484C80.2084%2098.0434%2080.5278%2099.7148%2080.4468%20101.454'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", ds = "" + new URL("loading-ClOqHxNk.gif", import.meta.url).href, us = "" + new URL("sign_pic-CrpHI1KR.jpg", import.meta.url).href;
+  function _s(t) {
     return new Promise((e, i) => {
-      const r = window.URL.createObjectURL(t), s = new Image();
-      s.src = r, s.addEventListener("load", async () => {
-        window.URL.revokeObjectURL(r), e(await ys(s));
-      }), s.addEventListener("error", (a) => {
-        window.URL.revokeObjectURL(r), i(a);
+      const s = window.URL.createObjectURL(t), r = new Image();
+      r.src = s, r.addEventListener("load", async () => {
+        window.URL.revokeObjectURL(s), e(await ps(r));
+      }), r.addEventListener("error", (a) => {
+        window.URL.revokeObjectURL(s), i(a);
       });
     });
   }
-  function ys(t) {
+  function ps(t) {
     return new Promise((e) => {
-      const i = document.createElement("canvas"), r = i.getContext("2d"), { naturalWidth: s, naturalHeight: a } = t;
-      i.width = s, i.height = a, r == null ? void 0 : r.drawImage(t, 0, 0, s, a), e(i.toDataURL("image/jpeg", 0.8));
+      const i = document.createElement("canvas"), s = i.getContext("2d"), { naturalWidth: r, naturalHeight: a } = t;
+      i.width = r, i.height = a, s == null ? void 0 : s.drawImage(t, 0, 0, r, a), e(i.toDataURL("image/jpeg", 0.8));
     });
   }
-  function Cs(t, e = "image/png", i = 1, r = "image.png") {
-    return new Promise((s) => {
+  function bs(t, e = "image/png", i = 1, s = "image.png") {
+    return new Promise((r) => {
       t.toBlob((a) => {
         if (!a) throw new Error("Failed to convert canvas to blob");
         const u = new File([
           a
-        ], r, {
+        ], s, {
           type: e
         });
-        s(u);
+        r(u);
       }, e, i);
     });
   }
-  function xs(t) {
+  function fs(t) {
     return new Promise((e, i) => {
-      const r = new Image();
-      r.addEventListener("load", e), r.addEventListener("error", i), r.src = t;
+      const s = new Image();
+      s.addEventListener("load", e), s.addEventListener("error", i), s.src = t;
     });
   }
-  function Ps() {
-    const { getCurrentPDF: t, getPDF: e, getArchive: i, getTrash: r } = Y();
+  function ms() {
+    const { getCurrentPDF: t, getPDF: e, getArchive: i, getTrash: s } = Y();
     return Promise.all([
       t(),
       e(),
       i(),
-      r()
+      s()
     ]);
   }
-  function Ss() {
+  function hs() {
     const e = Object.values(Object.assign({
-      "/src/assets/img/bg_decorate.svg": bs,
-      "/src/assets/img/img_archive.svg": fs,
-      "/src/assets/img/img_photo.svg": ms,
-      "/src/assets/img/img_search.svg": hs,
-      "/src/assets/img/img_trash.svg": gs,
-      "/src/assets/img/loading.gif": vs,
-      "/src/assets/img/sign_pic.jpg": ks
-    })).map(xs);
+      "/src/assets/img/bg_decorate.svg": os,
+      "/src/assets/img/img_archive.svg": as,
+      "/src/assets/img/img_photo.svg": ns,
+      "/src/assets/img/img_search.svg": ls,
+      "/src/assets/img/img_trash.svg": cs,
+      "/src/assets/img/loading.gif": ds,
+      "/src/assets/img/sign_pic.jpg": us
+    })).map(fs);
     return Promise.allSettled(e);
   }
-  const $s = {
+  const gs = {
     install() {
       const t = [
-        ps("Gen Jyuu Gothic P", "GenJyuuGothic-P.woff2"),
-        Ps(),
-        Ss()
+        rs("OakSans", "OakSans-Black.woff2"),
+        ms(),
+        hs()
       ];
       Promise.all(t).then(() => {
-        Ds();
+        vs();
       });
     }
   };
-  function Ds() {
+  function vs() {
     const t = document.querySelector("#loading-screen");
     !t || !(t instanceof HTMLElement) || (t.style.display = "none");
   }
-  let js, Ms, _e, Bs, At;
-  js = "modulepreload";
-  Ms = function(t, e) {
+  let ks, ws, ce;
+  ks = "modulepreload";
+  ws = function(t, e) {
     return new URL(t, e).href;
   };
-  _e = {};
-  vt = function(e, i, r) {
-    let s = Promise.resolve();
+  ce = {};
+  vt = function(e, i, s) {
+    let r = Promise.resolve();
     if (i && i.length > 0) {
-      let u = function(f) {
-        return Promise.all(f.map((C) => Promise.resolve(C).then((k) => ({
+      let u = function(h) {
+        return Promise.all(h.map((y) => Promise.resolve(y).then((k) => ({
           status: "fulfilled",
           value: k
         }), (k) => ({
@@ -25527,19 +25413,19 @@ let __tla = Promise.all([
           reason: k
         }))));
       };
-      const b = document.getElementsByTagName("link"), p = document.querySelector("meta[property=csp-nonce]"), v = (p == null ? void 0 : p.nonce) || (p == null ? void 0 : p.getAttribute("nonce"));
-      s = u(i.map((f) => {
-        if (f = Ms(f, r), f in _e) return;
-        _e[f] = true;
-        const C = f.endsWith(".css"), k = C ? '[rel="stylesheet"]' : "";
-        if (!!r) for (let x = b.length - 1; x >= 0; x--) {
-          const M = b[x];
-          if (M.href === f && (!C || M.rel === "stylesheet")) return;
+      const b = document.getElementsByTagName("link"), _ = document.querySelector("meta[property=csp-nonce]"), v = (_ == null ? void 0 : _.nonce) || (_ == null ? void 0 : _.getAttribute("nonce"));
+      r = u(i.map((h) => {
+        if (h = ws(h, s), h in ce) return;
+        ce[h] = true;
+        const y = h.endsWith(".css"), k = y ? '[rel="stylesheet"]' : "";
+        if (!!s) for (let P = b.length - 1; P >= 0; P--) {
+          const M = b[P];
+          if (M.href === h && (!y || M.rel === "stylesheet")) return;
         }
-        else if (document.querySelector(`link[href="${f}"]${k}`)) return;
+        else if (document.querySelector(`link[href="${h}"]${k}`)) return;
         const w = document.createElement("link");
-        if (w.rel = C ? "stylesheet" : js, C || (w.as = "script"), w.crossOrigin = "", w.href = f, v && w.setAttribute("nonce", v), document.head.appendChild(w), C) return new Promise((x, M) => {
-          w.addEventListener("load", x), w.addEventListener("error", () => M(new Error(`Unable to preload CSS for ${f}`)));
+        if (w.rel = y ? "stylesheet" : ks, y || (w.as = "script"), w.crossOrigin = "", w.href = h, v && w.setAttribute("nonce", v), document.head.appendChild(w), y) return new Promise((P, M) => {
+          w.addEventListener("load", P), w.addEventListener("error", () => M(new Error(`Unable to preload CSS for ${h}`)));
         });
       }));
     }
@@ -25549,143 +25435,132 @@ let __tla = Promise.all([
       });
       if (b.payload = u, window.dispatchEvent(b), !b.defaultPrevented) throw u;
     }
-    return s.then((u) => {
+    return r.then((u) => {
       for (const b of u || []) b.status === "rejected" && a(b.reason);
       return e().catch(a);
     });
   };
-  Bs = {
-    class: "absolute bottom-1 right-3 text-xs text-gray-40 md:bottom-2"
-  };
-  At = A({
-    __name: "SignVersion",
-    setup(t) {
-      const e = "0.5.1";
-      return (i, r) => (n(), _("p", Bs, "ver: " + c(l(e)), 1));
-    }
-  });
-  function re() {
-    const t = Qt(), e = be();
-    function i(s) {
+  function ye() {
+    const t = Xt(), e = ue();
+    function i(r) {
       t.push({
-        name: s
+        name: r
       });
     }
-    function r() {
+    function s() {
       t.go(-1);
     }
     return {
       goPage: i,
-      goBack: r,
+      goBack: s,
       route: e
     };
   }
   function ut() {
-    const t = S(false), e = gt(() => vt(() => Promise.resolve().then(() => ye), void 0, import.meta.url)), { goBack: i, goPage: r } = re();
-    function s(a) {
+    const t = S(false), e = gt(() => vt(() => Promise.resolve().then(() => ke), void 0, import.meta.url)), { goBack: i, goPage: s } = ye();
+    function r(a) {
       t.value = a;
     }
     return {
       isShowWarnPopup: t,
       SignPopup: e,
       goBack: i,
-      goPage: r,
-      toggleWarnPopup: s
+      goPage: s,
+      toggleWarnPopup: r
     };
   }
-  const Ts = {
+  const ys = {
     class: "complete-content content"
-  }, zs = {
+  }, xs = {
     class: "title text-center w-full"
-  }, Fs = {
+  }, Cs = {
     class: "toolbar md:absolute md:right-10 md:top-5"
-  }, Ls = {
+  }, Ps = {
     class: "complete-content-file"
-  }, As = {
+  }, Ss = {
     class: "w-fit h-fit py-5 px-3 scale-150 origin-top-left flex flex-col gap-5 md:scale-100 md:py-10 md:px-14"
-  }, Es = [
+  }, $s = [
     "src"
-  ], Is = {
+  ], Ds = {
     class: "text-center"
-  }, Zs = {
+  }, js = {
     class: "flex justify-between md:justify-evenly"
-  }, Os = A({
+  }, Ms = I({
     __name: "CompleteContent",
     setup(t) {
-      const e = S("archive"), i = S(false), { currentPDF: r } = nt(Y()), { t: s } = dt(), { isShowWarnPopup: a, SignPopup: u, goPage: b, toggleWarnPopup: p } = ut(), v = gt(() => vt(() => import("../chunks/SignEncryption-qXNtzy3g.js").then(async (m) => {
+      const e = S("archive"), i = S(false), { currentPDF: s } = at(Y()), { t: r } = dt(), { isShowWarnPopup: a, SignPopup: u, goPage: b, toggleWarnPopup: _ } = ut(), v = gt(() => vt(() => import("../chunks/SignEncryption-DMDbHRFr.js").then(async (m) => {
         await m.__tla;
         return m;
-      }).then((w) => w.S), __vite__mapDeps([0,1,2]), import.meta.url)), f = U(() => ({
+      }).then((w) => w.S), __vite__mapDeps([0,1,2]), import.meta.url)), h = U(() => ({
         archive: "prompt.sure_archive_file",
         trash: "prompt.sure_delete_file"
       })[e.value]);
-      function C(w) {
-        e.value = w, p(true);
+      function y(w) {
+        e.value = w, _(true);
       }
       function k() {
-        const { addArchive: w, addTrash: x } = Y(), M = e.value === "archive";
-        M ? w(r.value) : x(r.value), W(s(M ? "prompt.file_archived_success" : "prompt.file_delete_success")), p(false), !M && b("home");
+        const { addArchive: w, addTrash: P } = Y(), M = e.value === "archive";
+        M ? w(s.value) : P(s.value), W(r(M ? "prompt.file_archived_success" : "prompt.file_delete_success")), _(false), !M && b("home");
       }
-      function $(w) {
+      function j(w) {
         i.value = w;
       }
-      return We(() => mt().updateFilePassword("")), te(() => {
+      return Ne(() => mt().updateFilePassword("")), Jt(() => {
         Y().clearCurrentPDF();
-      }), (w, x) => (n(), _("div", Ts, [
-        o("h5", zs, c(w.$t("sign_completed")), 1),
-        o("ul", Fs, [
+      }), (w, P) => (n(), p("div", ys, [
+        o("h5", xs, c(w.$t("sign_completed")), 1),
+        o("ul", Cs, [
           o("li", null, [
-            y(O, {
+            C(O, {
               name: "download",
               class: "w-9 h-9",
-              onClick: x[0] || (x[0] = (M) => $(true))
+              onClick: P[0] || (P[0] = (M) => j(true))
             })
           ]),
           o("li", null, [
-            y(O, {
+            C(O, {
               name: "archive",
               class: "w-9 h-9",
-              onClick: x[1] || (x[1] = (M) => C("archive"))
+              onClick: P[1] || (P[1] = (M) => y("archive"))
             })
           ]),
           o("li", null, [
-            y(O, {
+            C(O, {
               name: "trash",
               class: "w-9 h-9",
-              onClick: x[2] || (x[2] = (M) => C("trash"))
+              onClick: P[2] || (P[2] = (M) => y("trash"))
             })
           ])
         ]),
-        o("div", Ls, [
-          o("div", As, [
-            (n(true), _(X, null, at(l(r).canvas, (M) => (n(), _("img", {
+        o("div", Ps, [
+          o("div", Ss, [
+            (n(true), p(J, null, nt(l(s).canvas, (M) => (n(), p("img", {
               key: M,
               src: M,
               alt: "PDF document"
-            }, null, 8, Es))), 128))
+            }, null, 8, $s))), 128))
           ])
         ]),
         o("button", {
           class: "btn btn-primary md:absolute md:left-10 md:top-7",
           disabled: false,
-          onClick: x[3] || (x[3] = (M) => l(b)("home"))
+          onClick: P[3] || (P[3] = (M) => l(b)("home"))
         }, [
-          x[6] || (x[6] = o("span", {
+          P[6] || (P[6] = o("span", {
             class: "text-4xl font-thin"
           }, "\u2190", -1)),
           yt(c(w.$t("return_home")), 1)
         ]),
-        y(At),
-        l(a) ? (n(), L(l(u), {
+        l(a) ? (n(), E(l(u), {
           key: 0,
           title: w.$t("warn")
         }, {
-          default: G(() => [
-            o("p", Is, c(w.$t(f.value)), 1),
-            o("div", Zs, [
+          default: K(() => [
+            o("p", Ds, c(w.$t(h.value)), 1),
+            o("div", js, [
               o("button", {
                 class: "btn btn-base",
-                onClick: x[4] || (x[4] = (M) => l(p)(false))
+                onClick: P[4] || (P[4] = (M) => l(_)(false))
               }, c(w.$t("not_yet")), 1),
               o("button", {
                 class: "btn btn-primary",
@@ -25697,30 +25572,30 @@ let __tla = Promise.all([
         }, 8, [
           "title"
         ])) : Z("", true),
-        i.value ? (n(), L(l(v), {
+        i.value ? (n(), E(l(v), {
           key: 1,
-          file: l(r),
-          onCloseEncryptPopup: x[5] || (x[5] = (M) => $(false))
+          file: l(s),
+          onCloseEncryptPopup: P[5] || (P[5] = (M) => j(false))
         }, null, 8, [
           "file"
         ])) : Z("", true)
       ]));
     }
-  }), qs = N(Os, [
+  }), Bs = N(Ms, [
     [
       "__scopeId",
-      "data-v-d1394b11"
+      "data-v-8d2e975f"
     ]
-  ]), Rs = {
+  ]), Ts = {
     class: "complete layout step"
-  }, Vs = A({
+  }, zs = I({
     __name: "index",
     setup(t) {
-      return (e, i) => (n(), _("div", Rs, [
-        y(qs)
+      return (e, i) => (n(), p("div", Ts, [
+        C(Bs)
       ]));
     }
-  }), Hs = "data:image/svg+xml,%3csvg%20width='156'%20height='156'%20viewBox='0%200%20156%20156'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20filter='url(%23filter0_d_73_7059)'%3e%3ccircle%20cx='78'%20cy='74'%20r='67'%20fill='%23B7EC5D'%20stroke='%23333333'%20stroke-width='2'/%3e%3cpath%20d='M72.2%2052.6591C72.8459%2047.6538%2072.1627%2042.8045%2073.0643%2037.8457C73.5607%2036.3566%2078.0278%2036.8528%2078.0278%2036.8528C78.0278%2036.8528%2081.4729%2037.3493%2082.495%2037.3493C83.6642%2037.3493%2082.9339%2047.5016%2082.9913%2048.7656C83.2243%2053.8908%2083.3805%2055.5021%2083.3805%2060.6436C83.3805%2064.1819%2083.18%2066.6342%2083.3805%2068.5389C83.3805%2069.6123%2088.4808%2069.5603%2089.4439%2069.6123C92.8447%2069.7962%2095.6529%2069.9421%2099.2491%2069.9421C102.845%2069.9421%20105.68%2069.7601%20109.794%2069.9421C112.12%2070.0449%20113.587%2069.581%20114.851%2069.9421C115.34%2070.082%20115.254%2074.5758%20115.254%2074.5758C115.254%2074.5758%20114.9%2078.1452%20114.851%2079.9644C114.835%2080.5251%20114.864%2080.9666%20114.149%2080.9666C107.223%2080.9666%20100.271%2081.1452%2093.3471%2080.9555C92.1535%2080.9228%2083.3805%2079.3765%2083.3805%2080.6771C83.3805%2082.6381%2083.5916%2084.7265%2083.2802%2086.657C83.0315%2088.199%2083.18%2089.8302%2083.18%2091.3898C83.18%2093.2583%2083.5608%2094.5717%2083.2802%2096.4153C83.3805%2098.31%2082.7903%20100.993%2083.18%20104.853C83.3805%20106.839%2083.6533%20109.97%2082.7903%20110.833C82.2495%20111.374%2079.302%20110.833%2078.592%20110.833C77.78%20110.833%2077.0104%20111.034%2076.1867%20111.034C75.7049%20111.034%2072.6647%20111.347%2073.0643%20110.388C73.3187%20109.777%2073.1645%20108.848%2073.1645%20108.183C73.1645%20106.122%2072.9275%20103.92%2073.1645%20101.875C73.5682%2098.3939%2072.7283%2094.8761%2073.0643%2091.3898C73.4212%2087.6876%2073.1645%2084.4013%2073.1645%2080.6771C73.1645%2079.8525%2072.3089%2079.3185%2071.4051%2079.3185H67.8022C62.1897%2079.3185%2059.6833%2079.363%2054.0708%2079.363C51.7768%2079.363%2053.1621%2079.3185%2050.8681%2079.3185H43.2832C42.6342%2079.3185%2041.3151%2079.1483%2041.1451%2078.8508C40.8476%2078.3301%2040.7099%2077.7626%2040.8014%2077.0576C41.0019%2075.5126%2040.9678%2073.39%2041.0019%2071.5456C41.0109%2071.0615%2040.8661%2068.9398%2041.503%2068.9398H47.5574C49.7132%2068.9398%2052.6454%2068.7394%2057.7234%2068.7394C62.3095%2068.7394%2067.0091%2069.0439%2071.5542%2068.5389C72.4266%2068.442%2071.955%2063.9746%2071.955%2063.3051C71.955%2059.8085%2071.7527%2056.1261%2072.2%2052.6591Z'%20stroke='%234D4D4D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/g%3e%3cdefs%3e%3cfilter%20id='filter0_d_73_7059'%20x='0'%20y='0'%20width='156'%20height='156'%20filterUnits='userSpaceOnUse'%20color-interpolation-filters='sRGB'%3e%3cfeFlood%20flood-opacity='0'%20result='BackgroundImageFix'/%3e%3cfeColorMatrix%20in='SourceAlpha'%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%20127%200'%20result='hardAlpha'/%3e%3cfeOffset%20dy='4'/%3e%3cfeGaussianBlur%20stdDeviation='5'/%3e%3cfeComposite%20in2='hardAlpha'%20operator='out'/%3e%3cfeColorMatrix%20type='matrix'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.25%200'/%3e%3cfeBlend%20mode='normal'%20in2='BackgroundImageFix'%20result='effect1_dropShadow_73_7059'/%3e%3cfeBlend%20mode='normal'%20in='SourceGraphic'%20in2='effect1_dropShadow_73_7059'%20result='shape'/%3e%3c/filter%3e%3c/defs%3e%3c/svg%3e", Us = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.8973%2042.2716C21.2028%2043.1178%2022.1265%2043.5723%2025.0593%2043.5723H47.0189C67.1022%2043.5723%2089.5156%2043.9242%20107.696%2043.5723C114.329%2043.4438%20118.962%2044.1761%20124.223%2041.1697C126.179%2040.0522%20128.077%2037.0964%20129.181%2035.1097C130.391%2032.9321%20130.808%2029.873%20129.966%2026.6729C129.024%2023.0934%20126.834%2019.9659%20123.672%2018.5824C118.535%2016.3352%20117.924%2017.1843%20113.756%2016.6737C108.844%2016.072%20104.735%2016.7564%20101.085%2016.7564H92.8207C91.3333%2016.7564%2088.2136%2016.6737%2088.2136%2016.6737C88.2136%2016.6737%2078.4404%2016.3845%2073.6695%2016.3845C68.1405%2016.3845%2062.5234%2016.3787%2057.012%2016.3787C46.5387%2016.3787%2036.5998%2015.5266%2026.161%2016.3787C20.1295%2016.8711%2015.2647%2016.9713%2011.8374%2021.8878C9.44848%2025.3147%209.08273%2029.0498%209.6337%2032.3552C10.2413%2036.0006%2011.8373%2037.8643%2014.1499%2040.0395C14.7658%2040.6189%2015.3852%2041.3566%2017.8973%2042.2716Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M22.8557%2040.3027C22.708%2046.6555%2022.8419%2058.072%2022.8419%2064.4318C22.8419%2071.7728%2022.8419%2079.1137%2022.8419%2086.4547C22.8419%2090.924%2022.8419%2095.3933%2022.8419%2099.8626C22.8419%20103.911%2022.5759%20111.245%2024.5417%20116.094C27.6074%20123.656%2034.6737%20123.511%2041.2895%20123.511C50.5931%20123.511%2059.8967%20123.511%2069.2003%20123.511C74.4607%20123.511%2079.7266%20123.883%2085.0047%20123.883C90.4346%20123.883%2099.3066%20124.95%20104.39%20123.256C110.135%20121.341%20113.391%20120.11%20115.408%20116.094C116.793%20113.339%20117.544%20102.224%20117.164%2096.2612C116.872%2091.669%20117.028%2087.9876%20117.164%2084.4783C117.559%2074.2948%20117.064%2067.1636%20117.522%2058.4475C117.662%2055.8026%20117.019%2053.9924%20117.164%2051.3682C117.3%2048.9218%20116.793%2041.7082%20116.793%2039.3027'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M55.9294%2070.9037C57.1749%2070.837%2059.314%2070.9948%2061.4306%2070.6091C64.1624%2070.1113%2065.6913%2070.3807%2068.032%2070.2553C70.5148%2070.1223%2072.0634%2070.1702%2075.1836%2069.8723C80.1236%2069.4008%2080.4168%2069.7574%2083.4442%2069.5952'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", Ns = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M32.2158%2092.7849C33.807%2094.5848%2037.064%2099.4962%2042.8388%20102.884C47.0091%20105.33%2050.301%20106.453%2055.4121%20107.669C62.4685%20109.348%2067.8268%20108.854%2073.9589%20108.662C80.5079%20108.457%2082.8997%20105.351%2089.1425%20103.341C91.118%20102.705%2093.2034%20101.975%2094.9794%20100.886C97.2727%2099.4783%2099.2495%2095.1507%20101.291%2093.4103C105.528%2089.7982%20109.179%2085.2878%20110.776%2079.9067C113.024%2072.3335%20113.625%2061.4052%20113.023%2053.511C112.68%2049.0131%20110.526%2045.2867%20108.657%2041.3045C107.684%2039.2331%20106.694%2037.1631%20105.217%2035.3981C104.057%2034.0116%20102.67%2032.8514%20101.395%2031.5763C99.282%2029.463%2096.847%2026.9934%2094.493%2025.233C91.656%2021.9564%2086.894%2020.8771%2083.555%2019.5814C75.8728%2016.6002%2067.4696%2014.9132%2059.1535%2016.7872C53.9676%2017.9559%2048.6984%2020.4413%2044.0402%2022.9368C39.1748%2025.5433%2034.9565%2029.24%2031.1735%2033.244C27.6174%2037.008%2026.3651%2041.0554%2023.4891%2045.3695C22.0727%2047.4941%2020.5128%2054.2416%2020.5128%2056.8804C20.5128%2063.6727%2019.7441%2069.0489%2021.816%2075.4827C23.1147%2079.5155%2025.1002%2083.212%2027.5023%2086.6585C28.9532%2088.7402%2030.5328%2090.8812%2032.2158%2092.7849Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M95.5413%2095.6855C98.4422%2099.4567%20101.772%20100.647%20104.459%20104.574C105.743%20106.452%20110.384%20112.105%20112.339%20113.309C114.61%20114.706%20116.287%20117.973%20119.114%20120.301'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M77.594%2027.3027C79.4731%2027.6685%2081.3555%2028.0267%2083.1563%2028.7522C85.3903%2029.6523%2087.3708%2031.0914%2089.37%2032.4975C92.2609%2034.5308%2095.2121%2036.755%2097.3579%2039.787C100.402%2044.0878%20102.603%2047.9394%20103.756%2053.8685C104.702%2058.7391%20104.737%2063.3802%20103.756%2066.5739'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M37.426%2085.0547C40.3347%2091.2008%2046.2391%2094.2199%2052.0576%2097.2882'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", Ws = {}, Gs = {
+  }), Fs = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.8973%2042.2716C21.2028%2043.1178%2022.1265%2043.5723%2025.0593%2043.5723H47.0189C67.1022%2043.5723%2089.5156%2043.9242%20107.696%2043.5723C114.329%2043.4438%20118.962%2044.1761%20124.223%2041.1697C126.179%2040.0522%20128.077%2037.0964%20129.181%2035.1097C130.391%2032.9321%20130.808%2029.873%20129.966%2026.6729C129.024%2023.0934%20126.834%2019.9659%20123.672%2018.5824C118.535%2016.3352%20117.924%2017.1843%20113.756%2016.6737C108.844%2016.072%20104.735%2016.7564%20101.085%2016.7564H92.8207C91.3333%2016.7564%2088.2136%2016.6737%2088.2136%2016.6737C88.2136%2016.6737%2078.4404%2016.3845%2073.6695%2016.3845C68.1405%2016.3845%2062.5234%2016.3787%2057.012%2016.3787C46.5387%2016.3787%2036.5998%2015.5266%2026.161%2016.3787C20.1295%2016.8711%2015.2647%2016.9713%2011.8374%2021.8878C9.44848%2025.3147%209.08273%2029.0498%209.6337%2032.3552C10.2413%2036.0006%2011.8373%2037.8643%2014.1499%2040.0395C14.7658%2040.6189%2015.3852%2041.3566%2017.8973%2042.2716Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M22.8557%2040.3027C22.708%2046.6555%2022.8419%2058.072%2022.8419%2064.4318C22.8419%2071.7728%2022.8419%2079.1137%2022.8419%2086.4547C22.8419%2090.924%2022.8419%2095.3933%2022.8419%2099.8626C22.8419%20103.911%2022.5759%20111.245%2024.5417%20116.094C27.6074%20123.656%2034.6737%20123.511%2041.2895%20123.511C50.5931%20123.511%2059.8967%20123.511%2069.2003%20123.511C74.4607%20123.511%2079.7266%20123.883%2085.0047%20123.883C90.4346%20123.883%2099.3066%20124.95%20104.39%20123.256C110.135%20121.341%20113.391%20120.11%20115.408%20116.094C116.793%20113.339%20117.544%20102.224%20117.164%2096.2612C116.872%2091.669%20117.028%2087.9876%20117.164%2084.4783C117.559%2074.2948%20117.064%2067.1636%20117.522%2058.4475C117.662%2055.8026%20117.019%2053.9924%20117.164%2051.3682C117.3%2048.9218%20116.793%2041.7082%20116.793%2039.3027'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M55.9294%2070.9037C57.1749%2070.837%2059.314%2070.9948%2061.4306%2070.6091C64.1624%2070.1113%2065.6913%2070.3807%2068.032%2070.2553C70.5148%2070.1223%2072.0634%2070.1702%2075.1836%2069.8723C80.1236%2069.4008%2080.4168%2069.7574%2083.4442%2069.5952'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", As = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M32.2158%2092.7849C33.807%2094.5848%2037.064%2099.4962%2042.8388%20102.884C47.0091%20105.33%2050.301%20106.453%2055.4121%20107.669C62.4685%20109.348%2067.8268%20108.854%2073.9589%20108.662C80.5079%20108.457%2082.8997%20105.351%2089.1425%20103.341C91.118%20102.705%2093.2034%20101.975%2094.9794%20100.886C97.2727%2099.4783%2099.2495%2095.1507%20101.291%2093.4103C105.528%2089.7982%20109.179%2085.2878%20110.776%2079.9067C113.024%2072.3335%20113.625%2061.4052%20113.023%2053.511C112.68%2049.0131%20110.526%2045.2867%20108.657%2041.3045C107.684%2039.2331%20106.694%2037.1631%20105.217%2035.3981C104.057%2034.0116%20102.67%2032.8514%20101.395%2031.5763C99.282%2029.463%2096.847%2026.9934%2094.493%2025.233C91.656%2021.9564%2086.894%2020.8771%2083.555%2019.5814C75.8728%2016.6002%2067.4696%2014.9132%2059.1535%2016.7872C53.9676%2017.9559%2048.6984%2020.4413%2044.0402%2022.9368C39.1748%2025.5433%2034.9565%2029.24%2031.1735%2033.244C27.6174%2037.008%2026.3651%2041.0554%2023.4891%2045.3695C22.0727%2047.4941%2020.5128%2054.2416%2020.5128%2056.8804C20.5128%2063.6727%2019.7441%2069.0489%2021.816%2075.4827C23.1147%2079.5155%2025.1002%2083.212%2027.5023%2086.6585C28.9532%2088.7402%2030.5328%2090.8812%2032.2158%2092.7849Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M95.5413%2095.6855C98.4422%2099.4567%20101.772%20100.647%20104.459%20104.574C105.743%20106.452%20110.384%20112.105%20112.339%20113.309C114.61%20114.706%20116.287%20117.973%20119.114%20120.301'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M77.594%2027.3027C79.4731%2027.6685%2081.3555%2028.0267%2083.1563%2028.7522C85.3903%2029.6523%2087.3708%2031.0914%2089.37%2032.4975C92.2609%2034.5308%2095.2121%2036.755%2097.3579%2039.787C100.402%2044.0878%20102.603%2047.9394%20103.756%2053.8685C104.702%2058.7391%20104.737%2063.3802%20103.756%2066.5739'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M37.426%2085.0547C40.3347%2091.2008%2046.2391%2094.2199%2052.0576%2097.2882'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", Ls = {}, Es = {
     width: "40",
     height: "40",
     viewBox: "0 0 40 40",
@@ -25729,8 +25604,8 @@ let __tla = Promise.all([
     class: "hidden transition-colors md:block",
     title: "list icon"
   };
-  function Ks(t, e) {
-    return n(), _("svg", Gs, e[0] || (e[0] = [
+  function Is(t, e) {
+    return n(), p("svg", Es, e[0] || (e[0] = [
       o("rect", {
         x: "13",
         y: "12",
@@ -25760,18 +25635,18 @@ let __tla = Promise.all([
       }, null, -1)
     ]));
   }
-  const Ys = N(Ws, [
+  const Zs = N(Ls, [
     [
       "render",
-      Ks
+      Is
     ]
-  ]), Xs = {
+  ]), Os = {
     class: "sign-file-more bg-white"
-  }, Js = [
+  }, qs = [
     "src"
-  ], Qs = [
+  ], Vs = [
     "innerHTML"
-  ], t0 = A({
+  ], Rs = I({
     __name: "SignFile",
     props: {
       file: {},
@@ -25794,7 +25669,7 @@ let __tla = Promise.all([
       "selectFile"
     ],
     setup(t, { emit: e }) {
-      const i = e, r = S(false), s = S(false), a = Qt(), { addPDF: u, addArchive: b, addTrash: p, deleteArchive: v, deleteTrash: f, setCurrentPDF: C } = Y(), k = U(() => _i(t.file.updateDate)), $ = U(() => ({
+      const i = e, s = S(false), r = S(false), a = Xt(), { addPDF: u, addArchive: b, addTrash: _, deleteArchive: v, deleteTrash: h, setCurrentPDF: y } = Y(), k = U(() => ai(t.file.updateDate)), j = U(() => ({
         file: [
           {
             icon: "download",
@@ -25802,7 +25677,7 @@ let __tla = Promise.all([
           },
           {
             icon: "sign",
-            feat: () => x()
+            feat: () => P()
           },
           {
             icon: "archive",
@@ -25826,19 +25701,19 @@ let __tla = Promise.all([
         trash: [
           {
             icon: "reduction",
-            feat: () => h()
+            feat: () => m()
           },
           {
             icon: "trash",
-            feat: () => D()
+            feat: () => $()
           }
         ]
       })[t.type]);
       function w() {
         q(false), i("openEncryptPopup", t.file);
       }
-      function x() {
-        C({
+      function P() {
+        y({
           ...t.file,
           isUpdate: true
         }), a.push({
@@ -25849,68 +25724,68 @@ let __tla = Promise.all([
         b(t.file), i("selectFile", t.file, false);
       }
       function T() {
-        p(t.file, t.type), i("selectFile", t.file, false);
+        _(t.file, t.type), i("selectFile", t.file, false);
       }
       function g() {
         v(t.file.PDFId), i("selectFile", t.file, false), u(t.file);
       }
-      function h() {
-        f(t.file.PDFId), i("selectFile", t.file, false), u(t.file);
+      function m() {
+        h(t.file.PDFId), i("selectFile", t.file, false), u(t.file);
       }
-      function D() {
+      function $() {
         q(false), i("openWarnPopup", t.file);
       }
       function q(d) {
-        r.value = d;
+        s.value = d;
       }
-      function j(d) {
-        const B = d.toLowerCase().indexOf(t.keyword.toLowerCase()), P = B + t.keyword.length;
+      function D(d) {
+        const B = d.toLowerCase().indexOf(t.keyword.toLowerCase()), x = B + t.keyword.length;
         return [
           d.slice(0, B),
-          d.slice(B, P),
-          d.slice(P)
-        ].reduce((K, rt, ot) => rt ? `${K}<span class="${ot === 1 ? "text-primary" : ""}">${rt}</span>` : K, "");
+          d.slice(B, x),
+          d.slice(x)
+        ].reduce((G, rt, ot) => rt ? `${G}<span class="${ot === 1 ? "text-primary" : ""}">${rt}</span>` : G, "");
       }
-      function m() {
-        s.value = !s.value, i("selectFile", t.file, s.value);
+      function f() {
+        r.value = !r.value, i("selectFile", t.file, r.value);
       }
-      return zt(() => t.isSelectAll, (d) => {
-        d !== "mixed" && (s.value = d);
+      return Tt(() => t.isSelectAll, (d) => {
+        d !== "mixed" && (r.value = d);
       }), (d, B) => {
         var _a;
-        return n(), _("li", {
-          class: F([
+        return n(), p("li", {
+          class: L([
             "sign-file flex flex-col",
             d.isListStatus ? "md:flex-row" : "md:w-[316px] md:flex-shrink-0 md:h-fit",
             {
-              active: s.value
+              active: r.value
             }
           ]),
-          onClick: m
+          onClick: f
         }, [
           o("div", {
-            class: F([
+            class: L([
               "transition-opacity md:hidden",
-              r.value ? "opacity-100 z-10" : "opacity-0 -z-[1]"
+              s.value ? "opacity-100 z-10" : "opacity-0 -z-[1]"
             ])
           }, [
-            r.value ? (n(), _(X, {
+            s.value ? (n(), p(J, {
               key: 0
             }, [
               o("div", {
                 class: "mask",
-                onClick: B[0] || (B[0] = J((P) => q(false), [
+                onClick: B[0] || (B[0] = X((x) => q(false), [
                   "stop"
                 ]))
               }),
-              o("ul", Xs, [
-                (n(true), _(X, null, at($.value, (P) => (n(), _("li", {
-                  key: P.icon
+              o("ul", Os, [
+                (n(true), p(J, null, nt(j.value, (x) => (n(), p("li", {
+                  key: x.icon
                 }, [
-                  y(O, {
-                    name: P.icon,
+                  C(O, {
+                    name: x.icon,
                     class: "w-10 h-10",
-                    onClick: J(P.feat, [
+                    onClick: X(x.feat, [
                       "stop"
                     ])
                   }, null, 8, [
@@ -25921,25 +25796,25 @@ let __tla = Promise.all([
               ])
             ], 64)) : Z("", true)
           ], 2),
-          $.value.length ? (n(), L(O, {
+          j.value.length ? (n(), E(O, {
             key: 0,
             name: "more",
-            class: F(`absolute w-10 h-10 right-2 top-1 ${r.value ? "opacity-0" : "opacity-100"} md:hidden`),
-            onClick: B[1] || (B[1] = J((P) => q(true), [
+            class: L(`absolute w-10 h-10 right-2 top-1 ${s.value ? "opacity-0" : "opacity-100"} md:hidden`),
+            onClick: B[1] || (B[1] = X((x) => q(true), [
               "stop"
             ]))
           }, null, 8, [
             "class"
-          ])) : (n(), L(O, {
+          ])) : (n(), E(O, {
             key: 1,
             name: "reduction",
             class: "absolute w-10 h-10 right-2 top-1 md:hidden",
-            onClick: J(h, [
+            onClick: X(m, [
               "stop"
             ])
           })),
           o("div", {
-            class: F([
+            class: L([
               "w-1/3 h-[150px] flex items-center justify-center",
               {
                 "md:hidden": d.isListStatus
@@ -25950,10 +25825,10 @@ let __tla = Promise.all([
               src: (_a = d.file.canvas) == null ? void 0 : _a.at(0),
               class: "border-2 border-gray-20 w-full",
               alt: "file"
-            }, null, 8, Js)
+            }, null, 8, qs)
           ], 2),
           o("div", {
-            class: F([
+            class: L([
               "sign-file-content flex-col mt-4 text-center",
               {
                 "md:mt-0 md:flex-row md:items-center md:w-full md:text-start": d.isListStatus
@@ -25961,41 +25836,41 @@ let __tla = Promise.all([
             ])
           }, [
             o("div", {
-              class: F({
+              class: L({
                 "md:flex md:flex-row-reverse md:items-center md:gap-1 md:flex-1": d.isListStatus
               })
             }, [
               o("p", {
                 class: "flex-1",
-                innerHTML: j(d.file.name)
-              }, null, 8, Qs),
+                innerHTML: D(d.file.name)
+              }, null, 8, Vs),
               o("p", {
-                class: F([
-                  "text-gray-40",
+                class: L([
+                  "",
                   {
                     "md:text-black md:w-[236px]": d.isListStatus
                   }
                 ])
               }, c(k.value), 3),
-              d.isListStatus ? (n(), L(Ys, {
+              d.isListStatus ? (n(), E(Zs, {
                 key: 0
               })) : Z("", true)
             ], 2),
             o("ul", {
-              class: F([
+              class: L([
                 "flex-row gap-1 hidden justify-center md:flex",
                 {
                   "mt-4": !d.isListStatus
                 }
               ])
             }, [
-              (n(true), _(X, null, at($.value, (P) => (n(), _("li", {
-                key: P.icon
+              (n(true), p(J, null, nt(j.value, (x) => (n(), p("li", {
+                key: x.icon
               }, [
-                y(O, {
-                  name: P.icon,
+                C(O, {
+                  name: x.icon,
                   class: "w-10 h-10",
-                  onClick: J(P.feat, [
+                  onClick: X(x.feat, [
                     "stop"
                   ])
                 }, null, 8, [
@@ -26008,12 +25883,12 @@ let __tla = Promise.all([
         ], 2);
       };
     }
-  }), e0 = N(t0, [
+  }), Hs = N(Rs, [
     [
       "__scopeId",
-      "data-v-1e978b50"
+      "data-v-945527c4"
     ]
-  ]), i0 = {
+  ]), Us = {
     width: "40",
     height: "40",
     viewBox: "0 0 40 40",
@@ -26021,37 +25896,37 @@ let __tla = Promise.all([
     xmlns: "http://www.w3.org/2000/svg",
     class: "absolute left-1 top-0 transition-colors",
     title: "search icon"
-  }, s0 = [
+  }, Ns = [
     "stroke"
-  ], r0 = [
+  ], Ws = [
     "stroke"
-  ], o0 = A({
+  ], Gs = I({
     __name: "SvgSearch",
     props: {
       color: {}
     },
     setup(t) {
-      return (e, i) => (n(), _("svg", i0, [
+      return (e, i) => (n(), p("svg", Us, [
         o("circle", {
           cx: "19",
           cy: "19",
           r: "8.75",
           stroke: e.color,
           "stroke-width": "2.5"
-        }, null, 8, s0),
+        }, null, 8, Ns),
         o("path", {
           d: "M25 26L30 31",
           stroke: e.color,
           "stroke-width": "2.5",
           "stroke-linecap": "round"
-        }, null, 8, r0)
+        }, null, 8, Ws)
       ]));
     }
-  }), a0 = {
+  }), Ks = {
     class: "w-[90%] relative m-3 max-w-[400px] md:absolute md:-top-16"
-  }, n0 = [
+  }, Ys = [
     "placeholder"
-  ], l0 = A({
+  ], Xs = I({
     __name: "HomeSearch",
     props: {
       modelValue: {},
@@ -26061,42 +25936,42 @@ let __tla = Promise.all([
       "update:modelValue"
     ],
     setup(t) {
-      const e = it(t, "modelValue"), i = S("#CCCCCC"), r = U(() => e.value);
-      function s() {
-        i.value = "#B7EC5D";
+      const e = it(t, "modelValue"), i = S("#CCCCCC"), s = U(() => e.value);
+      function r() {
+        i.value = "#b7ec5d";
       }
       function a() {
-        i.value = "#CCCCCC";
+        i.value = "#ffffff";
       }
       function u() {
         e.value = "";
       }
-      return (b, p) => (n(), _("label", a0, [
-        y(o0, {
+      return (b, _) => (n(), p("label", Ks, [
+        C(Gs, {
           color: i.value
         }, null, 8, [
           "color"
         ]),
-        st(y(O, {
+        st(C(O, {
           name: "close_s",
           class: "absolute right-1 top-0 w-10 h-10",
           onClick: u
         }, null, 512), [
           [
             ct,
-            r.value
+            s.value
           ]
         ]),
         st(o("input", {
-          "onUpdate:modelValue": p[0] || (p[0] = (v) => e.value = v),
+          "onUpdate:modelValue": _[0] || (_[0] = (v) => e.value = v),
           type: "text",
           class: "input pl-12",
           placeholder: b.$t("placeholder.keyword"),
-          onFocus: s,
+          onFocus: r,
           onBlur: a
-        }, null, 40, n0), [
+        }, null, 40, Ys), [
           [
-            ee,
+            Qt,
             e.value,
             void 0,
             {
@@ -26106,102 +25981,102 @@ let __tla = Promise.all([
         ])
       ]));
     }
-  }), c0 = {
+  }), Js = {
     class: "sign-files"
-  }, d0 = {
+  }, Qs = {
     class: "hidden md:flex items-end w-full px-4 py-5"
-  }, u0 = {
+  }, t0 = {
     class: "w-[300px] flex items-center pl-6 gap-5 h-6"
-  }, _0 = {
+  }, e0 = {
     class: "w-7 h-8 flex items-center justify-center hover:bg-gray-50/15 cursor-pointer transition-colors rounded"
-  }, p0 = {
+  }, i0 = {
     class: "flex justify-between items-end flex-1"
-  }, b0 = {
+  }, s0 = {
     class: "flex gap-1"
-  }, f0 = {
+  }, r0 = {
     key: 1,
     class: "w-[80%] h-[calc(100%-60px)] flex flex-col items-center justify-center"
-  }, m0 = {
-    class: "text-gray-40 text-center mb-3"
-  }, h0 = {
-    class: "text-gray-40 text-center"
-  }, g0 = {
+  }, o0 = {
+    class: "text-center mb-3"
+  }, a0 = {
     class: "text-center"
-  }, v0 = {
+  }, n0 = {
+    class: "text-center"
+  }, l0 = {
     class: "flex justify-between md:justify-evenly"
-  }, k0 = A({
+  }, c0 = I({
     __name: "HomeSignFiles",
     props: {
       type: {},
       list: {}
     },
     setup(t) {
-      const e = S(""), i = S("list"), r = S(false), s = S(false), a = S(null), u = /* @__PURE__ */ new Set(), { deleteTrash: b, batchDeleteTrash: p } = Y(), { isShowWarnPopup: v, SignPopup: f, toggleWarnPopup: C } = ut(), k = gt(() => vt(() => import("../chunks/SignEncryption-qXNtzy3g.js").then(async (m3) => {
+      const e = S(""), i = S("list"), s = S(false), r = S(false), a = S(null), u = /* @__PURE__ */ new Set(), { deleteTrash: b, batchDeleteTrash: _ } = Y(), { isShowWarnPopup: v, SignPopup: h, toggleWarnPopup: y } = ut(), k = gt(() => vt(() => import("../chunks/SignEncryption-DMDbHRFr.js").then(async (m3) => {
         await m3.__tla;
         return m3;
-      }).then((P) => P.S), __vite__mapDeps([0,1,2]), import.meta.url)), $ = U(() => i.value === "list"), w = U(() => $.value && s.value === false), x = U(() => {
-        const P = e.value.toLowerCase();
-        return t.list.filter(({ name: H }) => H.toLowerCase().includes(P));
+      }).then((x) => x.S), __vite__mapDeps([0,1,2]), import.meta.url)), j = U(() => i.value === "list"), w = U(() => j.value && r.value === false), P = U(() => {
+        const x = e.value.toLowerCase();
+        return t.list.filter(({ name: H }) => H.toLowerCase().includes(x));
       });
-      function M(P) {
-        i.value = P;
+      function M(x) {
+        i.value = x;
       }
-      function T(P) {
-        C(true), P && (a.value = P);
+      function T(x) {
+        y(true), x && (a.value = x);
       }
       function g() {
-        C(false), a.value = null;
+        y(false), a.value = null;
       }
-      function h(P) {
-        r.value = true, a.value = P;
+      function m(x) {
+        s.value = true, a.value = x;
       }
-      function D() {
-        r.value = false, a.value = null;
+      function $() {
+        s.value = false, a.value = null;
       }
       function q() {
-        a.value ? (b(a.value.PDFId), j(a.value, false)) : (p(u), d()), g();
+        a.value ? (b(a.value.PDFId), D(a.value, false)) : (_(u), d()), g();
       }
-      function j(P, H) {
-        H ? u.add(P) : u.delete(P), B();
+      function D(x, H) {
+        H ? u.add(x) : u.delete(x), B();
       }
-      function m() {
-        if (!s.value) {
+      function f() {
+        if (!r.value) {
           u.clear();
           return;
         }
-        t.list.forEach((P) => u.add(P));
+        t.list.forEach((x) => u.add(x));
       }
       function d() {
         u.clear(), B();
       }
       async function B() {
-        if (await Wt(), !u.size) {
-          s.value = false;
+        if (await Nt(), !u.size) {
+          r.value = false;
           return;
         }
-        s.value = u.size === t.list.length ? true : "mixed";
+        r.value = u.size === t.list.length ? true : "mixed";
       }
-      return Ge(B), (P, H) => (n(), _("div", c0, [
-        y(l0, {
+      return We(B), (x, H) => (n(), p("div", Js, [
+        C(Xs, {
           modelValue: e.value,
-          "onUpdate:modelValue": H[0] || (H[0] = (K) => e.value = K)
+          "onUpdate:modelValue": H[0] || (H[0] = (G) => e.value = G)
         }, null, 8, [
           "modelValue"
         ]),
-        o("div", d0, [
-          o("div", u0, [
-            o("div", _0, [
-              y(l(Ji), {
-                modelValue: s.value,
-                "onUpdate:modelValue": H[1] || (H[1] = (K) => s.value = K),
-                onChange: m
+        o("div", Qs, [
+          o("div", t0, [
+            o("div", e0, [
+              C(l(Ri), {
+                modelValue: r.value,
+                "onUpdate:modelValue": H[1] || (H[1] = (G) => r.value = G),
+                onChange: f
               }, null, 8, [
                 "modelValue"
               ])
             ]),
-            s.value ? (n(), L(l(Ki), {
+            r.value ? (n(), E(l(Oi), {
               key: 0,
-              type: P.type,
+              type: x.type,
               batch: l(u),
               onClearBatch: d,
               onOpenWarnPopup: T
@@ -26210,71 +26085,71 @@ let __tla = Promise.all([
               "batch"
             ])) : Z("", true),
             o("p", {
-              class: F([
+              class: L([
                 "text-sm",
                 {
-                  "opacity-0": s.value
+                  "opacity-0": r.value
                 }
               ])
-            }, c(w.value ? P.$t("setup_time") : P.$t("batch_operation")), 3)
+            }, c(w.value ? x.$t("setup_time") : x.$t("batch_operation")), 3)
           ]),
-          o("div", p0, [
+          o("div", i0, [
             o("p", {
-              class: F([
+              class: L([
                 "text-sm h-6",
                 {
                   "opacity-0": !w.value
                 }
               ])
-            }, c(P.$t("project_name")), 3),
-            o("div", b0, [
-              y(O, {
+            }, c(x.$t("project_name")), 3),
+            o("div", s0, [
+              C(O, {
                 name: "list",
-                class: F([
+                class: L([
                   "w-10 h-10",
                   {
-                    "text-primary": $.value
+                    "text-primary": j.value
                   }
                 ]),
-                onClick: H[2] || (H[2] = (K) => M("list"))
+                onClick: H[2] || (H[2] = (G) => M("list"))
               }, null, 8, [
                 "class"
               ]),
-              y(O, {
+              C(O, {
                 name: "card",
-                class: F([
+                class: L([
                   "w-10 h-10",
                   {
                     "text-primary": i.value === "card"
                   }
                 ]),
-                onClick: H[3] || (H[3] = (K) => M("card"))
+                onClick: H[3] || (H[3] = (G) => M("card"))
               }, null, 8, [
                 "class"
               ])
             ])
           ])
         ]),
-        x.value.length ? (n(), _("ul", {
+        P.value.length ? (n(), p("ul", {
           key: 0,
-          class: F([
+          class: L([
             "w-full h-[calc(100%-60px)] overflow-y-auto gap-6 px-4",
             {
-              "md:flex md:flex-row md:flex-wrap md:gap-4": !$.value
+              "md:flex md:flex-row md:flex-wrap md:gap-4": !j.value
             }
           ])
         }, [
-          (n(true), _(X, null, at(x.value, (K, rt) => (n(), L(e0, {
-            key: K.PDFId,
-            file: K,
+          (n(true), p(J, null, nt(P.value, (G, rt) => (n(), E(Hs, {
+            key: G.PDFId,
+            file: G,
             index: rt,
-            type: P.type,
-            "is-list-status": $.value,
+            type: x.type,
+            "is-list-status": j.value,
             keyword: e.value,
-            "is-select-all": s.value,
+            "is-select-all": r.value,
             onOpenWarnPopup: T,
-            onOpenEncryptPopup: h,
-            onSelectFile: j
+            onOpenEncryptPopup: m,
+            onSelectFile: D
           }, null, 8, [
             "file",
             "index",
@@ -26283,196 +26158,189 @@ let __tla = Promise.all([
             "keyword",
             "is-select-all"
           ]))), 128))
-        ], 2)) : (n(), _("div", f0, [
+        ], 2)) : (n(), p("div", r0, [
           H[4] || (H[4] = o("img", {
-            src: Ns,
+            src: As,
             alt: "Search Icon",
             class: "mb-10"
           }, null, -1)),
-          o("h3", m0, c(P.$t("prompt.un_found")), 1),
-          o("p", h0, c(P.$t("prompt.try_another")), 1)
+          o("h3", o0, c(x.$t("prompt.un_found")), 1),
+          o("p", a0, c(x.$t("prompt.try_another")), 1)
         ])),
-        l(v) ? (n(), L(l(f), {
+        l(v) ? (n(), E(l(h), {
           key: 2,
-          title: P.$t("warn")
+          title: x.$t("warn")
         }, {
-          default: G(() => [
-            o("p", g0, c(P.$t("prompt.sure_delete_file")), 1),
-            o("div", v0, [
+          default: K(() => [
+            o("p", n0, c(x.$t("prompt.sure_delete_file")), 1),
+            o("div", l0, [
               o("button", {
                 class: "btn btn-base",
                 onClick: g
-              }, c(P.$t("not_yet")), 1),
+              }, c(x.$t("not_yet")), 1),
               o("button", {
                 class: "btn btn-primary",
                 onClick: q
-              }, c(P.$t("confirm")), 1)
+              }, c(x.$t("confirm")), 1)
             ])
           ]),
           _: 1
         }, 8, [
           "title"
         ])) : Z("", true),
-        r.value ? (n(), L(l(k), {
+        s.value ? (n(), E(l(k), {
           key: 3,
           file: a.value,
-          onCloseEncryptPopup: D
+          onCloseEncryptPopup: $
         }, null, 8, [
           "file"
         ])) : Z("", true)
       ]));
     }
-  }), oe = N(k0, [
+  }), ie = N(c0, [
     [
       "__scopeId",
-      "data-v-e745338c"
+      "data-v-bacbdbb7"
     ]
-  ]), w0 = {
+  ]), d0 = {
     class: "index-archives index-container"
-  }, y0 = {
+  }, u0 = {
     key: 1,
     class: "h-full flex flex-col items-center justify-center gap-[35px]"
-  }, C0 = {
-    class: "text-gray-40 text-center"
-  }, x0 = {
+  }, _0 = {
+    class: "text-center"
+  }, p0 = {
     class: "mb-2"
-  }, P0 = A({
+  }, b0 = I({
     __name: "HomeArchives",
     setup(t) {
-      const { archiveList: e } = nt(Y());
-      return (i, r) => (n(), _("div", w0, [
-        l(e).length ? (n(), L(oe, {
+      const { archiveList: e } = at(Y());
+      return (i, s) => (n(), p("div", d0, [
+        l(e).length ? (n(), E(ie, {
           key: 0,
           type: "archive",
           list: l(e)
         }, null, 8, [
           "list"
-        ])) : (n(), _("div", y0, [
-          r[0] || (r[0] = o("img", {
-            src: Us,
+        ])) : (n(), p("div", u0, [
+          s[0] || (s[0] = o("img", {
+            src: Fs,
             alt: "archive icon"
           }, null, -1)),
-          o("div", C0, [
-            o("h5", x0, c(i.$t("prompt.no_items")), 1),
+          o("div", _0, [
+            o("h5", p0, c(i.$t("prompt.no_items")), 1),
             o("p", null, c(i.$t("prompt.archived_projects")), 1)
           ])
         ]))
       ]));
     }
-  }), ht = "data:image/svg+xml,%3csvg%20width='136'%20height='136'%20viewBox='0%200%20136%20136'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='68'%20cy='68'%20r='67'%20fill='%234D4D4D'%20stroke='%23B7EC5D'%20stroke-width='2'/%3e%3cpath%20d='M62.2%2046.6591C62.8459%2041.6538%2062.1627%2036.8045%2063.0643%2031.8457C63.5607%2030.3566%2068.0278%2030.8528%2068.0278%2030.8528C68.0278%2030.8528%2071.4729%2031.3493%2072.495%2031.3493C73.6642%2031.3493%2072.9339%2041.5016%2072.9913%2042.7656C73.2243%2047.8908%2073.3805%2049.5021%2073.3805%2054.6436C73.3805%2058.1819%2073.18%2060.6342%2073.3805%2062.5389C73.3805%2063.6123%2078.4808%2063.5603%2079.4439%2063.6123C82.8447%2063.7962%2085.6529%2063.9421%2089.2491%2063.9421C92.8453%2063.9421%2095.6801%2063.7601%2099.7943%2063.9421C102.12%2064.0449%20103.587%2063.581%20104.851%2063.9421C105.34%2064.082%20105.254%2068.5758%20105.254%2068.5758C105.254%2068.5758%20104.9%2072.1452%20104.851%2073.9644C104.835%2074.5251%20104.864%2074.9666%20104.149%2074.9666C97.2232%2074.9666%2090.271%2075.1452%2083.3471%2074.9555C82.1535%2074.9228%2073.3805%2073.3765%2073.3805%2074.6771C73.3805%2076.6381%2073.5916%2078.7265%2073.2802%2080.657C73.0315%2082.199%2073.18%2083.8302%2073.18%2085.3898C73.18%2087.2583%2073.5608%2088.5717%2073.2802%2090.4153C73.3805%2092.31%2072.7903%2094.9927%2073.18%2098.8532C73.3805%20100.839%2073.6533%20103.97%2072.7903%20104.833C72.2495%20105.374%2069.302%20104.833%2068.592%20104.833C67.78%20104.833%2067.0104%20105.034%2066.1867%20105.034C65.7049%20105.034%2062.6647%20105.347%2063.0643%20104.388C63.3187%20103.777%2063.1645%20102.848%2063.1645%20102.183C63.1645%20100.122%2062.9275%2097.9198%2063.1645%2095.8751C63.5682%2092.3939%2062.7283%2088.8761%2063.0643%2085.3898C63.4212%2081.6876%2063.1645%2078.4013%2063.1645%2074.6771C63.1645%2073.8525%2062.3089%2073.3185%2061.4051%2073.3185H57.8022C52.1897%2073.3185%2049.6833%2073.363%2044.0708%2073.363C41.7768%2073.363%2043.1621%2073.3185%2040.8681%2073.3185H33.2832C32.6342%2073.3185%2031.3151%2073.1483%2031.1451%2072.8508C30.8476%2072.3301%2030.7099%2071.7626%2030.8014%2071.0576C31.0019%2069.5126%2030.9678%2067.39%2031.0019%2065.5456C31.0109%2065.0615%2030.8661%2062.9398%2031.503%2062.9398H37.5574C39.7132%2062.9398%2042.6454%2062.7394%2047.7234%2062.7394C52.3095%2062.7394%2057.0091%2063.0439%2061.5542%2062.5389C62.4266%2062.442%2061.955%2057.9746%2061.955%2057.3051C61.955%2053.8085%2061.7527%2050.1261%2062.2%2046.6591Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", S0 = {
+  }), ht = "data:image/svg+xml,%3csvg%20width='136'%20height='136'%20viewBox='0%200%20136%20136'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='68'%20cy='68'%20r='67'%20fill='%234D4D4D'%20stroke='%23B7EC5D'%20stroke-width='2'/%3e%3cpath%20d='M62.2%2046.6591C62.8459%2041.6538%2062.1627%2036.8045%2063.0643%2031.8457C63.5607%2030.3566%2068.0278%2030.8528%2068.0278%2030.8528C68.0278%2030.8528%2071.4729%2031.3493%2072.495%2031.3493C73.6642%2031.3493%2072.9339%2041.5016%2072.9913%2042.7656C73.2243%2047.8908%2073.3805%2049.5021%2073.3805%2054.6436C73.3805%2058.1819%2073.18%2060.6342%2073.3805%2062.5389C73.3805%2063.6123%2078.4808%2063.5603%2079.4439%2063.6123C82.8447%2063.7962%2085.6529%2063.9421%2089.2491%2063.9421C92.8453%2063.9421%2095.6801%2063.7601%2099.7943%2063.9421C102.12%2064.0449%20103.587%2063.581%20104.851%2063.9421C105.34%2064.082%20105.254%2068.5758%20105.254%2068.5758C105.254%2068.5758%20104.9%2072.1452%20104.851%2073.9644C104.835%2074.5251%20104.864%2074.9666%20104.149%2074.9666C97.2232%2074.9666%2090.271%2075.1452%2083.3471%2074.9555C82.1535%2074.9228%2073.3805%2073.3765%2073.3805%2074.6771C73.3805%2076.6381%2073.5916%2078.7265%2073.2802%2080.657C73.0315%2082.199%2073.18%2083.8302%2073.18%2085.3898C73.18%2087.2583%2073.5608%2088.5717%2073.2802%2090.4153C73.3805%2092.31%2072.7903%2094.9927%2073.18%2098.8532C73.3805%20100.839%2073.6533%20103.97%2072.7903%20104.833C72.2495%20105.374%2069.302%20104.833%2068.592%20104.833C67.78%20104.833%2067.0104%20105.034%2066.1867%20105.034C65.7049%20105.034%2062.6647%20105.347%2063.0643%20104.388C63.3187%20103.777%2063.1645%20102.848%2063.1645%20102.183C63.1645%20100.122%2062.9275%2097.9198%2063.1645%2095.8751C63.5682%2092.3939%2062.7283%2088.8761%2063.0643%2085.3898C63.4212%2081.6876%2063.1645%2078.4013%2063.1645%2074.6771C63.1645%2073.8525%2062.3089%2073.3185%2061.4051%2073.3185H57.8022C52.1897%2073.3185%2049.6833%2073.363%2044.0708%2073.363C41.7768%2073.363%2043.1621%2073.3185%2040.8681%2073.3185H33.2832C32.6342%2073.3185%2031.3151%2073.1483%2031.1451%2072.8508C30.8476%2072.3301%2030.7099%2071.7626%2030.8014%2071.0576C31.0019%2069.5126%2030.9678%2067.39%2031.0019%2065.5456C31.0109%2065.0615%2030.8661%2062.9398%2031.503%2062.9398H37.5574C39.7132%2062.9398%2042.6454%2062.7394%2047.7234%2062.7394C52.3095%2062.7394%2057.0091%2063.0439%2061.5542%2062.5389C62.4266%2062.442%2061.955%2057.9746%2061.955%2057.3051C61.955%2053.8085%2061.7527%2050.1261%2062.2%2046.6591Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", f0 = {
     class: "index-files index-container"
-  }, $0 = {
+  }, m0 = {
     key: 1,
     class: "h-full flex flex-col items-center justify-center gap-5"
-  }, D0 = {
+  }, h0 = {
     class: "text-center"
-  }, j0 = A({
+  }, g0 = I({
     __name: "HomeFiles",
     setup(t) {
-      const { goPage: e } = re(), { PDFList: i } = nt(Y());
-      return (r, s) => (n(), _("div", S0, [
-        l(i).length ? (n(), L(oe, {
+      const { goPage: e } = ye(), { PDFList: i } = at(Y());
+      return (s, r) => (n(), p("div", f0, [
+        l(i).length ? (n(), E(ie, {
           key: 0,
           type: "file",
           list: l(i)
         }, null, 8, [
           "list"
-        ])) : (n(), _("div", $0, [
+        ])) : (n(), p("div", m0, [
           o("img", {
             src: ht,
             alt: "create file",
             class: "iconScale w-[80px] h-[80] md:w-[136px] md:h-[136px]",
-            onClick: s[0] || (s[0] = (a) => l(e)("upload"))
+            onClick: r[0] || (r[0] = (a) => l(e)("upload"))
           }),
-          o("h3", D0, c(r.$t("prompt.create_file")), 1)
+          o("h3", h0, c(s.$t("prompt.create_file")), 1)
         ]))
       ]));
     }
-  }), M0 = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15%2039.8833C17.5%2039.8833%2020.5%2039.7924%2020.5%2039.7924C20.5%2039.7924%2029.872%2039.5742%2034.0063%2039.5742C39.9053%2039.5742%2045.8044%2039.5742%2051.7035%2039.5742C56.1682%2039.5742%2062.6329%2039.5742%2067.0976%2039.5742C75.7673%2039.5742%2078.4247%2039.7924%2087.0858%2039.7924C100.603%2039.7924%20112.436%2039.8832%20126%2039.8832'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M48.0752%2039C48.0752%2033.3427%2047.906%2026.7393%2048.0752%2021.0968C48.1078%2020.0094%2048.4693%2018.9773%2048.5114%2017.9076C48.5661%2016.5158%2048.9123%2016.8415%2051.4741%2016.4087C53.5724%2015.8274%2055.7756%2016.0367%2057.9681%2016.0367C61.4896%2016.0367%2064.9903%2016.0123%2068.4966%2016.2174C70.0828%2016.3102%2071.6934%2016.2102%2073.2823%2016.228C74.9405%2016.2467%2076.5969%2016.5518%2078.2618%2016.6214C80.484%2016.7142%2082.6812%2016.8021%2084.9133%2016.8021C87.1525%2016.8021%2090.3764%2016.4928%2092.5526%2016.4194C93.8768%2016.3747%2093.5943%2021.7948%2093.6794%2022.9146C93.9248%2026.1444%2094%2030.2186%2094%2033.4509C94%2035.3088%2093.7819%2041.1797%2093.7819%2043'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M30%2035C30%2036.1871%2030.2187%2043.3205%2030.2187%2044.5345C30.2187%2046.8984%2030.1856%2049.5525%2030.5467%2051.893C31.4233%2057.5754%2030.8747%2063.5893%2030.8747%2069.3172C30.8747%2071.8369%2031.2303%2074.353%2031.3242%2076.8726C31.4959%2081.4807%2032.2162%2085.3052%2032.5147%2090.7282C32.8968%2097.6671%2032.3462%20101.587%2032.7942%20108.522C33.1104%20113.417%2033.7904%20120.39%2034.9019%20122.131C36.0134%20123.872%2043.3799%20123.762%2044.4688%20123.762C48.0403%20122.857%2055.1129%20123.762%2058.9316%20123.762C66.8081%20123.762%2071.848%20123.261%2079.6994%20123.872C84.4124%20124.24%2089.051%20123.716%2093.7309%20123.54C96.6568%20123.43%20102.98%20124.357%20105.669%20123.146C107.679%20122.241%20107.799%20117.622%20107.799%20113.001C107.799%20108.991%20107.953%20105.124%20108.145%20101.809C108.579%2094.3379%20108.899%2088.7109%20109.378%2080.318C109.979%2069.8038%20110.056%2062.6519%20110.179%2053.6668C110.231%2049.8878%20111%2043.8477%20111%2040.0923'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M58.6807%2065.4473C58.6807%2068.815%2059.2792%2072.1775%2059.5534%2075.5322C60.0362%2081.4398%2059.9898%2087.4023%2059.9898%2093.3264C59.9898%2097.933%2060.208%20102.514%2060.208%20107.121'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M80.9521%2067.1855C80.4987%2076.9134%2080.4748%2086.6247%2080.2479%2096.3484C80.2084%2098.0434%2080.5278%2099.7148%2080.4468%20101.454'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", B0 = {
+  }), v0 = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15%2039.8833C17.5%2039.8833%2020.5%2039.7924%2020.5%2039.7924C20.5%2039.7924%2029.872%2039.5742%2034.0063%2039.5742C39.9053%2039.5742%2045.8044%2039.5742%2051.7035%2039.5742C56.1682%2039.5742%2062.6329%2039.5742%2067.0976%2039.5742C75.7673%2039.5742%2078.4247%2039.7924%2087.0858%2039.7924C100.603%2039.7924%20112.436%2039.8832%20126%2039.8832'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M48.0752%2039C48.0752%2033.3427%2047.906%2026.7393%2048.0752%2021.0968C48.1078%2020.0094%2048.4693%2018.9773%2048.5114%2017.9076C48.5661%2016.5158%2048.9123%2016.8415%2051.4741%2016.4087C53.5724%2015.8274%2055.7756%2016.0367%2057.9681%2016.0367C61.4896%2016.0367%2064.9903%2016.0123%2068.4966%2016.2174C70.0828%2016.3102%2071.6934%2016.2102%2073.2823%2016.228C74.9405%2016.2467%2076.5969%2016.5518%2078.2618%2016.6214C80.484%2016.7142%2082.6812%2016.8021%2084.9133%2016.8021C87.1525%2016.8021%2090.3764%2016.4928%2092.5526%2016.4194C93.8768%2016.3747%2093.5943%2021.7948%2093.6794%2022.9146C93.9248%2026.1444%2094%2030.2186%2094%2033.4509C94%2035.3088%2093.7819%2041.1797%2093.7819%2043'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M30%2035C30%2036.1871%2030.2187%2043.3205%2030.2187%2044.5345C30.2187%2046.8984%2030.1856%2049.5525%2030.5467%2051.893C31.4233%2057.5754%2030.8747%2063.5893%2030.8747%2069.3172C30.8747%2071.8369%2031.2303%2074.353%2031.3242%2076.8726C31.4959%2081.4807%2032.2162%2085.3052%2032.5147%2090.7282C32.8968%2097.6671%2032.3462%20101.587%2032.7942%20108.522C33.1104%20113.417%2033.7904%20120.39%2034.9019%20122.131C36.0134%20123.872%2043.3799%20123.762%2044.4688%20123.762C48.0403%20122.857%2055.1129%20123.762%2058.9316%20123.762C66.8081%20123.762%2071.848%20123.261%2079.6994%20123.872C84.4124%20124.24%2089.051%20123.716%2093.7309%20123.54C96.6568%20123.43%20102.98%20124.357%20105.669%20123.146C107.679%20122.241%20107.799%20117.622%20107.799%20113.001C107.799%20108.991%20107.953%20105.124%20108.145%20101.809C108.579%2094.3379%20108.899%2088.7109%20109.378%2080.318C109.979%2069.8038%20110.056%2062.6519%20110.179%2053.6668C110.231%2049.8878%20111%2043.8477%20111%2040.0923'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M58.6807%2065.4473C58.6807%2068.815%2059.2792%2072.1775%2059.5534%2075.5322C60.0362%2081.4398%2059.9898%2087.4023%2059.9898%2093.3264C59.9898%2097.933%2060.208%20102.514%2060.208%20107.121'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M80.9521%2067.1855C80.4987%2076.9134%2080.4748%2086.6247%2080.2479%2096.3484C80.2084%2098.0434%2080.5278%2099.7148%2080.4468%20101.454'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", k0 = {
     class: "index-trash index-container"
-  }, T0 = {
+  }, w0 = {
     key: 1,
     class: "h-full flex flex-col items-center justify-center gap-[35px]"
-  }, z0 = {
-    class: "text-gray-40 text-center"
-  }, F0 = {
+  }, y0 = {
+    class: "text-center"
+  }, x0 = {
     class: "mb-2"
-  }, L0 = {
+  }, C0 = {
     class: "absolute w-full flex justify-center left-0 -bottom-4 md:-bottom-3"
-  }, A0 = {
+  }, P0 = {
     class: "index-trash-warn shadow shadow-primary"
-  }, E0 = A({
+  }, S0 = I({
     __name: "HomeTrash",
     setup(t) {
-      const { trashList: e } = nt(Y());
-      return Y().filterTrash(), (i, r) => (n(), _("div", B0, [
-        l(e).length ? (n(), L(oe, {
+      const { trashList: e } = at(Y());
+      return Y().filterTrash(), (i, s) => (n(), p("div", k0, [
+        l(e).length ? (n(), E(ie, {
           key: 0,
           type: "trash",
           list: l(e)
         }, null, 8, [
           "list"
-        ])) : (n(), _("div", T0, [
-          r[0] || (r[0] = o("img", {
-            src: M0,
+        ])) : (n(), p("div", w0, [
+          s[0] || (s[0] = o("img", {
+            src: v0,
             alt: "trash icon"
           }, null, -1)),
-          o("div", z0, [
-            o("h5", F0, c(i.$t("prompt.no_items")), 1),
+          o("div", y0, [
+            o("h5", x0, c(i.$t("prompt.no_items")), 1),
             o("p", null, c(i.$t("prompt.deleted_projects")), 1)
           ])
         ])),
-        o("div", L0, [
-          o("p", A0, c(i.$t("prompt.trash_shelf_life")), 1)
+        o("div", C0, [
+          o("p", P0, c(i.$t("prompt.trash_shelf_life")), 1)
         ])
       ]));
     }
-  }), I0 = N(E0, [
+  }), $0 = N(S0, [
     [
       "__scopeId",
-      "data-v-69281099"
+      "data-v-6bb5f082"
     ]
-  ]), Z0 = {
+  ]), D0 = {
     class: "index-content content"
-  }, O0 = {
+  }, j0 = {
     class: "title"
-  }, q0 = A({
+  }, M0 = I({
     __name: "HomeContent",
     props: {
       currentTab: {}
     },
     setup(t) {
-      const { goPage: e } = re(), i = U(() => ({
+      const e = U(() => ({
         file: "my_files",
         archive: "archived_files",
         trash: "trash_bin"
-      })[t.currentTab]), r = U(() => ({
-        file: j0,
-        archive: P0,
-        trash: I0
+      })[t.currentTab]), i = U(() => ({
+        file: g0,
+        archive: b0,
+        trash: $0
       })[t.currentTab]);
-      return (s, a) => (n(), _("div", Z0, [
-        o("img", {
-          src: Hs,
-          alt: "Add File Svg",
-          class: "index-content-add iconScale",
-          onClick: a[0] || (a[0] = (u) => l(e)("upload"))
-        }),
-        o("h5", O0, c(s.$t(i.value)), 1),
-        y(At),
-        (n(), L(Ke, null, [
-          (n(), L(ge(r.value)))
+      return (s, r) => (n(), p("div", D0, [
+        o("h5", j0, c(s.$t(e.value)), 1),
+        (n(), E(Ge, null, [
+          (n(), E(me(i.value)))
         ], 1024))
       ]));
     }
-  }), R0 = N(q0, [
+  }), B0 = N(M0, [
     [
       "__scopeId",
-      "data-v-17dc7c8b"
+      "data-v-6472ed17"
     ]
-  ]), V0 = "data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M21.9523%205H14.9997C11.857%205%2010.2856%205%209.30932%205.97631C8.33301%206.95262%208.33301%208.52397%208.33301%2011.6667V28.3333C8.33301%2031.476%208.33301%2033.0474%209.30932%2034.0237C10.2856%2035%2011.857%2035%2014.9997%2035H24.9997C28.1424%2035%2029.7137%2035%2030.69%2034.0237C31.6663%2033.0474%2031.6663%2031.476%2031.6663%2028.3333V14.714C31.6663%2014.0328%2031.6663%2013.6922%2031.5395%2013.3859C31.4126%2013.0796%2031.1717%2012.8387%2030.69%2012.357L24.3093%205.97631C23.8276%205.49459%2023.5867%205.25373%2023.2805%205.12687C22.9742%205%2022.6335%205%2021.9523%205Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'/%3e%3cpath%20d='M15%2021.666L25%2021.666'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M15%2028.334L21.6667%2028.334'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M21.667%205V11.6667C21.667%2013.238%2021.667%2014.0237%2022.1551%2014.5118C22.6433%2015%2023.429%2015%2025.0003%2015H31.667'%20stroke='%23B7EC5D'%20stroke-width='2.5'/%3e%3c/svg%3e", H0 = "data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_73_12300)'%3e%3cpath%20d='M31.6667%207.61914H8.33333C6.49238%207.61914%205%209.11152%205%2010.9525C5%2012.7934%206.49238%2014.2858%208.33333%2014.2858H31.6667C33.5076%2014.2858%2035%2012.7934%2035%2010.9525C35%209.11152%2033.5076%207.61914%2031.6667%207.61914Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M8.33301%2014.2852V30.9518C8.33301%2031.8359%208.6842%2032.6837%209.30932%2033.3088C9.93444%2033.934%2010.7823%2034.2852%2011.6663%2034.2852H28.333C29.2171%2034.2852%2030.0649%2033.934%2030.69%2033.3088C31.3152%2032.6837%2031.6663%2031.8359%2031.6663%2030.9518V14.2852'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M16.667%2020.9531H23.3337'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_73_12300'%3e%3crect%20width='40'%20height='40'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e", U0 = "data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cmask%20id='path-1-inside-1_73_12301'%20fill='white'%3e%3crect%20x='13.333'%20y='4.76172'%20width='13.3333'%20height='8.57143'%20rx='2'/%3e%3c/mask%3e%3crect%20x='13.333'%20y='4.76172'%20width='13.3333'%20height='8.57143'%20rx='2'%20stroke='%23B7EC5D'%20stroke-width='5'%20mask='url(%23path-1-inside-1_73_12301)'/%3e%3cpath%20d='M4.76191%2012.3809H35.2381'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M10.734%2032.3135L9.87715%2012.6777H30.1228L29.266%2032.3135C29.2251%2033.2495%2028.4545%2033.9873%2027.5176%2033.9873H12.4823C11.5455%2033.9873%2010.7748%2033.2495%2010.734%2032.3135Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'/%3e%3cpath%20d='M17.1426%2019.0469V28.5707'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M22.8574%2019.0469V28.5707'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e", N0 = {
+  ]), T0 = "data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M21.9523%205H14.9997C11.857%205%2010.2856%205%209.30932%205.97631C8.33301%206.95262%208.33301%208.52397%208.33301%2011.6667V28.3333C8.33301%2031.476%208.33301%2033.0474%209.30932%2034.0237C10.2856%2035%2011.857%2035%2014.9997%2035H24.9997C28.1424%2035%2029.7137%2035%2030.69%2034.0237C31.6663%2033.0474%2031.6663%2031.476%2031.6663%2028.3333V14.714C31.6663%2014.0328%2031.6663%2013.6922%2031.5395%2013.3859C31.4126%2013.0796%2031.1717%2012.8387%2030.69%2012.357L24.3093%205.97631C23.8276%205.49459%2023.5867%205.25373%2023.2805%205.12687C22.9742%205%2022.6335%205%2021.9523%205Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'/%3e%3cpath%20d='M15%2021.666L25%2021.666'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M15%2028.334L21.6667%2028.334'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M21.667%205V11.6667C21.667%2013.238%2021.667%2014.0237%2022.1551%2014.5118C22.6433%2015%2023.429%2015%2025.0003%2015H31.667'%20stroke='%23B7EC5D'%20stroke-width='2.5'/%3e%3c/svg%3e", z0 = "data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_73_12300)'%3e%3cpath%20d='M31.6667%207.61914H8.33333C6.49238%207.61914%205%209.11152%205%2010.9525C5%2012.7934%206.49238%2014.2858%208.33333%2014.2858H31.6667C33.5076%2014.2858%2035%2012.7934%2035%2010.9525C35%209.11152%2033.5076%207.61914%2031.6667%207.61914Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M8.33301%2014.2852V30.9518C8.33301%2031.8359%208.6842%2032.6837%209.30932%2033.3088C9.93444%2033.934%2010.7823%2034.2852%2011.6663%2034.2852H28.333C29.2171%2034.2852%2030.0649%2033.934%2030.69%2033.3088C31.3152%2032.6837%2031.6663%2031.8359%2031.6663%2030.9518V14.2852'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M16.667%2020.9531H23.3337'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_73_12300'%3e%3crect%20width='40'%20height='40'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e", F0 = "data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cmask%20id='path-1-inside-1_73_12301'%20fill='white'%3e%3crect%20x='13.333'%20y='4.76172'%20width='13.3333'%20height='8.57143'%20rx='2'/%3e%3c/mask%3e%3crect%20x='13.333'%20y='4.76172'%20width='13.3333'%20height='8.57143'%20rx='2'%20stroke='%23B7EC5D'%20stroke-width='5'%20mask='url(%23path-1-inside-1_73_12301)'/%3e%3cpath%20d='M4.76191%2012.3809H35.2381'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M10.734%2032.3135L9.87715%2012.6777H30.1228L29.266%2032.3135C29.2251%2033.2495%2028.4545%2033.9873%2027.5176%2033.9873H12.4823C11.5455%2033.9873%2010.7748%2033.2495%2010.734%2032.3135Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'/%3e%3cpath%20d='M17.1426%2019.0469V28.5707'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M22.8574%2019.0469V28.5707'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e", A0 = {
     class: "index-menu"
-  }, W0 = A({
+  }, L0 = I({
     __name: "HomeMenu",
     props: {
       currentTab: {},
@@ -26483,71 +26351,71 @@ let __tla = Promise.all([
     ],
     setup(t) {
       const e = it(t, "currentTab");
-      function i(r) {
-        e.value = r;
+      function i(s) {
+        e.value = s;
       }
-      return (r, s) => (n(), _("ul", N0, [
+      return (s, r) => (n(), p("ul", A0, [
         o("li", {
-          class: F(e.value === "file" ? "bg-white" : "bg-gray-60"),
-          onClick: s[0] || (s[0] = (a) => i("file"))
-        }, s[3] || (s[3] = [
+          class: L(e.value === "file" ? "bg-white" : "bg-gray-60"),
+          onClick: r[0] || (r[0] = (a) => i("file"))
+        }, r[3] || (r[3] = [
           o("img", {
-            src: V0,
+            src: T0,
             alt: "file icon"
           }, null, -1)
         ]), 2),
         o("li", {
-          class: F(e.value === "archive" ? "bg-white" : "bg-gray-60"),
-          onClick: s[1] || (s[1] = (a) => i("archive"))
-        }, s[4] || (s[4] = [
+          class: L(e.value === "archive" ? "bg-white" : "bg-gray-60"),
+          onClick: r[1] || (r[1] = (a) => i("archive"))
+        }, r[4] || (r[4] = [
           o("img", {
-            src: H0,
+            src: z0,
             alt: "archive icon"
           }, null, -1)
         ]), 2),
         o("li", {
-          class: F(e.value === "trash" ? "bg-white" : "bg-gray-60"),
-          onClick: s[2] || (s[2] = (a) => i("trash"))
-        }, s[5] || (s[5] = [
+          class: L(e.value === "trash" ? "bg-white" : "bg-gray-60"),
+          onClick: r[2] || (r[2] = (a) => i("trash"))
+        }, r[5] || (r[5] = [
           o("img", {
-            src: U0,
+            src: F0,
             alt: "trash icon"
           }, null, -1)
         ]), 2)
       ]));
     }
-  }), G0 = N(W0, [
+  }), E0 = N(L0, [
     [
       "__scopeId",
       "data-v-9304ff59"
     ]
-  ]), K0 = {
+  ]), I0 = {
     class: "index layout md:-translate-x-10"
-  }, Y0 = A({
+  }, Z0 = I({
     __name: "index",
     setup(t) {
       const e = S("file");
-      return (i, r) => (n(), _("div", K0, [
-        y(G0, {
+      return (i, s) => (n(), p("div", I0, [
+        C(E0, {
           "current-tab": e.value,
-          "onUpdate:currentTab": r[0] || (r[0] = (s) => e.value = s)
+          "onUpdate:currentTab": s[0] || (s[0] = (r) => e.value = r)
         }, null, 8, [
           "current-tab"
         ]),
-        y(R0, {
+        C(B0, {
           "current-tab": e.value
         }, null, 8, [
           "current-tab"
         ])
       ]));
     }
-  }), X0 = {
+  }), O0 = {
     class: "sign-step-btn"
-  }, J0 = [
+  }, q0 = [
     "disabled"
-  ], Q0 = [
+  ], V0 = [
     "disabled"
-  ], t2 = A({
+  ], R0 = I({
     __name: "SignStepBtn",
     props: {
       isPrevDisabled: {
@@ -26563,161 +26431,161 @@ let __tla = Promise.all([
     ],
     setup(t, { emit: e }) {
       const i = e;
-      return (r, s) => (n(), _("div", X0, [
+      return (s, r) => (n(), p("div", O0, [
         o("button", {
           class: "btn",
-          disabled: r.isPrevDisabled,
-          onClick: s[0] || (s[0] = (a) => i("prevStep"))
+          disabled: s.isPrevDisabled,
+          onClick: r[0] || (r[0] = (a) => i("prevStep"))
         }, [
-          s[2] || (s[2] = o("span", {
+          r[2] || (r[2] = o("span", {
             class: "text-4xl font-thin"
           }, "\u2190", -1)),
-          yt(c(r.$t("previous")), 1)
-        ], 8, J0),
+          yt(c(s.$t("previous")), 1)
+        ], 8, q0),
         o("button", {
           class: "btn btn-primary",
-          disabled: r.isNextDisabled,
-          onClick: s[1] || (s[1] = (a) => i("nextStep"))
+          disabled: s.isNextDisabled,
+          onClick: r[1] || (r[1] = (a) => i("nextStep"))
         }, [
-          yt(c(r.$t("next_step")), 1),
-          s[3] || (s[3] = o("span", {
+          yt(c(s.$t("next_step")), 1),
+          r[3] || (r[3] = o("span", {
             class: "text-4xl font-thin"
           }, "\u2192", -1))
-        ], 8, Q0)
+        ], 8, V0)
       ]));
     }
-  }), xe = N(t2, [
+  }), xe = N(R0, [
     [
       "__scopeId",
       "data-v-d68fbba4"
     ]
-  ]);
-  function Pe(t, e = false) {
-    const i = S([]), r = S(-1), s = S(null), a = S({
+  ]), H0 = 20 * 1024 * 1024, Ft = 15;
+  function Ce(t, e = false) {
+    const i = S([]), s = S(-1), r = S(null), a = S({
       height: 0,
       width: 0
-    }), u = new ResizeObserver(C), b = U(() => r.value >= t.value.pages), p = ui(async () => {
-      r.value && (r.value = 0, await f(0));
+    }), u = new ResizeObserver(y), b = U(() => s.value >= t.value.pages), _ = oi(async () => {
+      s.value && (s.value = 0, await h(0));
     }, 1e3);
     async function v(k) {
-      await Ct(100), i.value[k] = true, r.value += 1;
+      await zt(100), i.value[k] = true, s.value += 1;
     }
-    async function f(k) {
+    async function h(k) {
       var _a;
-      k >= t.value.pages || (await ((_a = s.value) == null ? void 0 : _a[k].reload()), await Ct(300), await f(k + 1));
+      k >= t.value.pages || (await ((_a = r.value) == null ? void 0 : _a[k].reload()), await zt(300), await h(k + 1));
     }
-    function C(k) {
-      k.forEach(({ contentRect: $ }) => {
-        a.value.height = $.height, a.value.width = $.width;
+    function y(k) {
+      k.forEach(({ contentRect: j }) => {
+        a.value.height = j.height, a.value.width = j.width;
       });
     }
-    return zt(() => {
+    return Tt(() => {
       var _a;
       return (_a = t.value) == null ? void 0 : _a.pages;
     }, (k) => {
-      k && (r.value = 0, i.value = Array.from({
+      k && (s.value = 0, i.value = Array.from({
         length: t.value.pages + 1
       }, () => false), i.value[0] = true);
     }, {
       immediate: true
-    }), e && zt(() => {
+    }), e && Tt(() => {
       var _a, _b;
-      return (_b = (_a = s.value) == null ? void 0 : _a[0]) == null ? void 0 : _b.canvasRef;
-    }, (k, $) => {
-      $ && u.unobserve($), k && u.observe(k);
-    }), te(() => {
+      return (_b = (_a = r.value) == null ? void 0 : _a[0]) == null ? void 0 : _b.canvasRef;
+    }, (k, j) => {
+      j && u.unobserve(j), k && u.observe(k);
+    }), Jt(() => {
       u.disconnect();
     }), {
-      canvasItems: s,
-      loadedState: de(i),
-      canvasRect: de(a),
+      canvasItems: r,
+      loadedState: ne(i),
+      canvasRect: ne(a),
       isCompleted: b,
       handleCanvasLoaded: v,
-      handleCanvasReload: p
+      handleCanvasReload: _
     };
   }
-  function e2(t) {
+  function U0(t) {
     let e = false, i = null;
-    function r() {
+    function s() {
       e = true;
     }
-    function s() {
+    function r() {
       i && (cancelAnimationFrame(i), i = null);
     }
-    function a(v, f, C) {
+    function a(v, h, y) {
       if (!t.value) return;
-      const { scrollTop: k, scrollLeft: $, scrollHeight: w, scrollWidth: x, clientHeight: M, clientWidth: T } = t.value, g = k + f, h = $ + v;
-      if (g < 0 || h < 0 || g + M > w || h + T > x) {
-        s();
+      const { scrollTop: k, scrollLeft: j, scrollHeight: w, scrollWidth: P, clientHeight: M, clientWidth: T } = t.value, g = k + h, m = j + v;
+      if (g < 0 || m < 0 || g + M > w || m + T > P) {
+        r();
         return;
       }
       i = requestAnimationFrame(() => {
         var _a;
         (_a = t.value) == null ? void 0 : _a.scrollTo({
           top: g,
-          left: h
-        }), i2(v, f, C), a(v, f, C);
+          left: m
+        }), N0(v, h, y), a(v, h, y);
       });
     }
     function u(v) {
       if (!e || !t.value) return;
-      const { clientX: f, clientY: C } = v.e instanceof TouchEvent ? v.e.touches[0] : v.e, k = b(f, C, v.transform);
-      let $ = 0, w = 0;
-      s(), ((k == null ? void 0 : k.left) || (k == null ? void 0 : k.right)) && ($ = k.left ? -15 : Ft), ((k == null ? void 0 : k.top) || (k == null ? void 0 : k.bottom)) && (w = k.top ? -15 : Ft), !(!$ && !w) && (i = window.requestAnimationFrame(() => {
-        a($, w, v.target);
+      const { clientX: h, clientY: y } = v.e instanceof TouchEvent ? v.e.touches[0] : v.e, k = b(h, y, v.transform);
+      let j = 0, w = 0;
+      r(), ((k == null ? void 0 : k.left) || (k == null ? void 0 : k.right)) && (j = k.left ? -15 : Ft), ((k == null ? void 0 : k.top) || (k == null ? void 0 : k.bottom)) && (w = k.top ? -15 : Ft), !(!j && !w) && (i = window.requestAnimationFrame(() => {
+        a(j, w, v.target);
       }));
     }
-    function b(v, f, C) {
+    function b(v, h, y) {
       if (!t.value) return null;
-      const k = t.value.getBoundingClientRect(), { height: $ = 0, width: w = 0, scaleX: x = 0, scaleY: M = 0, target: T } = C ?? {}, g = 20, h = (T == null ? void 0 : T.borderScaleFactor) ?? 1, D = (T == null ? void 0 : T.angle) ?? 0, { width: q, height: j } = s2(w * x, $ * M, D), m = (C == null ? void 0 : C.offsetX) ? (C.offsetX + q) % q : 0, d = (C == null ? void 0 : C.offsetY) ? (C.offsetY + j) % j : 0, B = d / h || g, P = (j - d) / h || g, H = m / h || g, K = (q - m) / h || g, rt = f <= k.top + B, ot = f >= k.bottom - P, R = v <= k.left + H, E = v >= k.right - K;
+      const k = t.value.getBoundingClientRect(), { height: j = 0, width: w = 0, scaleX: P = 0, scaleY: M = 0, target: T } = y ?? {}, g = 20, m = (T == null ? void 0 : T.borderScaleFactor) ?? 1, $ = (T == null ? void 0 : T.angle) ?? 0, { width: q, height: D } = W0(w * P, j * M, $), f = (y == null ? void 0 : y.offsetX) ? (y.offsetX + q) % q : 0, d = (y == null ? void 0 : y.offsetY) ? (y.offsetY + D) % D : 0, B = d / m || g, x = (D - d) / m || g, H = f / m || g, G = (q - f) / m || g, rt = h <= k.top + B, ot = h >= k.bottom - x, V = v <= k.left + H, F = v >= k.right - G;
       return {
         top: rt,
         bottom: ot,
-        left: R,
-        right: E
+        left: V,
+        right: F
       };
     }
-    function p() {
-      s(), e = false;
+    function _() {
+      r(), e = false;
     }
     return {
-      handlePointerDown: r,
+      handlePointerDown: s,
       handlePointerMove: u,
-      handlePointerUp: p
+      handlePointerUp: _
     };
   }
-  function i2(t, e, i) {
+  function N0(t, e, i) {
     var _a;
     i && (i.left += t * i.borderScaleFactor, i.top += e * i.borderScaleFactor, i.setCoords(), (_a = i.canvas) == null ? void 0 : _a.renderAll());
   }
-  function s2(t, e, i) {
-    const r = i * Math.PI / 180, s = Math.abs(t * Math.cos(r)) + Math.abs(e * Math.sin(r)), a = Math.abs(t * Math.sin(r)) + Math.abs(e * Math.cos(r));
+  function W0(t, e, i) {
+    const s = i * Math.PI / 180, r = Math.abs(t * Math.cos(s)) + Math.abs(e * Math.sin(s)), a = Math.abs(t * Math.sin(s)) + Math.abs(e * Math.cos(s));
     return {
-      width: s,
+      width: r,
       height: a
     };
   }
-  const Se = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M22.0571%2012.4497C23.3897%2011.0975%2027.3055%209.85066%2030.0895%209.27763C33.473%208.5812%2037.1868%208.79672%2040.632%208.83179C50.3019%208.93023%2063.6079%208.78722%2073.2636%208.83178C91.2312%208.9147%2094.1866%208.05573%20104.891%209.27763C115.596%2010.4995%20117.736%2011.7005%20122.467%2017.419C125.474%2021.0532%20126.305%2031.474%20126.305%2035.034V72.6746C126.305%2083.8705%20126.98%2090.4195%20125.976%20105.476C125.339%20109.861%20125.496%20115.414%20123.466%20119.28C119.649%20126.549%20109.409%20130.211%20104.891%20130.211H79.7899C66.8103%20130.211%2060.713%20131.286%2047.6604%20131.286C37.9108%20131.286%2031.8379%20132.176%2025.5713%20128.598C19.9386%20125.382%2017.5389%20122.683%2014.5268%20115.692C12.6731%20111.391%2013.1066%20105.221%2012.9993%20103.325C12.6677%2097.4641%2013.1783%2092.0674%2012.9666%2086.1717C12.4731%2072.4258%2012.1979%2058.4031%2012.9993%2044.6682C13.5373%2035.4483%2012.2062%2028.3163%2015.9875%2019.9778C17.3264%2015.676%2020.7364%2013.7899%2022.0571%2012.4497Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M8%20100.636C18.0405%2089.9465%2024.3907%2080.6421%2031.04%2074.8218C33.7043%2072.4898%2036.6642%2070.634%2039.5746%2068.692C40.9639%2067.765%2042.4043%2066.8967%2044.016%2066.5332C45.5391%2066.1898%2047.1386%2065.7111%2048.6814%2066.3467C51.5019%2067.5086%2053.6106%2070.5957%2055.4618%2073.0095C57.7258%2075.9617%2059.7103%2079.5336%2061.1722%2083.0038C62.4308%2085.9914%2064.2267%2089.9465%2064.2267%2089.9465C64.2267%2089.9465%2067.5687%2095.2586%2068.7449%2096.8226C69.3019%2097.5632%2072.5017%2098.2443%2073.2632%2097.9477C76.6962%2096.6106%2076.7751%2096.8085%2079.2875%2094.1174C80.284%2093.05%2082.7413%2089.9465%2084.8097%2087.731C86.3158%2086.1178%2088.505%2084.0366%2090.8316%2082.7906C93.0767%2081.5882%2096.0472%2081.7048%2098.3644%2082.7906C101.602%2084.3078%20103.226%2086.0187%20105.761%2088.7339C108.578%2091.7509%20111.815%2094.5458%20115.191%2096.8226C116.424%2097.6543%20117.9%2098.4279%20119.259%2099.0213C120.245%2099.4516%20120.955%2099.5609%20123.968%20100.636C127.084%20101.749%20128.5%20103.385%20132%20103.863'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M78.9387%2042.3295C77.7432%2044.0368%2077.334%2046.4893%2077.2789%2049.2967C77.2377%2051.3993%2078.0288%2054.6216%2078.0288%2054.6216C78.3143%2056.3035%2081.4702%2059.8159%2082.9152%2060.3076C84.5561%2060.8658%2086.1122%2062.0229%2087.8211%2062.156C90.373%2062.3548%2092.7922%2062.7052%2094.8495%2061.3831C99.8697%2058.1567%20101.101%2055.2912%20101.376%2049.5532C101.522%2046.5053%20100.591%2044.5412%2098.8657%2042.0249C96.1276%2038.0311%2092.8414%2036.6478%2088.2815%2036.3276C85.9331%2036.1627%2083.7024%2037.0765%2081.7968%2038.7987C80.4711%2039.9969%2079.9754%2040.8489%2078.9387%2042.3295Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e";
-  function $e(t, e, i = oi) {
+  const Pe = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M22.0571%2012.4497C23.3897%2011.0975%2027.3055%209.85066%2030.0895%209.27763C33.473%208.5812%2037.1868%208.79672%2040.632%208.83179C50.3019%208.93023%2063.6079%208.78722%2073.2636%208.83178C91.2312%208.9147%2094.1866%208.05573%20104.891%209.27763C115.596%2010.4995%20117.736%2011.7005%20122.467%2017.419C125.474%2021.0532%20126.305%2031.474%20126.305%2035.034V72.6746C126.305%2083.8705%20126.98%2090.4195%20125.976%20105.476C125.339%20109.861%20125.496%20115.414%20123.466%20119.28C119.649%20126.549%20109.409%20130.211%20104.891%20130.211H79.7899C66.8103%20130.211%2060.713%20131.286%2047.6604%20131.286C37.9108%20131.286%2031.8379%20132.176%2025.5713%20128.598C19.9386%20125.382%2017.5389%20122.683%2014.5268%20115.692C12.6731%20111.391%2013.1066%20105.221%2012.9993%20103.325C12.6677%2097.4641%2013.1783%2092.0674%2012.9666%2086.1717C12.4731%2072.4258%2012.1979%2058.4031%2012.9993%2044.6682C13.5373%2035.4483%2012.2062%2028.3163%2015.9875%2019.9778C17.3264%2015.676%2020.7364%2013.7899%2022.0571%2012.4497Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M8%20100.636C18.0405%2089.9465%2024.3907%2080.6421%2031.04%2074.8218C33.7043%2072.4898%2036.6642%2070.634%2039.5746%2068.692C40.9639%2067.765%2042.4043%2066.8967%2044.016%2066.5332C45.5391%2066.1898%2047.1386%2065.7111%2048.6814%2066.3467C51.5019%2067.5086%2053.6106%2070.5957%2055.4618%2073.0095C57.7258%2075.9617%2059.7103%2079.5336%2061.1722%2083.0038C62.4308%2085.9914%2064.2267%2089.9465%2064.2267%2089.9465C64.2267%2089.9465%2067.5687%2095.2586%2068.7449%2096.8226C69.3019%2097.5632%2072.5017%2098.2443%2073.2632%2097.9477C76.6962%2096.6106%2076.7751%2096.8085%2079.2875%2094.1174C80.284%2093.05%2082.7413%2089.9465%2084.8097%2087.731C86.3158%2086.1178%2088.505%2084.0366%2090.8316%2082.7906C93.0767%2081.5882%2096.0472%2081.7048%2098.3644%2082.7906C101.602%2084.3078%20103.226%2086.0187%20105.761%2088.7339C108.578%2091.7509%20111.815%2094.5458%20115.191%2096.8226C116.424%2097.6543%20117.9%2098.4279%20119.259%2099.0213C120.245%2099.4516%20120.955%2099.5609%20123.968%20100.636C127.084%20101.749%20128.5%20103.385%20132%20103.863'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M78.9387%2042.3295C77.7432%2044.0368%2077.334%2046.4893%2077.2789%2049.2967C77.2377%2051.3993%2078.0288%2054.6216%2078.0288%2054.6216C78.3143%2056.3035%2081.4702%2059.8159%2082.9152%2060.3076C84.5561%2060.8658%2086.1122%2062.0229%2087.8211%2062.156C90.373%2062.3548%2092.7922%2062.7052%2094.8495%2061.3831C99.8697%2058.1567%20101.101%2055.2912%20101.376%2049.5532C101.522%2046.5053%20100.591%2044.5412%2098.8657%2042.0249C96.1276%2038.0311%2092.8414%2036.6478%2088.2815%2036.3276C85.9331%2036.1627%2083.7024%2037.0765%2081.7968%2038.7987C80.4711%2039.9969%2079.9754%2040.8489%2078.9387%2042.3295Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e";
+  function Se(t, e, i = H0) {
     if (!t) return;
-    const { t: r } = se.global, s = t[0];
-    if (!e.test(s.type)) {
+    const { t: s } = ee.global, r = t[0];
+    if (!e.test(r.type)) {
       W({
-        message: r("prompt.file_format_not_match"),
+        message: s("prompt.file_format_not_match"),
         type: "error"
       });
       return;
     }
-    if (s.size > i) {
+    if (r.size > i) {
       W({
-        message: r("prompt.file_size_exceed"),
+        message: s("prompt.file_size_exceed"),
         type: "error"
       });
       return;
     }
-    return s;
+    return r;
   }
-  const r2 = A({
+  const G0 = I({
     __name: "SignatureMask",
     props: {
       isShowMask: {
@@ -26729,23 +26597,23 @@ let __tla = Promise.all([
     ],
     setup(t, { emit: e }) {
       const i = e;
-      return (r, s) => (n(), _("div", {
-        class: F([
+      return (s, r) => (n(), p("div", {
+        class: L([
           "mask bg-black/50 md:hidden",
-          r.isShowMask ? "opacity-100 z-1" : "opacity-0 -z-[1]"
+          s.isShowMask ? "opacity-100 z-1" : "opacity-0 -z-[1]"
         ]),
-        onClick: s[0] || (s[0] = (a) => i("close", false))
+        onClick: r[0] || (r[0] = (a) => i("close", false))
       }, null, 2));
     }
-  }), o2 = {
+  }), K0 = {
     class: "title text-center md:hidden"
-  }, a2 = {
+  }, Y0 = {
     class: "signature-popup-content"
-  }, n2 = {
+  }, X0 = {
     class: "flex justify-center gap-5 md:hidden"
-  }, l2 = [
+  }, J0 = [
     "disabled"
-  ], c2 = A({
+  ], Q0 = I({
     __name: "SignaturePopup",
     props: {
       isShowPopup: {
@@ -26763,70 +26631,70 @@ let __tla = Promise.all([
     ],
     setup(t, { emit: e }) {
       const i = e;
-      function r() {
+      function s() {
         i("close", false);
       }
-      return (s, a) => (n(), _(X, null, [
-        y(r2, {
-          "is-show-mask": s.isShowPopup,
-          onClose: r
+      return (r, a) => (n(), p(J, null, [
+        C(G0, {
+          "is-show-mask": r.isShowPopup,
+          onClose: s
         }, null, 8, [
           "is-show-mask"
         ]),
         o("div", {
-          class: F([
+          class: L([
             "signature-popup z-[1]",
-            s.isShowPopup ? "translate-y-0 md:block" : "translate-y-[100%] md:hidden"
+            r.isShowPopup ? "translate-y-0 md:block" : "translate-y-[100%] md:hidden"
           ])
         }, [
-          o("h5", o2, c(s.title), 1),
-          o("div", a2, [
-            me(s.$slots, "default", {}, void 0)
+          o("h5", K0, c(r.title), 1),
+          o("div", Y0, [
+            be(r.$slots, "default", {}, void 0)
           ]),
-          o("div", n2, [
+          o("div", X0, [
             o("button", {
               class: "btn btn-base",
-              onClick: r
-            }, c(s.$t("cancel")), 1),
+              onClick: s
+            }, c(r.$t("cancel")), 1),
             o("button", {
               class: "btn btn-primary",
-              disabled: s.isDisabled,
+              disabled: r.isDisabled,
               onClick: a[0] || (a[0] = (u) => i("use"))
-            }, c(s.customUseBtnName ?? s.$t("use")), 9, l2)
+            }, c(r.customUseBtnName ?? r.$t("use")), 9, J0)
           ])
         ], 2)
       ], 64));
     }
-  }), Et = N(c2, [
+  }), Lt = N(Q0, [
     [
       "__scopeId",
       "data-v-b4aa668c"
     ]
-  ]), d2 = {
+  ]), t2 = {
     key: 0,
     class: "signature-list"
-  }, u2 = [
+  }, e2 = [
     "onClick"
-  ], _2 = [
+  ], i2 = [
     "src"
-  ], p2 = {
+  ], s2 = {
     key: 1,
     class: "signature-list justify-center"
-  }, b2 = {
+  }, r2 = {
     class: "text-secondary text-center"
-  }, f2 = {
+  }, o2 = {
     class: "btn btn-primary"
-  }, m2 = {
+  }, a2 = {
     class: "text-center"
-  }, h2 = {
-    class: "text-gray-40 mb-3 hidden md:block"
-  }, g2 = {
-    class: "text-gray-40 px-4 text-center"
-  }, v2 = {
+  }, n2 = {
+    class: "mb-3 hidden md:block"
+  }, l2 = {
+    class: "px-4 text-center"
+  }, c2 = {
     class: "text-center"
-  }, k2 = {
+  }, d2 = {
     class: "flex justify-between md:justify-evenly"
-  }, w2 = A({
+  }, u2 = I({
     __name: "SignatureImage",
     props: {
       currentTool: {},
@@ -26843,82 +26711,82 @@ let __tla = Promise.all([
       "update:dragOffset"
     ]),
     setup(t, { emit: e }) {
-      const i = e, r = it(t, "currentTool"), s = it(t, "dragOffset"), a = S(""), u = S(false), { imageList: b } = nt(Vt()), { t: p, locale: v } = dt(), { isShowWarnPopup: f, SignPopup: C, toggleWarnPopup: k } = ut(), { toggleLoading: $ } = mt();
+      const i = e, s = it(t, "currentTool"), r = it(t, "dragOffset"), a = S(""), u = S(false), { imageList: b } = at(Vt()), { t: _, locale: v } = dt(), { isShowWarnPopup: h, SignPopup: y, toggleWarnPopup: k } = ut(), { toggleLoading: j } = mt();
       function w() {
-        i("useImage", a.value), j();
+        i("useImage", a.value), D();
       }
-      function x(m) {
-        a.value = m;
+      function P(f) {
+        a.value = f;
       }
       function M() {
-        Vt().deleteImage(a.value), W(p("prompt.picture_delete_success")), k(false), a.value = "";
+        Vt().deleteImage(a.value), W(_("prompt.picture_delete_success")), k(false), a.value = "";
       }
-      function T(m) {
-        u.value = m;
+      function T(f) {
+        u.value = f;
       }
-      async function g(m) {
-        const d = m.target, { files: B } = d;
-        await D(B), d.value = "";
+      async function g(f) {
+        const d = f.target, { files: B } = d;
+        await $(B), d.value = "";
       }
-      function h(m) {
-        const { dataTransfer: d } = m, B = d == null ? void 0 : d.files;
-        D(B);
+      function m(f) {
+        const { dataTransfer: d } = f, B = d == null ? void 0 : d.files;
+        $(B);
       }
-      async function D(m) {
+      async function $(f) {
         try {
-          const d = $e(m, /.png|.jpg|.jpeg/);
+          const d = Se(f, /.png|.jpg|.jpeg/);
           if (!d) return;
-          $({
+          j({
             isShow: true,
             title: "upload_file",
             content: "file_uploading"
           });
-          const B = await ws(d);
+          const B = await _s(d);
           if (b.value.includes(B)) {
             W({
-              message: p("prompt.picture_already_exists"),
+              message: _("prompt.picture_already_exists"),
               type: "error"
             });
             return;
           }
-          Vt().addImage(B), T(false), W(p("prompt.picture_add_success"));
+          Vt().addImage(B), T(false), W(_("prompt.picture_add_success"));
         } catch {
           W({
-            message: p("prompt.picture_upload_failed"),
+            message: _("prompt.picture_upload_failed"),
             type: "error"
           });
         } finally {
-          $({
+          j({
             isShow: false
           });
         }
       }
-      function q(m) {
+      function q(f) {
         var _a, _b;
-        const { src: d, offsetHeight: B, offsetWidth: P } = m.target, H = m.offsetX / P, K = m.offsetY / B;
-        (_a = m.dataTransfer) == null ? void 0 : _a.setData("text/uri-list", d), (_b = m.dataTransfer) == null ? void 0 : _b.setData("custom/offset", JSON.stringify({
+        const { src: d, offsetHeight: B, offsetWidth: x } = f.target, H = f.offsetX / x, G = f.offsetY / B;
+        (_a = f.dataTransfer) == null ? void 0 : _a.setData("text/uri-list", d), (_b = f.dataTransfer) == null ? void 0 : _b.setData("custom/offset", JSON.stringify({
           offsetX: H,
-          offsetY: K
-        })), s.value = {
-          x: m.offsetX,
-          y: m.offsetY,
-          width: P,
+          offsetY: G
+        })), r.value = {
+          x: f.offsetX,
+          y: f.offsetY,
+          width: x,
           height: B
         };
       }
-      function j() {
-        r.value = "";
+      function D() {
+        s.value = "";
       }
-      return (m, d) => (n(), _(X, null, [
-        y(Et, {
-          "is-show-popup": r.value === "image",
-          title: m.$t("picture_gallery"),
+      return (f, d) => (n(), p(J, null, [
+        C(Lt, {
+          "is-show-popup": s.value === "image",
+          title: f.$t("picture_gallery"),
           "is-disabled": !a.value,
-          onClose: j,
+          onClose: D,
           onUse: w
         }, {
-          default: G(() => [
-            l(b).length ? (n(), _("ul", d2, [
+          default: K(() => [
+            l(b).length ? (n(), p("ul", t2, [
               o("img", {
                 src: ht,
                 alt: "add dark icon",
@@ -26927,33 +26795,33 @@ let __tla = Promise.all([
                 class: "iconScale mb-3",
                 onClick: d[0] || (d[0] = (B) => T(true))
               }),
-              (n(true), _(X, null, at(l(b), (B) => (n(), _("li", {
+              (n(true), p(J, null, nt(l(b), (B) => (n(), p("li", {
                 key: B,
-                class: F([
+                class: L([
                   "rounded-[20px] relative w-full flex justify-center cursor-pointer h-[180px]",
                   a.value === B ? "bg-primary opacity-70" : "bg-white"
                 ]),
-                onClick: (P) => x(B)
+                onClick: (x) => P(B)
               }, [
                 o("img", {
                   src: B,
                   alt: "image",
                   class: "object-cover rounded-[20px]",
                   onDragstart: q
-                }, null, 40, _2),
-                st(y(O, {
+                }, null, 40, i2),
+                st(C(O, {
                   name: "close_s",
                   class: "absolute top-1 right-1 w-8 h-8 text-gray-80 drop-shadow-md",
                   "hover-color": "hover:text-danger",
-                  onClick: d[1] || (d[1] = (P) => l(k)(true))
+                  onClick: d[1] || (d[1] = (x) => l(k)(true))
                 }, null, 512), [
                   [
                     ct,
                     a.value === B
                   ]
                 ])
-              ], 10, u2))), 128))
-            ])) : (n(), _("div", p2, [
+              ], 10, e2))), 128))
+            ])) : (n(), p("div", s2, [
               o("img", {
                 src: ht,
                 alt: "add dark icon",
@@ -26962,7 +26830,7 @@ let __tla = Promise.all([
                 class: "iconScale mb-5",
                 onClick: d[2] || (d[2] = (B) => T(true))
               }),
-              o("h5", b2, c(m.$t("add_picture")), 1)
+              o("h5", r2, c(f.$t("add_picture")), 1)
             ]))
           ]),
           _: 1
@@ -26971,44 +26839,44 @@ let __tla = Promise.all([
           "title",
           "is-disabled"
         ]),
-        u.value ? (n(), L(l(C), {
+        u.value ? (n(), E(l(y), {
           key: 0,
-          title: m.$t("add_picture")
+          title: f.$t("add_picture")
         }, {
-          default: G(() => [
+          default: K(() => [
             o("div", {
               class: "signature-image-add",
-              onDragover: d[3] || (d[3] = J(() => {
+              onDragover: d[3] || (d[3] = X(() => {
               }, [
                 "stop",
                 "prevent"
               ])),
-              onDragenter: d[4] || (d[4] = J(() => {
+              onDragenter: d[4] || (d[4] = X(() => {
               }, [
                 "stop",
                 "prevent"
               ])),
-              onDrop: J(h, [
+              onDrop: X(m, [
                 "stop",
                 "prevent"
               ])
             }, [
               d[7] || (d[7] = o("img", {
-                src: Se,
+                src: Pe,
                 alt: ""
               }, null, -1)),
-              o("button", f2, [
+              o("button", o2, [
                 o("input", {
                   type: "file",
                   accept: "application/.jpg, .png",
                   class: "opacity-0 absolute w-[131px] h-[41px] cursor-pointer",
                   onChange: g
                 }, null, 32),
-                yt(c(m.$t("select_file")), 1)
+                yt(c(f.$t("select_file")), 1)
               ]),
-              o("div", m2, [
-                o("h5", h2, c(m.$t("prompt.or_drag_file")), 1),
-                o("p", g2, c(m.$t("prompt.support_filetype", {
+              o("div", a2, [
+                o("h5", n2, c(f.$t("prompt.or_drag_file")), 1),
+                o("p", l2, c(f.$t("prompt.support_filetype", {
                   type: l(v) === "en-US" ? "JPG and PNG" : "JPG\u3001PNG"
                 })), 1)
               ])
@@ -27016,27 +26884,27 @@ let __tla = Promise.all([
             o("button", {
               class: "btn btn-base",
               onClick: d[5] || (d[5] = (B) => T(false))
-            }, c(m.$t("cancel")), 1)
+            }, c(f.$t("cancel")), 1)
           ]),
           _: 1
         }, 8, [
           "title"
         ])) : Z("", true),
-        l(f) ? (n(), L(l(C), {
+        l(h) ? (n(), E(l(y), {
           key: 1,
-          title: m.$t("warn")
+          title: f.$t("warn")
         }, {
-          default: G(() => [
-            o("p", v2, c(m.$t("prompt.sure_delete_picture")), 1),
-            o("div", k2, [
+          default: K(() => [
+            o("p", c2, c(f.$t("prompt.sure_delete_picture")), 1),
+            o("div", d2, [
               o("button", {
                 class: "btn btn-base",
                 onClick: d[6] || (d[6] = (B) => l(k)(false))
-              }, c(m.$t("not_yet")), 1),
+              }, c(f.$t("not_yet")), 1),
               o("button", {
                 class: "btn btn-primary",
                 onClick: M
-              }, c(m.$t("delete")), 1)
+              }, c(f.$t("delete")), 1)
             ])
           ]),
           _: 1
@@ -27045,34 +26913,34 @@ let __tla = Promise.all([
         ])) : Z("", true)
       ], 64));
     }
-  }), y2 = N(w2, [
+  }), _2 = N(u2, [
     [
       "__scopeId",
-      "data-v-22c02e71"
+      "data-v-46ddb7d2"
     ]
-  ]), C2 = {
+  ]), p2 = {
     key: 0,
     class: "signature-list"
-  }, x2 = [
+  }, b2 = [
     "onClick"
-  ], P2 = {
+  ], f2 = {
     class: "whitespace-pre-wrap w-full text-ellipsis overflow-hidden"
-  }, S2 = {
+  }, m2 = {
     class: "inline"
-  }, $2 = {
+  }, h2 = {
     key: 1,
     class: "signature-list justify-center"
-  }, D2 = {
+  }, g2 = {
     class: "text-secondary text-center"
-  }, j2 = {
+  }, v2 = {
     class: "flex justify-between md:justify-evenly"
-  }, M2 = [
+  }, k2 = [
     "disabled"
-  ], B2 = {
+  ], w2 = {
     class: "text-center"
-  }, T2 = {
+  }, y2 = {
     class: "flex justify-between md:justify-evenly"
-  }, z2 = A({
+  }, x2 = I({
     __name: "SignatureLiteral",
     props: {
       currentTool: {},
@@ -27089,95 +26957,95 @@ let __tla = Promise.all([
       "update:dragOffset"
     ]),
     setup(t, { emit: e }) {
-      const i = e, r = it(t, "currentTool"), s = it(t, "dragOffset"), a = S(""), u = S(false), b = S(""), p = S(false), { literalList: v } = nt(jt()), { t: f } = dt(), { isShowWarnPopup: C, SignPopup: k, toggleWarnPopup: $ } = ut();
+      const i = e, s = it(t, "currentTool"), r = it(t, "dragOffset"), a = S(""), u = S(false), b = S(""), _ = S(false), { literalList: v } = at(Dt()), { t: h } = dt(), { isShowWarnPopup: y, SignPopup: k, toggleWarnPopup: j } = ut();
       function w() {
         i("useLiteral", a.value, "text"), q();
       }
-      function x(j) {
-        a.value = j;
+      function P(D) {
+        a.value = D;
       }
       function M() {
         if (v.value.includes(b.value)) {
           W({
-            message: f("prompt.text_already_exists"),
+            message: h("prompt.text_already_exists"),
             type: "error"
           });
           return;
         }
-        jt().addLiteral(b.value), W(f("prompt.text_add_success")), h(false);
+        Dt().addLiteral(b.value), W(h("prompt.text_add_success")), m(false);
       }
       function T() {
         if (a.value === b.value) {
-          h(false);
+          m(false);
           return;
         }
         if (v.value.includes(b.value)) {
           W({
-            message: f("prompt.text_already_exists"),
+            message: h("prompt.text_already_exists"),
             type: "error"
           });
           return;
         }
-        const { addLiteral: j, deleteLiteral: m } = jt();
-        j(b.value), m(a.value), W(f("prompt.text_edit_success")), a.value = b.value, h(false);
+        const { addLiteral: D, deleteLiteral: f } = Dt();
+        D(b.value), f(a.value), W(h("prompt.text_edit_success")), a.value = b.value, m(false);
       }
       function g() {
-        jt().deleteLiteral(a.value), W(f("prompt.text_delete_success")), $(false), a.value = "";
+        Dt().deleteLiteral(a.value), W(h("prompt.text_delete_success")), j(false), a.value = "";
       }
-      function h(j, m = false) {
-        p.value = m, u.value = j, b.value = m ? a.value : "";
+      function m(D, f = false) {
+        _.value = f, u.value = D, b.value = f ? a.value : "";
       }
-      function D(j) {
+      function $(D) {
         var _a, _b;
-        const { textContent: m, offsetHeight: d, offsetWidth: B } = j.target, P = j.offsetX / B, H = j.offsetY / d;
-        (_a = j.dataTransfer) == null ? void 0 : _a.setData("text/plain", m ?? ""), (_b = j.dataTransfer) == null ? void 0 : _b.setData("custom/offset", JSON.stringify({
-          offsetX: P,
+        const { textContent: f, offsetHeight: d, offsetWidth: B } = D.target, x = D.offsetX / B, H = D.offsetY / d;
+        (_a = D.dataTransfer) == null ? void 0 : _a.setData("text/plain", f ?? ""), (_b = D.dataTransfer) == null ? void 0 : _b.setData("custom/offset", JSON.stringify({
+          offsetX: x,
           offsetY: H
-        })), s.value = {
-          x: j.offsetX,
-          y: j.offsetY,
+        })), r.value = {
+          x: D.offsetX,
+          y: D.offsetY,
           width: B,
           height: d
         };
       }
       function q() {
-        r.value = "";
+        s.value = "";
       }
-      return (j, m) => (n(), _(X, null, [
-        y(Et, {
-          "is-show-popup": r.value === "literal",
-          title: j.$t("text_library"),
+      return (D, f) => (n(), p(J, null, [
+        C(Lt, {
+          "is-show-popup": s.value === "literal",
+          title: D.$t("text_library"),
           "is-disabled": !a.value,
           onClose: q,
           onUse: w
         }, {
-          default: G(() => [
-            l(v).length ? (n(), _("ul", C2, [
+          default: K(() => [
+            l(v).length ? (n(), p("ul", p2, [
               o("img", {
                 src: ht,
                 alt: "add dark icon",
                 width: "60",
                 height: "60",
                 class: "iconScale mb-3",
-                onClick: m[0] || (m[0] = (d) => h(true))
+                onClick: f[0] || (f[0] = (d) => m(true))
               }),
-              (n(true), _(X, null, at(l(v), (d) => (n(), _("li", {
+              (n(true), p(J, null, nt(l(v), (d) => (n(), p("li", {
                 key: d,
-                class: F([
+                class: L([
                   "rounded-[20px] relative w-full flex cursor-pointer px-3 py-4",
                   a.value === d ? "bg-primary opacity-70" : "bg-white"
                 ]),
                 draggable: "true",
-                onDragstart: D,
-                onClick: (B) => x(d)
+                onDragstart: $,
+                onClick: (B) => P(d)
               }, [
-                o("p", P2, [
-                  o("span", S2, c(d), 1),
-                  st(y(O, {
+                o("p", f2, [
+                  o("span", m2, c(d), 1),
+                  st(C(O, {
                     name: "edit",
                     class: "w-5 h-5 text-gray-80 inline relative scale-150 -top-[2px]",
                     "hover-color": "hover:text-green-600",
-                    onClick: m[1] || (m[1] = (B) => h(true, true))
+                    onClick: f[1] || (f[1] = (B) => m(true, true))
                   }, null, 512), [
                     [
                       ct,
@@ -27185,28 +27053,28 @@ let __tla = Promise.all([
                     ]
                   ])
                 ]),
-                st(y(O, {
+                st(C(O, {
                   name: "close_s",
                   class: "absolute top-1 right-1 w-8 h-8 text-gray-80",
                   "hover-color": "hover:text-danger",
-                  onClick: m[2] || (m[2] = (B) => l($)(true))
+                  onClick: f[2] || (f[2] = (B) => l(j)(true))
                 }, null, 512), [
                   [
                     ct,
                     a.value === d
                   ]
                 ])
-              ], 42, x2))), 128))
-            ])) : (n(), _("div", $2, [
+              ], 42, b2))), 128))
+            ])) : (n(), p("div", h2, [
               o("img", {
                 src: ht,
                 alt: "add dark icon",
                 width: "80",
                 height: "80",
                 class: "iconScale mb-5",
-                onClick: m[3] || (m[3] = (d) => h(true))
+                onClick: f[3] || (f[3] = (d) => m(true))
               }),
-              o("h5", D2, c(j.$t("add_commonly_use_text")), 1)
+              o("h5", g2, c(D.$t("add_commonly_use_text")), 1)
             ]))
           ]),
           _: 1
@@ -27215,51 +27083,51 @@ let __tla = Promise.all([
           "title",
           "is-disabled"
         ]),
-        u.value ? (n(), L(l(k), {
+        u.value ? (n(), E(l(k), {
           key: 0,
-          title: p.value ? j.$t("edit_text") : j.$t("add_text")
+          title: _.value ? D.$t("edit_text") : D.$t("add_text")
         }, {
-          default: G(() => [
+          default: K(() => [
             st(o("textarea", {
-              "onUpdate:modelValue": m[4] || (m[4] = (d) => b.value = d),
+              "onUpdate:modelValue": f[4] || (f[4] = (d) => b.value = d),
               class: "input my-5 h-[40dvh] rounded-[20px]"
             }, null, 512), [
               [
-                ee,
+                Qt,
                 b.value
               ]
             ]),
-            o("div", j2, [
+            o("div", v2, [
               o("button", {
                 class: "btn btn-base",
-                onClick: m[5] || (m[5] = (d) => h(false))
-              }, c(j.$t("cancel")), 1),
+                onClick: f[5] || (f[5] = (d) => m(false))
+              }, c(D.$t("cancel")), 1),
               o("button", {
                 class: "btn btn-primary",
                 disabled: !b.value,
-                onClick: m[6] || (m[6] = () => p.value ? T() : M())
-              }, c(j.$t("confirm")), 9, M2)
+                onClick: f[6] || (f[6] = () => _.value ? T() : M())
+              }, c(D.$t("confirm")), 9, k2)
             ])
           ]),
           _: 1
         }, 8, [
           "title"
         ])) : Z("", true),
-        l(C) ? (n(), L(l(k), {
+        l(y) ? (n(), E(l(k), {
           key: 1,
-          title: j.$t("warn")
+          title: D.$t("warn")
         }, {
-          default: G(() => [
-            o("p", B2, c(j.$t("prompt.sure_delete_text")), 1),
-            o("div", T2, [
+          default: K(() => [
+            o("p", w2, c(D.$t("prompt.sure_delete_text")), 1),
+            o("div", y2, [
               o("button", {
                 class: "btn btn-base",
-                onClick: m[7] || (m[7] = (d) => l($)(false))
-              }, c(j.$t("not_yet")), 1),
+                onClick: f[7] || (f[7] = (d) => l(j)(false))
+              }, c(D.$t("not_yet")), 1),
               o("button", {
                 class: "btn btn-primary",
                 onClick: g
-              }, c(j.$t("delete")), 1)
+              }, c(D.$t("delete")), 1)
             ])
           ]),
           _: 1
@@ -27268,38 +27136,38 @@ let __tla = Promise.all([
         ])) : Z("", true)
       ], 64));
     }
-  }), F2 = "" + new URL("logo_lightbg_horizontal-BI7KWlpK.png", import.meta.url).href, L2 = {}, A2 = {
+  }), C2 = "" + new URL("logo_darkbg_horizontal-EV2IreVs.png", import.meta.url).href, P2 = {}, S2 = {
     class: "w-full h-full flex items-center justify-center animate-pulse"
   };
-  function E2(t, e) {
-    return n(), _("div", A2, e[0] || (e[0] = [
+  function $2(t, e) {
+    return n(), p("div", S2, e[0] || (e[0] = [
       o("img", {
-        src: F2,
+        src: C2,
         class: "animate-bounce w-2/3 max-w-[400px]",
         alt: "logo"
       }, null, -1)
     ]));
   }
-  const I2 = N(L2, [
+  const D2 = N(P2, [
     [
       "render",
-      E2
+      $2
     ]
-  ]), Z2 = {
+  ]), j2 = {
     class: "flex flex-col gap-8 items-center py-8"
-  }, O2 = {
+  }, M2 = {
     key: 0,
     class: "text-center"
-  }, q2 = {
+  }, B2 = {
     class: "text-primary mb-[18px]"
-  }, R2 = {
-    class: "text-gray-40"
-  }, V2 = {
+  }, T2 = {
+    class: ""
+  }, z2 = {
     key: 1,
-    class: "text-center text-gray-40"
-  }, H2 = {
+    class: "text-center"
+  }, F2 = {
     class: "flex justify-between md:justify-evenly"
-  }, U2 = A({
+  }, A2 = I({
     __name: "SignatureMergePopup",
     props: {
       isShowMergePopup: {
@@ -27310,33 +27178,33 @@ let __tla = Promise.all([
       }
     },
     setup(t) {
-      const e = S(false), { SignPopup: i, goPage: r } = ut();
-      return (s, a) => s.isShowMergePopup ? (n(), L(l(i), {
+      const e = S(false), { SignPopup: i, goPage: s } = ut();
+      return (r, a) => r.isShowMergePopup ? (n(), E(l(i), {
         key: 0,
-        title: s.$t("create_file")
+        title: r.$t("create_file")
       }, {
-        default: G(() => [
-          o("div", Z2, [
+        default: K(() => [
+          o("div", j2, [
             a[2] || (a[2] = o("img", {
-              src: ke,
+              src: ge,
               class: "w-[60%]",
               alt: "loading gif"
             }, null, -1)),
-            e.value ? (n(), _("div", O2, [
-              o("h5", q2, c(s.$t("file_completed")), 1),
-              o("p", R2, c(s.$t("prompt.auto_jump_screen")), 1)
-            ])) : (n(), _("h5", V2, c(s.$t("merging_files")), 1))
+            e.value ? (n(), p("div", M2, [
+              o("h5", B2, c(r.$t("file_completed")), 1),
+              o("p", T2, c(r.$t("prompt.auto_jump_screen")), 1)
+            ])) : (n(), p("h5", z2, c(r.$t("merging_files")), 1))
           ]),
-          o("div", H2, [
-            e.value ? (n(), _("button", {
+          o("div", F2, [
+            e.value ? (n(), p("button", {
               key: 0,
               class: "btn btn-primary w-full",
-              onClick: a[0] || (a[0] = (u) => l(r)("complete"))
-            }, c(s.$t("confirm")), 1)) : (n(), _("button", {
+              onClick: a[0] || (a[0] = (u) => l(s)("complete"))
+            }, c(r.$t("confirm")), 1)) : (n(), p("button", {
               key: 1,
               class: "btn btn-base w-full",
-              onClick: a[1] || (a[1] = (...u) => s.cancelMergeFile && s.cancelMergeFile(...u))
-            }, c(s.$t("cancel")), 1))
+              onClick: a[1] || (a[1] = (...u) => r.cancelMergeFile && r.cancelMergeFile(...u))
+            }, c(r.$t("cancel")), 1))
           ])
         ]),
         _: 1
@@ -27344,18 +27212,18 @@ let __tla = Promise.all([
         "title"
       ])) : Z("", true);
     }
-  }), N2 = {
+  }), L2 = {
     class: "signature-list"
-  }, W2 = [
+  }, E2 = [
     "onClick"
-  ], G2 = {
+  ], I2 = {
     key: 1,
     class: "absolute h-28 animate-pulse leading-[112px] text-center"
-  }, K2 = {
+  }, Z2 = {
     class: "highlight absolute left-4 top-2"
-  }, Y2 = {
+  }, O2 = {
     class: "absolute right-3 top-3 rounded-full bg-danger w-2 h-2"
-  }, X2 = A({
+  }, q2 = I({
     __name: "SignaturePage",
     props: {
       currentTool: {},
@@ -27367,43 +27235,43 @@ let __tla = Promise.all([
       "update:currentTool"
     ]),
     setup(t, { emit: e }) {
-      const i = e, r = it(t, "currentTool"), s = S(1), a = S(window.devicePixelRatio), { currentPDF: u } = nt(Y()), b = mt(), { loadedState: p, canvasItems: v, handleCanvasLoaded: f, handleCanvasReload: C } = Pe(u), k = gt(() => vt(() => import("../chunks/@component-hook/pdf-canvas-DoR1skRj.js").then(async (m) => {
+      const i = e, s = it(t, "currentTool"), r = S(1), a = S(window.devicePixelRatio), { currentPDF: u } = at(Y()), b = mt(), { loadedState: _, canvasItems: v, handleCanvasLoaded: h, handleCanvasReload: y } = Ce(u), k = gt(() => vt(() => import("../chunks/@component-hook/pdf-canvas-gI5qE1lT.js").then(async (m) => {
         await m.__tla;
         return m;
-      }), __vite__mapDeps([3,2]), import.meta.url)), $ = pi(T);
+      }), __vite__mapDeps([3,2]), import.meta.url)), j = ni(T);
       function w(g) {
-        s.value = g, ie() && i("usePage", s.value);
+        r.value = g, te() && i("usePage", r.value);
       }
-      function x() {
-        i("usePage", s.value), M();
+      function P() {
+        i("usePage", r.value), M();
       }
       function M() {
-        r.value = "";
+        s.value = "";
       }
       function T() {
         a.value = window.devicePixelRatio;
       }
-      return te(() => {
-        $();
-      }), (g, h) => (n(), L(Et, {
-        "is-show-popup": r.value === "page",
+      return Jt(() => {
+        j();
+      }), (g, m) => (n(), E(Lt, {
+        "is-show-popup": s.value === "page",
         title: g.$t("select_page"),
         "is-disabled": false,
         "custom-use-btn-name": g.$t("select"),
         onClose: M,
-        onUse: x
+        onUse: P
       }, {
-        default: G(() => [
-          o("ul", N2, [
-            (n(true), _(X, null, at(l(u).pages, (D) => (n(), _("li", {
-              key: D,
-              class: F([
+        default: K(() => [
+          o("ul", L2, [
+            (n(true), p(J, null, nt(l(u).pages, ($) => (n(), p("li", {
+              key: $,
+              class: L([
                 "rounded-[20px] relative w-full flex flex-shrink-0 justify-center py-3 cursor-pointer overflow-hidden min-h-32",
-                s.value === D ? "bg-primary opacity-70" : "bg-white"
+                r.value === $ ? "bg-primary opacity-70" : "bg-white"
               ]),
-              onClick: (q) => w(D)
+              onClick: (q) => w($)
             }, [
-              l(p)[D - 1] ? (n(), L(l(k), {
+              l(_)[$ - 1] ? (n(), E(l(k), {
                 key: 0,
                 ref_for: true,
                 ref_key: "canvasItems",
@@ -27411,13 +27279,13 @@ let __tla = Promise.all([
                 class: "pointer-events-none",
                 file: l(u),
                 "canvas-id": "PDF-page-canvas",
-                page: D,
-                "canvas-class": l(p)[D] ? "border-2 border-gray-20" : void 0,
+                page: $,
+                "canvas-class": l(_)[$] ? "border-2 border-gray-20" : void 0,
                 "file-scale": a.value * 0.3,
                 password: l(b).filePassword,
                 "manual-reload": "",
-                onLoaded: (q) => l(f)(D),
-                onReload: l(C)
+                onLoaded: (q) => l(h)($),
+                onReload: l(y)
               }, null, 8, [
                 "file",
                 "page",
@@ -27427,15 +27295,15 @@ let __tla = Promise.all([
                 "onLoaded",
                 "onReload"
               ])) : Z("", true),
-              l(p)[D] ? Z("", true) : (n(), _("div", G2, " Loading... ")),
-              o("span", K2, c(`${D}.`), 1),
-              st(o("div", Y2, null, 512), [
+              l(_)[$] ? Z("", true) : (n(), p("div", I2, " Loading... ")),
+              o("span", Z2, c(`${$}.`), 1),
+              st(o("div", O2, null, 512), [
                 [
                   ct,
-                  s.value === D
+                  r.value === $
                 ]
               ])
-            ], 10, W2))), 128))
+            ], 10, E2))), 128))
           ])
         ]),
         _: 1
@@ -27445,17 +27313,17 @@ let __tla = Promise.all([
         "custom-use-btn-name"
       ]));
     }
-  }), J2 = {
+  }), V2 = {
     class: "signature-panel"
-  }, Q2 = [
+  }, R2 = [
     "disabled"
-  ], tr = [
+  ], H2 = [
     "disabled"
-  ], er = [
+  ], U2 = [
     "disabled"
-  ], ir = [
+  ], N2 = [
     "disabled"
-  ], sr = 1.5, rr = 0.5, or = A({
+  ], W2 = 1.5, G2 = 0.5, K2 = I({
     __name: "SignaturePanel",
     props: ft({
       isActivatedFabric: {
@@ -27475,150 +27343,150 @@ let __tla = Promise.all([
     ]),
     setup(t) {
       const e = it(t, "fileZoom");
-      function i(r) {
-        e.value += r;
+      function i(s) {
+        e.value += s;
       }
-      return (r, s) => (n(), _("div", J2, [
+      return (s, r) => (n(), p("div", V2, [
         o("button", {
           class: "btn-small btn-primary",
-          disabled: !r.isActivatedFabric,
-          onClick: s[0] || (s[0] = (a) => r.$emit("copyFabric"))
+          disabled: !s.isActivatedFabric,
+          onClick: r[0] || (r[0] = (a) => s.$emit("copyFabric"))
         }, [
-          y(O, {
+          C(O, {
             name: "file",
             class: "w-4.5 h-4.5 text-primary"
           })
-        ], 8, Q2),
+        ], 8, R2),
         o("button", {
           class: "btn-small btn-primary",
-          disabled: !r.isActivatedFabric,
-          onClick: s[1] || (s[1] = (a) => r.$emit("deleteFabric"))
+          disabled: !s.isActivatedFabric,
+          onClick: r[1] || (r[1] = (a) => s.$emit("deleteFabric"))
         }, [
-          y(O, {
+          C(O, {
             name: "trash",
             class: "w-4.5 h-4.5 text-primary"
           })
-        ], 8, tr),
+        ], 8, H2),
         o("button", {
           class: "btn-small btn-primary text-xs",
-          disabled: e.value >= sr,
-          onClick: s[2] || (s[2] = (a) => i(0.1))
-        }, " \u2795 ", 8, er),
+          disabled: e.value >= W2,
+          onClick: r[2] || (r[2] = (a) => i(0.1))
+        }, " \u2795 ", 8, U2),
         o("button", {
           class: "btn-small btn-primary text-xs",
-          disabled: e.value <= rr,
-          onClick: s[3] || (s[3] = (a) => i(-0.1))
-        }, " \u2796 ", 8, ir)
+          disabled: e.value <= G2,
+          onClick: r[3] || (r[3] = (a) => i(-0.1))
+        }, " \u2796 ", 8, N2)
       ]));
     }
-  }), ar = N(or, [
+  }), Y2 = N(K2, [
     [
       "__scopeId",
-      "data-v-afdfee97"
+      "data-v-ad339470"
     ]
-  ]), nr = {
+  ]), X2 = {
     class: "toolbar"
-  }, lr = {
+  }, J2 = {
     class: "flex justify-between md:justify-evenly"
-  }, cr = [
+  }, Q2 = [
     "disabled"
-  ], dr = A({
+  ], tr = I({
     __name: "SignatureDrawPopup",
     emits: [
       "close"
     ],
     setup(t, { emit: e }) {
-      const i = e, r = S(null), s = S("black"), a = S(false), { t: u } = dt(), b = gt(() => vt(() => Promise.resolve().then(() => ye), void 0, import.meta.url)), p = {
+      const i = e, s = S(null), r = S("black"), a = S(false), { t: u } = dt(), b = gt(() => vt(() => Promise.resolve().then(() => ke), void 0, import.meta.url)), _ = {
         ctx: null,
         isPainting: false
       };
       function v(T) {
-        s.value = T, p.ctx && (p.ctx.strokeStyle = T);
+        r.value = T, _.ctx && (_.ctx.strokeStyle = T);
       }
-      function f() {
+      function h() {
         var _a;
-        const T = (_a = r.value) == null ? void 0 : _a.toDataURL("image/png");
-        T && (Gt().addSignature(T), i("close"), W(u("signature_add_success")));
+        const T = (_a = s.value) == null ? void 0 : _a.toDataURL("image/png");
+        T && (Wt().addSignature(T), i("close"), W(u("signature_add_success")));
       }
-      function C() {
+      function y() {
         var _a;
-        r.value && (ie() ? (r.value.height = 235, r.value.width = 466) : r.value.height = window.innerHeight - 400, p.ctx = (_a = r.value) == null ? void 0 : _a.getContext("2d"), p.ctx && (p.ctx.lineWidth = 2, p.ctx.lineCap = "round"));
+        s.value && (te() ? (s.value.height = 235, s.value.width = 466) : s.value.height = window.innerHeight - 400, _.ctx = (_a = s.value) == null ? void 0 : _a.getContext("2d"), _.ctx && (_.ctx.lineWidth = 2, _.ctx.lineCap = "round"));
       }
       function k(T) {
-        if (!r.value) return {
+        if (!s.value) return {
           x: 0,
           y: 0
         };
-        const { left: g, top: h } = r.value.getBoundingClientRect();
+        const { left: g, top: m } = s.value.getBoundingClientRect();
         if (T.type === "mousemove") {
-          const { clientX: q, clientY: j } = T;
+          const { clientX: q, clientY: D } = T;
           return {
             x: q - g,
-            y: j - h
+            y: D - m
           };
         }
-        const { touches: D } = T;
+        const { touches: $ } = T;
         return {
-          x: D[0].clientX - g,
-          y: D[0].clientY - h
+          x: $[0].clientX - g,
+          y: $[0].clientY - m
         };
       }
-      function $() {
+      function j() {
         var _a;
-        p.isPainting = true, (_a = p.ctx) == null ? void 0 : _a.beginPath();
+        _.isPainting = true, (_a = _.ctx) == null ? void 0 : _a.beginPath();
       }
       function w() {
         var _a;
-        p.isPainting = false, (_a = p.ctx) == null ? void 0 : _a.closePath();
+        _.isPainting = false, (_a = _.ctx) == null ? void 0 : _a.closePath();
       }
-      function x(T) {
+      function P(T) {
         var _a, _b;
-        if (!p.isPainting) return;
-        const { x: g, y: h } = k(T);
-        (_a = p.ctx) == null ? void 0 : _a.lineTo(g, h), (_b = p.ctx) == null ? void 0 : _b.stroke(), a.value = true;
+        if (!_.isPainting) return;
+        const { x: g, y: m } = k(T);
+        (_a = _.ctx) == null ? void 0 : _a.lineTo(g, m), (_b = _.ctx) == null ? void 0 : _b.stroke(), a.value = true;
       }
       function M() {
         var _a;
-        r.value && ((_a = p.ctx) == null ? void 0 : _a.clearRect(0, 0, r.value.width, r.value.height), a.value = false);
+        s.value && ((_a = _.ctx) == null ? void 0 : _a.clearRect(0, 0, s.value.width, s.value.height), a.value = false);
       }
-      return (T, g) => (n(), L(l(b), {
+      return (T, g) => (n(), E(l(b), {
         title: T.$t("create_signature_file"),
-        onChildMounted: C
+        onChildMounted: y
       }, {
-        default: G(() => [
-          o("ul", nr, [
+        default: K(() => [
+          o("ul", X2, [
             o("li", null, [
-              y(O, {
-                name: s.value === "black" ? "color_black_h" : "color_black",
+              C(O, {
+                name: r.value === "black" ? "color_black_h" : "color_black",
                 class: "w-7 h-7",
                 "hover-change-svg": "",
-                onClick: g[0] || (g[0] = (h) => v("black"))
+                onClick: g[0] || (g[0] = (m) => v("black"))
               }, null, 8, [
                 "name"
               ])
             ]),
             o("li", null, [
-              y(O, {
-                name: s.value === "blue" ? "color_blue_h" : "color_blue",
+              C(O, {
+                name: r.value === "blue" ? "color_blue_h" : "color_blue",
                 class: "w-7 h-7",
                 "hover-change-svg": "",
-                onClick: g[1] || (g[1] = (h) => v("blue"))
+                onClick: g[1] || (g[1] = (m) => v("blue"))
               }, null, 8, [
                 "name"
               ])
             ]),
             o("li", null, [
-              y(O, {
-                name: s.value === "red" ? "color_red_h" : "color_red",
+              C(O, {
+                name: r.value === "red" ? "color_red_h" : "color_red",
                 class: "w-7 h-7",
                 "hover-change-svg": "",
-                onClick: g[2] || (g[2] = (h) => v("red"))
+                onClick: g[2] || (g[2] = (m) => v("red"))
               }, null, 8, [
                 "name"
               ])
             ]),
             o("li", null, [
-              y(O, {
+              C(O, {
                 name: "trash",
                 class: "w-7 h-7",
                 onClick: M
@@ -27627,31 +27495,31 @@ let __tla = Promise.all([
           ]),
           o("canvas", {
             ref_key: "canvasDraw",
-            ref: r,
+            ref: s,
             class: "bg-secondary-tint border-2 border-gray-30 rounded-[20px] mb-6",
-            onMousedown: J($, [
+            onMousedown: X(j, [
               "prevent"
             ]),
             onMouseup: w,
             onMouseleave: w,
-            onMousemove: x,
-            onTouchstart: J($, [
+            onMousemove: P,
+            onTouchstart: X(j, [
               "prevent"
             ]),
             onTouchend: w,
             onTouchcancel: w,
-            onTouchmove: x
+            onTouchmove: P
           }, null, 544),
-          o("div", lr, [
+          o("div", J2, [
             o("button", {
               class: "btn btn-base",
-              onClick: g[3] || (g[3] = (h) => i("close"))
+              onClick: g[3] || (g[3] = (m) => i("close"))
             }, c(T.$t("cancel")), 1),
             o("button", {
               class: "btn btn-primary",
               disabled: !a.value,
-              onClick: f
-            }, c(T.$t("confirm")), 9, cr)
+              onClick: h
+            }, c(T.$t("confirm")), 9, Q2)
           ])
         ]),
         _: 1
@@ -27659,23 +27527,23 @@ let __tla = Promise.all([
         "title"
       ]));
     }
-  }), ur = {
+  }), er = {
     key: 0,
     class: "signature-list"
-  }, _r = [
+  }, ir = [
     "onClick"
-  ], pr = [
+  ], sr = [
     "src"
-  ], br = {
+  ], rr = {
     key: 1,
     class: "signature-list justify-center"
-  }, fr = {
+  }, or = {
     class: "text-secondary text-center"
-  }, mr = {
+  }, ar = {
     class: "text-center"
-  }, hr = {
+  }, nr = {
     class: "flex justify-between"
-  }, gr = A({
+  }, lr = I({
     __name: "SignatureSign",
     props: {
       currentTool: {},
@@ -27692,89 +27560,89 @@ let __tla = Promise.all([
       "update:dragOffset"
     ]),
     setup(t, { emit: e }) {
-      const i = e, r = it(t, "currentTool"), s = it(t, "dragOffset"), a = S(""), u = S(false), { signatureList: b } = nt(Gt()), { t: p } = dt(), { isShowWarnPopup: v, SignPopup: f, toggleWarnPopup: C } = ut();
+      const i = e, s = it(t, "currentTool"), r = it(t, "dragOffset"), a = S(""), u = S(false), { signatureList: b } = at(Wt()), { t: _ } = dt(), { isShowWarnPopup: v, SignPopup: h, toggleWarnPopup: y } = ut();
       function k() {
         i("useSignature", a.value), T();
       }
-      function $(g) {
+      function j(g) {
         a.value = g;
       }
       function w() {
-        Gt().deleteSignature(a.value), W(p("prompt.signature_delete_success")), C(false), a.value = "";
+        Wt().deleteSignature(a.value), W(_("prompt.signature_delete_success")), y(false), a.value = "";
       }
-      function x(g) {
+      function P(g) {
         u.value = g;
       }
       function M(g) {
         var _a, _b;
-        const { src: h, offsetHeight: D, offsetWidth: q } = g.target, j = g.offsetX / q, m = g.offsetY / D;
-        (_a = g.dataTransfer) == null ? void 0 : _a.setData("text/uri-list", h), (_b = g.dataTransfer) == null ? void 0 : _b.setData("custom/offset", JSON.stringify({
-          offsetX: j,
-          offsetY: m
-        })), s.value = {
+        const { src: m, offsetHeight: $, offsetWidth: q } = g.target, D = g.offsetX / q, f = g.offsetY / $;
+        (_a = g.dataTransfer) == null ? void 0 : _a.setData("text/uri-list", m), (_b = g.dataTransfer) == null ? void 0 : _b.setData("custom/offset", JSON.stringify({
+          offsetX: D,
+          offsetY: f
+        })), r.value = {
           x: g.offsetX,
           y: g.offsetY,
           width: q,
-          height: D
+          height: $
         };
       }
       function T() {
-        r.value = "";
+        s.value = "";
       }
-      return (g, h) => (n(), _(X, null, [
-        y(Et, {
-          "is-show-popup": r.value === "sign",
+      return (g, m) => (n(), p(J, null, [
+        C(Lt, {
+          "is-show-popup": s.value === "sign",
           title: g.$t("signature_file"),
           "is-disabled": !a.value,
           onClose: T,
           onUse: k
         }, {
-          default: G(() => [
-            l(b).length ? (n(), _("ul", ur, [
+          default: K(() => [
+            l(b).length ? (n(), p("ul", er, [
               o("img", {
                 src: ht,
                 alt: "add dark icon",
                 width: "60",
                 height: "60",
                 class: "iconScale mb-3",
-                onClick: h[0] || (h[0] = (D) => x(true))
+                onClick: m[0] || (m[0] = ($) => P(true))
               }),
-              (n(true), _(X, null, at(l(b), (D) => (n(), _("li", {
-                key: D,
-                class: F([
+              (n(true), p(J, null, nt(l(b), ($) => (n(), p("li", {
+                key: $,
+                class: L([
                   "rounded-[20px] relative w-full flex justify-center cursor-pointer h-[98px]",
-                  a.value === D ? "bg-primary opacity-70" : "bg-white"
+                  a.value === $ ? "bg-primary opacity-70" : "bg-white"
                 ]),
-                onClick: (q) => $(D)
+                onClick: (q) => j($)
               }, [
                 o("img", {
-                  src: D,
+                  src: $,
                   alt: "signature icon",
                   class: "object-contain rounded-[20px]",
                   onDragstart: M
-                }, null, 40, pr),
-                st(y(O, {
+                }, null, 40, sr),
+                st(C(O, {
                   name: "close_s",
                   class: "absolute top-1 right-1 w-8 h-8 text-gray-80",
                   "hover-color": "hover:text-danger",
-                  onClick: h[1] || (h[1] = (q) => l(C)(true))
+                  onClick: m[1] || (m[1] = (q) => l(y)(true))
                 }, null, 512), [
                   [
                     ct,
-                    a.value === D
+                    a.value === $
                   ]
                 ])
-              ], 10, _r))), 128))
-            ])) : (n(), _("div", br, [
+              ], 10, ir))), 128))
+            ])) : (n(), p("div", rr, [
               o("img", {
                 src: ht,
                 alt: "",
                 width: "80",
                 height: "80",
                 class: "iconScale mb-5",
-                onClick: h[2] || (h[2] = (D) => x(true))
+                onClick: m[2] || (m[2] = ($) => P(true))
               }),
-              o("h5", fr, c(g.$t("add_signature_file")), 1)
+              o("h5", or, c(g.$t("add_signature_file")), 1)
             ]))
           ]),
           _: 1
@@ -27783,20 +27651,20 @@ let __tla = Promise.all([
           "title",
           "is-disabled"
         ]),
-        u.value ? (n(), L(dr, {
+        u.value ? (n(), E(tr, {
           key: 0,
-          onClose: h[3] || (h[3] = (D) => x(false))
+          onClose: m[3] || (m[3] = ($) => P(false))
         })) : Z("", true),
-        l(v) ? (n(), L(l(f), {
+        l(v) ? (n(), E(l(h), {
           key: 1,
           title: g.$t("warn")
         }, {
-          default: G(() => [
-            o("p", mr, c(g.$t("prompt.sure_delete_signature")), 1),
-            o("div", hr, [
+          default: K(() => [
+            o("p", ar, c(g.$t("prompt.sure_delete_signature")), 1),
+            o("div", nr, [
               o("button", {
                 class: "btn btn-base",
-                onClick: h[4] || (h[4] = (D) => l(C)(false))
+                onClick: m[4] || (m[4] = ($) => l(y)(false))
               }, c(g.$t("not_yet")), 1),
               o("button", {
                 class: "btn btn-primary",
@@ -27810,9 +27678,9 @@ let __tla = Promise.all([
         ])) : Z("", true)
       ], 64));
     }
-  }), vr = {
+  }), cr = {
     class: "toolbar signature-toolbar"
-  }, kr = A({
+  }, dr = I({
     __name: "SignatureToolbar",
     props: {
       currentTool: {},
@@ -27823,18 +27691,18 @@ let __tla = Promise.all([
     ],
     setup(t) {
       const e = it(t, "currentTool");
-      function i(r) {
-        e.value = r;
+      function i(s) {
+        e.value = s;
       }
-      return Lt(() => {
-        ie() && i("sign");
-      }), (r, s) => (n(), _("ul", vr, [
+      return At(() => {
+        te() && i("sign");
+      }), (s, r) => (n(), p("ul", cr, [
         o("li", {
-          onClick: s[0] || (s[0] = (a) => i("sign"))
+          onClick: r[0] || (r[0] = (a) => i("sign"))
         }, [
-          y(O, {
+          C(O, {
             name: "sign",
-            class: F([
+            class: L([
               "w-7 h-7",
               {
                 "text-primary": e.value === "sign"
@@ -27843,14 +27711,14 @@ let __tla = Promise.all([
           }, null, 8, [
             "class"
           ]),
-          o("p", null, c(r.$t("sign")), 1)
+          o("p", null, c(s.$t("sign")), 1)
         ]),
         o("li", {
-          onClick: s[1] || (s[1] = (a) => i("image"))
+          onClick: r[1] || (r[1] = (a) => i("image"))
         }, [
-          y(O, {
+          C(O, {
             name: "pic",
-            class: F([
+            class: L([
               "w-7 h-7",
               {
                 "text-primary": e.value === "image"
@@ -27859,14 +27727,14 @@ let __tla = Promise.all([
           }, null, 8, [
             "class"
           ]),
-          o("p", null, c(r.$t("picture")), 1)
+          o("p", null, c(s.$t("picture")), 1)
         ]),
         o("li", {
-          onClick: s[2] || (s[2] = (a) => i("literal"))
+          onClick: r[2] || (r[2] = (a) => i("literal"))
         }, [
-          y(O, {
+          C(O, {
             name: "text",
-            class: F([
+            class: L([
               "w-7 h-7",
               {
                 "text-primary": e.value === "literal"
@@ -27875,14 +27743,14 @@ let __tla = Promise.all([
           }, null, 8, [
             "class"
           ]),
-          o("p", null, c(r.$t("text")), 1)
+          o("p", null, c(s.$t("text")), 1)
         ]),
         o("li", {
-          onClick: s[3] || (s[3] = (a) => i("page"))
+          onClick: r[3] || (r[3] = (a) => i("page"))
         }, [
-          y(O, {
+          C(O, {
             name: "page",
-            class: F([
+            class: L([
               "w-7 h-7",
               {
                 "text-primary": e.value === "page"
@@ -27891,241 +27759,241 @@ let __tla = Promise.all([
           }, null, 8, [
             "class"
           ]),
-          o("p", null, c(r.$t("pages")), 1)
+          o("p", null, c(s.$t("pages")), 1)
         ])
       ]));
     }
-  }), wr = N(kr, [
+  }), ur = N(dr, [
     [
       "__scopeId",
       "data-v-72e15082"
     ]
-  ]), yr = {
+  ]), _r = {
     class: "signature-content content flex flex-col"
-  }, Cr = {
+  }, pr = {
     key: 0,
     class: "text-xs text-gray-60 md:text-sm"
-  }, xr = {
+  }, br = {
     class: "flex flex-col min-h-0 flex-1 md:flex-row"
-  }, Pr = {
+  }, fr = {
     class: "md:border-r-2 md:border-primary md:py-4 md:px-6"
-  }, Sr = {
+  }, mr = {
     class: "signature-content-file"
-  }, $r = {
+  }, hr = {
     class: "text-center"
-  }, Dr = {
+  }, gr = {
     class: "flex justify-between md:justify-evenly"
-  }, jr = {
+  }, vr = {
     class: "text-center"
-  }, Mr = {
+  }, kr = {
     class: "flex justify-between md:justify-evenly"
-  }, Nt = 0.6, Br = A({
+  }, Ut = 0.6, wr = I({
     __name: "SignatureContent",
     setup(t) {
-      const e = gt(() => vt(() => import("../chunks/@component-hook/pdf-canvas-DoR1skRj.js").then(async (m3) => {
+      const e = gt(() => vt(() => import("../chunks/@component-hook/pdf-canvas-gI5qE1lT.js").then(async (m3) => {
         await m3.__tla;
         return m3;
-      }), __vite__mapDeps([3,2]), import.meta.url)), i = S(""), r = S(false), s = S(1), a = S(false), u = S(false), b = ve("fileContainer"), p = S(1), v = S({
+      }), __vite__mapDeps([3,2]), import.meta.url)), i = S(""), s = S(false), r = S(1), a = S(false), u = S(false), b = he("fileContainer"), _ = S(1), v = S({
         x: 0,
         y: 0,
         width: 0,
         height: 0
-      }), f = S(false), { currentPDF: C } = nt(Y()), k = mt(), { t: $ } = dt(), { isShowWarnPopup: w, SignPopup: x, goBack: M, goPage: T, toggleWarnPopup: g } = ut(), { handlePointerDown: h, handlePointerMove: D, handlePointerUp: q } = e2(b), { canvasItems: j, loadedState: m, isCompleted: d, canvasRect: B, handleCanvasLoaded: P, handleCanvasReload: H } = Pe(C, true), K = U(() => `${B.value.width * p.value * Nt}px`), rt = U(() => `${B.value.height * p.value * Nt}px`), ot = U(() => j.value ? j.value.at(s.value - 1) : null);
-      let R = false, E = null;
+      }), h = S(false), { currentPDF: y } = at(Y()), k = mt(), { t: j } = dt(), { isShowWarnPopup: w, SignPopup: P, goBack: M, goPage: T, toggleWarnPopup: g } = ut(), { handlePointerDown: m, handlePointerMove: $, handlePointerUp: q } = U0(b), { canvasItems: D, loadedState: f, isCompleted: d, canvasRect: B, handleCanvasLoaded: x, handleCanvasReload: H } = Ce(y, true), G = U(() => `${B.value.width * _.value * Ut}px`), rt = U(() => `${B.value.height * _.value * Ut}px`), ot = U(() => D.value ? D.value.at(r.value - 1) : null);
+      let V = false, F = null;
       async function Q() {
-        It(false), Zt(true), await Ct(), window.requestAnimationFrame(async () => {
+        Et(false), It(true), await zt(), window.requestAnimationFrame(async () => {
           try {
-            if (!j.value) return;
-            const { setCurrentPDFCanvas: V, addPDF: z, updatePDF: I } = Y(), tt = j.value.map(async ({ canvasRef: et }) => {
+            if (!D.value) return;
+            const { setCurrentPDFCanvas: R, addPDF: z, updatePDF: A } = Y(), tt = D.value.map(async ({ canvasRef: et }) => {
               if (!et) return "";
-              const bt = await Cs(et);
-              return ue(bt, {
+              const bt = await bs(et);
+              return le(bt, {
                 useWebWorker: true
               });
-            }), kt = (await Promise.all(tt)).map((et) => et && ue.getDataUrlFromFile(et)), St = await Promise.all(kt);
-            if (r.value) {
-              r.value = false;
+            }), kt = (await Promise.all(tt)).map((et) => et && le.getDataUrlFromFile(et)), Pt = await Promise.all(kt);
+            if (s.value) {
+              s.value = false;
               return;
             }
-            V(St);
+            R(Pt);
             const pt = {
-              ...C.value,
+              ...y.value,
               PDFBase64: "",
               updateDate: Date.now()
             };
-            pt.isUpdate ? I(pt) : z(pt), W($("prompt.file_created_success")), T("complete");
+            pt.isUpdate ? A(pt) : z(pt), W(j("prompt.file_created_success")), T("complete");
           } catch {
             W({
-              message: $("prompt.operation_timed_out"),
+              message: j("prompt.operation_timed_out"),
               type: "error"
             });
           } finally {
-            Zt(false);
+            It(false);
           }
         });
       }
-      function _t2(V, z) {
-        const I = ot.value;
-        if (!I) return;
-        (z === "text" ? I.addText : I.addImage)(V);
+      function _t2(R, z) {
+        const A = ot.value;
+        if (!A) return;
+        (z === "text" ? A.addText : A.addImage)(R);
       }
-      function je(V) {
+      function De(R) {
         var _a;
-        (_a = ot.value) == null ? void 0 : _a.clearActive(), s.value = V, ae({
+        (_a = ot.value) == null ? void 0 : _a.clearActive(), r.value = R, se({
           top: 0,
           left: 0
         });
       }
-      function ae(V) {
-        b.value && b.value.scrollTo(V);
+      function se(R) {
+        b.value && b.value.scrollTo(R);
       }
-      function It(V) {
+      function Et(R) {
         var _a;
-        (_a = j.value) == null ? void 0 : _a.forEach(({ clearActive: z }) => z()), a.value = V;
+        (_a = D.value) == null ? void 0 : _a.forEach(({ clearActive: z }) => z()), a.value = R;
       }
-      function Zt(V) {
-        u.value = V;
+      function It(R) {
+        u.value = R;
+      }
+      function je() {
+        V = true, M();
       }
       function Me() {
-        R = true, M();
+        s.value = true, It(false);
       }
-      function Be() {
-        r.value = true, Zt(false);
-      }
-      function Te(V) {
+      function Be(R) {
         if (!b.value) return;
-        const { clientX: z, clientY: I } = V, tt = b.value.getBoundingClientRect(), { x: Pt, y: kt, height: St, width: pt } = v.value, et = I <= tt.top + kt, bt = I >= tt.bottom - (St - kt), le = z <= tt.left + Pt, ze = z >= tt.right - (pt - Pt);
-        let qt = 0, Rt = 0;
-        Ot(), (le || ze) && (qt = le ? -15 : Ft), (et || bt) && (Rt = et ? -15 : Ft), !(!qt && !Rt) && (E = window.requestAnimationFrame(() => {
-          ne(qt, Rt);
+        const { clientX: z, clientY: A } = R, tt = b.value.getBoundingClientRect(), { x: Ct, y: kt, height: Pt, width: pt } = v.value, et = A <= tt.top + kt, bt = A >= tt.bottom - (Pt - kt), oe = z <= tt.left + Ct, Te = z >= tt.right - (pt - Ct);
+        let Ot = 0, qt = 0;
+        Zt(), (oe || Te) && (Ot = oe ? -15 : Ft), (et || bt) && (qt = et ? -15 : Ft), !(!Ot && !qt) && (F = window.requestAnimationFrame(() => {
+          re(Ot, qt);
         }));
       }
-      function ne(V, z) {
+      function re(R, z) {
         if (!b.value) return;
-        const { scrollTop: I, scrollLeft: tt, scrollHeight: Pt, scrollWidth: kt, clientHeight: St, clientWidth: pt } = b.value, et = I + z, bt = tt + V;
-        if (et < 0 || bt < 0 || et + St > Pt || bt + pt > kt) {
-          Ot();
+        const { scrollTop: A, scrollLeft: tt, scrollHeight: Ct, scrollWidth: kt, clientHeight: Pt, clientWidth: pt } = b.value, et = A + z, bt = tt + R;
+        if (et < 0 || bt < 0 || et + Pt > Ct || bt + pt > kt) {
+          Zt();
           return;
         }
-        E = requestAnimationFrame(() => {
-          ae({
+        F = requestAnimationFrame(() => {
+          se({
             top: et,
             left: bt
-          }), ne(V, z);
+          }), re(R, z);
         });
       }
-      function Ot() {
-        E && (cancelAnimationFrame(E), E = null);
+      function Zt() {
+        F && (cancelAnimationFrame(F), F = null);
       }
-      return Yt(() => {
-        R && Y().clearCurrentPDF();
-      }), (V, z) => {
+      return Kt(() => {
+        V && Y().clearCurrentPDF();
+      }), (R, z) => {
         var _a, _b;
-        return n(), _("div", yr, [
+        return n(), p("div", _r, [
           o("h5", {
-            class: F([
+            class: L([
               "title text-center",
               {
                 "animate-pulse": !l(d)
               }
             ])
           }, [
-            yt(c(V.$t("sign_file")) + " ", 1),
-            l(d) ? Z("", true) : (n(), _("span", Cr, "(" + c(V.$t("file_uploading")) + ")", 1))
+            yt(c(R.$t("sign_file")) + " ", 1),
+            l(d) ? Z("", true) : (n(), p("span", pr, "(" + c(R.$t("file_uploading")) + ")", 1))
           ], 2),
-          o("div", xr, [
-            o("div", Pr, [
-              y(wr, {
+          o("div", br, [
+            o("div", fr, [
+              C(ur, {
                 "current-tool": i.value,
-                "onUpdate:currentTool": z[0] || (z[0] = (I) => i.value = I)
+                "onUpdate:currentTool": z[0] || (z[0] = (A) => i.value = A)
               }, null, 8, [
                 "current-tool"
               ]),
-              y(gr, {
+              C(lr, {
                 "current-tool": i.value,
-                "onUpdate:currentTool": z[1] || (z[1] = (I) => i.value = I),
+                "onUpdate:currentTool": z[1] || (z[1] = (A) => i.value = A),
                 "drag-offset": v.value,
-                "onUpdate:dragOffset": z[2] || (z[2] = (I) => v.value = I),
+                "onUpdate:dragOffset": z[2] || (z[2] = (A) => v.value = A),
                 onUseSignature: _t2
               }, null, 8, [
                 "current-tool",
                 "drag-offset"
               ]),
-              y(y2, {
+              C(_2, {
                 "current-tool": i.value,
-                "onUpdate:currentTool": z[3] || (z[3] = (I) => i.value = I),
+                "onUpdate:currentTool": z[3] || (z[3] = (A) => i.value = A),
                 "drag-offset": v.value,
-                "onUpdate:dragOffset": z[4] || (z[4] = (I) => v.value = I),
+                "onUpdate:dragOffset": z[4] || (z[4] = (A) => v.value = A),
                 onUseImage: _t2
               }, null, 8, [
                 "current-tool",
                 "drag-offset"
               ]),
-              y(z2, {
+              C(x2, {
                 "current-tool": i.value,
-                "onUpdate:currentTool": z[5] || (z[5] = (I) => i.value = I),
+                "onUpdate:currentTool": z[5] || (z[5] = (A) => i.value = A),
                 "drag-offset": v.value,
-                "onUpdate:dragOffset": z[6] || (z[6] = (I) => v.value = I),
+                "onUpdate:dragOffset": z[6] || (z[6] = (A) => v.value = A),
                 onUseLiteral: _t2
               }, null, 8, [
                 "current-tool",
                 "drag-offset"
               ]),
-              y(X2, {
+              C(q2, {
                 "current-tool": i.value,
-                "onUpdate:currentTool": z[7] || (z[7] = (I) => i.value = I),
-                onUsePage: je
+                "onUpdate:currentTool": z[7] || (z[7] = (A) => i.value = A),
+                onUsePage: De
               }, null, 8, [
                 "current-tool"
               ])
             ]),
-            o("div", Sr, [
+            o("div", mr, [
               o("div", {
                 ref: "fileContainer",
                 class: "relative w-full h-full overflow-auto touch-pan-x touch-pan-y pt-3 px-2 pb-11 md:pt-6 md:px-8",
-                onDragover: J(Te, [
+                onDragover: X(Be, [
                   "stop",
                   "prevent"
                 ]),
-                onDragleave: J(Ot, [
+                onDragleave: X(Zt, [
                   "stop",
                   "prevent"
                 ])
               }, [
                 o("div", {
-                  style: he({
-                    width: K.value,
+                  style: fe({
+                    width: G.value,
                     height: rt.value
                   })
                 }, [
-                  (n(true), _(X, null, at(l(C).pages, (I) => (n(), _(X, {
-                    key: I
+                  (n(true), p(J, null, nt(l(y).pages, (A) => (n(), p(J, {
+                    key: A
                   }, [
-                    l(m)[I - 1] ? st((n(), L(l(e), {
+                    l(f)[A - 1] ? st((n(), E(l(e), {
                       key: 0,
                       ref_for: true,
                       ref_key: "signatureCanvasItems",
-                      ref: j,
+                      ref: D,
                       class: "origin-top-left absolute",
-                      file: l(C),
-                      "file-zoom": p.value,
+                      file: l(y),
+                      "file-zoom": _.value,
                       "file-scale": 6.8,
-                      page: I,
-                      "canvas-scale": Nt,
+                      page: A,
+                      "canvas-scale": Ut,
                       password: l(k).filePassword,
                       "is-drop": "",
                       "manual-reload": "",
                       "close-svg-options": {
                         src: ""
                       },
-                      "on-destroy": l(Yt),
-                      onLoaded: (tt) => l(P)(I),
+                      "on-destroy": l(Kt),
+                      onLoaded: (tt) => l(x)(A),
                       onReload: l(H),
-                      onPointerDown: l(h),
-                      onPointerMove: l(D),
+                      onPointerDown: l(m),
+                      onPointerMove: l($),
                       onPointerUp: l(q),
-                      onSelectionCreated: z[8] || (z[8] = (tt) => f.value = true),
-                      onSelectionCleared: z[9] || (z[9] = (tt) => f.value = false)
+                      onSelectionCreated: z[8] || (z[8] = (tt) => h.value = true),
+                      onSelectionCleared: z[9] || (z[9] = (tt) => h.value = false)
                     }, null, 8, [
                       "file",
                       "file-zoom",
@@ -28140,20 +28008,20 @@ let __tla = Promise.all([
                     ])), [
                       [
                         ct,
-                        s.value === I
+                        r.value === A
                       ]
                     ]) : Z("", true)
                   ], 64))), 128))
                 ], 4),
-                l(m)[s.value] ? Z("", true) : (n(), L(I2, {
+                l(f)[r.value] ? Z("", true) : (n(), E(D2, {
                   key: 0,
                   class: "absolute"
                 }))
               ], 544),
-              y(ar, {
-                "file-zoom": p.value,
-                "onUpdate:fileZoom": z[10] || (z[10] = (I) => p.value = I),
-                "is-activated-fabric": f.value,
+              C(Y2, {
+                "file-zoom": _.value,
+                "onUpdate:fileZoom": z[10] || (z[10] = (A) => _.value = A),
+                "is-activated-fabric": h.value,
                 onCopyFabric: (_a = ot.value) == null ? void 0 : _a.copyActiveFabric,
                 onDeleteFabric: (_b = ot.value) == null ? void 0 : _b.deleteActiveFabric
               }, null, 8, [
@@ -28164,149 +28032,148 @@ let __tla = Promise.all([
               ])
             ])
           ]),
-          y(xe, {
+          C(xe, {
             class: "pb-2.5",
             "is-prev-disabled": !l(d),
             "is-next-disabled": !l(d),
-            onNextStep: z[11] || (z[11] = (I) => It(true)),
-            onPrevStep: z[12] || (z[12] = (I) => l(g)(true))
+            onNextStep: z[11] || (z[11] = (A) => Et(true)),
+            onPrevStep: z[12] || (z[12] = (A) => l(g)(true))
           }, null, 8, [
             "is-prev-disabled",
             "is-next-disabled"
           ]),
-          y(At),
-          l(w) ? (n(), L(l(x), {
+          l(w) ? (n(), E(l(P), {
             key: 0,
-            title: V.$t("warn")
+            title: R.$t("warn")
           }, {
-            default: G(() => [
-              o("p", $r, c(V.$t("prompt.sure_discard_edited_content")), 1),
-              o("div", Dr, [
+            default: K(() => [
+              o("p", hr, c(R.$t("prompt.sure_discard_edited_content")), 1),
+              o("div", gr, [
                 o("button", {
                   class: "btn btn-base",
-                  onClick: z[13] || (z[13] = (I) => l(g)(false))
-                }, c(V.$t("not_yet")), 1),
+                  onClick: z[13] || (z[13] = (A) => l(g)(false))
+                }, c(R.$t("not_yet")), 1),
                 o("button", {
                   class: "btn btn-primary",
-                  onClick: Me
-                }, c(V.$t("give_up")), 1)
+                  onClick: je
+                }, c(R.$t("give_up")), 1)
               ])
             ]),
             _: 1
           }, 8, [
             "title"
           ])) : Z("", true),
-          a.value ? (n(), L(l(x), {
+          a.value ? (n(), E(l(P), {
             key: 1,
-            title: V.$t("create_file")
+            title: R.$t("create_file")
           }, {
-            default: G(() => [
-              o("p", jr, c(V.$t("prompt.sure_completed_sign")), 1),
-              o("div", Mr, [
+            default: K(() => [
+              o("p", vr, c(R.$t("prompt.sure_completed_sign")), 1),
+              o("div", kr, [
                 o("button", {
                   class: "btn btn-base",
-                  onClick: z[14] || (z[14] = (I) => It(false))
-                }, c(V.$t("wait")), 1),
+                  onClick: z[14] || (z[14] = (A) => Et(false))
+                }, c(R.$t("wait")), 1),
                 o("button", {
                   class: "btn btn-primary",
                   onClick: Q
-                }, c(V.$t("confirm")), 1)
+                }, c(R.$t("confirm")), 1)
               ])
             ]),
             _: 1
           }, 8, [
             "title"
           ])) : Z("", true),
-          y(U2, {
+          C(A2, {
             "is-show-merge-popup": u.value,
-            "cancel-merge-file": Be
+            "cancel-merge-file": Me
           }, null, 8, [
             "is-show-merge-popup"
           ])
         ]);
       };
     }
-  }), Tr = N(Br, [
+  }), yr = N(wr, [
     [
       "__scopeId",
-      "data-v-101eeed7"
+      "data-v-e85d3743"
     ]
-  ]), zr = {
+  ]), xr = {
     class: "signature layout step"
-  }, Fr = A({
+  }, Cr = I({
     __name: "index",
     setup(t) {
-      return (e, i) => (n(), _("div", zr, [
-        y(Tr)
+      return (e, i) => (n(), p("div", xr, [
+        C(yr)
       ]));
     }
-  }), Lr = "data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M27.4481%2010.7981L29.7625%2013.1125C30.0554%2013.4054%2030.0554%2013.8803%2029.7625%2014.1732L16.8025%2027.1333L11.5196%2029.0411L13.4274%2023.7582L26.3875%2010.7981C26.6803%2010.5052%2027.1552%2010.5052%2027.4481%2010.7981Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'/%3e%3c/svg%3e", Ar = {
+  }), Pr = "data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M27.4481%2010.7981L29.7625%2013.1125C30.0554%2013.4054%2030.0554%2013.8803%2029.7625%2014.1732L16.8025%2027.1333L11.5196%2029.0411L13.4274%2023.7582L26.3875%2010.7981C26.6803%2010.5052%2027.1552%2010.5052%2027.4481%2010.7981Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'/%3e%3c/svg%3e", Sr = {
     class: "upload-content content"
-  }, Er = {
+  }, $r = {
     class: "title text-center"
-  }, Ir = {
+  }, Dr = {
     class: "upload-content-box h-[calc(100%-128px)] w-full my-5"
-  }, Zr = {
+  }, jr = {
     class: "flex flex-col gap-2 items-center w-full h-fit"
-  }, Or = {
+  }, Mr = {
     class: "relative h-fit"
-  }, qr = {
+  }, Br = {
     class: "w-full text-ellipsis overflow-hidden whitespace-nowrap text-center"
-  }, Rr = {
-    class: "text-gray-40"
-  }, Vr = {
+  }, Tr = {
+    class: ""
+  }, zr = {
     class: "w-full flex flex-col gap-4 items-center"
-  }, Hr = {
+  }, Fr = {
     class: "w-[90%] relative max-w-[400px]"
-  }, Ur = {
+  }, Ar = {
     key: 0,
     class: "border-dashed border-secondary border rounded-[20px] my-5 p-3 h-[calc(100%-128px)] w-full"
-  }, Nr = {
+  }, Lr = {
     class: "btn btn-primary"
-  }, Wr = {
+  }, Er = {
     class: "text-center"
-  }, Gr = {
-    class: "text-gray-40 mb-3 hidden md:block"
-  }, Kr = {
-    class: "text-gray-40 px-4 text-center"
-  }, Yr = {
+  }, Ir = {
+    class: "mb-3 hidden md:block"
+  }, Zr = {
+    class: "px-4 text-center"
+  }, Or = {
     class: "text-center"
-  }, Xr = {
+  }, qr = {
     class: "flex justify-between md:justify-around"
-  }, Jr = A({
+  }, Vr = I({
     __name: "UploadContent",
     setup(t) {
-      const e = S(""), i = S(""), r = S(true), s = S(false), a = S(1), { t: u, locale: b } = dt(), { createCanvas: p, deleteCanvas: v, loadFile: f } = ei({
+      const e = S(""), i = S(""), s = S(true), r = S(false), a = S(1), { t: u, locale: b } = dt(), { createCanvas: _, deleteCanvas: v, loadFile: h } = ti({
         id: "canvas"
-      }), { isShowWarnPopup: C, SignPopup: k, goBack: $, goPage: w, toggleWarnPopup: x } = ut(), { toggleLoading: M, updateFilePassword: T } = mt(), g = gt(() => vt(() => import("../chunks/UploadPassword-D5TXRV9J.js"), __vite__mapDeps([4,1,2,3]), import.meta.url)), h = /.pdf|.png|.jpg|.jpeg/;
-      let D = null;
+      }), { isShowWarnPopup: y, SignPopup: k, goBack: j, goPage: w, toggleWarnPopup: P } = ut(), { toggleLoading: M, updateFilePassword: T } = mt(), g = gt(() => vt(() => import("../chunks/UploadPassword-C5jnQgS0.js"), __vite__mapDeps([4,1,2,3]), import.meta.url)), m = /.pdf|.png|.jpg|.jpeg/;
+      let $ = null;
       const q = U(() => !e.value);
-      async function j(R) {
-        const E = R.target, { files: Q } = E;
-        await d(Q), E.value = "";
+      async function D(V) {
+        const F = V.target, { files: Q } = F;
+        await d(Q), F.value = "";
       }
-      function m(R) {
-        const { dataTransfer: E } = R, Q = E == null ? void 0 : E.files;
+      function f(V) {
+        const { dataTransfer: F } = V, Q = F == null ? void 0 : F.files;
         d(Q);
       }
-      function d(R) {
-        const E = $e(R, h);
-        if (E) return D = E, B(E);
+      function d(V) {
+        const F = Se(V, m);
+        if (F) return $ = F, B(F);
       }
-      async function B(R) {
+      async function B(V) {
         try {
-          const { setCurrentPDF: E } = Y(), { filePassword: Q } = mt();
+          const { setCurrentPDF: F } = Y(), { filePassword: Q } = mt();
           M({
             isShow: true,
             title: "upload_file",
             content: "file_uploading"
-          }), await Ct();
-          const _t2 = await f(R, Q);
+          }), await zt();
+          const _t2 = await h(V, Q);
           if (!_t2) throw new Error("File content is empty");
-          E(_t2), a.value = _t2.pages, W(u("prompt.file_upload_success")), e.value = R.name, i.value = R.name.replace(h, "");
-        } catch (E) {
-          if (`${E}`.includes("PasswordException")) {
-            if (s.value = true, `${E}` != "PasswordException: Incorrect Password") return;
+          F(_t2), a.value = _t2.pages, W(u("prompt.file_upload_success")), e.value = V.name, i.value = V.name.replace(m, "");
+        } catch (F) {
+          if (`${F}`.includes("PasswordException")) {
+            if (r.value = true, `${F}` != "PasswordException: Incorrect Password") return;
             W({
               message: u("prompt.incorrect_password"),
               type: "error"
@@ -28323,51 +28190,51 @@ let __tla = Promise.all([
           });
         }
       }
-      function P(R = false) {
-        s.value = false, !(!R || !D) && B(D);
+      function x(V = false) {
+        r.value = false, !(!V || !$) && B($);
       }
       function H() {
         e.value = "", Y().clearCurrentPDF(), T("");
       }
-      function K() {
-        H(), $();
+      function G() {
+        H(), j();
       }
       function rt() {
-        r.value = false;
+        s.value = false;
       }
       function ot() {
-        r.value = true, Y().setCurrentPDFName(i.value);
+        s.value = true, Y().setCurrentPDFName(i.value);
       }
-      return Lt(p), Yt(v), (R, E) => (n(), _("div", Ar, [
-        o("h5", Er, c(R.$t("upload_file")), 1),
-        st(o("div", Ir, [
-          o("div", Zr, [
-            o("div", Or, [
-              y(O, {
+      return At(_), Kt(v), (V, F) => (n(), p("div", Sr, [
+        o("h5", $r, c(V.$t("upload_file")), 1),
+        st(o("div", Dr, [
+          o("div", jr, [
+            o("div", Mr, [
+              C(O, {
                 name: "close",
                 class: "absolute -right-8 -top-2 cursor-pointer w-7 h-7 md:w-9 md:h-9 md:-right-12 md:-top-4",
                 onClick: H
               }),
-              E[6] || (E[6] = o("canvas", {
+              F[6] || (F[6] = o("canvas", {
                 id: "canvas",
                 class: "border-2 border-gray-20 w-full"
               }, null, -1))
             ]),
-            o("h5", qr, c(e.value), 1),
-            o("p", Rr, c(R.$t("page", a.value)), 1)
+            o("h5", Br, c(e.value), 1),
+            o("p", Tr, c(V.$t("page", a.value)), 1)
           ]),
-          o("div", Vr, [
-            o("p", null, c(R.$t("project_name")), 1),
-            o("label", Hr, [
+          o("div", zr, [
+            o("p", null, c(V.$t("project_name")), 1),
+            o("label", Fr, [
               st(o("input", {
-                "onUpdate:modelValue": E[0] || (E[0] = (Q) => i.value = Q),
+                "onUpdate:modelValue": F[0] || (F[0] = (Q) => i.value = Q),
                 type: "text",
                 class: "input",
                 onFocus: rt,
                 onBlur: ot
               }, null, 544), [
                 [
-                  ee,
+                  Qt,
                   i.value,
                   void 0,
                   {
@@ -28376,11 +28243,11 @@ let __tla = Promise.all([
                 ]
               ]),
               o("img", {
-                src: Lr,
+                src: Pr,
                 alt: "edit icon",
-                class: F([
+                class: L([
                   "absolute right-1 top-[2px] w-9 h-9 transition-all pointer-events-none",
-                  r.value ? "opacity-100" : "opacity-0"
+                  s.value ? "opacity-100" : "opacity-0"
                 ])
               }, null, 2)
             ])
@@ -28391,95 +28258,94 @@ let __tla = Promise.all([
             e.value
           ]
         ]),
-        e.value ? Z("", true) : (n(), _("div", Ur, [
+        e.value ? Z("", true) : (n(), p("div", Ar, [
           o("div", {
             class: "upload-content-box justify-center h-full w-full",
-            onDragover: E[1] || (E[1] = J(() => {
+            onDragover: F[1] || (F[1] = X(() => {
             }, [
               "stop",
               "prevent"
             ])),
-            onDragenter: E[2] || (E[2] = J(() => {
+            onDragenter: F[2] || (F[2] = X(() => {
             }, [
               "stop",
               "prevent"
             ])),
-            onDrop: J(m, [
+            onDrop: X(f, [
               "stop",
               "prevent"
             ])
           }, [
-            E[7] || (E[7] = o("img", {
-              src: Se,
+            F[7] || (F[7] = o("img", {
+              src: Pe,
               alt: "photo icon"
             }, null, -1)),
-            o("button", Nr, [
+            o("button", Lr, [
               o("input", {
                 type: "file",
                 accept: "application/pdf, .jpg, .png",
                 class: "opacity-0 absolute w-[131px] h-[41px] cursor-pointer",
-                onChange: j
+                onChange: D
               }, null, 32),
-              yt(c(R.$t("select_file")), 1)
+              yt(c(V.$t("select_file")), 1)
             ]),
-            o("div", Wr, [
-              o("h5", Gr, c(R.$t("prompt.or_drag_file")), 1),
-              o("p", Kr, c(R.$t("prompt.support_filetype", {
+            o("div", Er, [
+              o("h5", Ir, c(V.$t("prompt.or_drag_file")), 1),
+              o("p", Zr, c(V.$t("prompt.support_filetype", {
                 type: l(b) === "en-US" ? "PDF, JPG, and PNG" : "PDF\u3001JPG\u3001PNG"
               })), 1)
             ])
           ], 32)
         ])),
-        y(xe, {
+        C(xe, {
           "is-next-disabled": q.value,
-          onNextStep: E[3] || (E[3] = (Q) => l(w)("signature")),
-          onPrevStep: E[4] || (E[4] = (Q) => l(x)(true))
+          onNextStep: F[3] || (F[3] = (Q) => l(w)("signature")),
+          onPrevStep: F[4] || (F[4] = (Q) => l(P)(true))
         }, null, 8, [
           "is-next-disabled"
         ]),
-        y(At),
-        l(C) ? (n(), L(l(k), {
+        l(y) ? (n(), E(l(k), {
           key: 1,
-          title: R.$t("warn")
+          title: V.$t("warn")
         }, {
-          default: G(() => [
-            o("p", Yr, c(R.$t("prompt.give_up_edit")), 1),
-            o("div", Xr, [
+          default: K(() => [
+            o("p", Or, c(V.$t("prompt.give_up_edit")), 1),
+            o("div", qr, [
               o("button", {
                 class: "btn btn-base",
-                onClick: E[5] || (E[5] = (Q) => l(x)(false))
-              }, c(R.$t("not_yet")), 1),
+                onClick: F[5] || (F[5] = (Q) => l(P)(false))
+              }, c(V.$t("not_yet")), 1),
               o("button", {
                 class: "btn btn-primary",
-                onClick: K
-              }, c(R.$t("give_up")), 1)
+                onClick: G
+              }, c(V.$t("give_up")), 1)
             ])
           ]),
           _: 1
         }, 8, [
           "title"
         ])) : Z("", true),
-        s.value ? (n(), L(l(g), {
+        r.value ? (n(), E(l(g), {
           key: 2,
-          onClosePassword: P
+          onClosePassword: x
         })) : Z("", true)
       ]));
     }
-  }), Qr = N(Jr, [
+  }), Rr = N(Vr, [
     [
       "__scopeId",
-      "data-v-e6f557ca"
+      "data-v-989b52be"
     ]
-  ]), to = {
+  ]), Hr = {
     class: "upload layout step"
-  }, eo = A({
+  }, Ur = I({
     __name: "index",
     setup(t) {
-      return (e, i) => (n(), _("div", to, [
-        y(Qr)
+      return (e, i) => (n(), p("div", Hr, [
+        C(Rr)
       ]));
     }
-  }), io = [
+  }), Nr = [
     {
       path: "/:catchAll(.*)",
       redirect: "/"
@@ -28487,29 +28353,29 @@ let __tla = Promise.all([
     {
       path: "/",
       name: "home",
-      component: Y0
+      component: Z0
     },
     {
       path: "/upload",
       name: "upload",
-      component: eo
+      component: Ur
     },
     {
       path: "/signature",
       name: "signature",
-      component: Fr
+      component: Cr
     },
     {
       path: "/complete",
       name: "complete",
-      component: Vs
+      component: zs
     }
-  ], pe = Ye({
-    history: Xe(),
-    routes: io
-  }), so = {
+  ], de = Ke({
+    history: Ye(),
+    routes: Nr
+  }), Wr = {
     install(t) {
-      t.provide(Ce, pe.currentRoute), t.use(pe);
+      t.provide(we, de.currentRoute), t.use(de);
     }
   };
   if (typeof window < "u") {
@@ -28519,21 +28385,21 @@ let __tla = Promise.all([
     };
     document.readyState === "loading" ? document.addEventListener("DOMContentLoaded", t) : t();
   }
-  const xt = Je(Wi), De = Qe();
-  De.use(ti);
-  xt.use(De);
-  xt.use(so);
-  xt.use(se);
-  xt.use($s);
-  xt.use(_s);
+  const xt = Xe(Li), $e = Je();
+  $e.use(Qe);
+  xt.use($e);
+  xt.use(Wr);
+  xt.use(ee);
+  xt.use(gs);
+  xt.use(ss);
   xt.mount("#app");
 });
 export {
-  we as S,
+  ve as S,
   vt as _,
   __tla,
   W as a,
   O as b,
-  Ct as s,
+  zt as s,
   mt as u
 };

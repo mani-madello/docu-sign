@@ -139,7 +139,7 @@
 
 ### Features
 
-- complete basic PDF signature functions
+- complete basic Madello Document Signature Tool functions
 - PDF file will be stored in the indexedDB on the local side
 - change page transition
 - support english and chinese language

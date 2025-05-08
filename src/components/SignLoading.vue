@@ -18,7 +18,7 @@ const { loading } = storeToRefs(useConfigStore());
         alt="loading gif"
       />
 
-      <h5 class="text-center text-gray-40">
+      <h5 class="text-center ">
         {{ $t(loading.content) }}
       </h5>
       <div

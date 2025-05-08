@@ -1,7 +1,7 @@
 {
-  "name": "pdf-signature",
+  "name": "madello-document-signature-tool",
   "private": true,
-  "version": "0.5.1",
+  "version": "0.0.0",
   "type": "module",
   "packageManager": "pnpm@10.8.1",
   "scripts": {

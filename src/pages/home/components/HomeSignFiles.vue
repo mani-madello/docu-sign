@@ -183,10 +183,10 @@ onActivated(updateSelectAll);
         alt="Search Icon"
         class="mb-10"
       />
-      <h3 class="text-gray-40 text-center mb-3">
+      <h3 class=" text-center mb-3">
         {{ $t('prompt.un_found') }}
       </h3>
-      <p class="text-gray-40 text-center">
+      <p class=" text-center">
         {{ $t('prompt.try_another') }}
       </p>
     </div>

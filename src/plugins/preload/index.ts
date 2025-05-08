@@ -3,7 +3,7 @@ import { preloadImages, preloadStorage } from './local';
 
 export default {
   install() {
-    const preloads = [preloadFont('Gen Jyuu Gothic P', 'GenJyuuGothic-P.woff2'), preloadStorage(), preloadImages()];
+    const preloads = [preloadFont('OakSans', 'OakSans-Black.woff2'), preloadStorage(), preloadImages()];
 
     Promise.all(preloads).then(() => {
       closeLoadingScreen();

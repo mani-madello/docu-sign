@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import SignVersion from '@/components/SignVersion.vue';
-import { useRedirect } from '@/hooks/use-redirect';
 import type { MenuTab } from '@/types/menu';
 import HomeArchives from './HomeArchives.vue';
 import HomeFiles from './HomeFiles.vue';
@@ -12,7 +10,7 @@ interface Props {
 }
 
 const { currentTab } = defineProps<Props>();
-const { goPage } = useRedirect();
+// const { goPage } = useRedirect();
 const title = computed(() => {
   const titleMap = {
     file: 'my_files',
@@ -34,16 +32,9 @@ const currentCom = computed(() => {
 
 <template>
   <div class="index-content content">
-    <img
-      src="@/assets/icon/ic_add_tint.svg"
-      alt="Add File Svg"
-      class="index-content-add iconScale"
-      @click="goPage('upload')"
-    />
     <h5 class="title">
       {{ $t(title) }}
     </h5>
-    <sign-version />
 
     <keep-alive>
       <component :is="currentCom" />

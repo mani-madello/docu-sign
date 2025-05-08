@@ -25,7 +25,7 @@ usePdfStore().filterTrash();
         alt="trash icon"
       />
 
-      <div class="text-gray-40 text-center">
+      <div class=" text-center">
         <h5 class="mb-2">
           {{ $t('prompt.no_items') }}
         </h5>

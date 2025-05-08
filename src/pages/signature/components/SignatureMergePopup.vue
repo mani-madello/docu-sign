@@ -32,13 +32,13 @@ const { SignPopup, goPage } = useWarnPopup();
         <h5 class="text-primary mb-[18px]">
           {{ $t('file_completed') }}
         </h5>
-        <p class="text-gray-40">
+        <p class="">
           {{ $t('prompt.auto_jump_screen') }}
         </p>
       </div>
       <h5
         v-else
-        class="text-center text-gray-40"
+        class="text-center "
       >
         {{ $t('merging_files') }}
       </h5>

@@ -4,7 +4,6 @@ import { computed, defineAsyncComponent, onBeforeMount, onBeforeUnmount, ref } f
 import { useI18n } from 'vue-i18n';
 import { showToast } from '@/components/common';
 import SignIcon from '@/components/SignIcon.vue';
-import SignVersion from '@/components/SignVersion.vue';
 import { useWarnPopup } from '@/hooks/use-warn-popup';
 import { useConfigStore, usePdfStore } from '@/store';
 
@@ -107,7 +106,6 @@ onBeforeUnmount(() => {
       <span class="text-4xl font-thin">←</span>{{ $t('return_home') }}
     </button>
 
-    <sign-version />
     <sign-popup
       v-if="isShowWarnPopup"
       :title="$t('warn')"

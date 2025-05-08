@@ -13,7 +13,7 @@ const {
   name,
   hoverColor = 'hover:text-primary',
   prefix = 'icon',
-  color = '#4D4D4D',
+  color = '#ffffff',
   hoverChangeSvg = false,
 } = defineProps<Props>();
 

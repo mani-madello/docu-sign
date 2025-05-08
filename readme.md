@@ -2,7 +2,7 @@
   <img src="./public/logo.png" height="150">
 </p>
 
-<h1 align="center">PDF Signature</h1>
+<h1 align="center">Madello Document Signature Tool</h1>
 
 <p align="center">
   This is a web application for <code>signing PDF</code> documents online.

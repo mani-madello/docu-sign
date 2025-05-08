@@ -176,7 +176,7 @@ watch(
           class="flex-1"
           v-html="splitName(file.name)"
         ></p>
-        <p :class="['text-gray-40', { 'md:text-black md:w-[236px]': isListStatus }]">
+        <p :class="['', { 'md:text-black md:w-[236px]': isListStatus }]">
           {{ localTime }}
         </p>
 

@@ -5,7 +5,6 @@ import { computed, defineAsyncComponent, ref, useTemplateRef } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { showToast } from '@/components/common';
 import SignStepBtn from '@/components/SignStepBtn.vue';
-import SignVersion from '@/components/SignVersion.vue';
 import { DRAG_MOVE_STEP } from '@/constants/common';
 import { useLoadCanvas } from '@/hooks/use-load-canvas';
 import { usePointerFabric } from '@/hooks/use-pointer-fabric';
@@ -303,7 +302,6 @@ onAfterRouteLeave(() => {
       @next-step="toggleNextWarnPopup(true)"
       @prev-step="toggleWarnPopup(true)"
     />
-    <sign-version />
     <sign-popup
       v-if="isShowWarnPopup"
       :title="$t('warn')"

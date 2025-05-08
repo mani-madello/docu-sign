@@ -1,112 +1,36 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import SignIcon from '@/components/SignIcon.vue';
-import { I18N_MAP } from '@/constants/common';
 import { sleep } from '@/utils/common';
 import SignStep from './SignStep.vue';
 
 defineOptions({ name: 'AppHeader' });
 
 const isShowLanguageMenu = ref(false);
-const isDisplayLanguageMenu = ref(false);
 const { locale } = useI18n();
-let closeMenuTimer: NodeJS.Timeout | null = null;
-let isClosingMenu = false;
 
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function changeLocale(code: string) {
   locale.value = code;
   localStorage.setItem('pdf-signature-i18n', code);
-  isClosingMenu = true;
   await sleep(0);
   isShowLanguageMenu.value = false;
-}
-
-async function openLanguageMenu() {
-  if (isClosingMenu) return;
-  if (closeMenuTimer) {
-    clearTimeout(closeMenuTimer);
-    closeMenuTimer = null;
-  }
-  isDisplayLanguageMenu.value = true;
-  await sleep(0);
-  isShowLanguageMenu.value = true;
-}
-
-function closeLanguageMenu() {
-  closeMenuTimer = setTimeout(() => {
-    isShowLanguageMenu.value = false;
-  }, 150);
-}
-
-function onTransitionEnd(event: TransitionEvent) {
-  if (event.propertyName !== 'scale' || isShowLanguageMenu.value) return;
-  isDisplayLanguageMenu.value = false;
-  isClosingMenu = false;
 }
 </script>
 
 <template>
   <header class="app-header">
     <router-link to="/">
-      <img
+      <!-- <img
         src="@/assets/logo/logo_darkbg_horizontal.png"
         class="w-36 md:w-[228px]"
         alt="logo"
-      />
+      /> -->
     </router-link>
 
     <sign-step />
 
-    <div class="flex items-center gap-2 md:gap-4">
-      <div
-        class="relative"
-        @mouseover="openLanguageMenu"
-        @mouseleave="closeLanguageMenu"
-      >
-        <sign-icon
-          name="global"
-          class="app-header-icon text-gray-40 mt-0.5"
-        />
-
-        <div
-          v-if="isDisplayLanguageMenu"
-          :class="['app-header-menu-arrow app-header-transition', { 'opacity-0 scale-y-0': !isShowLanguageMenu }]"
-        ></div>
-
-        <teleport to="body">
-          <div
-            v-if="isDisplayLanguageMenu"
-            :class="['app-header-menu app-header-transition', { 'scale-y-0 opacity-0': !isShowLanguageMenu }]"
-            @transitionend="onTransitionEnd"
-            @mouseover="openLanguageMenu"
-            @mouseleave="closeLanguageMenu"
-          >
-            <ul class="app-header-language">
-              <li
-                v-for="(name, language) in I18N_MAP"
-                :key="language"
-                :class="['text-gray-50', { 'text-black bg-primary': locale === language }]"
-                @click="changeLocale(language)"
-              >
-                {{ name }}
-              </li>
-            </ul>
-          </div>
-        </teleport>
-      </div>
-
-      <a
-        href="https://github.com/tzuyi0817/PDF-signature"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <sign-icon
-          name="github"
-          class="app-header-icon text-gray-40"
-        />
-      </a>
-    </div>
   </header>
 </template>
 
@@ -117,7 +41,7 @@ function onTransitionEnd(event: TransitionEvent) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
+  background-color: transparent;
   padding: 8px;
   z-index: 1;
 }

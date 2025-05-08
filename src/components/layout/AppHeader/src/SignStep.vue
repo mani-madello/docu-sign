@@ -21,7 +21,7 @@ const isCompletePage = computed(() => route.name === 'complete');
         { 'sign-step-dot-complete': isSignaturePage || isCompletePage },
       ]"
     >
-      <span :class="['sign-step-text', isUploadPage ? 'text-primary' : 'text-gray-40']">
+      <span :class="['sign-step-text', isUploadPage ? 'text-primary' : '']">
         {{ $t('upload_file_lower') }}
       </span>
     </div>
@@ -39,7 +39,7 @@ const isCompletePage = computed(() => route.name === 'complete');
         { 'sign-step-dot-complete': isCompletePage },
       ]"
     >
-      <span :class="['sign-step-text', isSignaturePage ? 'text-primary' : 'text-gray-40']">
+      <span :class="['sign-step-text', isSignaturePage ? 'text-primary' : '']">
         {{ $t('sign_file_lower') }}
       </span>
     </div>
@@ -51,7 +51,7 @@ const isCompletePage = computed(() => route.name === 'complete');
     ></progress>
 
     <div :class="['sign-step-dot', { 'sign-step-dot-light': isCompletePage }]">
-      <span :class="['sign-step-text', isCompletePage ? 'text-primary' : 'text-gray-40']">
+      <span :class="['sign-step-text', isCompletePage ? 'text-primary' : '']">
         {{ $t('sign_completed_lower') }}
       </span>
     </div>
@@ -77,14 +77,14 @@ const isCompletePage = computed(() => route.name === 'complete');
   box-sizing: border-box;
   width: 10px;
   height: 10px;
-  background-color: black;
+  background-color: white;
   border: 2px solid var(--color-gray-40);
   border-radius: 50%;
 }
 
 .sign-step-dot-light {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 4px rgba(183, 236, 93, 0.5);
+  box-shadow: 0 0 0 4px #b2248c;
   transition-property: background-color, border-color, box-shadow;
   transition-delay: 300ms;
   transition-duration: 150ms;

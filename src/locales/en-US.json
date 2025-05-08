@@ -38,7 +38,7 @@
   "prompt": {
     "archived_projects": "Archived projects will be displayed here",
     "auto_jump_screen": "After completion, the screen will jump automatically. If there is no jump page, please press the confirm button.",
-    "create_file": "Come and create a new file",
+    "create_file": "Upload a document for sign",
     "deleted_projects": "Deleted items will be displayed here",
     "encryption_file": "Set a password to protect your PDF file",
     "error_occurred": "An unknown error occurred. Please refresh the page and try again",

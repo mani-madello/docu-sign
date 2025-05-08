@@ -5,7 +5,6 @@ import { useI18n } from 'vue-i18n';
 import { showToast } from '@/components/common';
 import SignIcon from '@/components/SignIcon.vue';
 import SignStepBtn from '@/components/SignStepBtn.vue';
-import SignVersion from '@/components/SignVersion.vue';
 import { useWarnPopup } from '@/hooks/use-warn-popup';
 import { onAfterRouteLeave } from '@/router';
 import { useConfigStore, usePdfStore } from '@/store';
@@ -134,7 +133,7 @@ onAfterRouteLeave(deleteCanvas);
         <h5 class="w-full text-ellipsis overflow-hidden whitespace-nowrap text-center">
           {{ fileName }}
         </h5>
-        <p class="text-gray-40">
+        <p class="">
           {{ $t('page', pages) }}
         </p>
       </div>
@@ -185,10 +184,10 @@ onAfterRouteLeave(deleteCanvas);
         </button>
 
         <div class="text-center">
-          <h5 class="text-gray-40 mb-3 hidden md:block">
+          <h5 class=" mb-3 hidden md:block">
             {{ $t('prompt.or_drag_file') }}
           </h5>
-          <p class="text-gray-40 px-4 text-center">
+          <p class=" px-4 text-center">
             {{ $t('prompt.support_filetype', { type: locale === 'en-US' ? 'PDF, JPG, and PNG' : 'PDF、JPG、PNG' }) }}
           </p>
         </div>
@@ -200,7 +199,6 @@ onAfterRouteLeave(deleteCanvas);
       @next-step="goPage('signature')"
       @prev-step="toggleWarnPopup(true)"
     />
-    <sign-version />
     <sign-popup
       v-if="isShowWarnPopup"
       :title="$t('warn')"
