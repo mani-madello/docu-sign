@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["../chunks/SignEncryption-DppJ7wPW.js","../chunks/SignPassword.vue_vue_type_script_setup_true_lang-R72PkFQp.js","../chunks/vendor-C8V6AyHD.js","../chunks/@component-hook/pdf-canvas-DoR1skRj.js","../chunks/UploadPassword-B7R4VJtG.js"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["../chunks/SignEncryption-qXNtzy3g.js","../chunks/SignPassword.vue_vue_type_script_setup_true_lang-DvOPUrgh.js","../chunks/vendor-C8V6AyHD.js","../chunks/@component-hook/pdf-canvas-DoR1skRj.js","../chunks/UploadPassword-D5TXRV9J.js"])))=>i.map(i=>d[i]);
 var __typeError = (msg) => {
   throw TypeError(msg);
 };
@@ -25612,7 +25612,7 @@ let __tla = Promise.all([
   }, Os = A({
     __name: "CompleteContent",
     setup(t) {
-      const e = S("archive"), i = S(false), { currentPDF: r } = nt(Y()), { t: s } = dt(), { isShowWarnPopup: a, SignPopup: u, goPage: b, toggleWarnPopup: p } = ut(), v = gt(() => vt(() => import("../chunks/SignEncryption-DppJ7wPW.js").then(async (m) => {
+      const e = S("archive"), i = S(false), { currentPDF: r } = nt(Y()), { t: s } = dt(), { isShowWarnPopup: a, SignPopup: u, goPage: b, toggleWarnPopup: p } = ut(), v = gt(() => vt(() => import("../chunks/SignEncryption-qXNtzy3g.js").then(async (m) => {
         await m.__tla;
         return m;
       }).then((w) => w.S), __vite__mapDeps([0,1,2]), import.meta.url)), f = U(() => ({
@@ -26136,7 +26136,7 @@ let __tla = Promise.all([
       list: {}
     },
     setup(t) {
-      const e = S(""), i = S("list"), r = S(false), s = S(false), a = S(null), u = /* @__PURE__ */ new Set(), { deleteTrash: b, batchDeleteTrash: p } = Y(), { isShowWarnPopup: v, SignPopup: f, toggleWarnPopup: C } = ut(), k = gt(() => vt(() => import("../chunks/SignEncryption-DppJ7wPW.js").then(async (m3) => {
+      const e = S(""), i = S("list"), r = S(false), s = S(false), a = S(null), u = /* @__PURE__ */ new Set(), { deleteTrash: b, batchDeleteTrash: p } = Y(), { isShowWarnPopup: v, SignPopup: f, toggleWarnPopup: C } = ut(), k = gt(() => vt(() => import("../chunks/SignEncryption-qXNtzy3g.js").then(async (m3) => {
         await m3.__tla;
         return m3;
       }).then((P) => P.S), __vite__mapDeps([0,1,2]), import.meta.url)), $ = U(() => i.value === "list"), w = U(() => $.value && s.value === false), x = U(() => {
@@ -28278,7 +28278,7 @@ let __tla = Promise.all([
     setup(t) {
       const e = S(""), i = S(""), r = S(true), s = S(false), a = S(1), { t: u, locale: b } = dt(), { createCanvas: p, deleteCanvas: v, loadFile: f } = ei({
         id: "canvas"
-      }), { isShowWarnPopup: C, SignPopup: k, goBack: $, goPage: w, toggleWarnPopup: x } = ut(), { toggleLoading: M, updateFilePassword: T } = mt(), g = gt(() => vt(() => import("../chunks/UploadPassword-B7R4VJtG.js"), __vite__mapDeps([4,1,2,3]), import.meta.url)), h = /.pdf|.png|.jpg|.jpeg/;
+      }), { isShowWarnPopup: C, SignPopup: k, goBack: $, goPage: w, toggleWarnPopup: x } = ut(), { toggleLoading: M, updateFilePassword: T } = mt(), g = gt(() => vt(() => import("../chunks/UploadPassword-D5TXRV9J.js"), __vite__mapDeps([4,1,2,3]), import.meta.url)), h = /.pdf|.png|.jpg|.jpeg/;
       let D = null;
       const q = U(() => !e.value);
       async function j(R) {
