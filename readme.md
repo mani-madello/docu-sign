@@ -1,11 +1,4 @@
-<p align="center">
-  <img src="./public/logo.png" height="150">
-</p>
-
-<h1 align="center">Madello E Signing Tool</h1>
-
-<p align="center">
-  This is a web application for <code>signing PDF</code> documents online.
+ve web application by <strong>Madello AI</strong> & <strong>Madello Consulting</strong> for <code>securely signing PDF</code> documents online.
 </p>
 
 <p align="center">
@@ -17,50 +10,45 @@
 
 <p align="center">
   <a href="https://pdf-signature-puce.vercel.app">
-    <img src="https://img.shields.io/badge/pdf--signature-demo-%23B7EC5D?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/madello--esign-live%20demo-%23B7EC5D?style=for-the-badge" />
   </a>
 </p>
 
 <br>
 
-![image](./public/cover.jpg)
+![Madello E-Sign Cover]
 
-## Description
+## 📝 About Madello E-Sign
 
-Users can upload PDF files, sign them online, and download the signed PDF files.  
-The application also supports setting PDF passwords and storing PDF files in the local `IndexedDB`.  
-Signatures, text, and images are stored in `localStorage` for reuse.
+**Madello E-Sign** is a secure, user-friendly tool built to streamline PDF document signing. Developed by **Madello AI**, a product-focused division of **Madello Consulting**, this tool enables professionals, enterprises, and individuals to manage and sign documents digitally—anytime, anywhere.
 
-## Features
+Key benefits:
+- Enhance efficiency in digital workflows
+- Simplify e-signature handling
+- Maintain privacy with local and secure data handling
 
-- Upload PDF files
-- Sign PDF files electronically
-- Download signed PDF files
-- Adjustable signature position and size
-- Set PDF passwords
-- Open encrypted PDF files
-- Support multiple languages
-- Store PDF files in IndexedDB
-- Custom signatures, text and images are stored in localStorage
-- Edit signed PDF files
+## 🔐 Features
 
-## Development
+- Upload and sign PDF documents digitally
+- Download secured, signed PDFs
+- Drag and resize signature anywhere on the page
+- Set passwords to protect PDFs
+- Open encrypted PDFs
+- Multilingual support
+- Store PDFs in browser `IndexedDB`
+- Save custom signatures, images, and text in `localStorage`
+- Edit already signed documents
+- Batch file operations: archive, delete, restore
 
-Clone this repository and install dependencies by running `pnpm`(Node.js version is v20.9.0), then:
+## 🚀 Quick Start (Development)
 
-- `pnpm dev`: Run in development mode
-- `pnpm build`: Build in production mode
-- `pnpm preview`: Run preview
+Ensure Node.js v20.9.0+ is installed. Then:
 
-## Use Technology
-
-- Frontend: vue3, typescript, tailwindcss, pinia
-- Environment construction: vite, eslint, prettier
-- PDF Handling: jspdf
-- Signature Drawing: [@component-hook/pdf-canvas](https://github.com/tzuyi0817/component-hook/tree/master/packages/pdf-canvas#readme)
-- Compress image: browser-image-compression
-- Internationalization: vue-i18n
-- Local Storage: idb-keyval
+```bash
+pnpm install
+pnpm dev       # Run development server
+pnpm build     # Build for production
+pnpm preview   # Preview production build
 
 ## Usage
 
