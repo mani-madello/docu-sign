@@ -7,6 +7,7 @@ const route = useRoute();
 const isUploadPage = computed(() => route.name === 'upload');
 const isSignaturePage = computed(() => route.name === 'signature');
 const isCompletePage = computed(() => route.name === 'complete');
+const isSendPage = computed(() => route.name === 'send');
 </script>
 
 <template>
@@ -53,6 +54,18 @@ const isCompletePage = computed(() => route.name === 'complete');
     <div :class="['sign-step-dot', { 'sign-step-dot-light': isCompletePage }]">
       <span :class="['sign-step-text', isCompletePage ? 'text-primary' : '']">
         {{ $t('sign_completed_lower') }}
+      </span>
+    </div>
+
+    <progress
+      class="sign-step-bar"
+      :value="isCompletePage ? 100 : 0"
+      max="100"
+    ></progress>
+
+    <div :class="['sign-step-dot', { 'sign-step-dot-light': isSendPage }]">
+      <span :class="['sign-step-text', isSendPage ? 'text-primary' : '']">
+        Send document
       </span>
     </div>
   </div>
