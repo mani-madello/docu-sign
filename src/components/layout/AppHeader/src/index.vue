@@ -1,49 +1,93 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useI18n } from 'vue-i18n';
-import { sleep } from '@/utils/common';
 import SignStep from './SignStep.vue';
-
 defineOptions({ name: 'AppHeader' });
-
-const isShowLanguageMenu = ref(false);
-const { locale } = useI18n();
-
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-async function changeLocale(code: string) {
-  locale.value = code;
-  localStorage.setItem('pdf-signature-i18n', code);
-  await sleep(0);
-  isShowLanguageMenu.value = false;
-}
 </script>
 
 <template>
-  <header class="app-header">
-    <router-link to="/">
-      <!-- <img
+  <header class="app-header" >  
+ <router-link to="/">
+    <img
         src="@/assets/logo/logo_darkbg_horizontal.png"
-        class="w-36 md:w-[228px]"
+        class="w-26 md:w-[228px]"
         alt="logo"
-      /> -->
+        style="width: 170px;"
+      /> 
     </router-link>
-
     <sign-step />
-
   </header>
 </template>
 
 <style lang="css" scoped>
+.index-menu {
+  display: flex;
+  gap: 4px;
+  margin-left: 20px;
+}
+
+.index-menu li {
+  border: 2px solid var(--color-gray-70);
+  border-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  padding-top: 8px;
+  height: 42px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  filter: drop-shadow(var(--drop-shadow-md));
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+.index-menu li:hover {
+  background-color: white;
+}
+
+.index-menu li img {
+  width: 22px;
+}
+
+@media (min-width: 768px) {
+  .index-menu {
+    flex-direction: column;
+    gap: 10px;
+    transform: translateY(82px);
+  }
+
+  .index-menu li {
+    width: 62px;
+    height: 56px;
+    transform: translateX(4px) rotate(-90deg);
+  }
+
+  .index-menu li img {
+    width: 28px;
+    transform: rotate(90deg);
+  }
+}
+
+
+
+
+
+
+.router-link-exact-active {
+  font-weight: 400;
+}
 .app-header {
   position: fixed;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   background-color: transparent;
   padding: 8px;
-  z-index: 1;
+  z-index: 0;
+  background-color: #fff;
+    height: 6.3125rem;
+
+
 }
 
 .app-header-icon {

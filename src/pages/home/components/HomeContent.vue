@@ -33,7 +33,26 @@ const currentCom = computed(() => {
 <template>
   <div class="index-content content">
     <h5 class="title">
-      {{ $t(title) }}
+      <img
+       v-if="title === 'my_files'"
+        src="@/assets/icon/archive-minimalistic-svgrepo-com.svg"
+        alt="trash icon"
+        style="width: 30px;display: inline;"
+      /> 
+      <img
+       v-if="title === 'archived_files'"
+        src="@/assets/icon/folder-with-files-svgrepo-com.svg"
+        alt="trash icon"
+        style="width: 30px;display: inline;"
+      /> 
+      <img
+       v-if="title === 'trash_bin'"
+        src="@/assets/icon/trash-bin-minimalistic-svgrepo-com.svg"
+        alt="trash icon"
+        style="width: 30px;display: inline;"
+      /> 
+      
+      {{ $t(title) }}  
     </h5>
 
     <keep-alive>

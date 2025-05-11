@@ -84,7 +84,7 @@ const isCompletePage = computed(() => route.name === 'complete');
 
 .sign-step-dot-light {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 4px #b2248c;
+  box-shadow: 0 0 0 4px #4C00FF;
   transition-property: background-color, border-color, box-shadow;
   transition-delay: 300ms;
   transition-duration: 150ms;
@@ -119,6 +119,7 @@ const isCompletePage = computed(() => route.name === 'complete');
 }
 
 .sign-step-text {
+  font-weight: bold;
   display: none;
   position: absolute;
   font-size: 14px;

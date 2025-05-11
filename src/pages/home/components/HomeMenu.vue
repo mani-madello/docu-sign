@@ -14,10 +14,13 @@ function changeTab(tab: MenuTab) {
       :class="currentTab === 'file' ? 'bg-white' : 'bg-gray-60'"
       @click="changeTab('file')"
     >
+    
       <img
+      class="icon"
         src="@/assets/icon/ic_file_h.svg"
         alt="file icon"
-      />
+        :class="currentTab === 'files' ? 'active-icon' : ''"
+      />My Files
     </li>
     <li
       :class="currentTab === 'archive' ? 'bg-white' : 'bg-gray-60'"
@@ -26,7 +29,7 @@ function changeTab(tab: MenuTab) {
       <img
         src="@/assets/icon/ic_archive_h.svg"
         alt="archive icon"
-      />
+      />Archived Files
     </li>
     <li
       :class="currentTab === 'trash' ? 'bg-white' : 'bg-gray-60'"
@@ -35,7 +38,7 @@ function changeTab(tab: MenuTab) {
       <img
         src="@/assets/icon/ic_trash_h.svg"
         alt="trash icon"
-      />
+      />Trash Bin
     </li>
   </ul>
 </template>
@@ -43,50 +46,65 @@ function changeTab(tab: MenuTab) {
 <style lang="css" scoped>
 .index-menu {
   display: flex;
-  gap: 4px;
+  gap: 12px;
   margin-left: 20px;
+  position: absolute;
+  z-index: 99999;
+  flex-direction: row;
+  margin-top:-6%;
 }
-
 .index-menu li {
-  border: 2px solid var(--color-gray-70);
-  border-bottom: 0;
+  background:#ac94fc;
+   
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 48px;
-  padding-top: 8px;
-  height: 42px;
+  justify-content: center;
+  gap: 6px;
+  width: auto;
+  padding: 8px 16px;
+  height: 44px;
   cursor: pointer;
-  transition: background-color 0.2s;
-  filter: drop-shadow(var(--drop-shadow-md));
-  border-top-left-radius: 100px;
-  border-top-right-radius: 100px;
+  transition: all 0.2s ease-in-out;
+  border-radius: 11px; /* pill shape */
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff; 
 }
 
-.index-menu li:hover {
-  background-color: white;
-}
+/* .index-menu li:hover {
+  background-color: #dbeafe;
+} */
 
 .index-menu li img {
-  width: 22px;
+  width: 20px;
+  height: 20px;
 }
 
-@media (min-width: 768px) {
-  .index-menu {
-    flex-direction: column;
-    gap: 10px;
-    transform: translateY(82px);
-  }
+.index-menu li.bg-white {
+ /* background: radial-gradient(100% 100% at 50% 0%, rgb(76, 0, 255) 0%, rgb(38, 6, 93) 100%);
+ /* background:linear-gradient(
+    359deg,
+    rgba(109, 48, 142, 1) 0%,
+    rgba(233, 14, 139, 1) 100%
+  ); 
+  background-color:rgb(31, 2, 100);
+  /* background-color:   rgb(76, 0, 255); */
 
-  .index-menu li {
-    width: 62px;
-    height: 56px;
-    transform: translateX(4px) rotate(-90deg);
-  }
+  color: white;
+  /* border-color: #2563eb; */
+}
 
-  .index-menu li img {
-    width: 28px;
-    transform: rotate(90deg);
-  }
+.index-menu li.bg-white img {
+  filter: brightness(2) invert(1);
+}
+
+/* Default color */
+.icon {
+  filter: grayscale(0%) brightness(100%);
+}
+
+/* Active state: Turn icon color to white */
+.index-menu li.active .icon {
+  filter: grayscale(0%) brightness(100%) invert(1); /* Makes the icon white */
 }
 </style>

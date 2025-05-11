@@ -1,7 +1,7 @@
 @layer components {
   .layout {
     position: relative;
-    min-height: 100dvh;
+    min-height: 95dvh;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 56px;

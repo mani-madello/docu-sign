@@ -188,7 +188,7 @@ onAfterRouteLeave(deleteCanvas);
             {{ $t('prompt.or_drag_file') }}
           </h5>
           <p class=" px-4 text-center">
-            {{ $t('prompt.support_filetype', { type: locale === 'en-US' ? 'PDF, JPG, and PNG' : 'PDF、JPG、PNG' }) }}
+            {{ $t('prompt.support_filetype', { type: locale === 'en-US' ? 'PDF, JPG, and PNG' : 'PDF, JPG, PNG' }) }}
           </p>
         </div>
       </div>

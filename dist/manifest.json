@@ -1,12 +1,12 @@
 {
   "id": "/pdf-signature",
-  "name": "Madello Document Signature Tool",
+  "name": "Madello E Signing Tool",
   "short_name": "PDF Sign",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#cd158b2e",
   "theme_color": "#B7EC5D",
-  "description": "This is an online instant Madello Document Signature Tool website.",
+  "description": "This is an online instant Madello E Signing Tool website.",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",

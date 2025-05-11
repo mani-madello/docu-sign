@@ -181,7 +181,7 @@ function close() {
           accept="application/.jpg, .png"
           class="opacity-0 absolute w-[131px] h-[41px] cursor-pointer"
           @change="uploadFile"
-        />{{ $t('select_file') }}
+        />{{ $t('select_file') }} 
       </button>
 
       <div class="text-center">
@@ -189,7 +189,7 @@ function close() {
           {{ $t('prompt.or_drag_file') }}
         </h5>
         <p class=" px-4 text-center">
-          {{ $t('prompt.support_filetype', { type: locale === 'en-US' ? 'JPG and PNG' : 'JPG、PNG' }) }}
+          {{ $t('prompt.support_filetype', { type: locale === 'en-US' ? 'JPG and PNG' : 'JPG,PNG' }) }}
         </p>
       </div>
     </div>

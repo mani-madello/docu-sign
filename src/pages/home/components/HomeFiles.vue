@@ -21,7 +21,7 @@ const { PDFList } = storeToRefs(usePdfStore());
       class="h-full flex flex-col items-center justify-center gap-5"
     >
       <img
-        src="@/assets/icon/ic_add_dark.svg"
+        src="@/assets/icon/add-folder-svgrepo-com.svg"
         alt="create file"
         class="iconScale w-[80px] h-[80] md:w-[136px] md:h-[136px]"
         @click="goPage('upload')"

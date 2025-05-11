@@ -105,7 +105,7 @@ function close() {
       class="signature-list justify-center"
     >
       <img
-        src="@/assets/icon/ic_add_dark.svg"
+        src="@/assets/icon/images.svg"
         alt=""
         width="80"
         height="80"

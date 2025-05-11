@@ -1,13 +1,13 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["../chunks/SignEncryption-DMDbHRFr.js","../chunks/SignPassword.vue_vue_type_script_setup_true_lang-Cw1fSFOa.js","../chunks/vendor-DdwyfI_m.js","../chunks/@component-hook/pdf-canvas-gI5qE1lT.js","../chunks/UploadPassword-C5jnQgS0.js"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["../chunks/SignEncryption-ComA92oE.js","../chunks/SignPassword.vue_vue_type_script_setup_true_lang-BS2uRloV.js","../chunks/vendor-2z0F1iGp.js","../chunks/@component-hook/pdf-canvas-DuZ37e5K.js","../chunks/UploadPassword-8EOCzOrj.js"])))=>i.map(i=>d[i]);
 var __typeError = (msg) => {
   throw TypeError(msg);
 };
 var __accessCheck = (obj, member, msg) => member.has(obj) || __typeError("Cannot " + msg);
 var __privateGet = (obj, member, getter) => (__accessCheck(obj, member, "read from private field"), getter ? getter.call(obj) : member.get(obj));
 var __privateAdd = (obj, member, value) => member.has(obj) ? __typeError("Cannot add the same private member more than once") : member instanceof WeakSet ? member.add(obj) : member.set(obj, value);
-import { d as I, c as U, u as ue, a as p, f as L, e as o, t as c, b as n, r as S, j as dt, k as C, l as _e, i as At, m as E, T as pe, p as be, g as X, q as $t, s as ze, v as Fe, x as Ae, y as Le, z as Ee, A as Ie, B as at, C as Z, D as l, E as K, h as fe, F as Ze, G as Xt, H as J, I as Oe, J as me, K as ft, L as it, M as qe, N as Ve, O as he, w as Tt, n as Nt, P as Re, Q as He, R as ae, S as Ue, U as gt, V as Ne, o as Jt, W as nt, X as yt, Y as st, Z as ct, _ as Qt, $ as We, a0 as Ge, a1 as ne, a2 as le, a3 as Ke, a4 as Ye, a5 as Xe, a6 as Je, a7 as Qe } from "../chunks/vendor-DdwyfI_m.js";
-import { useFabric as ti, __tla as __tla_0 } from "../chunks/@component-hook/pdf-canvas-gI5qE1lT.js";
-let ve, vt, W, O, zt, mt;
+import { d as I, c as U, u as ue, a as u, f as F, e as o, t as c, b as n, j as x, k as _e, l as G, i as Lt, m as E, T as pe, p as be, g as X, q as $t, s as Fe, v as Le, x as Ae, y as Ee, z as Ie, A as Ze, B as nt, C as Z, D as l, h as fe, E as Ve, r as D, F as Xt, G as J, H as He, I as me, J as ft, K as it, L as Oe, M as qe, N as he, w as Tt, n as Nt, O as Re, P as Ue, Q as ae, R as Ne, S as ht, U as gt, V as We, o as Jt, W as lt, X as at, Y as st, Z as dt, _ as Qt, $ as Ge, a0 as Ke, a1 as ne, a2 as le, a3 as Ye, a4 as Xe, a5 as Je, a6 as Qe, a7 as t0 } from "../chunks/vendor-2z0F1iGp.js";
+import { useFabric as e0, __tla as __tla_0 } from "../chunks/@component-hook/pdf-canvas-DuZ37e5K.js";
+let we, vt, W, V, zt, mt;
 let __tla = Promise.all([
   (() => {
     try {
@@ -22,7 +22,7 @@ let __tla = Promise.all([
     if (e && e.supports && e.supports("modulepreload")) return;
     for (const r of document.querySelectorAll('link[rel="modulepreload"]')) s(r);
     new MutationObserver((r) => {
-      for (const a of r) if (a.type === "childList") for (const u of a.addedNodes) u.tagName === "LINK" && u.rel === "modulepreload" && s(u);
+      for (const a of r) if (a.type === "childList") for (const _ of a.addedNodes) _.tagName === "LINK" && _.rel === "modulepreload" && s(_);
     }).observe(document, {
       childList: true,
       subtree: true
@@ -38,48 +38,20 @@ let __tla = Promise.all([
       fetch(r.href, a);
     }
   })();
-  const ei = Array.isArray, ii = (t) => Object.prototype.toString.call(t).slice(8, -1).toLowerCase(), si = (t) => ii(t) === "object", ri = (t, e) => Object.hasOwn(t, e);
-  function oi(t, e = 500) {
-    if (typeof t != "function") throw new TypeError("The first argument is not a function.");
-    let i = 0;
-    return function(...s) {
-      const r = Date.now();
-      r - i < e || (t.apply(this, s), i = r);
-    };
-  }
-  zt = function(t = 500) {
-    return new Promise((e) => setTimeout(e, t));
-  };
-  function te() {
-    return window.innerWidth > 768;
-  }
-  function ai(t) {
-    const [e, i] = new Date(t).toLocaleString("en-GB").split(","), [s, r, a] = e.split("/");
-    return `${a}-${r}-${s} ${i}`;
-  }
-  function ni(t) {
-    let e = window.devicePixelRatio;
-    const i = window.matchMedia(`(resolution: ${e}dppx)`), s = () => {
-      const r = window.devicePixelRatio;
-      r !== e && (e = r, t(r));
-    };
-    return i.addEventListener("change", s), () => {
-      i.removeEventListener("change", s);
-    };
-  }
-  let li, ci, di, N, ui, _i, pi, bi, fi, mi, hi, ge, gi, vi, ki, ke, wi, yi, Vt, xi, Dt, lt;
-  li = [
+  let ge, i0, s0, r0, N, o0, a0, n0, l0, c0, d0, u0, ve, _0, p0, b0, ke, f0, m0, Ot, h0, Dt, ct, g0, v0, w0, k0;
+  ge = "" + new URL("logo_darkbg_horizontal-EV2IreVs.png", import.meta.url).href;
+  i0 = [
     "value"
   ];
-  ci = [
+  s0 = [
     "value"
   ];
-  di = I({
+  r0 = I({
     __name: "SignStep",
     setup(t) {
       const e = ue(), i = U(() => e.name === "upload"), s = U(() => e.name === "signature"), r = U(() => e.name === "complete");
-      return (a, u) => (n(), p("div", {
-        class: L([
+      return (a, _) => (n(), u("div", {
+        class: F([
           "sign-step",
           {
             "opacity-0": !i.value && !s.value && !r.value
@@ -87,7 +59,7 @@ let __tla = Promise.all([
         ])
       }, [
         o("div", {
-          class: L([
+          class: F([
             "sign-step-dot",
             {
               "sign-step-dot-light": i.value
@@ -98,7 +70,7 @@ let __tla = Promise.all([
           ])
         }, [
           o("span", {
-            class: L([
+            class: F([
               "sign-step-text",
               i.value ? "text-primary" : ""
             ])
@@ -108,9 +80,9 @@ let __tla = Promise.all([
           class: "sign-step-bar",
           value: s.value || r.value ? 100 : 0,
           max: "100"
-        }, null, 8, li),
+        }, null, 8, i0),
         o("div", {
-          class: L([
+          class: F([
             "sign-step-dot",
             {
               "sign-step-dot-light": s.value
@@ -121,7 +93,7 @@ let __tla = Promise.all([
           ])
         }, [
           o("span", {
-            class: L([
+            class: F([
               "sign-step-text",
               s.value ? "text-primary" : ""
             ])
@@ -131,9 +103,9 @@ let __tla = Promise.all([
           class: "sign-step-bar",
           value: r.value ? 100 : 0,
           max: "100"
-        }, null, 8, ci),
+        }, null, 8, s0),
         o("div", {
-          class: L([
+          class: F([
             "sign-step-dot",
             {
               "sign-step-dot-light": r.value
@@ -141,7 +113,7 @@ let __tla = Promise.all([
           ])
         }, [
           o("span", {
-            class: L([
+            class: F([
               "sign-step-text",
               r.value ? "text-primary" : ""
             ])
@@ -155,62 +127,72 @@ let __tla = Promise.all([
     for (const [s, r] of e) i[s] = r;
     return i;
   };
-  ui = N(di, [
+  o0 = N(r0, [
     [
       "__scopeId",
-      "data-v-361ff071"
+      "data-v-0ba0bce0"
     ]
   ]);
-  _i = {
+  a0 = {
     class: "app-header"
   };
-  pi = I({
+  n0 = I({
     name: "AppHeader",
     __name: "index",
     setup(t) {
-      S(false);
-      const { locale: e } = dt();
-      return (i, s) => {
-        const r = _e("router-link");
-        return n(), p("header", _i, [
-          C(r, {
+      return (e, i) => {
+        const s = _e("router-link");
+        return n(), u("header", a0, [
+          x(s, {
             to: "/"
+          }, {
+            default: G(() => i[0] || (i[0] = [
+              o("img", {
+                src: ge,
+                class: "w-26 md:w-[228px]",
+                alt: "logo",
+                style: {
+                  width: "170px"
+                }
+              }, null, -1)
+            ])),
+            _: 1
           }),
-          C(ui)
+          x(o0)
         ]);
       };
     }
   });
-  bi = N(pi, [
+  l0 = N(n0, [
     [
       "__scopeId",
-      "data-v-99af3524"
+      "data-v-6995023a"
     ]
   ]);
-  fi = {
+  c0 = {
     class: "app-footer"
   };
-  mi = I({
+  d0 = I({
     name: "AppFooter",
     __name: "index",
     setup(t) {
-      return (e, i) => (n(), p("div", fi));
+      return (e, i) => (n(), u("div", c0, " \xA9 2025 Madello AI | Madello Consulting "));
     }
   });
-  hi = N(mi, [
+  u0 = N(d0, [
     [
       "__scopeId",
-      "data-v-2c9b572c"
+      "data-v-f87ac21d"
     ]
   ]);
-  ge = "" + new URL("loading-ClOqHxNk.gif", import.meta.url).href;
-  gi = {
+  ve = "" + new URL("loading-ClOqHxNk.gif", import.meta.url).href;
+  _0 = {
     class: "sign-popup-box"
   };
-  vi = {
+  p0 = {
     class: "border-b-2 border-primary py-1 px-4 text-center font-medium md:pb-4"
   };
-  ki = I({
+  b0 = I({
     __name: "SignPopup",
     props: {
       title: {}
@@ -221,7 +203,7 @@ let __tla = Promise.all([
     ],
     setup(t, { emit: e }) {
       const i = e;
-      return At(() => i("childMounted")), (s, r) => (n(), E(pe, {
+      return Lt(() => i("childMounted")), (s, r) => (n(), E(pe, {
         to: "body"
       }, [
         o("div", {
@@ -230,15 +212,15 @@ let __tla = Promise.all([
             "self"
           ]))
         }, [
-          o("div", gi, [
-            o("h5", vi, c(s.title), 1),
+          o("div", _0, [
+            o("h5", p0, c(s.title), 1),
             be(s.$slots, "default", {}, void 0)
           ])
         ])
       ]));
     }
   });
-  ve = N(ki, [
+  we = N(b0, [
     [
       "__scopeId",
       "data-v-61522e0f"
@@ -246,11 +228,11 @@ let __tla = Promise.all([
   ]);
   ke = Object.freeze(Object.defineProperty({
     __proto__: null,
-    default: ve
+    default: we
   }, Symbol.toStringTag, {
     value: "Module"
   }));
-  wi = {
+  f0 = {
     loading: {
       isShow: false,
       title: "",
@@ -262,7 +244,7 @@ let __tla = Promise.all([
   };
   mt = $t("pdf_signature_config", {
     state: () => ({
-      ...wi
+      ...f0
     }),
     actions: {
       toggleLoading({ isShow: t, title: e = "", content: i = "", isProcess: s = false, completeness: r = 0 }) {
@@ -282,12 +264,12 @@ let __tla = Promise.all([
       }
     }
   });
-  yi = {
+  m0 = {
     imageList: []
   };
-  Vt = $t("pdf_signature_image", {
+  Ot = $t("pdf_signature_image", {
     state: () => ({
-      ...yi
+      ...m0
     }),
     actions: {
       addImage(t) {
@@ -304,12 +286,12 @@ let __tla = Promise.all([
       ]
     }
   });
-  xi = {
+  h0 = {
     literalList: []
   };
   Dt = $t("pdf_signature_literal", {
     state: () => ({
-      ...xi
+      ...h0
     }),
     actions: {
       addLiteral(t) {
@@ -326,22 +308,26 @@ let __tla = Promise.all([
       ]
     }
   });
-  lt = {
+  ct = {
     CURRENT_PDF: "pdf_signature_currentPDF",
     PDF_LIST: "pdf_signature_PDF",
     ARCHIVE_LIST: "pdf_signature_archive",
     TRASH_LIST: "pdf_signature_trash"
   };
-  function jt(t, e) {
-    return Fe(t, e);
+  g0 = Array.isArray;
+  v0 = (t) => Object.prototype.toString.call(t).slice(8, -1).toLowerCase();
+  w0 = (t) => v0(t) === "object";
+  k0 = (t, e) => Object.hasOwn(t, e);
+  function Mt(t, e) {
+    return Le(t, e);
   }
-  function Mt(t, e, i) {
-    return ze(t, Bt(e), i);
+  function jt(t, e, i) {
+    return Fe(t, Bt(e), i);
   }
   function Bt(t) {
-    return ei(t) ? t.map((e) => Bt(e)) : Ae(t) || Le(t) || Ee(t) ? Bt(Ie(t)) : si(t) ? Object.keys(t).reduce((e, i) => (ri(t, i) && (e[i] = Bt(t[i])), e), {}) : t;
+    return g0(t) ? t.map((e) => Bt(e)) : Ae(t) || Ee(t) || Ie(t) ? Bt(Ze(t)) : w0(t) ? Object.keys(t).reduce((e, i) => (k0(t, i) && (e[i] = Bt(t[i])), e), {}) : t;
   }
-  const Ci = {
+  const y0 = {
     currentPDF: {
       PDFId: "",
       name: "",
@@ -355,14 +341,14 @@ let __tla = Promise.all([
     PDFList: [],
     archiveList: [],
     trashList: []
-  }, Pi = $t("pdf_signature_pdf", {
+  }, C0 = $t("pdf_signature_pdf", {
     state: () => ({
-      ...Ci
+      ...y0
     }),
     getters: {},
     actions: {
       async getCurrentPDF() {
-        const t = await jt(lt.CURRENT_PDF);
+        const t = await Mt(ct.CURRENT_PDF);
         t && (this.currentPDF = t);
       },
       setCurrentPDF(t) {
@@ -385,10 +371,10 @@ let __tla = Promise.all([
         return this.currentPDF.canvas = t, this.updateCurrentPDFIdb();
       },
       updateCurrentPDFIdb() {
-        return Mt(lt.CURRENT_PDF, this.currentPDF);
+        return jt(ct.CURRENT_PDF, this.currentPDF);
       },
       async getPDF() {
-        const t = await jt(lt.PDF_LIST);
+        const t = await Mt(ct.PDF_LIST);
         t && (this.PDFList = t);
       },
       addPDF(t) {
@@ -404,10 +390,10 @@ let __tla = Promise.all([
         return this.PDFList = this.PDFList.filter(({ PDFId: e }) => t !== e), this.updatePDFIdb();
       },
       updatePDFIdb() {
-        return Mt(lt.PDF_LIST, this.PDFList);
+        return jt(ct.PDF_LIST, this.PDFList);
       },
       async getArchive() {
-        const t = await jt(lt.ARCHIVE_LIST);
+        const t = await Mt(ct.ARCHIVE_LIST);
         t && (this.archiveList = t);
       },
       addArchive(t) {
@@ -431,10 +417,10 @@ let __tla = Promise.all([
         ]);
       },
       updateArchiveIdb() {
-        return Mt(lt.ARCHIVE_LIST, this.archiveList);
+        return jt(ct.ARCHIVE_LIST, this.archiveList);
       },
       async getTrash() {
-        const t = await jt(lt.TRASH_LIST);
+        const t = await Mt(ct.TRASH_LIST);
         t && (this.trashList = t);
       },
       addTrash(t, e) {
@@ -473,19 +459,19 @@ let __tla = Promise.all([
         return this.trashList = this.trashList.filter(({ trashDate: i }) => i ? e - i < 2592e6 : true), this.updateTrashIdb();
       },
       updateTrashIdb() {
-        return Mt(lt.TRASH_LIST, this.trashList);
+        return jt(ct.TRASH_LIST, this.trashList);
       }
     }
-  }), Si = Object.freeze(Object.defineProperty({
+  }), x0 = Object.freeze(Object.defineProperty({
     __proto__: null,
-    usePdfStore: Pi
+    usePdfStore: C0
   }, Symbol.toStringTag, {
     value: "Module"
-  })), $i = {
+  })), P0 = {
     signatureList: []
   }, Wt = $t("pdf_signature_signature", {
     state: () => ({
-      ...$i
+      ...P0
     }),
     actions: {
       addSignature(t) {
@@ -501,39 +487,39 @@ let __tla = Promise.all([
         "signatureList"
       ]
     }
-  }), { usePdfStore: Y } = Si, Di = {
+  }), { usePdfStore: Y } = x0, S0 = {
     class: "flex flex-col gap-8 items-center py-8"
-  }, ji = {
+  }, $0 = {
     class: "text-center"
-  }, Mi = {
+  }, D0 = {
     key: 0,
     class: "w-[90%] h-2 rounded bg-gray-30"
-  }, Bi = {
+  }, M0 = {
     class: "text-center mt-1 text-sm md:text-base"
-  }, Ti = I({
+  }, j0 = I({
     __name: "SignLoading",
     setup(t) {
-      const { loading: e } = at(mt());
-      return (i, s) => l(e).isShow ? (n(), E(ve, {
+      const { loading: e } = nt(mt());
+      return (i, s) => l(e).isShow ? (n(), E(we, {
         key: 0,
         title: i.$t(l(e).title)
       }, {
-        default: K(() => [
-          o("div", Di, [
+        default: G(() => [
+          o("div", S0, [
             s[0] || (s[0] = o("img", {
-              src: ge,
+              src: ve,
               class: "w-[60%]",
               alt: "loading gif"
             }, null, -1)),
-            o("h5", ji, c(i.$t(l(e).content)), 1),
-            l(e).isProcess ? (n(), p("div", Mi, [
+            o("h5", $0, c(i.$t(l(e).content)), 1),
+            l(e).isProcess ? (n(), u("div", D0, [
               o("div", {
                 class: "h-full bg-primary transition-all rounded",
                 style: fe({
                   width: `${l(e).completeness}%`
                 })
               }, null, 4),
-              o("p", Bi, c(`${i.$t("download_progress")} ${Math.floor(l(e).completeness)}%`), 1)
+              o("p", M0, c(`${i.$t("download_progress")} ${Math.floor(l(e).completeness)}%`), 1)
             ])) : Z("", true)
           ])
         ]),
@@ -542,7 +528,7 @@ let __tla = Promise.all([
         "title"
       ])) : Z("", true);
     }
-  }), zi = I({
+  }), B0 = I({
     __name: "SignReload",
     setup(t) {
       function e() {
@@ -557,8 +543,8 @@ let __tla = Promise.all([
         }, c(i.$t("prompt.error_occurred")), 1)
       ]));
     }
-  }), we = Symbol("inject-router");
-  class Fi {
+  }), ye = Symbol("inject-router");
+  class T0 {
     constructor() {
       __privateAdd(this, _t, /* @__PURE__ */ new Map());
     }
@@ -584,11 +570,11 @@ let __tla = Promise.all([
     }
   }
   _t = new WeakMap();
-  const Gt = new Fi(), Kt = Ai("onAfterLeave");
-  function Ai(t) {
+  const Gt = new T0(), Kt = z0("onAfterLeave");
+  function z0(t) {
     return (e) => {
       var _a;
-      const s = (_a = Ze(we).value) == null ? void 0 : _a.name;
+      const s = (_a = Ve(ye).value) == null ? void 0 : _a.name;
       if (!s) throw new Error("Route name is not defined");
       const r = `${t}-${String(s)}`, a = () => {
         e(), Gt.unsubscribe(r, a);
@@ -596,33 +582,33 @@ let __tla = Promise.all([
       Gt.subscribe(r, a);
     };
   }
-  function wt(t, e) {
+  function kt(t, e) {
     Gt.publish(`${t}-${e}`);
   }
-  let Li, Ei, Ii, Zi, Oi, qi, Vi, Ri, Hi, Ui, Ni, Wi, Gi, Ki, Yi, Xi, St;
-  Li = I({
+  let F0, L0, A0, E0, I0, Z0, V0, H0, O0, q0, R0, U0, N0, W0, G0, K0, St;
+  F0 = I({
     __name: "App",
     setup(t) {
-      const e = Xt(), i = S(""), s = S("");
+      const e = Xt(), i = D(""), s = D("");
       return e.beforeEach((r, a) => {
         i.value = String(r.name), s.value = String(a.name);
       }), (r, a) => {
-        const u = _e("router-view");
-        return n(), p(J, null, [
-          C(l(bi)),
-          C(u, null, {
-            default: K(({ Component: b }) => [
-              C(Oe, {
+        const _ = _e("router-view");
+        return n(), u(J, null, [
+          x(l(l0)),
+          x(_, null, {
+            default: G(({ Component: b }) => [
+              x(He, {
                 name: "slide-fade",
                 mode: "out-in",
-                onBeforeEnter: a[0] || (a[0] = (_) => l(wt)("onBeforeEnter", i.value)),
-                onEnter: a[1] || (a[1] = (_) => l(wt)("onEnter", i.value)),
-                onAfterEnter: a[2] || (a[2] = (_) => l(wt)("onAfterEnter", i.value)),
-                onBeforeLeave: a[3] || (a[3] = (_) => l(wt)("onBeforeLeave", s.value)),
-                onLeave: a[4] || (a[4] = (_) => l(wt)("onLeave", s.value)),
-                onAfterLeave: a[5] || (a[5] = (_) => l(wt)("onAfterLeave", s.value))
+                onBeforeEnter: a[0] || (a[0] = (p) => l(kt)("onBeforeEnter", i.value)),
+                onEnter: a[1] || (a[1] = (p) => l(kt)("onEnter", i.value)),
+                onAfterEnter: a[2] || (a[2] = (p) => l(kt)("onAfterEnter", i.value)),
+                onBeforeLeave: a[3] || (a[3] = (p) => l(kt)("onBeforeLeave", s.value)),
+                onLeave: a[4] || (a[4] = (p) => l(kt)("onLeave", s.value)),
+                onAfterLeave: a[5] || (a[5] = (p) => l(kt)("onAfterLeave", s.value))
               }, {
-                default: K(() => [
+                default: G(() => [
                   (n(), E(me(b)))
                 ]),
                 _: 2
@@ -630,21 +616,21 @@ let __tla = Promise.all([
             ]),
             _: 1
           }),
-          C(l(hi)),
-          C(Ti),
-          C(zi)
+          x(l(u0)),
+          x(j0),
+          x(B0)
         ], 64);
       };
     }
   });
-  Ei = [
+  L0 = [
     "title"
   ];
-  Ii = [
+  A0 = [
     "href",
     "fill"
   ];
-  O = I({
+  V = I({
     __name: "SignIcon",
     props: {
       name: {},
@@ -663,14 +649,14 @@ let __tla = Promise.all([
       }
     },
     setup(t) {
-      const e = S(false), i = U(() => {
+      const e = D(false), i = U(() => {
         const s = `#${t.prefix}-ic_${t.name}`;
         return t.hoverChangeSvg && e.value && !t.name.includes("_h") ? `${s}_h` : s;
       });
-      return (s, r) => (n(), p("svg", {
+      return (s, r) => (n(), u("svg", {
         "aria-hidden": "true",
         title: i.value,
-        class: L([
+        class: F([
           "cursor-pointer",
           {
             [`transition-[color_transform] ${s.hoverColor}`]: !s.hoverChangeSvg
@@ -682,14 +668,14 @@ let __tla = Promise.all([
         o("use", {
           href: i.value,
           fill: s.color
-        }, null, 8, Ii)
-      ], 42, Ei));
+        }, null, 8, A0)
+      ], 42, L0));
     }
   });
-  Zi = {
+  E0 = {
     class: "flex gap-3"
   };
-  Oi = I({
+  I0 = I({
     name: "BatchOperation",
     __name: "index",
     props: {
@@ -701,49 +687,49 @@ let __tla = Promise.all([
       "openWarnPopup"
     ],
     setup(t, { emit: e }) {
-      const i = e, { batchAddArchive: s, batchAddTrash: r, batchReductionArchive: a, batchReductionTrash: u } = Y();
+      const i = e, { batchAddArchive: s, batchAddTrash: r, batchReductionArchive: a, batchReductionTrash: _ } = Y();
       async function b() {
         await s(t.batch), i("clearBatch");
       }
-      async function _() {
+      async function p() {
         await r(t.batch, t.type), i("clearBatch");
       }
       async function v() {
-        t.type === "archive" ? await a(t.batch) : await u(t.batch), i("clearBatch");
+        t.type === "archive" ? await a(t.batch) : await _(t.batch), i("clearBatch");
       }
-      return (h, y) => (n(), p("div", Zi, [
-        h.type === "file" ? (n(), E(O, {
+      return (h, y) => (n(), u("div", E0, [
+        h.type === "file" ? (n(), E(V, {
           key: 0,
           name: "archive",
           class: "w-6 h-6",
           onClick: b
         })) : Z("", true),
-        h.type === "archive" || h.type === "trash" ? (n(), E(O, {
+        h.type === "archive" || h.type === "trash" ? (n(), E(V, {
           key: 1,
           name: "reduction",
           class: "w-6 h-6",
           onClick: v
         })) : Z("", true),
-        h.type === "file" || h.type === "archive" ? (n(), E(O, {
+        h.type === "file" || h.type === "archive" ? (n(), E(V, {
           key: 2,
           name: "trash",
           class: "w-6 h-6",
-          onClick: _
+          onClick: p
         })) : Z("", true),
-        h.type === "trash" ? (n(), E(O, {
+        h.type === "trash" ? (n(), E(V, {
           key: 3,
           name: "trash",
           class: "w-6 h-6",
-          onClick: y[0] || (y[0] = (k) => h.$emit("openWarnPopup"))
+          onClick: y[0] || (y[0] = (w) => h.$emit("openWarnPopup"))
         })) : Z("", true)
       ]));
     }
   });
-  qi = [
+  Z0 = [
     "id",
     "aria-checked"
   ];
-  Vi = I({
+  V0 = I({
     name: "Checkbox",
     __name: "index",
     props: {
@@ -761,13 +747,13 @@ let __tla = Promise.all([
       "update:modelValue"
     ]),
     setup(t, { emit: e }) {
-      const i = it(t, "modelValue"), s = e, r = qe();
+      const i = it(t, "modelValue"), s = e, r = Oe();
       function a() {
         i.value === true || i.value === "mixed" ? i.value = false : i.value = true, s("change", i.value);
       }
-      return (u, b) => (n(), p("label", {
+      return (_, b) => (n(), u("label", {
         id: l(r),
-        class: L([
+        class: F([
           "checkbox-container",
           {
             checked: i.value === true,
@@ -781,26 +767,26 @@ let __tla = Promise.all([
         o("span", {
           class: "checkmark"
         }, null, -1)
-      ]), 10, qi));
+      ]), 10, Z0));
     }
   });
-  Ri = N(Vi, [
+  H0 = N(V0, [
     [
       "__scopeId",
       "data-v-7ce7a363"
     ]
   ]);
-  Hi = "data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='20'%20cy='20'%20r='10.75'%20stroke='white'%20stroke-width='2.5'/%3e%3cpath%20d='M16%2024L23.7782%2016.2218'%20stroke='white'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M24%2024L16.2218%2016.2218'%20stroke='white'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e";
-  Ui = 2e3;
-  Ni = 8;
-  Wi = 50;
-  Gi = [
+  O0 = "data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='20'%20cy='20'%20r='10.75'%20stroke='white'%20stroke-width='2.5'/%3e%3cpath%20d='M16%2024L23.7782%2016.2218'%20stroke='white'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M24%2024L16.2218%2016.2218'%20stroke='white'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e";
+  q0 = 2e3;
+  R0 = 8;
+  U0 = 50;
+  N0 = [
     "data-id"
   ];
-  Ki = {
+  W0 = {
     class: "highlight text-white truncate w-fit"
   };
-  Yi = I({
+  G0 = I({
     name: "Toast",
     __name: "index",
     props: {
@@ -808,11 +794,11 @@ let __tla = Promise.all([
         default: ""
       },
       duration: {
-        default: Ui
+        default: q0
       },
       id: {},
       zIndex: {
-        default: Wi
+        default: U0
       },
       type: {
         default: "success"
@@ -824,75 +810,75 @@ let __tla = Promise.all([
       "mounted"
     ],
     setup(t, { expose: e, emit: i }) {
-      Ve((m) => ({
+      qe((m) => ({
         "13ac8a4e": m.zIndex,
-        "3c5118be": j.value
+        "3c5118be": M.value
       }));
-      const s = t, r = i, a = S(false), u = S(0), b = S(false), _ = he("toastRef");
+      const s = t, r = i, a = D(false), _ = D(0), b = D(false), p = he("toastRef");
       let v = new ResizeObserver(g), h = null;
       const y = U(() => {
         var _a, _b;
-        const m = es(s.id);
+        const m = Q0(s.id);
         if (!m) return 0;
-        const { component: $ } = m;
-        return (((_b = (_a = $.exposed) == null ? void 0 : _a.offsetBottom) == null ? void 0 : _b.value) ?? 0) + Ni;
-      }), k = U(() => y.value + u.value), j = U(() => `${y.value}px`), w = U(() => b.value ? "fade-leave-to" : a.value ? "fade-enter-to" : "fade-enter-from");
+        const { component: S } = m;
+        return (((_b = (_a = S.exposed) == null ? void 0 : _a.offsetBottom) == null ? void 0 : _b.value) ?? 0) + R0;
+      }), w = U(() => y.value + _.value), M = U(() => `${y.value}px`), k = U(() => b.value ? "fade-leave-to" : a.value ? "fade-enter-to" : "fade-enter-from");
       function P() {
         s.duration !== 0 && (h = setTimeout(() => {
-          M();
+          j();
         }, s.duration));
       }
-      function M() {
+      function j() {
         b.value = true, r("close"), h && (clearTimeout(h), h = null);
       }
       function T() {
         b.value && r("closed");
       }
       function g() {
-        _.value && (u.value = _.value.offsetHeight);
+        p.value && (_.value = p.value.offsetHeight);
       }
-      return Tt(_, (m, $) => {
-        $ && (v == null ? void 0 : v.unobserve($)), m && (v == null ? void 0 : v.observe(m));
-      }), At(async () => {
-        _.value && (await Nt(), r("mounted", _.value.getBoundingClientRect().height), await Nt(), P(), a.value = true);
+      return Tt(p, (m, S) => {
+        S && (v == null ? void 0 : v.unobserve(S)), m && (v == null ? void 0 : v.observe(m));
+      }), Lt(async () => {
+        p.value && (await Nt(), r("mounted", p.value.getBoundingClientRect().height), await Nt(), P(), a.value = true);
       }), Re(() => {
         v && (v.disconnect(), v = null);
       }), e({
-        close: M,
-        offsetBottom: k
-      }), (m, $) => (n(), p("div", {
+        close: j,
+        offsetBottom: w
+      }), (m, S) => (n(), u("div", {
         ref_key: "toastRef",
-        ref: _,
-        class: L([
+        ref: p,
+        class: F([
           "toast",
           m.type,
-          w.value
+          k.value
         ]),
         "data-id": m.id,
         role: "alert",
         onTransitionend: T
       }, [
-        o("p", Ki, c(m.message), 1),
+        o("p", W0, c(m.message), 1),
         o("img", {
-          src: Hi,
+          src: O0,
           class: "cursor-pointer w-10 h-10",
           alt: "close toast icon",
-          onClick: M
+          onClick: j
         })
-      ], 42, Gi));
+      ], 42, N0));
     }
   });
-  Xi = N(Yi, [
+  K0 = N(G0, [
     [
       "__scopeId",
       "data-v-e24dbb69"
     ]
   ]);
-  St = He([]);
-  let Ji = 0;
-  function Qi(t) {
+  St = Ue([]);
+  let Y0 = 0;
+  function X0(t) {
     var _a;
-    const e = `toast-${++Ji}`, i = typeof t == "string" ? {
+    const e = `toast-${++Y0}`, i = typeof t == "string" ? {
       message: t
     } : t;
     let s = document.createElement("div");
@@ -903,44 +889,44 @@ let __tla = Promise.all([
       },
       onClosed: () => {
         var _a2;
-        s && ae(null, s), s = null, ts(e), (_a2 = i.onClosed) == null ? void 0 : _a2.call(i);
+        s && ae(null, s), s = null, J0(e), (_a2 = i.onClosed) == null ? void 0 : _a2.call(i);
       },
       onMounted: () => {
       }
-    }, a = C(Xi, r);
+    }, a = x(K0, r);
     ae(a, s), s.firstElementChild && document.body.append(s.firstElementChild);
-    const u = a.component, b = ((_a = u.exposed) == null ? void 0 : _a.close) ?? (() => {
+    const _ = a.component, b = ((_a = _.exposed) == null ? void 0 : _a.close) ?? (() => {
     });
     return {
       id: e,
-      component: u,
+      component: _,
       close: b
     };
   }
   W = function(t) {
-    const e = Qi(t);
+    const e = X0(t);
     return St.push(e), {
       close: e.close
     };
   };
-  function ts(t) {
+  function J0(t) {
     const e = St.findIndex((i) => i.id === t);
     e !== -1 && St.splice(e, 1);
   }
-  function es(t) {
+  function Q0(t) {
     const e = St.findIndex((i) => i.id === t);
     return e <= 0 ? null : St[e - 1];
   }
-  const Rt = (t) => t && typeof t == "object" && !Array.isArray(t), Yt = (t, ...e) => {
+  const qt = (t) => t && typeof t == "object" && !Array.isArray(t), Yt = (t, ...e) => {
     if (!e.length) return t;
     const i = e.shift();
-    if (Rt(t) && Rt(i)) for (const s in i) Rt(i[s]) ? (t[s] || Object.assign(t, {
+    if (qt(t) && qt(i)) for (const s in i) qt(i[s]) ? (t[s] || Object.assign(t, {
       [s]: {}
     }), Yt(t[s], i[s])) : Object.assign(t, {
       [s]: i[s]
     });
     return Yt(t, ...e);
-  }, is = Yt({}, {
+  }, t2 = Yt({}, {
     "ar-SA": {
       add_commonly_use_text: {
         t: 0,
@@ -25291,74 +25277,74 @@ let __tla = Promise.all([
         }
       }
     }
-  }), ee = Ue({
+  }), te = Ne({
     locale: localStorage.getItem("pdf-signature-i18n") ?? navigator.language,
     fallbackLocale: "en-US",
-    messages: is
-  }), ss = {
+    messages: t2
+  }), e2 = {
     install(t) {
       t.config.errorHandler = (e, i, s) => {
-        console.error("Global error handling:", e), console.error("The error occurred in:", i), console.error("The error message:", s), Ht();
+        console.error("Global error handling:", e), console.error("The error occurred in:", i), console.error("The error message:", s), Rt();
       }, window.addEventListener("error", ({ message: e, filename: i, lineno: s, colno: r, error: a }) => (console.error("Error caught:", {
         message: e,
         filename: i,
         lineno: s,
         colno: r,
         error: a
-      }), Ht(), true)), window.addEventListener("unhandledrejection", (e) => {
-        console.error("Catch errors thrown by unhandled Promise", e.reason), Ht();
+      }), Rt(), true)), window.addEventListener("unhandledrejection", (e) => {
+        console.error("Catch errors thrown by unhandled Promise", e.reason), Rt();
       });
     }
   };
-  function Ht() {
-    const { t } = ee.global, e = document.querySelector("#loading-reload");
+  function Rt() {
+    const { t } = te.global, e = document.querySelector("#loading-reload");
     W({
       message: t("prompt.error_occurred"),
       type: "error"
     }), !(!e || !(e instanceof HTMLElement)) && (e.style.display = "flex");
   }
-  function rs(t, e) {
+  function i2(t, e) {
     return new FontFace(t, `url(/font/${e})`).load().then((s) => {
       document.fonts.add(s), document.body.style.fontFamily = t;
     });
   }
-  const os = "" + new URL("bg_decorate-CGBiDQAU.svg", import.meta.url).href, as = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.8973%2042.2716C21.2028%2043.1178%2022.1265%2043.5723%2025.0593%2043.5723H47.0189C67.1022%2043.5723%2089.5156%2043.9242%20107.696%2043.5723C114.329%2043.4438%20118.962%2044.1761%20124.223%2041.1697C126.179%2040.0522%20128.077%2037.0964%20129.181%2035.1097C130.391%2032.9321%20130.808%2029.873%20129.966%2026.6729C129.024%2023.0934%20126.834%2019.9659%20123.672%2018.5824C118.535%2016.3352%20117.924%2017.1843%20113.756%2016.6737C108.844%2016.072%20104.735%2016.7564%20101.085%2016.7564H92.8207C91.3333%2016.7564%2088.2136%2016.6737%2088.2136%2016.6737C88.2136%2016.6737%2078.4404%2016.3845%2073.6695%2016.3845C68.1405%2016.3845%2062.5234%2016.3787%2057.012%2016.3787C46.5387%2016.3787%2036.5998%2015.5266%2026.161%2016.3787C20.1295%2016.8711%2015.2647%2016.9713%2011.8374%2021.8878C9.44848%2025.3147%209.08273%2029.0498%209.6337%2032.3552C10.2413%2036.0006%2011.8373%2037.8643%2014.1499%2040.0395C14.7658%2040.6189%2015.3852%2041.3566%2017.8973%2042.2716Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M22.8557%2040.3027C22.708%2046.6555%2022.8419%2058.072%2022.8419%2064.4318C22.8419%2071.7728%2022.8419%2079.1137%2022.8419%2086.4547C22.8419%2090.924%2022.8419%2095.3933%2022.8419%2099.8626C22.8419%20103.911%2022.5759%20111.245%2024.5417%20116.094C27.6074%20123.656%2034.6737%20123.511%2041.2895%20123.511C50.5931%20123.511%2059.8967%20123.511%2069.2003%20123.511C74.4607%20123.511%2079.7266%20123.883%2085.0047%20123.883C90.4346%20123.883%2099.3066%20124.95%20104.39%20123.256C110.135%20121.341%20113.391%20120.11%20115.408%20116.094C116.793%20113.339%20117.544%20102.224%20117.164%2096.2612C116.872%2091.669%20117.028%2087.9876%20117.164%2084.4783C117.559%2074.2948%20117.064%2067.1636%20117.522%2058.4475C117.662%2055.8026%20117.019%2053.9924%20117.164%2051.3682C117.3%2048.9218%20116.793%2041.7082%20116.793%2039.3027'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M55.9294%2070.9037C57.1749%2070.837%2059.314%2070.9948%2061.4306%2070.6091C64.1624%2070.1113%2065.6913%2070.3807%2068.032%2070.2553C70.5148%2070.1223%2072.0634%2070.1702%2075.1836%2069.8723C80.1236%2069.4008%2080.4168%2069.7574%2083.4442%2069.5952'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", ns = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M22.0571%2012.4497C23.3897%2011.0975%2027.3055%209.85066%2030.0895%209.27763C33.473%208.5812%2037.1868%208.79672%2040.632%208.83179C50.3019%208.93023%2063.6079%208.78722%2073.2636%208.83178C91.2312%208.9147%2094.1866%208.05573%20104.891%209.27763C115.596%2010.4995%20117.736%2011.7005%20122.467%2017.419C125.474%2021.0532%20126.305%2031.474%20126.305%2035.034V72.6746C126.305%2083.8705%20126.98%2090.4195%20125.976%20105.476C125.339%20109.861%20125.496%20115.414%20123.466%20119.28C119.649%20126.549%20109.409%20130.211%20104.891%20130.211H79.7899C66.8103%20130.211%2060.713%20131.286%2047.6604%20131.286C37.9108%20131.286%2031.8379%20132.176%2025.5713%20128.598C19.9386%20125.382%2017.5389%20122.683%2014.5268%20115.692C12.6731%20111.391%2013.1066%20105.221%2012.9993%20103.325C12.6677%2097.4641%2013.1783%2092.0674%2012.9666%2086.1717C12.4731%2072.4258%2012.1979%2058.4031%2012.9993%2044.6682C13.5373%2035.4483%2012.2062%2028.3163%2015.9875%2019.9778C17.3264%2015.676%2020.7364%2013.7899%2022.0571%2012.4497Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M8%20100.636C18.0405%2089.9465%2024.3907%2080.6421%2031.04%2074.8218C33.7043%2072.4898%2036.6642%2070.634%2039.5746%2068.692C40.9639%2067.765%2042.4043%2066.8967%2044.016%2066.5332C45.5391%2066.1898%2047.1386%2065.7111%2048.6814%2066.3467C51.5019%2067.5086%2053.6106%2070.5957%2055.4618%2073.0095C57.7258%2075.9617%2059.7103%2079.5336%2061.1722%2083.0038C62.4308%2085.9914%2064.2267%2089.9465%2064.2267%2089.9465C64.2267%2089.9465%2067.5687%2095.2586%2068.7449%2096.8226C69.3019%2097.5632%2072.5017%2098.2443%2073.2632%2097.9477C76.6962%2096.6106%2076.7751%2096.8085%2079.2875%2094.1174C80.284%2093.05%2082.7413%2089.9465%2084.8097%2087.731C86.3158%2086.1178%2088.505%2084.0366%2090.8316%2082.7906C93.0767%2081.5882%2096.0472%2081.7048%2098.3644%2082.7906C101.602%2084.3078%20103.226%2086.0187%20105.761%2088.7339C108.578%2091.7509%20111.815%2094.5458%20115.191%2096.8226C116.424%2097.6543%20117.9%2098.4279%20119.259%2099.0213C120.245%2099.4516%20120.955%2099.5609%20123.968%20100.636C127.084%20101.749%20128.5%20103.385%20132%20103.863'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M78.9387%2042.3295C77.7432%2044.0368%2077.334%2046.4893%2077.2789%2049.2967C77.2377%2051.3993%2078.0288%2054.6216%2078.0288%2054.6216C78.3143%2056.3035%2081.4702%2059.8159%2082.9152%2060.3076C84.5561%2060.8658%2086.1122%2062.0229%2087.8211%2062.156C90.373%2062.3548%2092.7922%2062.7052%2094.8495%2061.3831C99.8697%2058.1567%20101.101%2055.2912%20101.376%2049.5532C101.522%2046.5053%20100.591%2044.5412%2098.8657%2042.0249C96.1276%2038.0311%2092.8414%2036.6478%2088.2815%2036.3276C85.9331%2036.1627%2083.7024%2037.0765%2081.7968%2038.7987C80.4711%2039.9969%2079.9754%2040.8489%2078.9387%2042.3295Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", ls = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M32.2158%2092.7849C33.807%2094.5848%2037.064%2099.4962%2042.8388%20102.884C47.0091%20105.33%2050.301%20106.453%2055.4121%20107.669C62.4685%20109.348%2067.8268%20108.854%2073.9589%20108.662C80.5079%20108.457%2082.8997%20105.351%2089.1425%20103.341C91.118%20102.705%2093.2034%20101.975%2094.9794%20100.886C97.2727%2099.4783%2099.2495%2095.1507%20101.291%2093.4103C105.528%2089.7982%20109.179%2085.2878%20110.776%2079.9067C113.024%2072.3335%20113.625%2061.4052%20113.023%2053.511C112.68%2049.0131%20110.526%2045.2867%20108.657%2041.3045C107.684%2039.2331%20106.694%2037.1631%20105.217%2035.3981C104.057%2034.0116%20102.67%2032.8514%20101.395%2031.5763C99.282%2029.463%2096.847%2026.9934%2094.493%2025.233C91.656%2021.9564%2086.894%2020.8771%2083.555%2019.5814C75.8728%2016.6002%2067.4696%2014.9132%2059.1535%2016.7872C53.9676%2017.9559%2048.6984%2020.4413%2044.0402%2022.9368C39.1748%2025.5433%2034.9565%2029.24%2031.1735%2033.244C27.6174%2037.008%2026.3651%2041.0554%2023.4891%2045.3695C22.0727%2047.4941%2020.5128%2054.2416%2020.5128%2056.8804C20.5128%2063.6727%2019.7441%2069.0489%2021.816%2075.4827C23.1147%2079.5155%2025.1002%2083.212%2027.5023%2086.6585C28.9532%2088.7402%2030.5328%2090.8812%2032.2158%2092.7849Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M95.5413%2095.6855C98.4422%2099.4567%20101.772%20100.647%20104.459%20104.574C105.743%20106.452%20110.384%20112.105%20112.339%20113.309C114.61%20114.706%20116.287%20117.973%20119.114%20120.301'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M77.594%2027.3027C79.4731%2027.6685%2081.3555%2028.0267%2083.1563%2028.7522C85.3903%2029.6523%2087.3708%2031.0914%2089.37%2032.4975C92.2609%2034.5308%2095.2121%2036.755%2097.3579%2039.787C100.402%2044.0878%20102.603%2047.9394%20103.756%2053.8685C104.702%2058.7391%20104.737%2063.3802%20103.756%2066.5739'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M37.426%2085.0547C40.3347%2091.2008%2046.2391%2094.2199%2052.0576%2097.2882'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", cs = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15%2039.8833C17.5%2039.8833%2020.5%2039.7924%2020.5%2039.7924C20.5%2039.7924%2029.872%2039.5742%2034.0063%2039.5742C39.9053%2039.5742%2045.8044%2039.5742%2051.7035%2039.5742C56.1682%2039.5742%2062.6329%2039.5742%2067.0976%2039.5742C75.7673%2039.5742%2078.4247%2039.7924%2087.0858%2039.7924C100.603%2039.7924%20112.436%2039.8832%20126%2039.8832'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M48.0752%2039C48.0752%2033.3427%2047.906%2026.7393%2048.0752%2021.0968C48.1078%2020.0094%2048.4693%2018.9773%2048.5114%2017.9076C48.5661%2016.5158%2048.9123%2016.8415%2051.4741%2016.4087C53.5724%2015.8274%2055.7756%2016.0367%2057.9681%2016.0367C61.4896%2016.0367%2064.9903%2016.0123%2068.4966%2016.2174C70.0828%2016.3102%2071.6934%2016.2102%2073.2823%2016.228C74.9405%2016.2467%2076.5969%2016.5518%2078.2618%2016.6214C80.484%2016.7142%2082.6812%2016.8021%2084.9133%2016.8021C87.1525%2016.8021%2090.3764%2016.4928%2092.5526%2016.4194C93.8768%2016.3747%2093.5943%2021.7948%2093.6794%2022.9146C93.9248%2026.1444%2094%2030.2186%2094%2033.4509C94%2035.3088%2093.7819%2041.1797%2093.7819%2043'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M30%2035C30%2036.1871%2030.2187%2043.3205%2030.2187%2044.5345C30.2187%2046.8984%2030.1856%2049.5525%2030.5467%2051.893C31.4233%2057.5754%2030.8747%2063.5893%2030.8747%2069.3172C30.8747%2071.8369%2031.2303%2074.353%2031.3242%2076.8726C31.4959%2081.4807%2032.2162%2085.3052%2032.5147%2090.7282C32.8968%2097.6671%2032.3462%20101.587%2032.7942%20108.522C33.1104%20113.417%2033.7904%20120.39%2034.9019%20122.131C36.0134%20123.872%2043.3799%20123.762%2044.4688%20123.762C48.0403%20122.857%2055.1129%20123.762%2058.9316%20123.762C66.8081%20123.762%2071.848%20123.261%2079.6994%20123.872C84.4124%20124.24%2089.051%20123.716%2093.7309%20123.54C96.6568%20123.43%20102.98%20124.357%20105.669%20123.146C107.679%20122.241%20107.799%20117.622%20107.799%20113.001C107.799%20108.991%20107.953%20105.124%20108.145%20101.809C108.579%2094.3379%20108.899%2088.7109%20109.378%2080.318C109.979%2069.8038%20110.056%2062.6519%20110.179%2053.6668C110.231%2049.8878%20111%2043.8477%20111%2040.0923'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M58.6807%2065.4473C58.6807%2068.815%2059.2792%2072.1775%2059.5534%2075.5322C60.0362%2081.4398%2059.9898%2087.4023%2059.9898%2093.3264C59.9898%2097.933%2060.208%20102.514%2060.208%20107.121'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M80.9521%2067.1855C80.4987%2076.9134%2080.4748%2086.6247%2080.2479%2096.3484C80.2084%2098.0434%2080.5278%2099.7148%2080.4468%20101.454'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", ds = "" + new URL("loading-ClOqHxNk.gif", import.meta.url).href, us = "" + new URL("sign_pic-CrpHI1KR.jpg", import.meta.url).href;
-  function _s(t) {
+  const s2 = "" + new URL("bg_decorate-CGBiDQAU.svg", import.meta.url).href, r2 = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.8973%2042.2716C21.2028%2043.1178%2022.1265%2043.5723%2025.0593%2043.5723H47.0189C67.1022%2043.5723%2089.5156%2043.9242%20107.696%2043.5723C114.329%2043.4438%20118.962%2044.1761%20124.223%2041.1697C126.179%2040.0522%20128.077%2037.0964%20129.181%2035.1097C130.391%2032.9321%20130.808%2029.873%20129.966%2026.6729C129.024%2023.0934%20126.834%2019.9659%20123.672%2018.5824C118.535%2016.3352%20117.924%2017.1843%20113.756%2016.6737C108.844%2016.072%20104.735%2016.7564%20101.085%2016.7564H92.8207C91.3333%2016.7564%2088.2136%2016.6737%2088.2136%2016.6737C88.2136%2016.6737%2078.4404%2016.3845%2073.6695%2016.3845C68.1405%2016.3845%2062.5234%2016.3787%2057.012%2016.3787C46.5387%2016.3787%2036.5998%2015.5266%2026.161%2016.3787C20.1295%2016.8711%2015.2647%2016.9713%2011.8374%2021.8878C9.44848%2025.3147%209.08273%2029.0498%209.6337%2032.3552C10.2413%2036.0006%2011.8373%2037.8643%2014.1499%2040.0395C14.7658%2040.6189%2015.3852%2041.3566%2017.8973%2042.2716Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M22.8557%2040.3027C22.708%2046.6555%2022.8419%2058.072%2022.8419%2064.4318C22.8419%2071.7728%2022.8419%2079.1137%2022.8419%2086.4547C22.8419%2090.924%2022.8419%2095.3933%2022.8419%2099.8626C22.8419%20103.911%2022.5759%20111.245%2024.5417%20116.094C27.6074%20123.656%2034.6737%20123.511%2041.2895%20123.511C50.5931%20123.511%2059.8967%20123.511%2069.2003%20123.511C74.4607%20123.511%2079.7266%20123.883%2085.0047%20123.883C90.4346%20123.883%2099.3066%20124.95%20104.39%20123.256C110.135%20121.341%20113.391%20120.11%20115.408%20116.094C116.793%20113.339%20117.544%20102.224%20117.164%2096.2612C116.872%2091.669%20117.028%2087.9876%20117.164%2084.4783C117.559%2074.2948%20117.064%2067.1636%20117.522%2058.4475C117.662%2055.8026%20117.019%2053.9924%20117.164%2051.3682C117.3%2048.9218%20116.793%2041.7082%20116.793%2039.3027'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M55.9294%2070.9037C57.1749%2070.837%2059.314%2070.9948%2061.4306%2070.6091C64.1624%2070.1113%2065.6913%2070.3807%2068.032%2070.2553C70.5148%2070.1223%2072.0634%2070.1702%2075.1836%2069.8723C80.1236%2069.4008%2080.4168%2069.7574%2083.4442%2069.5952'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", o2 = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M22.0571%2012.4497C23.3897%2011.0975%2027.3055%209.85066%2030.0895%209.27763C33.473%208.5812%2037.1868%208.79672%2040.632%208.83179C50.3019%208.93023%2063.6079%208.78722%2073.2636%208.83178C91.2312%208.9147%2094.1866%208.05573%20104.891%209.27763C115.596%2010.4995%20117.736%2011.7005%20122.467%2017.419C125.474%2021.0532%20126.305%2031.474%20126.305%2035.034V72.6746C126.305%2083.8705%20126.98%2090.4195%20125.976%20105.476C125.339%20109.861%20125.496%20115.414%20123.466%20119.28C119.649%20126.549%20109.409%20130.211%20104.891%20130.211H79.7899C66.8103%20130.211%2060.713%20131.286%2047.6604%20131.286C37.9108%20131.286%2031.8379%20132.176%2025.5713%20128.598C19.9386%20125.382%2017.5389%20122.683%2014.5268%20115.692C12.6731%20111.391%2013.1066%20105.221%2012.9993%20103.325C12.6677%2097.4641%2013.1783%2092.0674%2012.9666%2086.1717C12.4731%2072.4258%2012.1979%2058.4031%2012.9993%2044.6682C13.5373%2035.4483%2012.2062%2028.3163%2015.9875%2019.9778C17.3264%2015.676%2020.7364%2013.7899%2022.0571%2012.4497Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M8%20100.636C18.0405%2089.9465%2024.3907%2080.6421%2031.04%2074.8218C33.7043%2072.4898%2036.6642%2070.634%2039.5746%2068.692C40.9639%2067.765%2042.4043%2066.8967%2044.016%2066.5332C45.5391%2066.1898%2047.1386%2065.7111%2048.6814%2066.3467C51.5019%2067.5086%2053.6106%2070.5957%2055.4618%2073.0095C57.7258%2075.9617%2059.7103%2079.5336%2061.1722%2083.0038C62.4308%2085.9914%2064.2267%2089.9465%2064.2267%2089.9465C64.2267%2089.9465%2067.5687%2095.2586%2068.7449%2096.8226C69.3019%2097.5632%2072.5017%2098.2443%2073.2632%2097.9477C76.6962%2096.6106%2076.7751%2096.8085%2079.2875%2094.1174C80.284%2093.05%2082.7413%2089.9465%2084.8097%2087.731C86.3158%2086.1178%2088.505%2084.0366%2090.8316%2082.7906C93.0767%2081.5882%2096.0472%2081.7048%2098.3644%2082.7906C101.602%2084.3078%20103.226%2086.0187%20105.761%2088.7339C108.578%2091.7509%20111.815%2094.5458%20115.191%2096.8226C116.424%2097.6543%20117.9%2098.4279%20119.259%2099.0213C120.245%2099.4516%20120.955%2099.5609%20123.968%20100.636C127.084%20101.749%20128.5%20103.385%20132%20103.863'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M78.9387%2042.3295C77.7432%2044.0368%2077.334%2046.4893%2077.2789%2049.2967C77.2377%2051.3993%2078.0288%2054.6216%2078.0288%2054.6216C78.3143%2056.3035%2081.4702%2059.8159%2082.9152%2060.3076C84.5561%2060.8658%2086.1122%2062.0229%2087.8211%2062.156C90.373%2062.3548%2092.7922%2062.7052%2094.8495%2061.3831C99.8697%2058.1567%20101.101%2055.2912%20101.376%2049.5532C101.522%2046.5053%20100.591%2044.5412%2098.8657%2042.0249C96.1276%2038.0311%2092.8414%2036.6478%2088.2815%2036.3276C85.9331%2036.1627%2083.7024%2037.0765%2081.7968%2038.7987C80.4711%2039.9969%2079.9754%2040.8489%2078.9387%2042.3295Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", a2 = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M32.2158%2092.7849C33.807%2094.5848%2037.064%2099.4962%2042.8388%20102.884C47.0091%20105.33%2050.301%20106.453%2055.4121%20107.669C62.4685%20109.348%2067.8268%20108.854%2073.9589%20108.662C80.5079%20108.457%2082.8997%20105.351%2089.1425%20103.341C91.118%20102.705%2093.2034%20101.975%2094.9794%20100.886C97.2727%2099.4783%2099.2495%2095.1507%20101.291%2093.4103C105.528%2089.7982%20109.179%2085.2878%20110.776%2079.9067C113.024%2072.3335%20113.625%2061.4052%20113.023%2053.511C112.68%2049.0131%20110.526%2045.2867%20108.657%2041.3045C107.684%2039.2331%20106.694%2037.1631%20105.217%2035.3981C104.057%2034.0116%20102.67%2032.8514%20101.395%2031.5763C99.282%2029.463%2096.847%2026.9934%2094.493%2025.233C91.656%2021.9564%2086.894%2020.8771%2083.555%2019.5814C75.8728%2016.6002%2067.4696%2014.9132%2059.1535%2016.7872C53.9676%2017.9559%2048.6984%2020.4413%2044.0402%2022.9368C39.1748%2025.5433%2034.9565%2029.24%2031.1735%2033.244C27.6174%2037.008%2026.3651%2041.0554%2023.4891%2045.3695C22.0727%2047.4941%2020.5128%2054.2416%2020.5128%2056.8804C20.5128%2063.6727%2019.7441%2069.0489%2021.816%2075.4827C23.1147%2079.5155%2025.1002%2083.212%2027.5023%2086.6585C28.9532%2088.7402%2030.5328%2090.8812%2032.2158%2092.7849Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M95.5413%2095.6855C98.4422%2099.4567%20101.772%20100.647%20104.459%20104.574C105.743%20106.452%20110.384%20112.105%20112.339%20113.309C114.61%20114.706%20116.287%20117.973%20119.114%20120.301'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M77.594%2027.3027C79.4731%2027.6685%2081.3555%2028.0267%2083.1563%2028.7522C85.3903%2029.6523%2087.3708%2031.0914%2089.37%2032.4975C92.2609%2034.5308%2095.2121%2036.755%2097.3579%2039.787C100.402%2044.0878%20102.603%2047.9394%20103.756%2053.8685C104.702%2058.7391%20104.737%2063.3802%20103.756%2066.5739'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M37.426%2085.0547C40.3347%2091.2008%2046.2391%2094.2199%2052.0576%2097.2882'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", n2 = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15%2039.8833C17.5%2039.8833%2020.5%2039.7924%2020.5%2039.7924C20.5%2039.7924%2029.872%2039.5742%2034.0063%2039.5742C39.9053%2039.5742%2045.8044%2039.5742%2051.7035%2039.5742C56.1682%2039.5742%2062.6329%2039.5742%2067.0976%2039.5742C75.7673%2039.5742%2078.4247%2039.7924%2087.0858%2039.7924C100.603%2039.7924%20112.436%2039.8832%20126%2039.8832'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M48.0752%2039C48.0752%2033.3427%2047.906%2026.7393%2048.0752%2021.0968C48.1078%2020.0094%2048.4693%2018.9773%2048.5114%2017.9076C48.5661%2016.5158%2048.9123%2016.8415%2051.4741%2016.4087C53.5724%2015.8274%2055.7756%2016.0367%2057.9681%2016.0367C61.4896%2016.0367%2064.9903%2016.0123%2068.4966%2016.2174C70.0828%2016.3102%2071.6934%2016.2102%2073.2823%2016.228C74.9405%2016.2467%2076.5969%2016.5518%2078.2618%2016.6214C80.484%2016.7142%2082.6812%2016.8021%2084.9133%2016.8021C87.1525%2016.8021%2090.3764%2016.4928%2092.5526%2016.4194C93.8768%2016.3747%2093.5943%2021.7948%2093.6794%2022.9146C93.9248%2026.1444%2094%2030.2186%2094%2033.4509C94%2035.3088%2093.7819%2041.1797%2093.7819%2043'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M30%2035C30%2036.1871%2030.2187%2043.3205%2030.2187%2044.5345C30.2187%2046.8984%2030.1856%2049.5525%2030.5467%2051.893C31.4233%2057.5754%2030.8747%2063.5893%2030.8747%2069.3172C30.8747%2071.8369%2031.2303%2074.353%2031.3242%2076.8726C31.4959%2081.4807%2032.2162%2085.3052%2032.5147%2090.7282C32.8968%2097.6671%2032.3462%20101.587%2032.7942%20108.522C33.1104%20113.417%2033.7904%20120.39%2034.9019%20122.131C36.0134%20123.872%2043.3799%20123.762%2044.4688%20123.762C48.0403%20122.857%2055.1129%20123.762%2058.9316%20123.762C66.8081%20123.762%2071.848%20123.261%2079.6994%20123.872C84.4124%20124.24%2089.051%20123.716%2093.7309%20123.54C96.6568%20123.43%20102.98%20124.357%20105.669%20123.146C107.679%20122.241%20107.799%20117.622%20107.799%20113.001C107.799%20108.991%20107.953%20105.124%20108.145%20101.809C108.579%2094.3379%20108.899%2088.7109%20109.378%2080.318C109.979%2069.8038%20110.056%2062.6519%20110.179%2053.6668C110.231%2049.8878%20111%2043.8477%20111%2040.0923'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M58.6807%2065.4473C58.6807%2068.815%2059.2792%2072.1775%2059.5534%2075.5322C60.0362%2081.4398%2059.9898%2087.4023%2059.9898%2093.3264C59.9898%2097.933%2060.208%20102.514%2060.208%20107.121'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M80.9521%2067.1855C80.4987%2076.9134%2080.4748%2086.6247%2080.2479%2096.3484C80.2084%2098.0434%2080.5278%2099.7148%2080.4468%20101.454'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", l2 = "" + new URL("loading-ClOqHxNk.gif", import.meta.url).href, c2 = "" + new URL("sign_pic-CrpHI1KR.jpg", import.meta.url).href;
+  function d2(t) {
     return new Promise((e, i) => {
       const s = window.URL.createObjectURL(t), r = new Image();
       r.src = s, r.addEventListener("load", async () => {
-        window.URL.revokeObjectURL(s), e(await ps(r));
+        window.URL.revokeObjectURL(s), e(await u2(r));
       }), r.addEventListener("error", (a) => {
         window.URL.revokeObjectURL(s), i(a);
       });
     });
   }
-  function ps(t) {
+  function u2(t) {
     return new Promise((e) => {
       const i = document.createElement("canvas"), s = i.getContext("2d"), { naturalWidth: r, naturalHeight: a } = t;
       i.width = r, i.height = a, s == null ? void 0 : s.drawImage(t, 0, 0, r, a), e(i.toDataURL("image/jpeg", 0.8));
     });
   }
-  function bs(t, e = "image/png", i = 1, s = "image.png") {
+  function _2(t, e = "image/png", i = 1, s = "image.png") {
     return new Promise((r) => {
       t.toBlob((a) => {
         if (!a) throw new Error("Failed to convert canvas to blob");
-        const u = new File([
+        const _ = new File([
           a
         ], s, {
           type: e
         });
-        r(u);
+        r(_);
       }, e, i);
     });
   }
-  function fs(t) {
+  function p2(t) {
     return new Promise((e, i) => {
       const s = new Image();
       s.addEventListener("load", e), s.addEventListener("error", i), s.src = t;
     });
   }
-  function ms() {
+  function b2() {
     const { getCurrentPDF: t, getPDF: e, getArchive: i, getTrash: s } = Y();
     return Promise.all([
       t(),
@@ -25367,80 +25353,80 @@ let __tla = Promise.all([
       s()
     ]);
   }
-  function hs() {
+  function f2() {
     const e = Object.values(Object.assign({
-      "/src/assets/img/bg_decorate.svg": os,
-      "/src/assets/img/img_archive.svg": as,
-      "/src/assets/img/img_photo.svg": ns,
-      "/src/assets/img/img_search.svg": ls,
-      "/src/assets/img/img_trash.svg": cs,
-      "/src/assets/img/loading.gif": ds,
-      "/src/assets/img/sign_pic.jpg": us
-    })).map(fs);
+      "/src/assets/img/bg_decorate.svg": s2,
+      "/src/assets/img/img_archive.svg": r2,
+      "/src/assets/img/img_photo.svg": o2,
+      "/src/assets/img/img_search.svg": a2,
+      "/src/assets/img/img_trash.svg": n2,
+      "/src/assets/img/loading.gif": l2,
+      "/src/assets/img/sign_pic.jpg": c2
+    })).map(p2);
     return Promise.allSettled(e);
   }
-  const gs = {
+  const m2 = {
     install() {
       const t = [
-        rs("OakSans", "OakSans-Black.woff2"),
-        ms(),
-        hs()
+        i2("OakSans", "OakSans-Black.woff2"),
+        b2(),
+        f2()
       ];
       Promise.all(t).then(() => {
-        vs();
+        h2();
       });
     }
   };
-  function vs() {
+  function h2() {
     const t = document.querySelector("#loading-screen");
     !t || !(t instanceof HTMLElement) || (t.style.display = "none");
   }
-  let ks, ws, ce;
-  ks = "modulepreload";
-  ws = function(t, e) {
+  let g2, v2, ce;
+  g2 = "modulepreload";
+  v2 = function(t, e) {
     return new URL(t, e).href;
   };
   ce = {};
   vt = function(e, i, s) {
     let r = Promise.resolve();
     if (i && i.length > 0) {
-      let u = function(h) {
-        return Promise.all(h.map((y) => Promise.resolve(y).then((k) => ({
+      let _ = function(h) {
+        return Promise.all(h.map((y) => Promise.resolve(y).then((w) => ({
           status: "fulfilled",
-          value: k
-        }), (k) => ({
+          value: w
+        }), (w) => ({
           status: "rejected",
-          reason: k
+          reason: w
         }))));
       };
-      const b = document.getElementsByTagName("link"), _ = document.querySelector("meta[property=csp-nonce]"), v = (_ == null ? void 0 : _.nonce) || (_ == null ? void 0 : _.getAttribute("nonce"));
-      r = u(i.map((h) => {
-        if (h = ws(h, s), h in ce) return;
+      const b = document.getElementsByTagName("link"), p = document.querySelector("meta[property=csp-nonce]"), v = (p == null ? void 0 : p.nonce) || (p == null ? void 0 : p.getAttribute("nonce"));
+      r = _(i.map((h) => {
+        if (h = v2(h, s), h in ce) return;
         ce[h] = true;
-        const y = h.endsWith(".css"), k = y ? '[rel="stylesheet"]' : "";
+        const y = h.endsWith(".css"), w = y ? '[rel="stylesheet"]' : "";
         if (!!s) for (let P = b.length - 1; P >= 0; P--) {
-          const M = b[P];
-          if (M.href === h && (!y || M.rel === "stylesheet")) return;
+          const j = b[P];
+          if (j.href === h && (!y || j.rel === "stylesheet")) return;
         }
-        else if (document.querySelector(`link[href="${h}"]${k}`)) return;
-        const w = document.createElement("link");
-        if (w.rel = y ? "stylesheet" : ks, y || (w.as = "script"), w.crossOrigin = "", w.href = h, v && w.setAttribute("nonce", v), document.head.appendChild(w), y) return new Promise((P, M) => {
-          w.addEventListener("load", P), w.addEventListener("error", () => M(new Error(`Unable to preload CSS for ${h}`)));
+        else if (document.querySelector(`link[href="${h}"]${w}`)) return;
+        const k = document.createElement("link");
+        if (k.rel = y ? "stylesheet" : g2, y || (k.as = "script"), k.crossOrigin = "", k.href = h, v && k.setAttribute("nonce", v), document.head.appendChild(k), y) return new Promise((P, j) => {
+          k.addEventListener("load", P), k.addEventListener("error", () => j(new Error(`Unable to preload CSS for ${h}`)));
         });
       }));
     }
-    function a(u) {
+    function a(_) {
       const b = new Event("vite:preloadError", {
         cancelable: true
       });
-      if (b.payload = u, window.dispatchEvent(b), !b.defaultPrevented) throw u;
+      if (b.payload = _, window.dispatchEvent(b), !b.defaultPrevented) throw _;
     }
-    return r.then((u) => {
-      for (const b of u || []) b.status === "rejected" && a(b.reason);
+    return r.then((_) => {
+      for (const b of _ || []) b.status === "rejected" && a(b.reason);
       return e().catch(a);
     });
   };
-  function ye() {
+  function Ce() {
     const t = Xt(), e = ue();
     function i(r) {
       t.push({
@@ -25457,7 +25443,7 @@ let __tla = Promise.all([
     };
   }
   function ut() {
-    const t = S(false), e = gt(() => vt(() => Promise.resolve().then(() => ke), void 0, import.meta.url)), { goBack: i, goPage: s } = ye();
+    const t = D(false), e = ht(() => vt(() => Promise.resolve().then(() => ke), void 0, import.meta.url)), { goBack: i, goPage: s } = Ce();
     function r(a) {
       t.value = a;
     }
@@ -25469,103 +25455,103 @@ let __tla = Promise.all([
       toggleWarnPopup: r
     };
   }
-  const ys = {
+  const w2 = {
     class: "complete-content content"
-  }, xs = {
+  }, k2 = {
     class: "title text-center w-full"
-  }, Cs = {
+  }, y2 = {
     class: "toolbar md:absolute md:right-10 md:top-5"
-  }, Ps = {
+  }, C2 = {
     class: "complete-content-file"
-  }, Ss = {
+  }, x2 = {
     class: "w-fit h-fit py-5 px-3 scale-150 origin-top-left flex flex-col gap-5 md:scale-100 md:py-10 md:px-14"
-  }, $s = [
+  }, P2 = [
     "src"
-  ], Ds = {
+  ], S2 = {
     class: "text-center"
-  }, js = {
+  }, $2 = {
     class: "flex justify-between md:justify-evenly"
-  }, Ms = I({
+  }, D2 = I({
     __name: "CompleteContent",
     setup(t) {
-      const e = S("archive"), i = S(false), { currentPDF: s } = at(Y()), { t: r } = dt(), { isShowWarnPopup: a, SignPopup: u, goPage: b, toggleWarnPopup: _ } = ut(), v = gt(() => vt(() => import("../chunks/SignEncryption-DMDbHRFr.js").then(async (m) => {
+      const e = D("archive"), i = D(false), { currentPDF: s } = nt(Y()), { t: r } = gt(), { isShowWarnPopup: a, SignPopup: _, goPage: b, toggleWarnPopup: p } = ut(), v = ht(() => vt(() => import("../chunks/SignEncryption-ComA92oE.js").then(async (m) => {
         await m.__tla;
         return m;
-      }).then((w) => w.S), __vite__mapDeps([0,1,2]), import.meta.url)), h = U(() => ({
+      }).then((k) => k.S), __vite__mapDeps([0,1,2]), import.meta.url)), h = U(() => ({
         archive: "prompt.sure_archive_file",
         trash: "prompt.sure_delete_file"
       })[e.value]);
-      function y(w) {
-        e.value = w, _(true);
+      function y(k) {
+        e.value = k, p(true);
       }
-      function k() {
-        const { addArchive: w, addTrash: P } = Y(), M = e.value === "archive";
-        M ? w(s.value) : P(s.value), W(r(M ? "prompt.file_archived_success" : "prompt.file_delete_success")), _(false), !M && b("home");
+      function w() {
+        const { addArchive: k, addTrash: P } = Y(), j = e.value === "archive";
+        j ? k(s.value) : P(s.value), W(r(j ? "prompt.file_archived_success" : "prompt.file_delete_success")), p(false), !j && b("home");
       }
-      function j(w) {
-        i.value = w;
+      function M(k) {
+        i.value = k;
       }
-      return Ne(() => mt().updateFilePassword("")), Jt(() => {
+      return We(() => mt().updateFilePassword("")), Jt(() => {
         Y().clearCurrentPDF();
-      }), (w, P) => (n(), p("div", ys, [
-        o("h5", xs, c(w.$t("sign_completed")), 1),
-        o("ul", Cs, [
+      }), (k, P) => (n(), u("div", w2, [
+        o("h5", k2, c(k.$t("sign_completed")), 1),
+        o("ul", y2, [
           o("li", null, [
-            C(O, {
+            x(V, {
               name: "download",
               class: "w-9 h-9",
-              onClick: P[0] || (P[0] = (M) => j(true))
+              onClick: P[0] || (P[0] = (j) => M(true))
             })
           ]),
           o("li", null, [
-            C(O, {
+            x(V, {
               name: "archive",
               class: "w-9 h-9",
-              onClick: P[1] || (P[1] = (M) => y("archive"))
+              onClick: P[1] || (P[1] = (j) => y("archive"))
             })
           ]),
           o("li", null, [
-            C(O, {
+            x(V, {
               name: "trash",
               class: "w-9 h-9",
-              onClick: P[2] || (P[2] = (M) => y("trash"))
+              onClick: P[2] || (P[2] = (j) => y("trash"))
             })
           ])
         ]),
-        o("div", Ps, [
-          o("div", Ss, [
-            (n(true), p(J, null, nt(l(s).canvas, (M) => (n(), p("img", {
-              key: M,
-              src: M,
+        o("div", C2, [
+          o("div", x2, [
+            (n(true), u(J, null, lt(l(s).canvas, (j) => (n(), u("img", {
+              key: j,
+              src: j,
               alt: "PDF document"
-            }, null, 8, $s))), 128))
+            }, null, 8, P2))), 128))
           ])
         ]),
         o("button", {
           class: "btn btn-primary md:absolute md:left-10 md:top-7",
           disabled: false,
-          onClick: P[3] || (P[3] = (M) => l(b)("home"))
+          onClick: P[3] || (P[3] = (j) => l(b)("home"))
         }, [
           P[6] || (P[6] = o("span", {
             class: "text-4xl font-thin"
           }, "\u2190", -1)),
-          yt(c(w.$t("return_home")), 1)
+          at(c(k.$t("return_home")), 1)
         ]),
-        l(a) ? (n(), E(l(u), {
+        l(a) ? (n(), E(l(_), {
           key: 0,
-          title: w.$t("warn")
+          title: k.$t("warn")
         }, {
-          default: K(() => [
-            o("p", Ds, c(w.$t(h.value)), 1),
-            o("div", js, [
+          default: G(() => [
+            o("p", S2, c(k.$t(h.value)), 1),
+            o("div", $2, [
               o("button", {
                 class: "btn btn-base",
-                onClick: P[4] || (P[4] = (M) => l(_)(false))
-              }, c(w.$t("not_yet")), 1),
+                onClick: P[4] || (P[4] = (j) => l(p)(false))
+              }, c(k.$t("not_yet")), 1),
               o("button", {
                 class: "btn btn-primary",
-                onClick: k
-              }, c(w.$t("confirm")), 1)
+                onClick: w
+              }, c(k.$t("confirm")), 1)
             ])
           ]),
           _: 1
@@ -25575,27 +25561,27 @@ let __tla = Promise.all([
         i.value ? (n(), E(l(v), {
           key: 1,
           file: l(s),
-          onCloseEncryptPopup: P[5] || (P[5] = (M) => j(false))
+          onCloseEncryptPopup: P[5] || (P[5] = (j) => M(false))
         }, null, 8, [
           "file"
         ])) : Z("", true)
       ]));
     }
-  }), Bs = N(Ms, [
+  }), M2 = N(D2, [
     [
       "__scopeId",
       "data-v-8d2e975f"
     ]
-  ]), Ts = {
+  ]), j2 = {
     class: "complete layout step"
-  }, zs = I({
+  }, B2 = I({
     __name: "index",
     setup(t) {
-      return (e, i) => (n(), p("div", Ts, [
-        C(Bs)
+      return (e, i) => (n(), u("div", j2, [
+        x(M2)
       ]));
     }
-  }), Fs = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.8973%2042.2716C21.2028%2043.1178%2022.1265%2043.5723%2025.0593%2043.5723H47.0189C67.1022%2043.5723%2089.5156%2043.9242%20107.696%2043.5723C114.329%2043.4438%20118.962%2044.1761%20124.223%2041.1697C126.179%2040.0522%20128.077%2037.0964%20129.181%2035.1097C130.391%2032.9321%20130.808%2029.873%20129.966%2026.6729C129.024%2023.0934%20126.834%2019.9659%20123.672%2018.5824C118.535%2016.3352%20117.924%2017.1843%20113.756%2016.6737C108.844%2016.072%20104.735%2016.7564%20101.085%2016.7564H92.8207C91.3333%2016.7564%2088.2136%2016.6737%2088.2136%2016.6737C88.2136%2016.6737%2078.4404%2016.3845%2073.6695%2016.3845C68.1405%2016.3845%2062.5234%2016.3787%2057.012%2016.3787C46.5387%2016.3787%2036.5998%2015.5266%2026.161%2016.3787C20.1295%2016.8711%2015.2647%2016.9713%2011.8374%2021.8878C9.44848%2025.3147%209.08273%2029.0498%209.6337%2032.3552C10.2413%2036.0006%2011.8373%2037.8643%2014.1499%2040.0395C14.7658%2040.6189%2015.3852%2041.3566%2017.8973%2042.2716Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M22.8557%2040.3027C22.708%2046.6555%2022.8419%2058.072%2022.8419%2064.4318C22.8419%2071.7728%2022.8419%2079.1137%2022.8419%2086.4547C22.8419%2090.924%2022.8419%2095.3933%2022.8419%2099.8626C22.8419%20103.911%2022.5759%20111.245%2024.5417%20116.094C27.6074%20123.656%2034.6737%20123.511%2041.2895%20123.511C50.5931%20123.511%2059.8967%20123.511%2069.2003%20123.511C74.4607%20123.511%2079.7266%20123.883%2085.0047%20123.883C90.4346%20123.883%2099.3066%20124.95%20104.39%20123.256C110.135%20121.341%20113.391%20120.11%20115.408%20116.094C116.793%20113.339%20117.544%20102.224%20117.164%2096.2612C116.872%2091.669%20117.028%2087.9876%20117.164%2084.4783C117.559%2074.2948%20117.064%2067.1636%20117.522%2058.4475C117.662%2055.8026%20117.019%2053.9924%20117.164%2051.3682C117.3%2048.9218%20116.793%2041.7082%20116.793%2039.3027'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M55.9294%2070.9037C57.1749%2070.837%2059.314%2070.9948%2061.4306%2070.6091C64.1624%2070.1113%2065.6913%2070.3807%2068.032%2070.2553C70.5148%2070.1223%2072.0634%2070.1702%2075.1836%2069.8723C80.1236%2069.4008%2080.4168%2069.7574%2083.4442%2069.5952'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", As = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M32.2158%2092.7849C33.807%2094.5848%2037.064%2099.4962%2042.8388%20102.884C47.0091%20105.33%2050.301%20106.453%2055.4121%20107.669C62.4685%20109.348%2067.8268%20108.854%2073.9589%20108.662C80.5079%20108.457%2082.8997%20105.351%2089.1425%20103.341C91.118%20102.705%2093.2034%20101.975%2094.9794%20100.886C97.2727%2099.4783%2099.2495%2095.1507%20101.291%2093.4103C105.528%2089.7982%20109.179%2085.2878%20110.776%2079.9067C113.024%2072.3335%20113.625%2061.4052%20113.023%2053.511C112.68%2049.0131%20110.526%2045.2867%20108.657%2041.3045C107.684%2039.2331%20106.694%2037.1631%20105.217%2035.3981C104.057%2034.0116%20102.67%2032.8514%20101.395%2031.5763C99.282%2029.463%2096.847%2026.9934%2094.493%2025.233C91.656%2021.9564%2086.894%2020.8771%2083.555%2019.5814C75.8728%2016.6002%2067.4696%2014.9132%2059.1535%2016.7872C53.9676%2017.9559%2048.6984%2020.4413%2044.0402%2022.9368C39.1748%2025.5433%2034.9565%2029.24%2031.1735%2033.244C27.6174%2037.008%2026.3651%2041.0554%2023.4891%2045.3695C22.0727%2047.4941%2020.5128%2054.2416%2020.5128%2056.8804C20.5128%2063.6727%2019.7441%2069.0489%2021.816%2075.4827C23.1147%2079.5155%2025.1002%2083.212%2027.5023%2086.6585C28.9532%2088.7402%2030.5328%2090.8812%2032.2158%2092.7849Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M95.5413%2095.6855C98.4422%2099.4567%20101.772%20100.647%20104.459%20104.574C105.743%20106.452%20110.384%20112.105%20112.339%20113.309C114.61%20114.706%20116.287%20117.973%20119.114%20120.301'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M77.594%2027.3027C79.4731%2027.6685%2081.3555%2028.0267%2083.1563%2028.7522C85.3903%2029.6523%2087.3708%2031.0914%2089.37%2032.4975C92.2609%2034.5308%2095.2121%2036.755%2097.3579%2039.787C100.402%2044.0878%20102.603%2047.9394%20103.756%2053.8685C104.702%2058.7391%20104.737%2063.3802%20103.756%2066.5739'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M37.426%2085.0547C40.3347%2091.2008%2046.2391%2094.2199%2052.0576%2097.2882'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", Ls = {}, Es = {
+  }), T2 = "data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M2.54497%208.73005C2%209.79961%202%2011.1997%202%2014C2%2016.8003%202%2018.2004%202.54497%2019.27C3.02433%2020.2108%203.78924%2020.9757%204.73005%2021.455C5.79961%2022%207.19974%2022%2010%2022H14C16.8003%2022%2018.2004%2022%2019.27%2021.455C20.2108%2020.9757%2020.9757%2020.2108%2021.455%2019.27C22%2018.2004%2022%2016.8003%2022%2014C22%2011.1997%2022%209.79961%2021.455%208.73005C20.9757%207.78924%2020.2108%207.02433%2019.27%206.54497C18.2004%206%2016.8003%206%2014%206H10C7.19974%206%205.79961%206%204.73005%206.54497C3.78924%207.02433%203.02433%207.78924%202.54497%208.73005ZM15.0595%2012.4995C15.3353%2012.1905%2015.3085%2011.7164%2014.9995%2011.4406C14.6905%2011.1647%2014.2164%2011.1915%2013.9406%2011.5005L10.9286%2014.8739L10.0595%2013.9005C9.78359%2013.5915%209.30947%2013.5647%209.0005%2013.8406C8.69152%2014.1164%208.66468%2014.5905%208.94055%2014.8995L10.3691%2016.4995C10.5114%2016.6589%2010.7149%2016.75%2010.9286%2016.75C11.1422%2016.75%2011.3457%2016.6589%2011.488%2016.4995L15.0595%2012.4995Z'%20fill='%231C274C'/%3e%3cpath%20d='M20.5348%203.46447C19.0704%202%2016.7133%202%2011.9993%202C7.28525%202%204.92823%202%203.46377%203.46447C2.70628%204.22195%202.3406%205.21824%202.16406%206.65598C2.69473%206.06532%203.33236%205.57328%204.04836%205.20846C4.82984%204.81027%205.66664%204.6488%206.59316%204.5731C7.48829%204.49997%208.58971%204.49998%209.93646%204.5H14.0621C15.4089%204.49998%2016.5103%204.49997%2017.4054%204.5731C18.332%204.6488%2019.1688%204.81027%2019.9502%205.20846C20.6662%205.57328%2021.3039%206.06532%2021.8345%206.65598C21.658%205.21824%2021.2923%204.22195%2020.5348%203.46447Z'%20fill='%231C274C'/%3e%3c/svg%3e", z2 = "data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M2%206.94975C2%206.06722%202%205.62595%202.06935%205.25839C2.37464%203.64031%203.64031%202.37464%205.25839%202.06935C5.62595%202%206.06722%202%206.94975%202C7.33642%202%207.52976%202%207.71557%202.01738C8.51665%202.09229%209.27652%202.40704%209.89594%202.92051C10.0396%203.03961%2010.1763%203.17633%2010.4497%203.44975L11%204C11.8158%204.81578%2012.2237%205.22367%2012.7121%205.49543C12.9804%205.64471%2013.2651%205.7626%2013.5604%205.84678C14.0979%206%2014.6747%206%2015.8284%206H16.2021C18.8345%206%2020.1506%206%2021.0062%206.76946C21.0849%206.84024%2021.1598%206.91514%2021.2305%206.99383C22%207.84935%2022%209.16554%2022%2011.7979V14C22%2017.7712%2022%2019.6569%2020.8284%2020.8284C19.6569%2022%2017.7712%2022%2014%2022H10C6.22876%2022%204.34315%2022%203.17157%2020.8284C2%2019.6569%202%2017.7712%202%2014V6.94975Z'%20fill='%231C274C'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M12.25%2010C12.25%209.58579%2012.5858%209.25%2013%209.25H18C18.4142%209.25%2018.75%209.58579%2018.75%2010C18.75%2010.4142%2018.4142%2010.75%2018%2010.75H13C12.5858%2010.75%2012.25%2010.4142%2012.25%2010Z'%20fill='white'/%3e%3cpath%20d='M16.9856%203.02094C16.8321%203%2016.6492%203%2016.2835%203H12L12.3699%203.38312C13.0359%204.07299%2013.2919%204.33051%2013.5877%204.50096C13.7594%204.5999%2013.9415%204.67804%2014.1304%204.73383C14.4559%204.82993%2014.8128%204.83538%2015.7546%204.83538L16.089%204.83538C17.0914%204.83536%2017.8995%204.83535%2018.5389%204.91862C18.6984%204.93939%2018.8521%204.96582%2019%205C18.8144%203.96313%2018.0043%203.15985%2016.9856%203.02094Z'%20fill='%231C274C'/%3e%3c/svg%3e", F2 = "data:image/svg+xml,%3c!DOCTYPE%20svg%20PUBLIC%20'-//W3C//DTD%20SVG%201.1//EN'%20'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Transformed%20by:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='SVGRepo_bgCarrier'%20stroke-width='0'/%3e%3cg%20id='SVGRepo_tracerCarrier'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cg%20id='SVGRepo_iconCarrier'%3e%3cpath%20d='M3%206.52381C3%206.12932%203.32671%205.80952%203.72973%205.80952H8.51787C8.52437%204.9683%208.61554%203.81504%209.45037%203.01668C10.1074%202.38839%2011.0081%202%2012%202C12.9919%202%2013.8926%202.38839%2014.5496%203.01668C15.3844%203.81504%2015.4756%204.9683%2015.4821%205.80952H20.2703C20.6733%205.80952%2021%206.12932%2021%206.52381C21%206.9183%2020.6733%207.2381%2020.2703%207.2381H3.72973C3.32671%207.2381%203%206.9183%203%206.52381Z'%20fill='%231C274C'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M11.5956%2022H12.4044C15.1871%2022%2016.5785%2022%2017.4831%2021.1141C18.3878%2020.2281%2018.4803%2018.7749%2018.6654%2015.8685L18.9321%2011.6806C19.0326%2010.1036%2019.0828%209.31511%2018.6289%208.81545C18.1751%208.31579%2017.4087%208.31579%2015.876%208.31579H8.12404C6.59127%208.31579%205.82488%208.31579%205.37105%208.81545C4.91722%209.31511%204.96744%2010.1036%205.06788%2011.6806L5.33459%2015.8685C5.5197%2018.7749%205.61225%2020.2281%206.51689%2021.1141C7.42153%2022%208.81289%2022%2011.5956%2022ZM10.2463%2012.1885C10.2051%2011.7546%209.83753%2011.4381%209.42537%2011.4815C9.01321%2011.5249%208.71251%2011.9117%208.75372%2012.3456L9.25372%2017.6087C9.29494%2018.0426%209.66247%2018.3591%2010.0746%2018.3157C10.4868%2018.2724%2010.7875%2017.8855%2010.7463%2017.4516L10.2463%2012.1885ZM14.5746%2011.4815C14.9868%2011.5249%2015.2875%2011.9117%2015.2463%2012.3456L14.7463%2017.6087C14.7051%2018.0426%2014.3375%2018.3591%2013.9254%2018.3157C13.5132%2018.2724%2013.2125%2017.8855%2013.2537%2017.4516L13.7537%2012.1885C13.7949%2011.7546%2014.1625%2011.4381%2014.5746%2011.4815Z'%20fill='%231C274C'/%3e%3c/g%3e%3c/svg%3e", L2 = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.8973%2042.2716C21.2028%2043.1178%2022.1265%2043.5723%2025.0593%2043.5723H47.0189C67.1022%2043.5723%2089.5156%2043.9242%20107.696%2043.5723C114.329%2043.4438%20118.962%2044.1761%20124.223%2041.1697C126.179%2040.0522%20128.077%2037.0964%20129.181%2035.1097C130.391%2032.9321%20130.808%2029.873%20129.966%2026.6729C129.024%2023.0934%20126.834%2019.9659%20123.672%2018.5824C118.535%2016.3352%20117.924%2017.1843%20113.756%2016.6737C108.844%2016.072%20104.735%2016.7564%20101.085%2016.7564H92.8207C91.3333%2016.7564%2088.2136%2016.6737%2088.2136%2016.6737C88.2136%2016.6737%2078.4404%2016.3845%2073.6695%2016.3845C68.1405%2016.3845%2062.5234%2016.3787%2057.012%2016.3787C46.5387%2016.3787%2036.5998%2015.5266%2026.161%2016.3787C20.1295%2016.8711%2015.2647%2016.9713%2011.8374%2021.8878C9.44848%2025.3147%209.08273%2029.0498%209.6337%2032.3552C10.2413%2036.0006%2011.8373%2037.8643%2014.1499%2040.0395C14.7658%2040.6189%2015.3852%2041.3566%2017.8973%2042.2716Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M22.8557%2040.3027C22.708%2046.6555%2022.8419%2058.072%2022.8419%2064.4318C22.8419%2071.7728%2022.8419%2079.1137%2022.8419%2086.4547C22.8419%2090.924%2022.8419%2095.3933%2022.8419%2099.8626C22.8419%20103.911%2022.5759%20111.245%2024.5417%20116.094C27.6074%20123.656%2034.6737%20123.511%2041.2895%20123.511C50.5931%20123.511%2059.8967%20123.511%2069.2003%20123.511C74.4607%20123.511%2079.7266%20123.883%2085.0047%20123.883C90.4346%20123.883%2099.3066%20124.95%20104.39%20123.256C110.135%20121.341%20113.391%20120.11%20115.408%20116.094C116.793%20113.339%20117.544%20102.224%20117.164%2096.2612C116.872%2091.669%20117.028%2087.9876%20117.164%2084.4783C117.559%2074.2948%20117.064%2067.1636%20117.522%2058.4475C117.662%2055.8026%20117.019%2053.9924%20117.164%2051.3682C117.3%2048.9218%20116.793%2041.7082%20116.793%2039.3027'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M55.9294%2070.9037C57.1749%2070.837%2059.314%2070.9948%2061.4306%2070.6091C64.1624%2070.1113%2065.6913%2070.3807%2068.032%2070.2553C70.5148%2070.1223%2072.0634%2070.1702%2075.1836%2069.8723C80.1236%2069.4008%2080.4168%2069.7574%2083.4442%2069.5952'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", A2 = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M32.2158%2092.7849C33.807%2094.5848%2037.064%2099.4962%2042.8388%20102.884C47.0091%20105.33%2050.301%20106.453%2055.4121%20107.669C62.4685%20109.348%2067.8268%20108.854%2073.9589%20108.662C80.5079%20108.457%2082.8997%20105.351%2089.1425%20103.341C91.118%20102.705%2093.2034%20101.975%2094.9794%20100.886C97.2727%2099.4783%2099.2495%2095.1507%20101.291%2093.4103C105.528%2089.7982%20109.179%2085.2878%20110.776%2079.9067C113.024%2072.3335%20113.625%2061.4052%20113.023%2053.511C112.68%2049.0131%20110.526%2045.2867%20108.657%2041.3045C107.684%2039.2331%20106.694%2037.1631%20105.217%2035.3981C104.057%2034.0116%20102.67%2032.8514%20101.395%2031.5763C99.282%2029.463%2096.847%2026.9934%2094.493%2025.233C91.656%2021.9564%2086.894%2020.8771%2083.555%2019.5814C75.8728%2016.6002%2067.4696%2014.9132%2059.1535%2016.7872C53.9676%2017.9559%2048.6984%2020.4413%2044.0402%2022.9368C39.1748%2025.5433%2034.9565%2029.24%2031.1735%2033.244C27.6174%2037.008%2026.3651%2041.0554%2023.4891%2045.3695C22.0727%2047.4941%2020.5128%2054.2416%2020.5128%2056.8804C20.5128%2063.6727%2019.7441%2069.0489%2021.816%2075.4827C23.1147%2079.5155%2025.1002%2083.212%2027.5023%2086.6585C28.9532%2088.7402%2030.5328%2090.8812%2032.2158%2092.7849Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M95.5413%2095.6855C98.4422%2099.4567%20101.772%20100.647%20104.459%20104.574C105.743%20106.452%20110.384%20112.105%20112.339%20113.309C114.61%20114.706%20116.287%20117.973%20119.114%20120.301'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M77.594%2027.3027C79.4731%2027.6685%2081.3555%2028.0267%2083.1563%2028.7522C85.3903%2029.6523%2087.3708%2031.0914%2089.37%2032.4975C92.2609%2034.5308%2095.2121%2036.755%2097.3579%2039.787C100.402%2044.0878%20102.603%2047.9394%20103.756%2053.8685C104.702%2058.7391%20104.737%2063.3802%20103.756%2066.5739'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M37.426%2085.0547C40.3347%2091.2008%2046.2391%2094.2199%2052.0576%2097.2882'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", E2 = {}, I2 = {
     width: "40",
     height: "40",
     viewBox: "0 0 40 40",
@@ -25604,8 +25590,8 @@ let __tla = Promise.all([
     class: "hidden transition-colors md:block",
     title: "list icon"
   };
-  function Is(t, e) {
-    return n(), p("svg", Es, e[0] || (e[0] = [
+  function Z2(t, e) {
+    return n(), u("svg", I2, e[0] || (e[0] = [
       o("rect", {
         x: "13",
         y: "12",
@@ -25635,18 +25621,47 @@ let __tla = Promise.all([
       }, null, -1)
     ]));
   }
-  const Zs = N(Ls, [
+  const V2 = N(E2, [
     [
       "render",
-      Is
+      Z2
     ]
-  ]), Os = {
+  ]);
+  function H2(t, e = 500) {
+    if (typeof t != "function") throw new TypeError("The first argument is not a function.");
+    let i = 0;
+    return function(...s) {
+      const r = Date.now();
+      r - i < e || (t.apply(this, s), i = r);
+    };
+  }
+  zt = function(t = 500) {
+    return new Promise((e) => setTimeout(e, t));
+  };
+  function ee() {
+    return window.innerWidth > 768;
+  }
+  function O2(t) {
+    const [e, i] = new Date(t).toLocaleString("en-GB").split(","), [s, r, a] = e.split("/");
+    return `${a}-${r}-${s} ${i}`;
+  }
+  function q2(t) {
+    let e = window.devicePixelRatio;
+    const i = window.matchMedia(`(resolution: ${e}dppx)`), s = () => {
+      const r = window.devicePixelRatio;
+      r !== e && (e = r, t(r));
+    };
+    return i.addEventListener("change", s), () => {
+      i.removeEventListener("change", s);
+    };
+  }
+  const R2 = {
     class: "sign-file-more bg-white"
-  }, qs = [
+  }, U2 = [
     "src"
-  ], Vs = [
+  ], N2 = [
     "innerHTML"
-  ], Rs = I({
+  ], W2 = I({
     __name: "SignFile",
     props: {
       file: {},
@@ -25669,11 +25684,11 @@ let __tla = Promise.all([
       "selectFile"
     ],
     setup(t, { emit: e }) {
-      const i = e, s = S(false), r = S(false), a = Xt(), { addPDF: u, addArchive: b, addTrash: _, deleteArchive: v, deleteTrash: h, setCurrentPDF: y } = Y(), k = U(() => ai(t.file.updateDate)), j = U(() => ({
+      const i = e, s = D(false), r = D(false), a = Xt(), { addPDF: _, addArchive: b, addTrash: p, deleteArchive: v, deleteTrash: h, setCurrentPDF: y } = Y(), w = U(() => O2(t.file.updateDate)), M = U(() => ({
         file: [
           {
             icon: "download",
-            feat: () => w()
+            feat: () => k()
           },
           {
             icon: "sign",
@@ -25681,7 +25696,7 @@ let __tla = Promise.all([
           },
           {
             icon: "archive",
-            feat: () => M()
+            feat: () => j()
           },
           {
             icon: "trash",
@@ -25705,12 +25720,12 @@ let __tla = Promise.all([
           },
           {
             icon: "trash",
-            feat: () => $()
+            feat: () => S()
           }
         ]
       })[t.type]);
-      function w() {
-        q(false), i("openEncryptPopup", t.file);
+      function k() {
+        H(false), i("openEncryptPopup", t.file);
       }
       function P() {
         y({
@@ -25720,31 +25735,31 @@ let __tla = Promise.all([
           name: "signature"
         });
       }
-      function M() {
+      function j() {
         b(t.file), i("selectFile", t.file, false);
       }
       function T() {
-        _(t.file, t.type), i("selectFile", t.file, false);
+        p(t.file, t.type), i("selectFile", t.file, false);
       }
       function g() {
-        v(t.file.PDFId), i("selectFile", t.file, false), u(t.file);
+        v(t.file.PDFId), i("selectFile", t.file, false), _(t.file);
       }
       function m() {
-        h(t.file.PDFId), i("selectFile", t.file, false), u(t.file);
+        h(t.file.PDFId), i("selectFile", t.file, false), _(t.file);
       }
-      function $() {
-        q(false), i("openWarnPopup", t.file);
+      function S() {
+        H(false), i("openWarnPopup", t.file);
       }
-      function q(d) {
+      function H(d) {
         s.value = d;
       }
-      function D(d) {
-        const B = d.toLowerCase().indexOf(t.keyword.toLowerCase()), x = B + t.keyword.length;
+      function $(d) {
+        const B = d.toLowerCase().indexOf(t.keyword.toLowerCase()), C = B + t.keyword.length;
         return [
           d.slice(0, B),
-          d.slice(B, x),
-          d.slice(x)
-        ].reduce((G, rt, ot) => rt ? `${G}<span class="${ot === 1 ? "text-primary" : ""}">${rt}</span>` : G, "");
+          d.slice(B, C),
+          d.slice(C)
+        ].reduce((K, rt, ot) => rt ? `${K}<span class="${ot === 1 ? "text-primary" : ""}">${rt}</span>` : K, "");
       }
       function f() {
         r.value = !r.value, i("selectFile", t.file, r.value);
@@ -25753,8 +25768,8 @@ let __tla = Promise.all([
         d !== "mixed" && (r.value = d);
       }), (d, B) => {
         var _a;
-        return n(), p("li", {
-          class: L([
+        return n(), u("li", {
+          class: F([
             "sign-file flex flex-col",
             d.isListStatus ? "md:flex-row" : "md:w-[316px] md:flex-shrink-0 md:h-fit",
             {
@@ -25764,28 +25779,28 @@ let __tla = Promise.all([
           onClick: f
         }, [
           o("div", {
-            class: L([
+            class: F([
               "transition-opacity md:hidden",
               s.value ? "opacity-100 z-10" : "opacity-0 -z-[1]"
             ])
           }, [
-            s.value ? (n(), p(J, {
+            s.value ? (n(), u(J, {
               key: 0
             }, [
               o("div", {
                 class: "mask",
-                onClick: B[0] || (B[0] = X((x) => q(false), [
+                onClick: B[0] || (B[0] = X((C) => H(false), [
                   "stop"
                 ]))
               }),
-              o("ul", Os, [
-                (n(true), p(J, null, nt(j.value, (x) => (n(), p("li", {
-                  key: x.icon
+              o("ul", R2, [
+                (n(true), u(J, null, lt(M.value, (C) => (n(), u("li", {
+                  key: C.icon
                 }, [
-                  C(O, {
-                    name: x.icon,
+                  x(V, {
+                    name: C.icon,
                     class: "w-10 h-10",
-                    onClick: X(x.feat, [
+                    onClick: X(C.feat, [
                       "stop"
                     ])
                   }, null, 8, [
@@ -25796,16 +25811,16 @@ let __tla = Promise.all([
               ])
             ], 64)) : Z("", true)
           ], 2),
-          j.value.length ? (n(), E(O, {
+          M.value.length ? (n(), E(V, {
             key: 0,
             name: "more",
-            class: L(`absolute w-10 h-10 right-2 top-1 ${s.value ? "opacity-0" : "opacity-100"} md:hidden`),
-            onClick: B[1] || (B[1] = X((x) => q(true), [
+            class: F(`absolute w-10 h-10 right-2 top-1 ${s.value ? "opacity-0" : "opacity-100"} md:hidden`),
+            onClick: B[1] || (B[1] = X((C) => H(true), [
               "stop"
             ]))
           }, null, 8, [
             "class"
-          ])) : (n(), E(O, {
+          ])) : (n(), E(V, {
             key: 1,
             name: "reduction",
             class: "absolute w-10 h-10 right-2 top-1 md:hidden",
@@ -25814,7 +25829,7 @@ let __tla = Promise.all([
             ])
           })),
           o("div", {
-            class: L([
+            class: F([
               "w-1/3 h-[150px] flex items-center justify-center",
               {
                 "md:hidden": d.isListStatus
@@ -25825,10 +25840,10 @@ let __tla = Promise.all([
               src: (_a = d.file.canvas) == null ? void 0 : _a.at(0),
               class: "border-2 border-gray-20 w-full",
               alt: "file"
-            }, null, 8, qs)
+            }, null, 8, U2)
           ], 2),
           o("div", {
-            class: L([
+            class: F([
               "sign-file-content flex-col mt-4 text-center",
               {
                 "md:mt-0 md:flex-row md:items-center md:w-full md:text-start": d.isListStatus
@@ -25836,41 +25851,41 @@ let __tla = Promise.all([
             ])
           }, [
             o("div", {
-              class: L({
+              class: F({
                 "md:flex md:flex-row-reverse md:items-center md:gap-1 md:flex-1": d.isListStatus
               })
             }, [
               o("p", {
                 class: "flex-1",
-                innerHTML: D(d.file.name)
-              }, null, 8, Vs),
+                innerHTML: $(d.file.name)
+              }, null, 8, N2),
               o("p", {
-                class: L([
+                class: F([
                   "",
                   {
                     "md:text-black md:w-[236px]": d.isListStatus
                   }
                 ])
-              }, c(k.value), 3),
-              d.isListStatus ? (n(), E(Zs, {
+              }, c(w.value), 3),
+              d.isListStatus ? (n(), E(V2, {
                 key: 0
               })) : Z("", true)
             ], 2),
             o("ul", {
-              class: L([
+              class: F([
                 "flex-row gap-1 hidden justify-center md:flex",
                 {
                   "mt-4": !d.isListStatus
                 }
               ])
             }, [
-              (n(true), p(J, null, nt(j.value, (x) => (n(), p("li", {
-                key: x.icon
+              (n(true), u(J, null, lt(M.value, (C) => (n(), u("li", {
+                key: C.icon
               }, [
-                C(O, {
-                  name: x.icon,
+                x(V, {
+                  name: C.icon,
                   class: "w-10 h-10",
-                  onClick: X(x.feat, [
+                  onClick: X(C.feat, [
                     "stop"
                   ])
                 }, null, 8, [
@@ -25883,12 +25898,12 @@ let __tla = Promise.all([
         ], 2);
       };
     }
-  }), Hs = N(Rs, [
+  }), G2 = N(W2, [
     [
       "__scopeId",
       "data-v-945527c4"
     ]
-  ]), Us = {
+  ]), K2 = {
     width: "40",
     height: "40",
     viewBox: "0 0 40 40",
@@ -25896,37 +25911,37 @@ let __tla = Promise.all([
     xmlns: "http://www.w3.org/2000/svg",
     class: "absolute left-1 top-0 transition-colors",
     title: "search icon"
-  }, Ns = [
+  }, Y2 = [
     "stroke"
-  ], Ws = [
+  ], X2 = [
     "stroke"
-  ], Gs = I({
+  ], J2 = I({
     __name: "SvgSearch",
     props: {
       color: {}
     },
     setup(t) {
-      return (e, i) => (n(), p("svg", Us, [
+      return (e, i) => (n(), u("svg", K2, [
         o("circle", {
           cx: "19",
           cy: "19",
           r: "8.75",
           stroke: e.color,
           "stroke-width": "2.5"
-        }, null, 8, Ns),
+        }, null, 8, Y2),
         o("path", {
           d: "M25 26L30 31",
           stroke: e.color,
           "stroke-width": "2.5",
           "stroke-linecap": "round"
-        }, null, 8, Ws)
+        }, null, 8, X2)
       ]));
     }
-  }), Ks = {
+  }), Q2 = {
     class: "w-[90%] relative m-3 max-w-[400px] md:absolute md:-top-16"
-  }, Ys = [
+  }, ti = [
     "placeholder"
-  ], Xs = I({
+  ], ei = I({
     __name: "HomeSearch",
     props: {
       modelValue: {},
@@ -25936,40 +25951,40 @@ let __tla = Promise.all([
       "update:modelValue"
     ],
     setup(t) {
-      const e = it(t, "modelValue"), i = S("#CCCCCC"), s = U(() => e.value);
+      const e = it(t, "modelValue"), i = D("#CCCCCC"), s = U(() => e.value);
       function r() {
         i.value = "#b7ec5d";
       }
       function a() {
         i.value = "#ffffff";
       }
-      function u() {
+      function _() {
         e.value = "";
       }
-      return (b, _) => (n(), p("label", Ks, [
-        C(Gs, {
+      return (b, p) => (n(), u("label", Q2, [
+        x(J2, {
           color: i.value
         }, null, 8, [
           "color"
         ]),
-        st(C(O, {
+        st(x(V, {
           name: "close_s",
           class: "absolute right-1 top-0 w-10 h-10",
-          onClick: u
+          onClick: _
         }, null, 512), [
           [
-            ct,
+            dt,
             s.value
           ]
         ]),
         st(o("input", {
-          "onUpdate:modelValue": _[0] || (_[0] = (v) => e.value = v),
+          "onUpdate:modelValue": p[0] || (p[0] = (v) => e.value = v),
           type: "text",
           class: "input pl-12",
           placeholder: b.$t("placeholder.keyword"),
           onFocus: r,
           onBlur: a
-        }, null, 40, Ys), [
+        }, null, 40, ti), [
           [
             Qt,
             e.value,
@@ -25981,103 +25996,103 @@ let __tla = Promise.all([
         ])
       ]));
     }
-  }), Js = {
+  }), ii = {
     class: "sign-files"
-  }, Qs = {
+  }, si = {
     class: "hidden md:flex items-end w-full px-4 py-5"
-  }, t0 = {
+  }, ri = {
     class: "w-[300px] flex items-center pl-6 gap-5 h-6"
-  }, e0 = {
+  }, oi = {
     class: "w-7 h-8 flex items-center justify-center hover:bg-gray-50/15 cursor-pointer transition-colors rounded"
-  }, i0 = {
+  }, ai = {
     class: "flex justify-between items-end flex-1"
-  }, s0 = {
+  }, ni = {
     class: "flex gap-1"
-  }, r0 = {
+  }, li = {
     key: 1,
     class: "w-[80%] h-[calc(100%-60px)] flex flex-col items-center justify-center"
-  }, o0 = {
+  }, ci = {
     class: "text-center mb-3"
-  }, a0 = {
+  }, di = {
     class: "text-center"
-  }, n0 = {
+  }, ui = {
     class: "text-center"
-  }, l0 = {
+  }, _i = {
     class: "flex justify-between md:justify-evenly"
-  }, c0 = I({
+  }, pi = I({
     __name: "HomeSignFiles",
     props: {
       type: {},
       list: {}
     },
     setup(t) {
-      const e = S(""), i = S("list"), s = S(false), r = S(false), a = S(null), u = /* @__PURE__ */ new Set(), { deleteTrash: b, batchDeleteTrash: _ } = Y(), { isShowWarnPopup: v, SignPopup: h, toggleWarnPopup: y } = ut(), k = gt(() => vt(() => import("../chunks/SignEncryption-DMDbHRFr.js").then(async (m3) => {
+      const e = D(""), i = D("list"), s = D(false), r = D(false), a = D(null), _ = /* @__PURE__ */ new Set(), { deleteTrash: b, batchDeleteTrash: p } = Y(), { isShowWarnPopup: v, SignPopup: h, toggleWarnPopup: y } = ut(), w = ht(() => vt(() => import("../chunks/SignEncryption-ComA92oE.js").then(async (m3) => {
         await m3.__tla;
         return m3;
-      }).then((x) => x.S), __vite__mapDeps([0,1,2]), import.meta.url)), j = U(() => i.value === "list"), w = U(() => j.value && r.value === false), P = U(() => {
-        const x = e.value.toLowerCase();
-        return t.list.filter(({ name: H }) => H.toLowerCase().includes(x));
+      }).then((C) => C.S), __vite__mapDeps([0,1,2]), import.meta.url)), M = U(() => i.value === "list"), k = U(() => M.value && r.value === false), P = U(() => {
+        const C = e.value.toLowerCase();
+        return t.list.filter(({ name: R }) => R.toLowerCase().includes(C));
       });
-      function M(x) {
-        i.value = x;
+      function j(C) {
+        i.value = C;
       }
-      function T(x) {
-        y(true), x && (a.value = x);
+      function T(C) {
+        y(true), C && (a.value = C);
       }
       function g() {
         y(false), a.value = null;
       }
-      function m(x) {
-        s.value = true, a.value = x;
+      function m(C) {
+        s.value = true, a.value = C;
       }
-      function $() {
+      function S() {
         s.value = false, a.value = null;
       }
-      function q() {
-        a.value ? (b(a.value.PDFId), D(a.value, false)) : (_(u), d()), g();
+      function H() {
+        a.value ? (b(a.value.PDFId), $(a.value, false)) : (p(_), d()), g();
       }
-      function D(x, H) {
-        H ? u.add(x) : u.delete(x), B();
+      function $(C, R) {
+        R ? _.add(C) : _.delete(C), B();
       }
       function f() {
         if (!r.value) {
-          u.clear();
+          _.clear();
           return;
         }
-        t.list.forEach((x) => u.add(x));
+        t.list.forEach((C) => _.add(C));
       }
       function d() {
-        u.clear(), B();
+        _.clear(), B();
       }
       async function B() {
-        if (await Nt(), !u.size) {
+        if (await Nt(), !_.size) {
           r.value = false;
           return;
         }
-        r.value = u.size === t.list.length ? true : "mixed";
+        r.value = _.size === t.list.length ? true : "mixed";
       }
-      return We(B), (x, H) => (n(), p("div", Js, [
-        C(Xs, {
+      return Ge(B), (C, R) => (n(), u("div", ii, [
+        x(ei, {
           modelValue: e.value,
-          "onUpdate:modelValue": H[0] || (H[0] = (G) => e.value = G)
+          "onUpdate:modelValue": R[0] || (R[0] = (K) => e.value = K)
         }, null, 8, [
           "modelValue"
         ]),
-        o("div", Qs, [
-          o("div", t0, [
-            o("div", e0, [
-              C(l(Ri), {
+        o("div", si, [
+          o("div", ri, [
+            o("div", oi, [
+              x(l(H0), {
                 modelValue: r.value,
-                "onUpdate:modelValue": H[1] || (H[1] = (G) => r.value = G),
+                "onUpdate:modelValue": R[1] || (R[1] = (K) => r.value = K),
                 onChange: f
               }, null, 8, [
                 "modelValue"
               ])
             ]),
-            r.value ? (n(), E(l(Oi), {
+            r.value ? (n(), E(l(I0), {
               key: 0,
-              type: x.type,
-              batch: l(u),
+              type: C.type,
+              batch: l(_),
               onClearBatch: d,
               onOpenWarnPopup: T
             }, null, 8, [
@@ -26085,71 +26100,71 @@ let __tla = Promise.all([
               "batch"
             ])) : Z("", true),
             o("p", {
-              class: L([
+              class: F([
                 "text-sm",
                 {
                   "opacity-0": r.value
                 }
               ])
-            }, c(w.value ? x.$t("setup_time") : x.$t("batch_operation")), 3)
+            }, c(k.value ? C.$t("setup_time") : C.$t("batch_operation")), 3)
           ]),
-          o("div", i0, [
+          o("div", ai, [
             o("p", {
-              class: L([
+              class: F([
                 "text-sm h-6",
                 {
-                  "opacity-0": !w.value
+                  "opacity-0": !k.value
                 }
               ])
-            }, c(x.$t("project_name")), 3),
-            o("div", s0, [
-              C(O, {
+            }, c(C.$t("project_name")), 3),
+            o("div", ni, [
+              x(V, {
                 name: "list",
-                class: L([
+                class: F([
                   "w-10 h-10",
                   {
-                    "text-primary": j.value
+                    "text-primary": M.value
                   }
                 ]),
-                onClick: H[2] || (H[2] = (G) => M("list"))
+                onClick: R[2] || (R[2] = (K) => j("list"))
               }, null, 8, [
                 "class"
               ]),
-              C(O, {
+              x(V, {
                 name: "card",
-                class: L([
+                class: F([
                   "w-10 h-10",
                   {
                     "text-primary": i.value === "card"
                   }
                 ]),
-                onClick: H[3] || (H[3] = (G) => M("card"))
+                onClick: R[3] || (R[3] = (K) => j("card"))
               }, null, 8, [
                 "class"
               ])
             ])
           ])
         ]),
-        P.value.length ? (n(), p("ul", {
+        P.value.length ? (n(), u("ul", {
           key: 0,
-          class: L([
+          class: F([
             "w-full h-[calc(100%-60px)] overflow-y-auto gap-6 px-4",
             {
-              "md:flex md:flex-row md:flex-wrap md:gap-4": !j.value
+              "md:flex md:flex-row md:flex-wrap md:gap-4": !M.value
             }
           ])
         }, [
-          (n(true), p(J, null, nt(P.value, (G, rt) => (n(), E(Hs, {
-            key: G.PDFId,
-            file: G,
+          (n(true), u(J, null, lt(P.value, (K, rt) => (n(), E(G2, {
+            key: K.PDFId,
+            file: K,
             index: rt,
-            type: x.type,
-            "is-list-status": j.value,
+            type: C.type,
+            "is-list-status": M.value,
             keyword: e.value,
             "is-select-all": r.value,
             onOpenWarnPopup: T,
             onOpenEncryptPopup: m,
-            onSelectFile: D
+            onSelectFile: $
           }, null, 8, [
             "file",
             "index",
@@ -26158,160 +26173,184 @@ let __tla = Promise.all([
             "keyword",
             "is-select-all"
           ]))), 128))
-        ], 2)) : (n(), p("div", r0, [
-          H[4] || (H[4] = o("img", {
-            src: As,
+        ], 2)) : (n(), u("div", li, [
+          R[4] || (R[4] = o("img", {
+            src: A2,
             alt: "Search Icon",
             class: "mb-10"
           }, null, -1)),
-          o("h3", o0, c(x.$t("prompt.un_found")), 1),
-          o("p", a0, c(x.$t("prompt.try_another")), 1)
+          o("h3", ci, c(C.$t("prompt.un_found")), 1),
+          o("p", di, c(C.$t("prompt.try_another")), 1)
         ])),
         l(v) ? (n(), E(l(h), {
           key: 2,
-          title: x.$t("warn")
+          title: C.$t("warn")
         }, {
-          default: K(() => [
-            o("p", n0, c(x.$t("prompt.sure_delete_file")), 1),
-            o("div", l0, [
+          default: G(() => [
+            o("p", ui, c(C.$t("prompt.sure_delete_file")), 1),
+            o("div", _i, [
               o("button", {
                 class: "btn btn-base",
                 onClick: g
-              }, c(x.$t("not_yet")), 1),
+              }, c(C.$t("not_yet")), 1),
               o("button", {
                 class: "btn btn-primary",
-                onClick: q
-              }, c(x.$t("confirm")), 1)
+                onClick: H
+              }, c(C.$t("confirm")), 1)
             ])
           ]),
           _: 1
         }, 8, [
           "title"
         ])) : Z("", true),
-        s.value ? (n(), E(l(k), {
+        s.value ? (n(), E(l(w), {
           key: 3,
           file: a.value,
-          onCloseEncryptPopup: $
+          onCloseEncryptPopup: S
         }, null, 8, [
           "file"
         ])) : Z("", true)
       ]));
     }
-  }), ie = N(c0, [
+  }), ie = N(pi, [
     [
       "__scopeId",
       "data-v-bacbdbb7"
     ]
-  ]), d0 = {
+  ]), bi = {
     class: "index-archives index-container"
-  }, u0 = {
+  }, fi = {
     key: 1,
     class: "h-full flex flex-col items-center justify-center gap-[35px]"
-  }, _0 = {
+  }, mi = {
     class: "text-center"
-  }, p0 = {
+  }, hi = {
     class: "mb-2"
-  }, b0 = I({
+  }, gi = I({
     __name: "HomeArchives",
     setup(t) {
-      const { archiveList: e } = at(Y());
-      return (i, s) => (n(), p("div", d0, [
+      const { archiveList: e } = nt(Y());
+      return (i, s) => (n(), u("div", bi, [
         l(e).length ? (n(), E(ie, {
           key: 0,
           type: "archive",
           list: l(e)
         }, null, 8, [
           "list"
-        ])) : (n(), p("div", u0, [
+        ])) : (n(), u("div", fi, [
           s[0] || (s[0] = o("img", {
-            src: Fs,
+            src: L2,
             alt: "archive icon"
           }, null, -1)),
-          o("div", _0, [
-            o("h5", p0, c(i.$t("prompt.no_items")), 1),
+          o("div", mi, [
+            o("h5", hi, c(i.$t("prompt.no_items")), 1),
             o("p", null, c(i.$t("prompt.archived_projects")), 1)
           ])
         ]))
       ]));
     }
-  }), ht = "data:image/svg+xml,%3csvg%20width='136'%20height='136'%20viewBox='0%200%20136%20136'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='68'%20cy='68'%20r='67'%20fill='%234D4D4D'%20stroke='%23B7EC5D'%20stroke-width='2'/%3e%3cpath%20d='M62.2%2046.6591C62.8459%2041.6538%2062.1627%2036.8045%2063.0643%2031.8457C63.5607%2030.3566%2068.0278%2030.8528%2068.0278%2030.8528C68.0278%2030.8528%2071.4729%2031.3493%2072.495%2031.3493C73.6642%2031.3493%2072.9339%2041.5016%2072.9913%2042.7656C73.2243%2047.8908%2073.3805%2049.5021%2073.3805%2054.6436C73.3805%2058.1819%2073.18%2060.6342%2073.3805%2062.5389C73.3805%2063.6123%2078.4808%2063.5603%2079.4439%2063.6123C82.8447%2063.7962%2085.6529%2063.9421%2089.2491%2063.9421C92.8453%2063.9421%2095.6801%2063.7601%2099.7943%2063.9421C102.12%2064.0449%20103.587%2063.581%20104.851%2063.9421C105.34%2064.082%20105.254%2068.5758%20105.254%2068.5758C105.254%2068.5758%20104.9%2072.1452%20104.851%2073.9644C104.835%2074.5251%20104.864%2074.9666%20104.149%2074.9666C97.2232%2074.9666%2090.271%2075.1452%2083.3471%2074.9555C82.1535%2074.9228%2073.3805%2073.3765%2073.3805%2074.6771C73.3805%2076.6381%2073.5916%2078.7265%2073.2802%2080.657C73.0315%2082.199%2073.18%2083.8302%2073.18%2085.3898C73.18%2087.2583%2073.5608%2088.5717%2073.2802%2090.4153C73.3805%2092.31%2072.7903%2094.9927%2073.18%2098.8532C73.3805%20100.839%2073.6533%20103.97%2072.7903%20104.833C72.2495%20105.374%2069.302%20104.833%2068.592%20104.833C67.78%20104.833%2067.0104%20105.034%2066.1867%20105.034C65.7049%20105.034%2062.6647%20105.347%2063.0643%20104.388C63.3187%20103.777%2063.1645%20102.848%2063.1645%20102.183C63.1645%20100.122%2062.9275%2097.9198%2063.1645%2095.8751C63.5682%2092.3939%2062.7283%2088.8761%2063.0643%2085.3898C63.4212%2081.6876%2063.1645%2078.4013%2063.1645%2074.6771C63.1645%2073.8525%2062.3089%2073.3185%2061.4051%2073.3185H57.8022C52.1897%2073.3185%2049.6833%2073.363%2044.0708%2073.363C41.7768%2073.363%2043.1621%2073.3185%2040.8681%2073.3185H33.2832C32.6342%2073.3185%2031.3151%2073.1483%2031.1451%2072.8508C30.8476%2072.3301%2030.7099%2071.7626%2030.8014%2071.0576C31.0019%2069.5126%2030.9678%2067.39%2031.0019%2065.5456C31.0109%2065.0615%2030.8661%2062.9398%2031.503%2062.9398H37.5574C39.7132%2062.9398%2042.6454%2062.7394%2047.7234%2062.7394C52.3095%2062.7394%2057.0091%2063.0439%2061.5542%2062.5389C62.4266%2062.442%2061.955%2057.9746%2061.955%2057.3051C61.955%2053.8085%2061.7527%2050.1261%2062.2%2046.6591Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", f0 = {
+  }), vi = "data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M2.06935%205.00839C2%205.37595%202%205.81722%202%206.69975V13.75C2%2017.5212%202%2019.4069%203.17157%2020.5784C4.34315%2021.75%206.22876%2021.75%2010%2021.75H14C17.7712%2021.75%2019.6569%2021.75%2020.8284%2020.5784C22%2019.4069%2022%2017.5212%2022%2013.75V11.5479C22%208.91554%2022%207.59935%2021.2305%206.74383C21.1598%206.66514%2021.0849%206.59024%2021.0062%206.51946C20.1506%205.75%2018.8345%205.75%2016.2021%205.75H15.8284C14.6747%205.75%2014.0979%205.75%2013.5604%205.59678C13.2651%205.5126%2012.9804%205.39471%2012.7121%205.24543C12.2237%204.97367%2011.8158%204.56578%2011%203.75L10.4497%203.19975C10.1763%202.92633%2010.0396%202.78961%209.89594%202.67051C9.27652%202.15704%208.51665%201.84229%207.71557%201.76738C7.52976%201.75%207.33642%201.75%206.94975%201.75C6.06722%201.75%205.62595%201.75%205.25839%201.81935C3.64031%202.12464%202.37464%203.39031%202.06935%205.00839ZM12%2011C12.4142%2011%2012.75%2011.3358%2012.75%2011.75V13H14C14.4142%2013%2014.75%2013.3358%2014.75%2013.75C14.75%2014.1642%2014.4142%2014.5%2014%2014.5H12.75V15.75C12.75%2016.1642%2012.4142%2016.5%2012%2016.5C11.5858%2016.5%2011.25%2016.1642%2011.25%2015.75V14.5H10C9.58579%2014.5%209.25%2014.1642%209.25%2013.75C9.25%2013.3358%209.58579%2013%2010%2013H11.25V11.75C11.25%2011.3358%2011.5858%2011%2012%2011Z'%20fill='%231C274C'/%3e%3c/svg%3e", wi = {
     class: "index-files index-container"
-  }, m0 = {
+  }, ki = {
     key: 1,
     class: "h-full flex flex-col items-center justify-center gap-5"
-  }, h0 = {
+  }, yi = {
     class: "text-center"
-  }, g0 = I({
+  }, Ci = I({
     __name: "HomeFiles",
     setup(t) {
-      const { goPage: e } = ye(), { PDFList: i } = at(Y());
-      return (s, r) => (n(), p("div", f0, [
+      const { goPage: e } = Ce(), { PDFList: i } = nt(Y());
+      return (s, r) => (n(), u("div", wi, [
         l(i).length ? (n(), E(ie, {
           key: 0,
           type: "file",
           list: l(i)
         }, null, 8, [
           "list"
-        ])) : (n(), p("div", m0, [
+        ])) : (n(), u("div", ki, [
           o("img", {
-            src: ht,
+            src: vi,
             alt: "create file",
             class: "iconScale w-[80px] h-[80] md:w-[136px] md:h-[136px]",
             onClick: r[0] || (r[0] = (a) => l(e)("upload"))
           }),
-          o("h3", h0, c(s.$t("prompt.create_file")), 1)
+          o("h3", yi, c(s.$t("prompt.create_file")), 1)
         ]))
       ]));
     }
-  }), v0 = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15%2039.8833C17.5%2039.8833%2020.5%2039.7924%2020.5%2039.7924C20.5%2039.7924%2029.872%2039.5742%2034.0063%2039.5742C39.9053%2039.5742%2045.8044%2039.5742%2051.7035%2039.5742C56.1682%2039.5742%2062.6329%2039.5742%2067.0976%2039.5742C75.7673%2039.5742%2078.4247%2039.7924%2087.0858%2039.7924C100.603%2039.7924%20112.436%2039.8832%20126%2039.8832'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M48.0752%2039C48.0752%2033.3427%2047.906%2026.7393%2048.0752%2021.0968C48.1078%2020.0094%2048.4693%2018.9773%2048.5114%2017.9076C48.5661%2016.5158%2048.9123%2016.8415%2051.4741%2016.4087C53.5724%2015.8274%2055.7756%2016.0367%2057.9681%2016.0367C61.4896%2016.0367%2064.9903%2016.0123%2068.4966%2016.2174C70.0828%2016.3102%2071.6934%2016.2102%2073.2823%2016.228C74.9405%2016.2467%2076.5969%2016.5518%2078.2618%2016.6214C80.484%2016.7142%2082.6812%2016.8021%2084.9133%2016.8021C87.1525%2016.8021%2090.3764%2016.4928%2092.5526%2016.4194C93.8768%2016.3747%2093.5943%2021.7948%2093.6794%2022.9146C93.9248%2026.1444%2094%2030.2186%2094%2033.4509C94%2035.3088%2093.7819%2041.1797%2093.7819%2043'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M30%2035C30%2036.1871%2030.2187%2043.3205%2030.2187%2044.5345C30.2187%2046.8984%2030.1856%2049.5525%2030.5467%2051.893C31.4233%2057.5754%2030.8747%2063.5893%2030.8747%2069.3172C30.8747%2071.8369%2031.2303%2074.353%2031.3242%2076.8726C31.4959%2081.4807%2032.2162%2085.3052%2032.5147%2090.7282C32.8968%2097.6671%2032.3462%20101.587%2032.7942%20108.522C33.1104%20113.417%2033.7904%20120.39%2034.9019%20122.131C36.0134%20123.872%2043.3799%20123.762%2044.4688%20123.762C48.0403%20122.857%2055.1129%20123.762%2058.9316%20123.762C66.8081%20123.762%2071.848%20123.261%2079.6994%20123.872C84.4124%20124.24%2089.051%20123.716%2093.7309%20123.54C96.6568%20123.43%20102.98%20124.357%20105.669%20123.146C107.679%20122.241%20107.799%20117.622%20107.799%20113.001C107.799%20108.991%20107.953%20105.124%20108.145%20101.809C108.579%2094.3379%20108.899%2088.7109%20109.378%2080.318C109.979%2069.8038%20110.056%2062.6519%20110.179%2053.6668C110.231%2049.8878%20111%2043.8477%20111%2040.0923'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M58.6807%2065.4473C58.6807%2068.815%2059.2792%2072.1775%2059.5534%2075.5322C60.0362%2081.4398%2059.9898%2087.4023%2059.9898%2093.3264C59.9898%2097.933%2060.208%20102.514%2060.208%20107.121'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M80.9521%2067.1855C80.4987%2076.9134%2080.4748%2086.6247%2080.2479%2096.3484C80.2084%2098.0434%2080.5278%2099.7148%2080.4468%20101.454'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", k0 = {
+  }), xi = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15%2039.8833C17.5%2039.8833%2020.5%2039.7924%2020.5%2039.7924C20.5%2039.7924%2029.872%2039.5742%2034.0063%2039.5742C39.9053%2039.5742%2045.8044%2039.5742%2051.7035%2039.5742C56.1682%2039.5742%2062.6329%2039.5742%2067.0976%2039.5742C75.7673%2039.5742%2078.4247%2039.7924%2087.0858%2039.7924C100.603%2039.7924%20112.436%2039.8832%20126%2039.8832'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M48.0752%2039C48.0752%2033.3427%2047.906%2026.7393%2048.0752%2021.0968C48.1078%2020.0094%2048.4693%2018.9773%2048.5114%2017.9076C48.5661%2016.5158%2048.9123%2016.8415%2051.4741%2016.4087C53.5724%2015.8274%2055.7756%2016.0367%2057.9681%2016.0367C61.4896%2016.0367%2064.9903%2016.0123%2068.4966%2016.2174C70.0828%2016.3102%2071.6934%2016.2102%2073.2823%2016.228C74.9405%2016.2467%2076.5969%2016.5518%2078.2618%2016.6214C80.484%2016.7142%2082.6812%2016.8021%2084.9133%2016.8021C87.1525%2016.8021%2090.3764%2016.4928%2092.5526%2016.4194C93.8768%2016.3747%2093.5943%2021.7948%2093.6794%2022.9146C93.9248%2026.1444%2094%2030.2186%2094%2033.4509C94%2035.3088%2093.7819%2041.1797%2093.7819%2043'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M30%2035C30%2036.1871%2030.2187%2043.3205%2030.2187%2044.5345C30.2187%2046.8984%2030.1856%2049.5525%2030.5467%2051.893C31.4233%2057.5754%2030.8747%2063.5893%2030.8747%2069.3172C30.8747%2071.8369%2031.2303%2074.353%2031.3242%2076.8726C31.4959%2081.4807%2032.2162%2085.3052%2032.5147%2090.7282C32.8968%2097.6671%2032.3462%20101.587%2032.7942%20108.522C33.1104%20113.417%2033.7904%20120.39%2034.9019%20122.131C36.0134%20123.872%2043.3799%20123.762%2044.4688%20123.762C48.0403%20122.857%2055.1129%20123.762%2058.9316%20123.762C66.8081%20123.762%2071.848%20123.261%2079.6994%20123.872C84.4124%20124.24%2089.051%20123.716%2093.7309%20123.54C96.6568%20123.43%20102.98%20124.357%20105.669%20123.146C107.679%20122.241%20107.799%20117.622%20107.799%20113.001C107.799%20108.991%20107.953%20105.124%20108.145%20101.809C108.579%2094.3379%20108.899%2088.7109%20109.378%2080.318C109.979%2069.8038%20110.056%2062.6519%20110.179%2053.6668C110.231%2049.8878%20111%2043.8477%20111%2040.0923'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M58.6807%2065.4473C58.6807%2068.815%2059.2792%2072.1775%2059.5534%2075.5322C60.0362%2081.4398%2059.9898%2087.4023%2059.9898%2093.3264C59.9898%2097.933%2060.208%20102.514%2060.208%20107.121'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M80.9521%2067.1855C80.4987%2076.9134%2080.4748%2086.6247%2080.2479%2096.3484C80.2084%2098.0434%2080.5278%2099.7148%2080.4468%20101.454'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", Pi = {
     class: "index-trash index-container"
-  }, w0 = {
+  }, Si = {
     key: 1,
     class: "h-full flex flex-col items-center justify-center gap-[35px]"
-  }, y0 = {
+  }, $i = {
     class: "text-center"
-  }, x0 = {
+  }, Di = {
     class: "mb-2"
-  }, C0 = {
+  }, Mi = {
     class: "absolute w-full flex justify-center left-0 -bottom-4 md:-bottom-3"
-  }, P0 = {
+  }, ji = {
     class: "index-trash-warn shadow shadow-primary"
-  }, S0 = I({
+  }, Bi = I({
     __name: "HomeTrash",
     setup(t) {
-      const { trashList: e } = at(Y());
-      return Y().filterTrash(), (i, s) => (n(), p("div", k0, [
+      const { trashList: e } = nt(Y());
+      return Y().filterTrash(), (i, s) => (n(), u("div", Pi, [
         l(e).length ? (n(), E(ie, {
           key: 0,
           type: "trash",
           list: l(e)
         }, null, 8, [
           "list"
-        ])) : (n(), p("div", w0, [
+        ])) : (n(), u("div", Si, [
           s[0] || (s[0] = o("img", {
-            src: v0,
+            src: xi,
             alt: "trash icon"
           }, null, -1)),
-          o("div", y0, [
-            o("h5", x0, c(i.$t("prompt.no_items")), 1),
+          o("div", $i, [
+            o("h5", Di, c(i.$t("prompt.no_items")), 1),
             o("p", null, c(i.$t("prompt.deleted_projects")), 1)
           ])
         ])),
-        o("div", C0, [
-          o("p", P0, c(i.$t("prompt.trash_shelf_life")), 1)
+        o("div", Mi, [
+          o("p", ji, c(i.$t("prompt.trash_shelf_life")), 1)
         ])
       ]));
     }
-  }), $0 = N(S0, [
+  }), Ti = N(Bi, [
     [
       "__scopeId",
       "data-v-6bb5f082"
     ]
-  ]), D0 = {
+  ]), zi = {
     class: "index-content content"
-  }, j0 = {
+  }, Fi = {
     class: "title"
-  }, M0 = I({
+  }, Li = {
+    key: 0,
+    src: T2,
+    alt: "trash icon",
+    style: {
+      width: "30px",
+      display: "inline"
+    }
+  }, Ai = {
+    key: 1,
+    src: z2,
+    alt: "trash icon",
+    style: {
+      width: "30px",
+      display: "inline"
+    }
+  }, Ei = {
+    key: 2,
+    src: F2,
+    alt: "trash icon",
+    style: {
+      width: "30px",
+      display: "inline"
+    }
+  }, Ii = I({
     __name: "HomeContent",
     props: {
       currentTab: {}
@@ -26322,25 +26361,30 @@ let __tla = Promise.all([
         archive: "archived_files",
         trash: "trash_bin"
       })[t.currentTab]), i = U(() => ({
-        file: g0,
-        archive: b0,
-        trash: $0
+        file: Ci,
+        archive: gi,
+        trash: Ti
       })[t.currentTab]);
-      return (s, r) => (n(), p("div", D0, [
-        o("h5", j0, c(s.$t(e.value)), 1),
-        (n(), E(Ge, null, [
+      return (s, r) => (n(), u("div", zi, [
+        o("h5", Fi, [
+          e.value === "my_files" ? (n(), u("img", Li)) : Z("", true),
+          e.value === "archived_files" ? (n(), u("img", Ai)) : Z("", true),
+          e.value === "trash_bin" ? (n(), u("img", Ei)) : Z("", true),
+          at(" " + c(s.$t(e.value)), 1)
+        ]),
+        (n(), E(Ke, null, [
           (n(), E(me(i.value)))
         ], 1024))
       ]));
     }
-  }), B0 = N(M0, [
+  }), Zi = N(Ii, [
     [
       "__scopeId",
-      "data-v-6472ed17"
+      "data-v-329b5be0"
     ]
-  ]), T0 = "data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M21.9523%205H14.9997C11.857%205%2010.2856%205%209.30932%205.97631C8.33301%206.95262%208.33301%208.52397%208.33301%2011.6667V28.3333C8.33301%2031.476%208.33301%2033.0474%209.30932%2034.0237C10.2856%2035%2011.857%2035%2014.9997%2035H24.9997C28.1424%2035%2029.7137%2035%2030.69%2034.0237C31.6663%2033.0474%2031.6663%2031.476%2031.6663%2028.3333V14.714C31.6663%2014.0328%2031.6663%2013.6922%2031.5395%2013.3859C31.4126%2013.0796%2031.1717%2012.8387%2030.69%2012.357L24.3093%205.97631C23.8276%205.49459%2023.5867%205.25373%2023.2805%205.12687C22.9742%205%2022.6335%205%2021.9523%205Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'/%3e%3cpath%20d='M15%2021.666L25%2021.666'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M15%2028.334L21.6667%2028.334'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M21.667%205V11.6667C21.667%2013.238%2021.667%2014.0237%2022.1551%2014.5118C22.6433%2015%2023.429%2015%2025.0003%2015H31.667'%20stroke='%23B7EC5D'%20stroke-width='2.5'/%3e%3c/svg%3e", z0 = "data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_73_12300)'%3e%3cpath%20d='M31.6667%207.61914H8.33333C6.49238%207.61914%205%209.11152%205%2010.9525C5%2012.7934%206.49238%2014.2858%208.33333%2014.2858H31.6667C33.5076%2014.2858%2035%2012.7934%2035%2010.9525C35%209.11152%2033.5076%207.61914%2031.6667%207.61914Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M8.33301%2014.2852V30.9518C8.33301%2031.8359%208.6842%2032.6837%209.30932%2033.3088C9.93444%2033.934%2010.7823%2034.2852%2011.6663%2034.2852H28.333C29.2171%2034.2852%2030.0649%2033.934%2030.69%2033.3088C31.3152%2032.6837%2031.6663%2031.8359%2031.6663%2030.9518V14.2852'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M16.667%2020.9531H23.3337'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_73_12300'%3e%3crect%20width='40'%20height='40'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e", F0 = "data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cmask%20id='path-1-inside-1_73_12301'%20fill='white'%3e%3crect%20x='13.333'%20y='4.76172'%20width='13.3333'%20height='8.57143'%20rx='2'/%3e%3c/mask%3e%3crect%20x='13.333'%20y='4.76172'%20width='13.3333'%20height='8.57143'%20rx='2'%20stroke='%23B7EC5D'%20stroke-width='5'%20mask='url(%23path-1-inside-1_73_12301)'/%3e%3cpath%20d='M4.76191%2012.3809H35.2381'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M10.734%2032.3135L9.87715%2012.6777H30.1228L29.266%2032.3135C29.2251%2033.2495%2028.4545%2033.9873%2027.5176%2033.9873H12.4823C11.5455%2033.9873%2010.7748%2033.2495%2010.734%2032.3135Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'/%3e%3cpath%20d='M17.1426%2019.0469V28.5707'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M22.8574%2019.0469V28.5707'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e", A0 = {
+  ]), Vi = "data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M21.9523%205H14.9997C11.857%205%2010.2856%205%209.30932%205.97631C8.33301%206.95262%208.33301%208.52397%208.33301%2011.6667V28.3333C8.33301%2031.476%208.33301%2033.0474%209.30932%2034.0237C10.2856%2035%2011.857%2035%2014.9997%2035H24.9997C28.1424%2035%2029.7137%2035%2030.69%2034.0237C31.6663%2033.0474%2031.6663%2031.476%2031.6663%2028.3333V14.714C31.6663%2014.0328%2031.6663%2013.6922%2031.5395%2013.3859C31.4126%2013.0796%2031.1717%2012.8387%2030.69%2012.357L24.3093%205.97631C23.8276%205.49459%2023.5867%205.25373%2023.2805%205.12687C22.9742%205%2022.6335%205%2021.9523%205Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'/%3e%3cpath%20d='M15%2021.666L25%2021.666'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M15%2028.334L21.6667%2028.334'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M21.667%205V11.6667C21.667%2013.238%2021.667%2014.0237%2022.1551%2014.5118C22.6433%2015%2023.429%2015%2025.0003%2015H31.667'%20stroke='%23B7EC5D'%20stroke-width='2.5'/%3e%3c/svg%3e", Hi = "data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_73_12300)'%3e%3cpath%20d='M31.6667%207.61914H8.33333C6.49238%207.61914%205%209.11152%205%2010.9525C5%2012.7934%206.49238%2014.2858%208.33333%2014.2858H31.6667C33.5076%2014.2858%2035%2012.7934%2035%2010.9525C35%209.11152%2033.5076%207.61914%2031.6667%207.61914Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M8.33301%2014.2852V30.9518C8.33301%2031.8359%208.6842%2032.6837%209.30932%2033.3088C9.93444%2033.934%2010.7823%2034.2852%2011.6663%2034.2852H28.333C29.2171%2034.2852%2030.0649%2033.934%2030.69%2033.3088C31.3152%2032.6837%2031.6663%2031.8359%2031.6663%2030.9518V14.2852'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M16.667%2020.9531H23.3337'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_73_12300'%3e%3crect%20width='40'%20height='40'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e", Oi = "data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cmask%20id='path-1-inside-1_73_12301'%20fill='white'%3e%3crect%20x='13.333'%20y='4.76172'%20width='13.3333'%20height='8.57143'%20rx='2'/%3e%3c/mask%3e%3crect%20x='13.333'%20y='4.76172'%20width='13.3333'%20height='8.57143'%20rx='2'%20stroke='%23B7EC5D'%20stroke-width='5'%20mask='url(%23path-1-inside-1_73_12301)'/%3e%3cpath%20d='M4.76191%2012.3809H35.2381'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M10.734%2032.3135L9.87715%2012.6777H30.1228L29.266%2032.3135C29.2251%2033.2495%2028.4545%2033.9873%2027.5176%2033.9873H12.4823C11.5455%2033.9873%2010.7748%2033.2495%2010.734%2032.3135Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'/%3e%3cpath%20d='M17.1426%2019.0469V28.5707'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M22.8574%2019.0469V28.5707'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e", qi = {
     class: "index-menu"
-  }, L0 = I({
+  }, Ri = I({
     __name: "HomeMenu",
     props: {
       currentTab: {},
@@ -26354,68 +26398,75 @@ let __tla = Promise.all([
       function i(s) {
         e.value = s;
       }
-      return (s, r) => (n(), p("ul", A0, [
+      return (s, r) => (n(), u("ul", qi, [
         o("li", {
-          class: L(e.value === "file" ? "bg-white" : "bg-gray-60"),
+          class: F(e.value === "file" ? "bg-white" : "bg-gray-60"),
           onClick: r[0] || (r[0] = (a) => i("file"))
-        }, r[3] || (r[3] = [
+        }, [
           o("img", {
-            src: T0,
+            class: F([
+              "icon",
+              e.value === "files" ? "active-icon" : ""
+            ]),
+            src: Vi,
             alt: "file icon"
-          }, null, -1)
-        ]), 2),
+          }, null, 2),
+          r[3] || (r[3] = at("My Files "))
+        ], 2),
         o("li", {
-          class: L(e.value === "archive" ? "bg-white" : "bg-gray-60"),
+          class: F(e.value === "archive" ? "bg-white" : "bg-gray-60"),
           onClick: r[1] || (r[1] = (a) => i("archive"))
         }, r[4] || (r[4] = [
           o("img", {
-            src: z0,
+            src: Hi,
             alt: "archive icon"
-          }, null, -1)
+          }, null, -1),
+          at("Archived Files ")
         ]), 2),
         o("li", {
-          class: L(e.value === "trash" ? "bg-white" : "bg-gray-60"),
+          class: F(e.value === "trash" ? "bg-white" : "bg-gray-60"),
           onClick: r[2] || (r[2] = (a) => i("trash"))
         }, r[5] || (r[5] = [
           o("img", {
-            src: F0,
+            src: Oi,
             alt: "trash icon"
-          }, null, -1)
+          }, null, -1),
+          at("Trash Bin ")
         ]), 2)
       ]));
     }
-  }), E0 = N(L0, [
+  }), Ui = N(Ri, [
     [
       "__scopeId",
-      "data-v-9304ff59"
+      "data-v-172306af"
     ]
-  ]), I0 = {
+  ]), Ni = {
     class: "index layout md:-translate-x-10"
-  }, Z0 = I({
+  }, Wi = I({
     __name: "index",
     setup(t) {
-      const e = S("file");
-      return (i, s) => (n(), p("div", I0, [
-        C(E0, {
+      const e = D("file");
+      return (i, s) => (n(), u("div", Ni, [
+        x(Ui, {
           "current-tab": e.value,
           "onUpdate:currentTab": s[0] || (s[0] = (r) => e.value = r)
         }, null, 8, [
           "current-tab"
         ]),
-        C(B0, {
+        x(Zi, {
           "current-tab": e.value
         }, null, 8, [
           "current-tab"
         ])
       ]));
     }
-  }), O0 = {
+  }), Gi = {
     class: "sign-step-btn"
-  }, q0 = [
+  }, Ki = [
     "disabled"
-  ], V0 = [
+  ], Yi = [
     "disabled"
-  ], R0 = I({
+  ], Xi = I({
     __name: "SignStepBtn",
     props: {
       isPrevDisabled: {
@@ -26431,7 +26482,7 @@ let __tla = Promise.all([
     ],
     setup(t, { emit: e }) {
       const i = e;
-      return (s, r) => (n(), p("div", O0, [
+      return (s, r) => (n(), u("div", Gi, [
         o("button", {
           class: "btn",
           disabled: s.isPrevDisabled,
@@ -26440,50 +26491,50 @@ let __tla = Promise.all([
           r[2] || (r[2] = o("span", {
             class: "text-4xl font-thin"
           }, "\u2190", -1)),
-          yt(c(s.$t("previous")), 1)
-        ], 8, q0),
+          at(c(s.$t("previous")), 1)
+        ], 8, Ki),
         o("button", {
           class: "btn btn-primary",
           disabled: s.isNextDisabled,
           onClick: r[1] || (r[1] = (a) => i("nextStep"))
         }, [
-          yt(c(s.$t("next_step")), 1),
+          at(c(s.$t("next_step")), 1),
           r[3] || (r[3] = o("span", {
             class: "text-4xl font-thin"
           }, "\u2192", -1))
-        ], 8, V0)
+        ], 8, Yi)
       ]));
     }
-  }), xe = N(R0, [
+  }), xe = N(Xi, [
     [
       "__scopeId",
       "data-v-d68fbba4"
     ]
-  ]), H0 = 20 * 1024 * 1024, Ft = 15;
-  function Ce(t, e = false) {
-    const i = S([]), s = S(-1), r = S(null), a = S({
+  ]), Ji = 20 * 1024 * 1024, Ft = 15;
+  function Pe(t, e = false) {
+    const i = D([]), s = D(-1), r = D(null), a = D({
       height: 0,
       width: 0
-    }), u = new ResizeObserver(y), b = U(() => s.value >= t.value.pages), _ = oi(async () => {
+    }), _ = new ResizeObserver(y), b = U(() => s.value >= t.value.pages), p = H2(async () => {
       s.value && (s.value = 0, await h(0));
     }, 1e3);
-    async function v(k) {
-      await zt(100), i.value[k] = true, s.value += 1;
+    async function v(w) {
+      await zt(100), i.value[w] = true, s.value += 1;
     }
-    async function h(k) {
+    async function h(w) {
       var _a;
-      k >= t.value.pages || (await ((_a = r.value) == null ? void 0 : _a[k].reload()), await zt(300), await h(k + 1));
+      w >= t.value.pages || (await ((_a = r.value) == null ? void 0 : _a[w].reload()), await zt(300), await h(w + 1));
     }
-    function y(k) {
-      k.forEach(({ contentRect: j }) => {
-        a.value.height = j.height, a.value.width = j.width;
+    function y(w) {
+      w.forEach(({ contentRect: M }) => {
+        a.value.height = M.height, a.value.width = M.width;
       });
     }
     return Tt(() => {
       var _a;
       return (_a = t.value) == null ? void 0 : _a.pages;
-    }, (k) => {
-      k && (s.value = 0, i.value = Array.from({
+    }, (w) => {
+      w && (s.value = 0, i.value = Array.from({
         length: t.value.pages + 1
       }, () => false), i.value[0] = true);
     }, {
@@ -26491,20 +26542,20 @@ let __tla = Promise.all([
     }), e && Tt(() => {
       var _a, _b;
       return (_b = (_a = r.value) == null ? void 0 : _a[0]) == null ? void 0 : _b.canvasRef;
-    }, (k, j) => {
-      j && u.unobserve(j), k && u.observe(k);
+    }, (w, M) => {
+      M && _.unobserve(M), w && _.observe(w);
     }), Jt(() => {
-      u.disconnect();
+      _.disconnect();
     }), {
       canvasItems: r,
       loadedState: ne(i),
       canvasRect: ne(a),
       isCompleted: b,
       handleCanvasLoaded: v,
-      handleCanvasReload: _
+      handleCanvasReload: p
     };
   }
-  function U0(t) {
+  function Qi(t) {
     let e = false, i = null;
     function s() {
       e = true;
@@ -26514,8 +26565,8 @@ let __tla = Promise.all([
     }
     function a(v, h, y) {
       if (!t.value) return;
-      const { scrollTop: k, scrollLeft: j, scrollHeight: w, scrollWidth: P, clientHeight: M, clientWidth: T } = t.value, g = k + h, m = j + v;
-      if (g < 0 || m < 0 || g + M > w || m + T > P) {
+      const { scrollTop: w, scrollLeft: M, scrollHeight: k, scrollWidth: P, clientHeight: j, clientWidth: T } = t.value, g = w + h, m = M + v;
+      if (g < 0 || m < 0 || g + j > k || m + T > P) {
         r();
         return;
       }
@@ -26524,51 +26575,51 @@ let __tla = Promise.all([
         (_a = t.value) == null ? void 0 : _a.scrollTo({
           top: g,
           left: m
-        }), N0(v, h, y), a(v, h, y);
+        }), ts(v, h, y), a(v, h, y);
       });
     }
-    function u(v) {
+    function _(v) {
       if (!e || !t.value) return;
-      const { clientX: h, clientY: y } = v.e instanceof TouchEvent ? v.e.touches[0] : v.e, k = b(h, y, v.transform);
-      let j = 0, w = 0;
-      r(), ((k == null ? void 0 : k.left) || (k == null ? void 0 : k.right)) && (j = k.left ? -15 : Ft), ((k == null ? void 0 : k.top) || (k == null ? void 0 : k.bottom)) && (w = k.top ? -15 : Ft), !(!j && !w) && (i = window.requestAnimationFrame(() => {
-        a(j, w, v.target);
+      const { clientX: h, clientY: y } = v.e instanceof TouchEvent ? v.e.touches[0] : v.e, w = b(h, y, v.transform);
+      let M = 0, k = 0;
+      r(), ((w == null ? void 0 : w.left) || (w == null ? void 0 : w.right)) && (M = w.left ? -15 : Ft), ((w == null ? void 0 : w.top) || (w == null ? void 0 : w.bottom)) && (k = w.top ? -15 : Ft), !(!M && !k) && (i = window.requestAnimationFrame(() => {
+        a(M, k, v.target);
       }));
     }
     function b(v, h, y) {
       if (!t.value) return null;
-      const k = t.value.getBoundingClientRect(), { height: j = 0, width: w = 0, scaleX: P = 0, scaleY: M = 0, target: T } = y ?? {}, g = 20, m = (T == null ? void 0 : T.borderScaleFactor) ?? 1, $ = (T == null ? void 0 : T.angle) ?? 0, { width: q, height: D } = W0(w * P, j * M, $), f = (y == null ? void 0 : y.offsetX) ? (y.offsetX + q) % q : 0, d = (y == null ? void 0 : y.offsetY) ? (y.offsetY + D) % D : 0, B = d / m || g, x = (D - d) / m || g, H = f / m || g, G = (q - f) / m || g, rt = h <= k.top + B, ot = h >= k.bottom - x, V = v <= k.left + H, F = v >= k.right - G;
+      const w = t.value.getBoundingClientRect(), { height: M = 0, width: k = 0, scaleX: P = 0, scaleY: j = 0, target: T } = y ?? {}, g = 20, m = (T == null ? void 0 : T.borderScaleFactor) ?? 1, S = (T == null ? void 0 : T.angle) ?? 0, { width: H, height: $ } = es(k * P, M * j, S), f = (y == null ? void 0 : y.offsetX) ? (y.offsetX + H) % H : 0, d = (y == null ? void 0 : y.offsetY) ? (y.offsetY + $) % $ : 0, B = d / m || g, C = ($ - d) / m || g, R = f / m || g, K = (H - f) / m || g, rt = h <= w.top + B, ot = h >= w.bottom - C, O = v <= w.left + R, L = v >= w.right - K;
       return {
         top: rt,
         bottom: ot,
-        left: V,
-        right: F
+        left: O,
+        right: L
       };
     }
-    function _() {
+    function p() {
       r(), e = false;
     }
     return {
       handlePointerDown: s,
-      handlePointerMove: u,
-      handlePointerUp: _
+      handlePointerMove: _,
+      handlePointerUp: p
     };
   }
-  function N0(t, e, i) {
+  function ts(t, e, i) {
     var _a;
     i && (i.left += t * i.borderScaleFactor, i.top += e * i.borderScaleFactor, i.setCoords(), (_a = i.canvas) == null ? void 0 : _a.renderAll());
   }
-  function W0(t, e, i) {
+  function es(t, e, i) {
     const s = i * Math.PI / 180, r = Math.abs(t * Math.cos(s)) + Math.abs(e * Math.sin(s)), a = Math.abs(t * Math.sin(s)) + Math.abs(e * Math.cos(s));
     return {
       width: r,
       height: a
     };
   }
-  const Pe = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M22.0571%2012.4497C23.3897%2011.0975%2027.3055%209.85066%2030.0895%209.27763C33.473%208.5812%2037.1868%208.79672%2040.632%208.83179C50.3019%208.93023%2063.6079%208.78722%2073.2636%208.83178C91.2312%208.9147%2094.1866%208.05573%20104.891%209.27763C115.596%2010.4995%20117.736%2011.7005%20122.467%2017.419C125.474%2021.0532%20126.305%2031.474%20126.305%2035.034V72.6746C126.305%2083.8705%20126.98%2090.4195%20125.976%20105.476C125.339%20109.861%20125.496%20115.414%20123.466%20119.28C119.649%20126.549%20109.409%20130.211%20104.891%20130.211H79.7899C66.8103%20130.211%2060.713%20131.286%2047.6604%20131.286C37.9108%20131.286%2031.8379%20132.176%2025.5713%20128.598C19.9386%20125.382%2017.5389%20122.683%2014.5268%20115.692C12.6731%20111.391%2013.1066%20105.221%2012.9993%20103.325C12.6677%2097.4641%2013.1783%2092.0674%2012.9666%2086.1717C12.4731%2072.4258%2012.1979%2058.4031%2012.9993%2044.6682C13.5373%2035.4483%2012.2062%2028.3163%2015.9875%2019.9778C17.3264%2015.676%2020.7364%2013.7899%2022.0571%2012.4497Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M8%20100.636C18.0405%2089.9465%2024.3907%2080.6421%2031.04%2074.8218C33.7043%2072.4898%2036.6642%2070.634%2039.5746%2068.692C40.9639%2067.765%2042.4043%2066.8967%2044.016%2066.5332C45.5391%2066.1898%2047.1386%2065.7111%2048.6814%2066.3467C51.5019%2067.5086%2053.6106%2070.5957%2055.4618%2073.0095C57.7258%2075.9617%2059.7103%2079.5336%2061.1722%2083.0038C62.4308%2085.9914%2064.2267%2089.9465%2064.2267%2089.9465C64.2267%2089.9465%2067.5687%2095.2586%2068.7449%2096.8226C69.3019%2097.5632%2072.5017%2098.2443%2073.2632%2097.9477C76.6962%2096.6106%2076.7751%2096.8085%2079.2875%2094.1174C80.284%2093.05%2082.7413%2089.9465%2084.8097%2087.731C86.3158%2086.1178%2088.505%2084.0366%2090.8316%2082.7906C93.0767%2081.5882%2096.0472%2081.7048%2098.3644%2082.7906C101.602%2084.3078%20103.226%2086.0187%20105.761%2088.7339C108.578%2091.7509%20111.815%2094.5458%20115.191%2096.8226C116.424%2097.6543%20117.9%2098.4279%20119.259%2099.0213C120.245%2099.4516%20120.955%2099.5609%20123.968%20100.636C127.084%20101.749%20128.5%20103.385%20132%20103.863'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M78.9387%2042.3295C77.7432%2044.0368%2077.334%2046.4893%2077.2789%2049.2967C77.2377%2051.3993%2078.0288%2054.6216%2078.0288%2054.6216C78.3143%2056.3035%2081.4702%2059.8159%2082.9152%2060.3076C84.5561%2060.8658%2086.1122%2062.0229%2087.8211%2062.156C90.373%2062.3548%2092.7922%2062.7052%2094.8495%2061.3831C99.8697%2058.1567%20101.101%2055.2912%20101.376%2049.5532C101.522%2046.5053%20100.591%2044.5412%2098.8657%2042.0249C96.1276%2038.0311%2092.8414%2036.6478%2088.2815%2036.3276C85.9331%2036.1627%2083.7024%2037.0765%2081.7968%2038.7987C80.4711%2039.9969%2079.9754%2040.8489%2078.9387%2042.3295Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e";
-  function Se(t, e, i = H0) {
+  const yt = "data:image/svg+xml,%3csvg%20width='136'%20height='136'%20viewBox='0%200%20136%20136'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='68'%20cy='68'%20r='67'%20fill='%234D4D4D'%20stroke='%23B7EC5D'%20stroke-width='2'/%3e%3cpath%20d='M62.2%2046.6591C62.8459%2041.6538%2062.1627%2036.8045%2063.0643%2031.8457C63.5607%2030.3566%2068.0278%2030.8528%2068.0278%2030.8528C68.0278%2030.8528%2071.4729%2031.3493%2072.495%2031.3493C73.6642%2031.3493%2072.9339%2041.5016%2072.9913%2042.7656C73.2243%2047.8908%2073.3805%2049.5021%2073.3805%2054.6436C73.3805%2058.1819%2073.18%2060.6342%2073.3805%2062.5389C73.3805%2063.6123%2078.4808%2063.5603%2079.4439%2063.6123C82.8447%2063.7962%2085.6529%2063.9421%2089.2491%2063.9421C92.8453%2063.9421%2095.6801%2063.7601%2099.7943%2063.9421C102.12%2064.0449%20103.587%2063.581%20104.851%2063.9421C105.34%2064.082%20105.254%2068.5758%20105.254%2068.5758C105.254%2068.5758%20104.9%2072.1452%20104.851%2073.9644C104.835%2074.5251%20104.864%2074.9666%20104.149%2074.9666C97.2232%2074.9666%2090.271%2075.1452%2083.3471%2074.9555C82.1535%2074.9228%2073.3805%2073.3765%2073.3805%2074.6771C73.3805%2076.6381%2073.5916%2078.7265%2073.2802%2080.657C73.0315%2082.199%2073.18%2083.8302%2073.18%2085.3898C73.18%2087.2583%2073.5608%2088.5717%2073.2802%2090.4153C73.3805%2092.31%2072.7903%2094.9927%2073.18%2098.8532C73.3805%20100.839%2073.6533%20103.97%2072.7903%20104.833C72.2495%20105.374%2069.302%20104.833%2068.592%20104.833C67.78%20104.833%2067.0104%20105.034%2066.1867%20105.034C65.7049%20105.034%2062.6647%20105.347%2063.0643%20104.388C63.3187%20103.777%2063.1645%20102.848%2063.1645%20102.183C63.1645%20100.122%2062.9275%2097.9198%2063.1645%2095.8751C63.5682%2092.3939%2062.7283%2088.8761%2063.0643%2085.3898C63.4212%2081.6876%2063.1645%2078.4013%2063.1645%2074.6771C63.1645%2073.8525%2062.3089%2073.3185%2061.4051%2073.3185H57.8022C52.1897%2073.3185%2049.6833%2073.363%2044.0708%2073.363C41.7768%2073.363%2043.1621%2073.3185%2040.8681%2073.3185H33.2832C32.6342%2073.3185%2031.3151%2073.1483%2031.1451%2072.8508C30.8476%2072.3301%2030.7099%2071.7626%2030.8014%2071.0576C31.0019%2069.5126%2030.9678%2067.39%2031.0019%2065.5456C31.0109%2065.0615%2030.8661%2062.9398%2031.503%2062.9398H37.5574C39.7132%2062.9398%2042.6454%2062.7394%2047.7234%2062.7394C52.3095%2062.7394%2057.0091%2063.0439%2061.5542%2062.5389C62.4266%2062.442%2061.955%2057.9746%2061.955%2057.3051C61.955%2053.8085%2061.7527%2050.1261%2062.2%2046.6591Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e", Se = "data:image/svg+xml,%3csvg%20width='140'%20height='140'%20viewBox='0%200%20140%20140'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M22.0571%2012.4497C23.3897%2011.0975%2027.3055%209.85066%2030.0895%209.27763C33.473%208.5812%2037.1868%208.79672%2040.632%208.83179C50.3019%208.93023%2063.6079%208.78722%2073.2636%208.83178C91.2312%208.9147%2094.1866%208.05573%20104.891%209.27763C115.596%2010.4995%20117.736%2011.7005%20122.467%2017.419C125.474%2021.0532%20126.305%2031.474%20126.305%2035.034V72.6746C126.305%2083.8705%20126.98%2090.4195%20125.976%20105.476C125.339%20109.861%20125.496%20115.414%20123.466%20119.28C119.649%20126.549%20109.409%20130.211%20104.891%20130.211H79.7899C66.8103%20130.211%2060.713%20131.286%2047.6604%20131.286C37.9108%20131.286%2031.8379%20132.176%2025.5713%20128.598C19.9386%20125.382%2017.5389%20122.683%2014.5268%20115.692C12.6731%20111.391%2013.1066%20105.221%2012.9993%20103.325C12.6677%2097.4641%2013.1783%2092.0674%2012.9666%2086.1717C12.4731%2072.4258%2012.1979%2058.4031%2012.9993%2044.6682C13.5373%2035.4483%2012.2062%2028.3163%2015.9875%2019.9778C17.3264%2015.676%2020.7364%2013.7899%2022.0571%2012.4497Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M8%20100.636C18.0405%2089.9465%2024.3907%2080.6421%2031.04%2074.8218C33.7043%2072.4898%2036.6642%2070.634%2039.5746%2068.692C40.9639%2067.765%2042.4043%2066.8967%2044.016%2066.5332C45.5391%2066.1898%2047.1386%2065.7111%2048.6814%2066.3467C51.5019%2067.5086%2053.6106%2070.5957%2055.4618%2073.0095C57.7258%2075.9617%2059.7103%2079.5336%2061.1722%2083.0038C62.4308%2085.9914%2064.2267%2089.9465%2064.2267%2089.9465C64.2267%2089.9465%2067.5687%2095.2586%2068.7449%2096.8226C69.3019%2097.5632%2072.5017%2098.2443%2073.2632%2097.9477C76.6962%2096.6106%2076.7751%2096.8085%2079.2875%2094.1174C80.284%2093.05%2082.7413%2089.9465%2084.8097%2087.731C86.3158%2086.1178%2088.505%2084.0366%2090.8316%2082.7906C93.0767%2081.5882%2096.0472%2081.7048%2098.3644%2082.7906C101.602%2084.3078%20103.226%2086.0187%20105.761%2088.7339C108.578%2091.7509%20111.815%2094.5458%20115.191%2096.8226C116.424%2097.6543%20117.9%2098.4279%20119.259%2099.0213C120.245%2099.4516%20120.955%2099.5609%20123.968%20100.636C127.084%20101.749%20128.5%20103.385%20132%20103.863'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3cpath%20d='M78.9387%2042.3295C77.7432%2044.0368%2077.334%2046.4893%2077.2789%2049.2967C77.2377%2051.3993%2078.0288%2054.6216%2078.0288%2054.6216C78.3143%2056.3035%2081.4702%2059.8159%2082.9152%2060.3076C84.5561%2060.8658%2086.1122%2062.0229%2087.8211%2062.156C90.373%2062.3548%2092.7922%2062.7052%2094.8495%2061.3831C99.8697%2058.1567%20101.101%2055.2912%20101.376%2049.5532C101.522%2046.5053%20100.591%2044.5412%2098.8657%2042.0249C96.1276%2038.0311%2092.8414%2036.6478%2088.2815%2036.3276C85.9331%2036.1627%2083.7024%2037.0765%2081.7968%2038.7987C80.4711%2039.9969%2079.9754%2040.8489%2078.9387%2042.3295Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'%20stroke-linecap='round'/%3e%3c/svg%3e";
+  function $e(t, e, i = Ji) {
     if (!t) return;
-    const { t: s } = ee.global, r = t[0];
+    const { t: s } = te.global, r = t[0];
     if (!e.test(r.type)) {
       W({
         message: s("prompt.file_format_not_match"),
@@ -26585,7 +26636,7 @@ let __tla = Promise.all([
     }
     return r;
   }
-  const G0 = I({
+  const is = I({
     __name: "SignatureMask",
     props: {
       isShowMask: {
@@ -26597,23 +26648,23 @@ let __tla = Promise.all([
     ],
     setup(t, { emit: e }) {
       const i = e;
-      return (s, r) => (n(), p("div", {
-        class: L([
+      return (s, r) => (n(), u("div", {
+        class: F([
           "mask bg-black/50 md:hidden",
           s.isShowMask ? "opacity-100 z-1" : "opacity-0 -z-[1]"
         ]),
         onClick: r[0] || (r[0] = (a) => i("close", false))
       }, null, 2));
     }
-  }), K0 = {
+  }), ss = {
     class: "title text-center md:hidden"
-  }, Y0 = {
+  }, rs = {
     class: "signature-popup-content"
-  }, X0 = {
+  }, os = {
     class: "flex justify-center gap-5 md:hidden"
-  }, J0 = [
+  }, as = [
     "disabled"
-  ], Q0 = I({
+  ], ns = I({
     __name: "SignaturePopup",
     props: {
       isShowPopup: {
@@ -26634,24 +26685,24 @@ let __tla = Promise.all([
       function s() {
         i("close", false);
       }
-      return (r, a) => (n(), p(J, null, [
-        C(G0, {
+      return (r, a) => (n(), u(J, null, [
+        x(is, {
           "is-show-mask": r.isShowPopup,
           onClose: s
         }, null, 8, [
           "is-show-mask"
         ]),
         o("div", {
-          class: L([
+          class: F([
             "signature-popup z-[1]",
             r.isShowPopup ? "translate-y-0 md:block" : "translate-y-[100%] md:hidden"
           ])
         }, [
-          o("h5", K0, c(r.title), 1),
-          o("div", Y0, [
+          o("h5", ss, c(r.title), 1),
+          o("div", rs, [
             be(r.$slots, "default", {}, void 0)
           ]),
-          o("div", X0, [
+          o("div", os, [
             o("button", {
               class: "btn btn-base",
               onClick: s
@@ -26659,42 +26710,42 @@ let __tla = Promise.all([
             o("button", {
               class: "btn btn-primary",
               disabled: r.isDisabled,
-              onClick: a[0] || (a[0] = (u) => i("use"))
-            }, c(r.customUseBtnName ?? r.$t("use")), 9, J0)
+              onClick: a[0] || (a[0] = (_) => i("use"))
+            }, c(r.customUseBtnName ?? r.$t("use")), 9, as)
           ])
         ], 2)
       ], 64));
     }
-  }), Lt = N(Q0, [
+  }), At = N(ns, [
     [
       "__scopeId",
       "data-v-b4aa668c"
     ]
-  ]), t2 = {
+  ]), ls = {
     key: 0,
     class: "signature-list"
-  }, e2 = [
+  }, cs = [
     "onClick"
-  ], i2 = [
+  ], ds = [
     "src"
-  ], s2 = {
+  ], us = {
     key: 1,
     class: "signature-list justify-center"
-  }, r2 = {
+  }, _s = {
     class: "text-secondary text-center"
-  }, o2 = {
+  }, ps = {
     class: "btn btn-primary"
-  }, a2 = {
+  }, bs = {
     class: "text-center"
-  }, n2 = {
+  }, fs = {
     class: "mb-3 hidden md:block"
-  }, l2 = {
+  }, ms = {
     class: "px-4 text-center"
-  }, c2 = {
+  }, hs = {
     class: "text-center"
-  }, d2 = {
+  }, gs = {
     class: "flex justify-between md:justify-evenly"
-  }, u2 = I({
+  }, vs = I({
     __name: "SignatureImage",
     props: {
       currentTool: {},
@@ -26711,126 +26762,126 @@ let __tla = Promise.all([
       "update:dragOffset"
     ]),
     setup(t, { emit: e }) {
-      const i = e, s = it(t, "currentTool"), r = it(t, "dragOffset"), a = S(""), u = S(false), { imageList: b } = at(Vt()), { t: _, locale: v } = dt(), { isShowWarnPopup: h, SignPopup: y, toggleWarnPopup: k } = ut(), { toggleLoading: j } = mt();
-      function w() {
-        i("useImage", a.value), D();
+      const i = e, s = it(t, "currentTool"), r = it(t, "dragOffset"), a = D(""), _ = D(false), { imageList: b } = nt(Ot()), { t: p, locale: v } = gt(), { isShowWarnPopup: h, SignPopup: y, toggleWarnPopup: w } = ut(), { toggleLoading: M } = mt();
+      function k() {
+        i("useImage", a.value), $();
       }
       function P(f) {
         a.value = f;
       }
-      function M() {
-        Vt().deleteImage(a.value), W(_("prompt.picture_delete_success")), k(false), a.value = "";
+      function j() {
+        Ot().deleteImage(a.value), W(p("prompt.picture_delete_success")), w(false), a.value = "";
       }
       function T(f) {
-        u.value = f;
+        _.value = f;
       }
       async function g(f) {
         const d = f.target, { files: B } = d;
-        await $(B), d.value = "";
+        await S(B), d.value = "";
       }
       function m(f) {
         const { dataTransfer: d } = f, B = d == null ? void 0 : d.files;
-        $(B);
+        S(B);
       }
-      async function $(f) {
+      async function S(f) {
         try {
-          const d = Se(f, /.png|.jpg|.jpeg/);
+          const d = $e(f, /.png|.jpg|.jpeg/);
           if (!d) return;
-          j({
+          M({
             isShow: true,
             title: "upload_file",
             content: "file_uploading"
           });
-          const B = await _s(d);
+          const B = await d2(d);
           if (b.value.includes(B)) {
             W({
-              message: _("prompt.picture_already_exists"),
+              message: p("prompt.picture_already_exists"),
               type: "error"
             });
             return;
           }
-          Vt().addImage(B), T(false), W(_("prompt.picture_add_success"));
+          Ot().addImage(B), T(false), W(p("prompt.picture_add_success"));
         } catch {
           W({
-            message: _("prompt.picture_upload_failed"),
+            message: p("prompt.picture_upload_failed"),
             type: "error"
           });
         } finally {
-          j({
+          M({
             isShow: false
           });
         }
       }
-      function q(f) {
+      function H(f) {
         var _a, _b;
-        const { src: d, offsetHeight: B, offsetWidth: x } = f.target, H = f.offsetX / x, G = f.offsetY / B;
+        const { src: d, offsetHeight: B, offsetWidth: C } = f.target, R = f.offsetX / C, K = f.offsetY / B;
         (_a = f.dataTransfer) == null ? void 0 : _a.setData("text/uri-list", d), (_b = f.dataTransfer) == null ? void 0 : _b.setData("custom/offset", JSON.stringify({
-          offsetX: H,
-          offsetY: G
+          offsetX: R,
+          offsetY: K
         })), r.value = {
           x: f.offsetX,
           y: f.offsetY,
-          width: x,
+          width: C,
           height: B
         };
       }
-      function D() {
+      function $() {
         s.value = "";
       }
-      return (f, d) => (n(), p(J, null, [
-        C(Lt, {
+      return (f, d) => (n(), u(J, null, [
+        x(At, {
           "is-show-popup": s.value === "image",
           title: f.$t("picture_gallery"),
           "is-disabled": !a.value,
-          onClose: D,
-          onUse: w
+          onClose: $,
+          onUse: k
         }, {
-          default: K(() => [
-            l(b).length ? (n(), p("ul", t2, [
+          default: G(() => [
+            l(b).length ? (n(), u("ul", ls, [
               o("img", {
-                src: ht,
+                src: yt,
                 alt: "add dark icon",
                 width: "60",
                 height: "60",
                 class: "iconScale mb-3",
                 onClick: d[0] || (d[0] = (B) => T(true))
               }),
-              (n(true), p(J, null, nt(l(b), (B) => (n(), p("li", {
+              (n(true), u(J, null, lt(l(b), (B) => (n(), u("li", {
                 key: B,
-                class: L([
+                class: F([
                   "rounded-[20px] relative w-full flex justify-center cursor-pointer h-[180px]",
                   a.value === B ? "bg-primary opacity-70" : "bg-white"
                 ]),
-                onClick: (x) => P(B)
+                onClick: (C) => P(B)
               }, [
                 o("img", {
                   src: B,
                   alt: "image",
                   class: "object-cover rounded-[20px]",
-                  onDragstart: q
-                }, null, 40, i2),
-                st(C(O, {
+                  onDragstart: H
+                }, null, 40, ds),
+                st(x(V, {
                   name: "close_s",
                   class: "absolute top-1 right-1 w-8 h-8 text-gray-80 drop-shadow-md",
                   "hover-color": "hover:text-danger",
-                  onClick: d[1] || (d[1] = (x) => l(k)(true))
+                  onClick: d[1] || (d[1] = (C) => l(w)(true))
                 }, null, 512), [
                   [
-                    ct,
+                    dt,
                     a.value === B
                   ]
                 ])
-              ], 10, e2))), 128))
-            ])) : (n(), p("div", s2, [
+              ], 10, cs))), 128))
+            ])) : (n(), u("div", us, [
               o("img", {
-                src: ht,
+                src: yt,
                 alt: "add dark icon",
                 width: "80",
                 height: "80",
                 class: "iconScale mb-5",
                 onClick: d[2] || (d[2] = (B) => T(true))
               }),
-              o("h5", r2, c(f.$t("add_picture")), 1)
+              o("h5", _s, c(f.$t("add_picture")), 1)
             ]))
           ]),
           _: 1
@@ -26839,11 +26890,11 @@ let __tla = Promise.all([
           "title",
           "is-disabled"
         ]),
-        u.value ? (n(), E(l(y), {
+        _.value ? (n(), E(l(y), {
           key: 0,
           title: f.$t("add_picture")
         }, {
-          default: K(() => [
+          default: G(() => [
             o("div", {
               class: "signature-image-add",
               onDragover: d[3] || (d[3] = X(() => {
@@ -26862,22 +26913,22 @@ let __tla = Promise.all([
               ])
             }, [
               d[7] || (d[7] = o("img", {
-                src: Pe,
+                src: Se,
                 alt: ""
               }, null, -1)),
-              o("button", o2, [
+              o("button", ps, [
                 o("input", {
                   type: "file",
                   accept: "application/.jpg, .png",
                   class: "opacity-0 absolute w-[131px] h-[41px] cursor-pointer",
                   onChange: g
                 }, null, 32),
-                yt(c(f.$t("select_file")), 1)
+                at(c(f.$t("select_file")), 1)
               ]),
-              o("div", a2, [
-                o("h5", n2, c(f.$t("prompt.or_drag_file")), 1),
-                o("p", l2, c(f.$t("prompt.support_filetype", {
-                  type: l(v) === "en-US" ? "JPG and PNG" : "JPG\u3001PNG"
+              o("div", bs, [
+                o("h5", fs, c(f.$t("prompt.or_drag_file")), 1),
+                o("p", ms, c(f.$t("prompt.support_filetype", {
+                  type: l(v) === "en-US" ? "JPG and PNG" : "JPG,PNG"
                 })), 1)
               ])
             ], 32),
@@ -26894,16 +26945,16 @@ let __tla = Promise.all([
           key: 1,
           title: f.$t("warn")
         }, {
-          default: K(() => [
-            o("p", c2, c(f.$t("prompt.sure_delete_picture")), 1),
-            o("div", d2, [
+          default: G(() => [
+            o("p", hs, c(f.$t("prompt.sure_delete_picture")), 1),
+            o("div", gs, [
               o("button", {
                 class: "btn btn-base",
-                onClick: d[6] || (d[6] = (B) => l(k)(false))
+                onClick: d[6] || (d[6] = (B) => l(w)(false))
               }, c(f.$t("not_yet")), 1),
               o("button", {
                 class: "btn btn-primary",
-                onClick: M
+                onClick: j
               }, c(f.$t("delete")), 1)
             ])
           ]),
@@ -26913,34 +26964,34 @@ let __tla = Promise.all([
         ])) : Z("", true)
       ], 64));
     }
-  }), _2 = N(u2, [
+  }), ws = N(vs, [
     [
       "__scopeId",
-      "data-v-46ddb7d2"
+      "data-v-568c3d64"
     ]
-  ]), p2 = {
+  ]), ks = {
     key: 0,
     class: "signature-list"
-  }, b2 = [
+  }, ys = [
     "onClick"
-  ], f2 = {
+  ], Cs = {
     class: "whitespace-pre-wrap w-full text-ellipsis overflow-hidden"
-  }, m2 = {
+  }, xs = {
     class: "inline"
-  }, h2 = {
+  }, Ps = {
     key: 1,
     class: "signature-list justify-center"
-  }, g2 = {
+  }, Ss = {
     class: "text-secondary text-center"
-  }, v2 = {
+  }, $s = {
     class: "flex justify-between md:justify-evenly"
-  }, k2 = [
+  }, Ds = [
     "disabled"
-  ], w2 = {
+  ], Ms = {
     class: "text-center"
-  }, y2 = {
+  }, js = {
     class: "flex justify-between md:justify-evenly"
-  }, x2 = I({
+  }, Bs = I({
     __name: "SignatureLiteral",
     props: {
       currentTool: {},
@@ -26957,14 +27008,14 @@ let __tla = Promise.all([
       "update:dragOffset"
     ]),
     setup(t, { emit: e }) {
-      const i = e, s = it(t, "currentTool"), r = it(t, "dragOffset"), a = S(""), u = S(false), b = S(""), _ = S(false), { literalList: v } = at(Dt()), { t: h } = dt(), { isShowWarnPopup: y, SignPopup: k, toggleWarnPopup: j } = ut();
-      function w() {
-        i("useLiteral", a.value, "text"), q();
+      const i = e, s = it(t, "currentTool"), r = it(t, "dragOffset"), a = D(""), _ = D(false), b = D(""), p = D(false), { literalList: v } = nt(Dt()), { t: h } = gt(), { isShowWarnPopup: y, SignPopup: w, toggleWarnPopup: M } = ut();
+      function k() {
+        i("useLiteral", a.value, "text"), H();
       }
-      function P(D) {
-        a.value = D;
+      function P($) {
+        a.value = $;
       }
-      function M() {
+      function j() {
         if (v.value.includes(b.value)) {
           W({
             message: h("prompt.text_already_exists"),
@@ -26986,95 +27037,95 @@ let __tla = Promise.all([
           });
           return;
         }
-        const { addLiteral: D, deleteLiteral: f } = Dt();
-        D(b.value), f(a.value), W(h("prompt.text_edit_success")), a.value = b.value, m(false);
+        const { addLiteral: $, deleteLiteral: f } = Dt();
+        $(b.value), f(a.value), W(h("prompt.text_edit_success")), a.value = b.value, m(false);
       }
       function g() {
-        Dt().deleteLiteral(a.value), W(h("prompt.text_delete_success")), j(false), a.value = "";
+        Dt().deleteLiteral(a.value), W(h("prompt.text_delete_success")), M(false), a.value = "";
       }
-      function m(D, f = false) {
-        _.value = f, u.value = D, b.value = f ? a.value : "";
+      function m($, f = false) {
+        p.value = f, _.value = $, b.value = f ? a.value : "";
       }
-      function $(D) {
+      function S($) {
         var _a, _b;
-        const { textContent: f, offsetHeight: d, offsetWidth: B } = D.target, x = D.offsetX / B, H = D.offsetY / d;
-        (_a = D.dataTransfer) == null ? void 0 : _a.setData("text/plain", f ?? ""), (_b = D.dataTransfer) == null ? void 0 : _b.setData("custom/offset", JSON.stringify({
-          offsetX: x,
-          offsetY: H
+        const { textContent: f, offsetHeight: d, offsetWidth: B } = $.target, C = $.offsetX / B, R = $.offsetY / d;
+        (_a = $.dataTransfer) == null ? void 0 : _a.setData("text/plain", f ?? ""), (_b = $.dataTransfer) == null ? void 0 : _b.setData("custom/offset", JSON.stringify({
+          offsetX: C,
+          offsetY: R
         })), r.value = {
-          x: D.offsetX,
-          y: D.offsetY,
+          x: $.offsetX,
+          y: $.offsetY,
           width: B,
           height: d
         };
       }
-      function q() {
+      function H() {
         s.value = "";
       }
-      return (D, f) => (n(), p(J, null, [
-        C(Lt, {
+      return ($, f) => (n(), u(J, null, [
+        x(At, {
           "is-show-popup": s.value === "literal",
-          title: D.$t("text_library"),
+          title: $.$t("text_library"),
           "is-disabled": !a.value,
-          onClose: q,
-          onUse: w
+          onClose: H,
+          onUse: k
         }, {
-          default: K(() => [
-            l(v).length ? (n(), p("ul", p2, [
+          default: G(() => [
+            l(v).length ? (n(), u("ul", ks, [
               o("img", {
-                src: ht,
+                src: yt,
                 alt: "add dark icon",
                 width: "60",
                 height: "60",
                 class: "iconScale mb-3",
                 onClick: f[0] || (f[0] = (d) => m(true))
               }),
-              (n(true), p(J, null, nt(l(v), (d) => (n(), p("li", {
+              (n(true), u(J, null, lt(l(v), (d) => (n(), u("li", {
                 key: d,
-                class: L([
+                class: F([
                   "rounded-[20px] relative w-full flex cursor-pointer px-3 py-4",
                   a.value === d ? "bg-primary opacity-70" : "bg-white"
                 ]),
                 draggable: "true",
-                onDragstart: $,
+                onDragstart: S,
                 onClick: (B) => P(d)
               }, [
-                o("p", f2, [
-                  o("span", m2, c(d), 1),
-                  st(C(O, {
+                o("p", Cs, [
+                  o("span", xs, c(d), 1),
+                  st(x(V, {
                     name: "edit",
                     class: "w-5 h-5 text-gray-80 inline relative scale-150 -top-[2px]",
                     "hover-color": "hover:text-green-600",
                     onClick: f[1] || (f[1] = (B) => m(true, true))
                   }, null, 512), [
                     [
-                      ct,
+                      dt,
                       a.value === d
                     ]
                   ])
                 ]),
-                st(C(O, {
+                st(x(V, {
                   name: "close_s",
                   class: "absolute top-1 right-1 w-8 h-8 text-gray-80",
                   "hover-color": "hover:text-danger",
-                  onClick: f[2] || (f[2] = (B) => l(j)(true))
+                  onClick: f[2] || (f[2] = (B) => l(M)(true))
                 }, null, 512), [
                   [
-                    ct,
+                    dt,
                     a.value === d
                   ]
                 ])
-              ], 42, b2))), 128))
-            ])) : (n(), p("div", h2, [
+              ], 42, ys))), 128))
+            ])) : (n(), u("div", Ps, [
               o("img", {
-                src: ht,
+                src: yt,
                 alt: "add dark icon",
                 width: "80",
                 height: "80",
                 class: "iconScale mb-5",
                 onClick: f[3] || (f[3] = (d) => m(true))
               }),
-              o("h5", g2, c(D.$t("add_commonly_use_text")), 1)
+              o("h5", Ss, c($.$t("add_commonly_use_text")), 1)
             ]))
           ]),
           _: 1
@@ -27083,11 +27134,11 @@ let __tla = Promise.all([
           "title",
           "is-disabled"
         ]),
-        u.value ? (n(), E(l(k), {
+        _.value ? (n(), E(l(w), {
           key: 0,
-          title: _.value ? D.$t("edit_text") : D.$t("add_text")
+          title: p.value ? $.$t("edit_text") : $.$t("add_text")
         }, {
-          default: K(() => [
+          default: G(() => [
             st(o("textarea", {
               "onUpdate:modelValue": f[4] || (f[4] = (d) => b.value = d),
               class: "input my-5 h-[40dvh] rounded-[20px]"
@@ -27097,37 +27148,37 @@ let __tla = Promise.all([
                 b.value
               ]
             ]),
-            o("div", v2, [
+            o("div", $s, [
               o("button", {
                 class: "btn btn-base",
                 onClick: f[5] || (f[5] = (d) => m(false))
-              }, c(D.$t("cancel")), 1),
+              }, c($.$t("cancel")), 1),
               o("button", {
                 class: "btn btn-primary",
                 disabled: !b.value,
-                onClick: f[6] || (f[6] = () => _.value ? T() : M())
-              }, c(D.$t("confirm")), 9, k2)
+                onClick: f[6] || (f[6] = () => p.value ? T() : j())
+              }, c($.$t("confirm")), 9, Ds)
             ])
           ]),
           _: 1
         }, 8, [
           "title"
         ])) : Z("", true),
-        l(y) ? (n(), E(l(k), {
+        l(y) ? (n(), E(l(w), {
           key: 1,
-          title: D.$t("warn")
+          title: $.$t("warn")
         }, {
-          default: K(() => [
-            o("p", w2, c(D.$t("prompt.sure_delete_text")), 1),
-            o("div", y2, [
+          default: G(() => [
+            o("p", Ms, c($.$t("prompt.sure_delete_text")), 1),
+            o("div", js, [
               o("button", {
                 class: "btn btn-base",
-                onClick: f[7] || (f[7] = (d) => l(j)(false))
-              }, c(D.$t("not_yet")), 1),
+                onClick: f[7] || (f[7] = (d) => l(M)(false))
+              }, c($.$t("not_yet")), 1),
               o("button", {
                 class: "btn btn-primary",
                 onClick: g
-              }, c(D.$t("delete")), 1)
+              }, c($.$t("delete")), 1)
             ])
           ]),
           _: 1
@@ -27136,38 +27187,38 @@ let __tla = Promise.all([
         ])) : Z("", true)
       ], 64));
     }
-  }), C2 = "" + new URL("logo_darkbg_horizontal-EV2IreVs.png", import.meta.url).href, P2 = {}, S2 = {
+  }), Ts = {}, zs = {
     class: "w-full h-full flex items-center justify-center animate-pulse"
   };
-  function $2(t, e) {
-    return n(), p("div", S2, e[0] || (e[0] = [
+  function Fs(t, e) {
+    return n(), u("div", zs, e[0] || (e[0] = [
       o("img", {
-        src: C2,
+        src: ge,
         class: "animate-bounce w-2/3 max-w-[400px]",
         alt: "logo"
       }, null, -1)
     ]));
   }
-  const D2 = N(P2, [
+  const Ls = N(Ts, [
     [
       "render",
-      $2
+      Fs
     ]
-  ]), j2 = {
+  ]), As = {
     class: "flex flex-col gap-8 items-center py-8"
-  }, M2 = {
+  }, Es = {
     key: 0,
     class: "text-center"
-  }, B2 = {
+  }, Is = {
     class: "text-primary mb-[18px]"
-  }, T2 = {
+  }, Zs = {
     class: ""
-  }, z2 = {
+  }, Vs = {
     key: 1,
     class: "text-center"
-  }, F2 = {
+  }, Hs = {
     class: "flex justify-between md:justify-evenly"
-  }, A2 = I({
+  }, Os = I({
     __name: "SignatureMergePopup",
     props: {
       isShowMergePopup: {
@@ -27178,32 +27229,32 @@ let __tla = Promise.all([
       }
     },
     setup(t) {
-      const e = S(false), { SignPopup: i, goPage: s } = ut();
+      const e = D(false), { SignPopup: i, goPage: s } = ut();
       return (r, a) => r.isShowMergePopup ? (n(), E(l(i), {
         key: 0,
         title: r.$t("create_file")
       }, {
-        default: K(() => [
-          o("div", j2, [
+        default: G(() => [
+          o("div", As, [
             a[2] || (a[2] = o("img", {
-              src: ge,
+              src: ve,
               class: "w-[60%]",
               alt: "loading gif"
             }, null, -1)),
-            e.value ? (n(), p("div", M2, [
-              o("h5", B2, c(r.$t("file_completed")), 1),
-              o("p", T2, c(r.$t("prompt.auto_jump_screen")), 1)
-            ])) : (n(), p("h5", z2, c(r.$t("merging_files")), 1))
+            e.value ? (n(), u("div", Es, [
+              o("h5", Is, c(r.$t("file_completed")), 1),
+              o("p", Zs, c(r.$t("prompt.auto_jump_screen")), 1)
+            ])) : (n(), u("h5", Vs, c(r.$t("merging_files")), 1))
           ]),
-          o("div", F2, [
-            e.value ? (n(), p("button", {
+          o("div", Hs, [
+            e.value ? (n(), u("button", {
               key: 0,
               class: "btn btn-primary w-full",
-              onClick: a[0] || (a[0] = (u) => l(s)("complete"))
-            }, c(r.$t("confirm")), 1)) : (n(), p("button", {
+              onClick: a[0] || (a[0] = (_) => l(s)("complete"))
+            }, c(r.$t("confirm")), 1)) : (n(), u("button", {
               key: 1,
               class: "btn btn-base w-full",
-              onClick: a[1] || (a[1] = (...u) => r.cancelMergeFile && r.cancelMergeFile(...u))
+              onClick: a[1] || (a[1] = (..._) => r.cancelMergeFile && r.cancelMergeFile(..._))
             }, c(r.$t("cancel")), 1))
           ])
         ]),
@@ -27212,18 +27263,18 @@ let __tla = Promise.all([
         "title"
       ])) : Z("", true);
     }
-  }), L2 = {
+  }), qs = {
     class: "signature-list"
-  }, E2 = [
+  }, Rs = [
     "onClick"
-  ], I2 = {
+  ], Us = {
     key: 1,
     class: "absolute h-28 animate-pulse leading-[112px] text-center"
-  }, Z2 = {
+  }, Ns = {
     class: "highlight absolute left-4 top-2"
-  }, O2 = {
+  }, Ws = {
     class: "absolute right-3 top-3 rounded-full bg-danger w-2 h-2"
-  }, q2 = I({
+  }, Gs = I({
     __name: "SignaturePage",
     props: {
       currentTool: {},
@@ -27235,56 +27286,56 @@ let __tla = Promise.all([
       "update:currentTool"
     ]),
     setup(t, { emit: e }) {
-      const i = e, s = it(t, "currentTool"), r = S(1), a = S(window.devicePixelRatio), { currentPDF: u } = at(Y()), b = mt(), { loadedState: _, canvasItems: v, handleCanvasLoaded: h, handleCanvasReload: y } = Ce(u), k = gt(() => vt(() => import("../chunks/@component-hook/pdf-canvas-gI5qE1lT.js").then(async (m) => {
+      const i = e, s = it(t, "currentTool"), r = D(1), a = D(window.devicePixelRatio), { currentPDF: _ } = nt(Y()), b = mt(), { loadedState: p, canvasItems: v, handleCanvasLoaded: h, handleCanvasReload: y } = Pe(_), w = ht(() => vt(() => import("../chunks/@component-hook/pdf-canvas-DuZ37e5K.js").then(async (m) => {
         await m.__tla;
         return m;
-      }), __vite__mapDeps([3,2]), import.meta.url)), j = ni(T);
-      function w(g) {
-        r.value = g, te() && i("usePage", r.value);
+      }), __vite__mapDeps([3,2]), import.meta.url)), M = q2(T);
+      function k(g) {
+        r.value = g, ee() && i("usePage", r.value);
       }
       function P() {
-        i("usePage", r.value), M();
+        i("usePage", r.value), j();
       }
-      function M() {
+      function j() {
         s.value = "";
       }
       function T() {
         a.value = window.devicePixelRatio;
       }
       return Jt(() => {
-        j();
-      }), (g, m) => (n(), E(Lt, {
+        M();
+      }), (g, m) => (n(), E(At, {
         "is-show-popup": s.value === "page",
         title: g.$t("select_page"),
         "is-disabled": false,
         "custom-use-btn-name": g.$t("select"),
-        onClose: M,
+        onClose: j,
         onUse: P
       }, {
-        default: K(() => [
-          o("ul", L2, [
-            (n(true), p(J, null, nt(l(u).pages, ($) => (n(), p("li", {
-              key: $,
-              class: L([
+        default: G(() => [
+          o("ul", qs, [
+            (n(true), u(J, null, lt(l(_).pages, (S) => (n(), u("li", {
+              key: S,
+              class: F([
                 "rounded-[20px] relative w-full flex flex-shrink-0 justify-center py-3 cursor-pointer overflow-hidden min-h-32",
-                r.value === $ ? "bg-primary opacity-70" : "bg-white"
+                r.value === S ? "bg-primary opacity-70" : "bg-white"
               ]),
-              onClick: (q) => w($)
+              onClick: (H) => k(S)
             }, [
-              l(_)[$ - 1] ? (n(), E(l(k), {
+              l(p)[S - 1] ? (n(), E(l(w), {
                 key: 0,
                 ref_for: true,
                 ref_key: "canvasItems",
                 ref: v,
                 class: "pointer-events-none",
-                file: l(u),
+                file: l(_),
                 "canvas-id": "PDF-page-canvas",
-                page: $,
-                "canvas-class": l(_)[$] ? "border-2 border-gray-20" : void 0,
+                page: S,
+                "canvas-class": l(p)[S] ? "border-2 border-gray-20" : void 0,
                 "file-scale": a.value * 0.3,
                 password: l(b).filePassword,
                 "manual-reload": "",
-                onLoaded: (q) => l(h)($),
+                onLoaded: (H) => l(h)(S),
                 onReload: l(y)
               }, null, 8, [
                 "file",
@@ -27295,15 +27346,15 @@ let __tla = Promise.all([
                 "onLoaded",
                 "onReload"
               ])) : Z("", true),
-              l(_)[$] ? Z("", true) : (n(), p("div", I2, " Loading... ")),
-              o("span", Z2, c(`${$}.`), 1),
-              st(o("div", O2, null, 512), [
+              l(p)[S] ? Z("", true) : (n(), u("div", Us, " Loading... ")),
+              o("span", Ns, c(`${S}.`), 1),
+              st(o("div", Ws, null, 512), [
                 [
-                  ct,
-                  r.value === $
+                  dt,
+                  r.value === S
                 ]
               ])
-            ], 10, E2))), 128))
+            ], 10, Rs))), 128))
           ])
         ]),
         _: 1
@@ -27313,17 +27364,17 @@ let __tla = Promise.all([
         "custom-use-btn-name"
       ]));
     }
-  }), V2 = {
+  }), Ks = {
     class: "signature-panel"
-  }, R2 = [
+  }, Ys = [
     "disabled"
-  ], H2 = [
+  ], Xs = [
     "disabled"
-  ], U2 = [
+  ], Js = [
     "disabled"
-  ], N2 = [
+  ], Qs = [
     "disabled"
-  ], W2 = 1.5, G2 = 0.5, K2 = I({
+  ], tr = 1.5, er = 0.5, ir = I({
     __name: "SignaturePanel",
     props: ft({
       isActivatedFabric: {
@@ -27346,117 +27397,117 @@ let __tla = Promise.all([
       function i(s) {
         e.value += s;
       }
-      return (s, r) => (n(), p("div", V2, [
+      return (s, r) => (n(), u("div", Ks, [
         o("button", {
           class: "btn-small btn-primary",
           disabled: !s.isActivatedFabric,
           onClick: r[0] || (r[0] = (a) => s.$emit("copyFabric"))
         }, [
-          C(O, {
+          x(V, {
             name: "file",
             class: "w-4.5 h-4.5 text-primary"
           })
-        ], 8, R2),
+        ], 8, Ys),
         o("button", {
           class: "btn-small btn-primary",
           disabled: !s.isActivatedFabric,
           onClick: r[1] || (r[1] = (a) => s.$emit("deleteFabric"))
         }, [
-          C(O, {
+          x(V, {
             name: "trash",
             class: "w-4.5 h-4.5 text-primary"
           })
-        ], 8, H2),
+        ], 8, Xs),
         o("button", {
           class: "btn-small btn-primary text-xs",
-          disabled: e.value >= W2,
+          disabled: e.value >= tr,
           onClick: r[2] || (r[2] = (a) => i(0.1))
-        }, " \u2795 ", 8, U2),
+        }, " \u2795 ", 8, Js),
         o("button", {
           class: "btn-small btn-primary text-xs",
-          disabled: e.value <= G2,
+          disabled: e.value <= er,
           onClick: r[3] || (r[3] = (a) => i(-0.1))
-        }, " \u2796 ", 8, N2)
+        }, " \u2796 ", 8, Qs)
       ]));
     }
-  }), Y2 = N(K2, [
+  }), sr = N(ir, [
     [
       "__scopeId",
-      "data-v-ad339470"
+      "data-v-8d01bf5a"
     ]
-  ]), X2 = {
+  ]), rr = {
     class: "toolbar"
-  }, J2 = {
+  }, or = {
     class: "flex justify-between md:justify-evenly"
-  }, Q2 = [
+  }, ar = [
     "disabled"
-  ], tr = I({
+  ], nr = I({
     __name: "SignatureDrawPopup",
     emits: [
       "close"
     ],
     setup(t, { emit: e }) {
-      const i = e, s = S(null), r = S("black"), a = S(false), { t: u } = dt(), b = gt(() => vt(() => Promise.resolve().then(() => ke), void 0, import.meta.url)), _ = {
+      const i = e, s = D(null), r = D("black"), a = D(false), { t: _ } = gt(), b = ht(() => vt(() => Promise.resolve().then(() => ke), void 0, import.meta.url)), p = {
         ctx: null,
         isPainting: false
       };
       function v(T) {
-        r.value = T, _.ctx && (_.ctx.strokeStyle = T);
+        r.value = T, p.ctx && (p.ctx.strokeStyle = T);
       }
       function h() {
         var _a;
         const T = (_a = s.value) == null ? void 0 : _a.toDataURL("image/png");
-        T && (Wt().addSignature(T), i("close"), W(u("signature_add_success")));
+        T && (Wt().addSignature(T), i("close"), W(_("signature_add_success")));
       }
       function y() {
         var _a;
-        s.value && (te() ? (s.value.height = 235, s.value.width = 466) : s.value.height = window.innerHeight - 400, _.ctx = (_a = s.value) == null ? void 0 : _a.getContext("2d"), _.ctx && (_.ctx.lineWidth = 2, _.ctx.lineCap = "round"));
+        s.value && (ee() ? (s.value.height = 235, s.value.width = 466) : s.value.height = window.innerHeight - 400, p.ctx = (_a = s.value) == null ? void 0 : _a.getContext("2d"), p.ctx && (p.ctx.lineWidth = 2, p.ctx.lineCap = "round"));
       }
-      function k(T) {
+      function w(T) {
         if (!s.value) return {
           x: 0,
           y: 0
         };
         const { left: g, top: m } = s.value.getBoundingClientRect();
         if (T.type === "mousemove") {
-          const { clientX: q, clientY: D } = T;
+          const { clientX: H, clientY: $ } = T;
           return {
-            x: q - g,
-            y: D - m
+            x: H - g,
+            y: $ - m
           };
         }
-        const { touches: $ } = T;
+        const { touches: S } = T;
         return {
-          x: $[0].clientX - g,
-          y: $[0].clientY - m
+          x: S[0].clientX - g,
+          y: S[0].clientY - m
         };
-      }
-      function j() {
-        var _a;
-        _.isPainting = true, (_a = _.ctx) == null ? void 0 : _a.beginPath();
-      }
-      function w() {
-        var _a;
-        _.isPainting = false, (_a = _.ctx) == null ? void 0 : _a.closePath();
-      }
-      function P(T) {
-        var _a, _b;
-        if (!_.isPainting) return;
-        const { x: g, y: m } = k(T);
-        (_a = _.ctx) == null ? void 0 : _a.lineTo(g, m), (_b = _.ctx) == null ? void 0 : _b.stroke(), a.value = true;
       }
       function M() {
         var _a;
-        s.value && ((_a = _.ctx) == null ? void 0 : _a.clearRect(0, 0, s.value.width, s.value.height), a.value = false);
+        p.isPainting = true, (_a = p.ctx) == null ? void 0 : _a.beginPath();
+      }
+      function k() {
+        var _a;
+        p.isPainting = false, (_a = p.ctx) == null ? void 0 : _a.closePath();
+      }
+      function P(T) {
+        var _a, _b;
+        if (!p.isPainting) return;
+        const { x: g, y: m } = w(T);
+        (_a = p.ctx) == null ? void 0 : _a.lineTo(g, m), (_b = p.ctx) == null ? void 0 : _b.stroke(), a.value = true;
+      }
+      function j() {
+        var _a;
+        s.value && ((_a = p.ctx) == null ? void 0 : _a.clearRect(0, 0, s.value.width, s.value.height), a.value = false);
       }
       return (T, g) => (n(), E(l(b), {
         title: T.$t("create_signature_file"),
         onChildMounted: y
       }, {
-        default: K(() => [
-          o("ul", X2, [
+        default: G(() => [
+          o("ul", rr, [
             o("li", null, [
-              C(O, {
+              x(V, {
                 name: r.value === "black" ? "color_black_h" : "color_black",
                 class: "w-7 h-7",
                 "hover-change-svg": "",
@@ -27466,7 +27517,7 @@ let __tla = Promise.all([
               ])
             ]),
             o("li", null, [
-              C(O, {
+              x(V, {
                 name: r.value === "blue" ? "color_blue_h" : "color_blue",
                 class: "w-7 h-7",
                 "hover-change-svg": "",
@@ -27476,7 +27527,7 @@ let __tla = Promise.all([
               ])
             ]),
             o("li", null, [
-              C(O, {
+              x(V, {
                 name: r.value === "red" ? "color_red_h" : "color_red",
                 class: "w-7 h-7",
                 "hover-change-svg": "",
@@ -27486,10 +27537,10 @@ let __tla = Promise.all([
               ])
             ]),
             o("li", null, [
-              C(O, {
+              x(V, {
                 name: "trash",
                 class: "w-7 h-7",
-                onClick: M
+                onClick: j
               })
             ])
           ]),
@@ -27497,20 +27548,20 @@ let __tla = Promise.all([
             ref_key: "canvasDraw",
             ref: s,
             class: "bg-secondary-tint border-2 border-gray-30 rounded-[20px] mb-6",
-            onMousedown: X(j, [
+            onMousedown: X(M, [
               "prevent"
             ]),
-            onMouseup: w,
-            onMouseleave: w,
+            onMouseup: k,
+            onMouseleave: k,
             onMousemove: P,
-            onTouchstart: X(j, [
+            onTouchstart: X(M, [
               "prevent"
             ]),
-            onTouchend: w,
-            onTouchcancel: w,
+            onTouchend: k,
+            onTouchcancel: k,
             onTouchmove: P
           }, null, 544),
-          o("div", J2, [
+          o("div", or, [
             o("button", {
               class: "btn btn-base",
               onClick: g[3] || (g[3] = (m) => i("close"))
@@ -27519,7 +27570,7 @@ let __tla = Promise.all([
               class: "btn btn-primary",
               disabled: !a.value,
               onClick: h
-            }, c(T.$t("confirm")), 9, Q2)
+            }, c(T.$t("confirm")), 9, ar)
           ])
         ]),
         _: 1
@@ -27527,23 +27578,23 @@ let __tla = Promise.all([
         "title"
       ]));
     }
-  }), er = {
+  }), lr = {
     key: 0,
     class: "signature-list"
-  }, ir = [
+  }, cr = [
     "onClick"
-  ], sr = [
+  ], dr = [
     "src"
-  ], rr = {
+  ], ur = {
     key: 1,
     class: "signature-list justify-center"
-  }, or = {
+  }, _r = {
     class: "text-secondary text-center"
-  }, ar = {
+  }, pr = {
     class: "text-center"
-  }, nr = {
+  }, br = {
     class: "flex justify-between"
-  }, lr = I({
+  }, fr = I({
     __name: "SignatureSign",
     props: {
       currentTool: {},
@@ -27560,89 +27611,89 @@ let __tla = Promise.all([
       "update:dragOffset"
     ]),
     setup(t, { emit: e }) {
-      const i = e, s = it(t, "currentTool"), r = it(t, "dragOffset"), a = S(""), u = S(false), { signatureList: b } = at(Wt()), { t: _ } = dt(), { isShowWarnPopup: v, SignPopup: h, toggleWarnPopup: y } = ut();
-      function k() {
+      const i = e, s = it(t, "currentTool"), r = it(t, "dragOffset"), a = D(""), _ = D(false), { signatureList: b } = nt(Wt()), { t: p } = gt(), { isShowWarnPopup: v, SignPopup: h, toggleWarnPopup: y } = ut();
+      function w() {
         i("useSignature", a.value), T();
       }
-      function j(g) {
+      function M(g) {
         a.value = g;
       }
-      function w() {
-        Wt().deleteSignature(a.value), W(_("prompt.signature_delete_success")), y(false), a.value = "";
+      function k() {
+        Wt().deleteSignature(a.value), W(p("prompt.signature_delete_success")), y(false), a.value = "";
       }
       function P(g) {
-        u.value = g;
+        _.value = g;
       }
-      function M(g) {
+      function j(g) {
         var _a, _b;
-        const { src: m, offsetHeight: $, offsetWidth: q } = g.target, D = g.offsetX / q, f = g.offsetY / $;
+        const { src: m, offsetHeight: S, offsetWidth: H } = g.target, $ = g.offsetX / H, f = g.offsetY / S;
         (_a = g.dataTransfer) == null ? void 0 : _a.setData("text/uri-list", m), (_b = g.dataTransfer) == null ? void 0 : _b.setData("custom/offset", JSON.stringify({
-          offsetX: D,
+          offsetX: $,
           offsetY: f
         })), r.value = {
           x: g.offsetX,
           y: g.offsetY,
-          width: q,
-          height: $
+          width: H,
+          height: S
         };
       }
       function T() {
         s.value = "";
       }
-      return (g, m) => (n(), p(J, null, [
-        C(Lt, {
+      return (g, m) => (n(), u(J, null, [
+        x(At, {
           "is-show-popup": s.value === "sign",
           title: g.$t("signature_file"),
           "is-disabled": !a.value,
           onClose: T,
-          onUse: k
+          onUse: w
         }, {
-          default: K(() => [
-            l(b).length ? (n(), p("ul", er, [
+          default: G(() => [
+            l(b).length ? (n(), u("ul", lr, [
               o("img", {
-                src: ht,
+                src: yt,
                 alt: "add dark icon",
                 width: "60",
                 height: "60",
                 class: "iconScale mb-3",
-                onClick: m[0] || (m[0] = ($) => P(true))
+                onClick: m[0] || (m[0] = (S) => P(true))
               }),
-              (n(true), p(J, null, nt(l(b), ($) => (n(), p("li", {
-                key: $,
-                class: L([
+              (n(true), u(J, null, lt(l(b), (S) => (n(), u("li", {
+                key: S,
+                class: F([
                   "rounded-[20px] relative w-full flex justify-center cursor-pointer h-[98px]",
-                  a.value === $ ? "bg-primary opacity-70" : "bg-white"
+                  a.value === S ? "bg-primary opacity-70" : "bg-white"
                 ]),
-                onClick: (q) => j($)
+                onClick: (H) => M(S)
               }, [
                 o("img", {
-                  src: $,
+                  src: S,
                   alt: "signature icon",
                   class: "object-contain rounded-[20px]",
-                  onDragstart: M
-                }, null, 40, sr),
-                st(C(O, {
+                  onDragstart: j
+                }, null, 40, dr),
+                st(x(V, {
                   name: "close_s",
                   class: "absolute top-1 right-1 w-8 h-8 text-gray-80",
                   "hover-color": "hover:text-danger",
-                  onClick: m[1] || (m[1] = (q) => l(y)(true))
+                  onClick: m[1] || (m[1] = (H) => l(y)(true))
                 }, null, 512), [
                   [
-                    ct,
-                    a.value === $
+                    dt,
+                    a.value === S
                   ]
                 ])
-              ], 10, ir))), 128))
-            ])) : (n(), p("div", rr, [
+              ], 10, cr))), 128))
+            ])) : (n(), u("div", ur, [
               o("img", {
-                src: ht,
+                src: yt,
                 alt: "",
                 width: "80",
                 height: "80",
                 class: "iconScale mb-5",
-                onClick: m[2] || (m[2] = ($) => P(true))
+                onClick: m[2] || (m[2] = (S) => P(true))
               }),
-              o("h5", or, c(g.$t("add_signature_file")), 1)
+              o("h5", _r, c(g.$t("add_signature_file")), 1)
             ]))
           ]),
           _: 1
@@ -27651,24 +27702,24 @@ let __tla = Promise.all([
           "title",
           "is-disabled"
         ]),
-        u.value ? (n(), E(tr, {
+        _.value ? (n(), E(nr, {
           key: 0,
-          onClose: m[3] || (m[3] = ($) => P(false))
+          onClose: m[3] || (m[3] = (S) => P(false))
         })) : Z("", true),
         l(v) ? (n(), E(l(h), {
           key: 1,
           title: g.$t("warn")
         }, {
-          default: K(() => [
-            o("p", ar, c(g.$t("prompt.sure_delete_signature")), 1),
-            o("div", nr, [
+          default: G(() => [
+            o("p", pr, c(g.$t("prompt.sure_delete_signature")), 1),
+            o("div", br, [
               o("button", {
                 class: "btn btn-base",
-                onClick: m[4] || (m[4] = ($) => l(y)(false))
+                onClick: m[4] || (m[4] = (S) => l(y)(false))
               }, c(g.$t("not_yet")), 1),
               o("button", {
                 class: "btn btn-primary",
-                onClick: w
+                onClick: k
               }, c(g.$t("delete")), 1)
             ])
           ]),
@@ -27678,9 +27729,9 @@ let __tla = Promise.all([
         ])) : Z("", true)
       ], 64));
     }
-  }), cr = {
+  }), mr = {
     class: "toolbar signature-toolbar"
-  }, dr = I({
+  }, hr = I({
     __name: "SignatureToolbar",
     props: {
       currentTool: {},
@@ -27694,15 +27745,15 @@ let __tla = Promise.all([
       function i(s) {
         e.value = s;
       }
-      return At(() => {
-        te() && i("sign");
-      }), (s, r) => (n(), p("ul", cr, [
+      return Lt(() => {
+        ee() && i("sign");
+      }), (s, r) => (n(), u("ul", mr, [
         o("li", {
           onClick: r[0] || (r[0] = (a) => i("sign"))
         }, [
-          C(O, {
+          x(V, {
             name: "sign",
-            class: L([
+            class: F([
               "w-7 h-7",
               {
                 "text-primary": e.value === "sign"
@@ -27716,9 +27767,9 @@ let __tla = Promise.all([
         o("li", {
           onClick: r[1] || (r[1] = (a) => i("image"))
         }, [
-          C(O, {
+          x(V, {
             name: "pic",
-            class: L([
+            class: F([
               "w-7 h-7",
               {
                 "text-primary": e.value === "image"
@@ -27732,9 +27783,9 @@ let __tla = Promise.all([
         o("li", {
           onClick: r[2] || (r[2] = (a) => i("literal"))
         }, [
-          C(O, {
+          x(V, {
             name: "text",
-            class: L([
+            class: F([
               "w-7 h-7",
               {
                 "text-primary": e.value === "literal"
@@ -27748,9 +27799,9 @@ let __tla = Promise.all([
         o("li", {
           onClick: r[3] || (r[3] = (a) => i("page"))
         }, [
-          C(O, {
+          x(V, {
             name: "page",
-            class: L([
+            class: F([
               "w-7 h-7",
               {
                 "text-primary": e.value === "page"
@@ -27763,68 +27814,68 @@ let __tla = Promise.all([
         ])
       ]));
     }
-  }), ur = N(dr, [
+  }), gr = N(hr, [
     [
       "__scopeId",
       "data-v-72e15082"
     ]
-  ]), _r = {
+  ]), vr = {
     class: "signature-content content flex flex-col"
-  }, pr = {
+  }, wr = {
     key: 0,
     class: "text-xs text-gray-60 md:text-sm"
-  }, br = {
-    class: "flex flex-col min-h-0 flex-1 md:flex-row"
-  }, fr = {
-    class: "md:border-r-2 md:border-primary md:py-4 md:px-6"
-  }, mr = {
-    class: "signature-content-file"
-  }, hr = {
-    class: "text-center"
-  }, gr = {
-    class: "flex justify-between md:justify-evenly"
-  }, vr = {
-    class: "text-center"
   }, kr = {
+    class: "flex flex-col min-h-0 flex-1 md:flex-row"
+  }, yr = {
+    class: "md:border-r-2 md:border-primary md:py-4 md:px-6"
+  }, Cr = {
+    class: "signature-content-file"
+  }, xr = {
+    class: "text-center"
+  }, Pr = {
     class: "flex justify-between md:justify-evenly"
-  }, Ut = 0.6, wr = I({
+  }, Sr = {
+    class: "text-center"
+  }, $r = {
+    class: "flex justify-between md:justify-evenly"
+  }, Ut = 0.6, Dr = I({
     __name: "SignatureContent",
     setup(t) {
-      const e = gt(() => vt(() => import("../chunks/@component-hook/pdf-canvas-gI5qE1lT.js").then(async (m3) => {
+      const e = ht(() => vt(() => import("../chunks/@component-hook/pdf-canvas-DuZ37e5K.js").then(async (m3) => {
         await m3.__tla;
         return m3;
-      }), __vite__mapDeps([3,2]), import.meta.url)), i = S(""), s = S(false), r = S(1), a = S(false), u = S(false), b = he("fileContainer"), _ = S(1), v = S({
+      }), __vite__mapDeps([3,2]), import.meta.url)), i = D(""), s = D(false), r = D(1), a = D(false), _ = D(false), b = he("fileContainer"), p = D(1), v = D({
         x: 0,
         y: 0,
         width: 0,
         height: 0
-      }), h = S(false), { currentPDF: y } = at(Y()), k = mt(), { t: j } = dt(), { isShowWarnPopup: w, SignPopup: P, goBack: M, goPage: T, toggleWarnPopup: g } = ut(), { handlePointerDown: m, handlePointerMove: $, handlePointerUp: q } = U0(b), { canvasItems: D, loadedState: f, isCompleted: d, canvasRect: B, handleCanvasLoaded: x, handleCanvasReload: H } = Ce(y, true), G = U(() => `${B.value.width * _.value * Ut}px`), rt = U(() => `${B.value.height * _.value * Ut}px`), ot = U(() => D.value ? D.value.at(r.value - 1) : null);
-      let V = false, F = null;
+      }), h = D(false), { currentPDF: y } = nt(Y()), w = mt(), { t: M } = gt(), { isShowWarnPopup: k, SignPopup: P, goBack: j, goPage: T, toggleWarnPopup: g } = ut(), { handlePointerDown: m, handlePointerMove: S, handlePointerUp: H } = Qi(b), { canvasItems: $, loadedState: f, isCompleted: d, canvasRect: B, handleCanvasLoaded: C, handleCanvasReload: R } = Pe(y, true), K = U(() => `${B.value.width * p.value * Ut}px`), rt = U(() => `${B.value.height * p.value * Ut}px`), ot = U(() => $.value ? $.value.at(r.value - 1) : null);
+      let O = false, L = null;
       async function Q() {
         Et(false), It(true), await zt(), window.requestAnimationFrame(async () => {
           try {
-            if (!D.value) return;
-            const { setCurrentPDFCanvas: R, addPDF: z, updatePDF: A } = Y(), tt = D.value.map(async ({ canvasRef: et }) => {
+            if (!$.value) return;
+            const { setCurrentPDFCanvas: q, addPDF: z, updatePDF: A } = Y(), tt = $.value.map(async ({ canvasRef: et }) => {
               if (!et) return "";
-              const bt = await bs(et);
+              const bt = await _2(et);
               return le(bt, {
                 useWebWorker: true
               });
-            }), kt = (await Promise.all(tt)).map((et) => et && le.getDataUrlFromFile(et)), Pt = await Promise.all(kt);
+            }), wt = (await Promise.all(tt)).map((et) => et && le.getDataUrlFromFile(et)), Pt = await Promise.all(wt);
             if (s.value) {
               s.value = false;
               return;
             }
-            R(Pt);
+            q(Pt);
             const pt = {
               ...y.value,
               PDFBase64: "",
               updateDate: Date.now()
             };
-            pt.isUpdate ? A(pt) : z(pt), W(j("prompt.file_created_success")), T("complete");
+            pt.isUpdate ? A(pt) : z(pt), W(M("prompt.file_created_success")), T("complete");
           } catch {
             W({
-              message: j("prompt.operation_timed_out"),
+              message: M("prompt.operation_timed_out"),
               type: "error"
             });
           } finally {
@@ -27832,84 +27883,84 @@ let __tla = Promise.all([
           }
         });
       }
-      function _t2(R, z) {
+      function _t2(q, z) {
         const A = ot.value;
         if (!A) return;
-        (z === "text" ? A.addText : A.addImage)(R);
+        (z === "text" ? A.addText : A.addImage)(q);
       }
-      function De(R) {
+      function Me(q) {
         var _a;
-        (_a = ot.value) == null ? void 0 : _a.clearActive(), r.value = R, se({
+        (_a = ot.value) == null ? void 0 : _a.clearActive(), r.value = q, se({
           top: 0,
           left: 0
         });
       }
-      function se(R) {
-        b.value && b.value.scrollTo(R);
+      function se(q) {
+        b.value && b.value.scrollTo(q);
       }
-      function Et(R) {
+      function Et(q) {
         var _a;
-        (_a = D.value) == null ? void 0 : _a.forEach(({ clearActive: z }) => z()), a.value = R;
+        (_a = $.value) == null ? void 0 : _a.forEach(({ clearActive: z }) => z()), a.value = q;
       }
-      function It(R) {
-        u.value = R;
+      function It(q) {
+        _.value = q;
       }
       function je() {
-        V = true, M();
+        O = true, j();
       }
-      function Me() {
+      function Be() {
         s.value = true, It(false);
       }
-      function Be(R) {
+      function Te(q) {
         if (!b.value) return;
-        const { clientX: z, clientY: A } = R, tt = b.value.getBoundingClientRect(), { x: Ct, y: kt, height: Pt, width: pt } = v.value, et = A <= tt.top + kt, bt = A >= tt.bottom - (Pt - kt), oe = z <= tt.left + Ct, Te = z >= tt.right - (pt - Ct);
-        let Ot = 0, qt = 0;
-        Zt(), (oe || Te) && (Ot = oe ? -15 : Ft), (et || bt) && (qt = et ? -15 : Ft), !(!Ot && !qt) && (F = window.requestAnimationFrame(() => {
-          re(Ot, qt);
+        const { clientX: z, clientY: A } = q, tt = b.value.getBoundingClientRect(), { x: xt, y: wt, height: Pt, width: pt } = v.value, et = A <= tt.top + wt, bt = A >= tt.bottom - (Pt - wt), oe = z <= tt.left + xt, ze = z >= tt.right - (pt - xt);
+        let Vt = 0, Ht = 0;
+        Zt(), (oe || ze) && (Vt = oe ? -15 : Ft), (et || bt) && (Ht = et ? -15 : Ft), !(!Vt && !Ht) && (L = window.requestAnimationFrame(() => {
+          re(Vt, Ht);
         }));
       }
-      function re(R, z) {
+      function re(q, z) {
         if (!b.value) return;
-        const { scrollTop: A, scrollLeft: tt, scrollHeight: Ct, scrollWidth: kt, clientHeight: Pt, clientWidth: pt } = b.value, et = A + z, bt = tt + R;
-        if (et < 0 || bt < 0 || et + Pt > Ct || bt + pt > kt) {
+        const { scrollTop: A, scrollLeft: tt, scrollHeight: xt, scrollWidth: wt, clientHeight: Pt, clientWidth: pt } = b.value, et = A + z, bt = tt + q;
+        if (et < 0 || bt < 0 || et + Pt > xt || bt + pt > wt) {
           Zt();
           return;
         }
-        F = requestAnimationFrame(() => {
+        L = requestAnimationFrame(() => {
           se({
             top: et,
             left: bt
-          }), re(R, z);
+          }), re(q, z);
         });
       }
       function Zt() {
-        F && (cancelAnimationFrame(F), F = null);
+        L && (cancelAnimationFrame(L), L = null);
       }
       return Kt(() => {
-        V && Y().clearCurrentPDF();
-      }), (R, z) => {
+        O && Y().clearCurrentPDF();
+      }), (q, z) => {
         var _a, _b;
-        return n(), p("div", _r, [
+        return n(), u("div", vr, [
           o("h5", {
-            class: L([
+            class: F([
               "title text-center",
               {
                 "animate-pulse": !l(d)
               }
             ])
           }, [
-            yt(c(R.$t("sign_file")) + " ", 1),
-            l(d) ? Z("", true) : (n(), p("span", pr, "(" + c(R.$t("file_uploading")) + ")", 1))
+            at(c(q.$t("sign_file")) + " ", 1),
+            l(d) ? Z("", true) : (n(), u("span", wr, "(" + c(q.$t("file_uploading")) + ")", 1))
           ], 2),
-          o("div", br, [
-            o("div", fr, [
-              C(ur, {
+          o("div", kr, [
+            o("div", yr, [
+              x(gr, {
                 "current-tool": i.value,
                 "onUpdate:currentTool": z[0] || (z[0] = (A) => i.value = A)
               }, null, 8, [
                 "current-tool"
               ]),
-              C(lr, {
+              x(fr, {
                 "current-tool": i.value,
                 "onUpdate:currentTool": z[1] || (z[1] = (A) => i.value = A),
                 "drag-offset": v.value,
@@ -27919,7 +27970,7 @@ let __tla = Promise.all([
                 "current-tool",
                 "drag-offset"
               ]),
-              C(_2, {
+              x(ws, {
                 "current-tool": i.value,
                 "onUpdate:currentTool": z[3] || (z[3] = (A) => i.value = A),
                 "drag-offset": v.value,
@@ -27929,7 +27980,7 @@ let __tla = Promise.all([
                 "current-tool",
                 "drag-offset"
               ]),
-              C(x2, {
+              x(Bs, {
                 "current-tool": i.value,
                 "onUpdate:currentTool": z[5] || (z[5] = (A) => i.value = A),
                 "drag-offset": v.value,
@@ -27939,19 +27990,19 @@ let __tla = Promise.all([
                 "current-tool",
                 "drag-offset"
               ]),
-              C(q2, {
+              x(Gs, {
                 "current-tool": i.value,
                 "onUpdate:currentTool": z[7] || (z[7] = (A) => i.value = A),
-                onUsePage: De
+                onUsePage: Me
               }, null, 8, [
                 "current-tool"
               ])
             ]),
-            o("div", mr, [
+            o("div", Cr, [
               o("div", {
                 ref: "fileContainer",
                 class: "relative w-full h-full overflow-auto touch-pan-x touch-pan-y pt-3 px-2 pb-11 md:pt-6 md:px-8",
-                onDragover: X(Be, [
+                onDragover: X(Te, [
                   "stop",
                   "prevent"
                 ]),
@@ -27962,36 +28013,36 @@ let __tla = Promise.all([
               }, [
                 o("div", {
                   style: fe({
-                    width: G.value,
+                    width: K.value,
                     height: rt.value
                   })
                 }, [
-                  (n(true), p(J, null, nt(l(y).pages, (A) => (n(), p(J, {
+                  (n(true), u(J, null, lt(l(y).pages, (A) => (n(), u(J, {
                     key: A
                   }, [
                     l(f)[A - 1] ? st((n(), E(l(e), {
                       key: 0,
                       ref_for: true,
                       ref_key: "signatureCanvasItems",
-                      ref: D,
+                      ref: $,
                       class: "origin-top-left absolute",
                       file: l(y),
-                      "file-zoom": _.value,
+                      "file-zoom": p.value,
                       "file-scale": 6.8,
                       page: A,
                       "canvas-scale": Ut,
-                      password: l(k).filePassword,
+                      password: l(w).filePassword,
                       "is-drop": "",
                       "manual-reload": "",
                       "close-svg-options": {
                         src: ""
                       },
                       "on-destroy": l(Kt),
-                      onLoaded: (tt) => l(x)(A),
-                      onReload: l(H),
+                      onLoaded: (tt) => l(C)(A),
+                      onReload: l(R),
                       onPointerDown: l(m),
-                      onPointerMove: l($),
-                      onPointerUp: l(q),
+                      onPointerMove: l(S),
+                      onPointerUp: l(H),
                       onSelectionCreated: z[8] || (z[8] = (tt) => h.value = true),
                       onSelectionCleared: z[9] || (z[9] = (tt) => h.value = false)
                     }, null, 8, [
@@ -28007,20 +28058,20 @@ let __tla = Promise.all([
                       "onPointerUp"
                     ])), [
                       [
-                        ct,
+                        dt,
                         r.value === A
                       ]
                     ]) : Z("", true)
                   ], 64))), 128))
                 ], 4),
-                l(f)[r.value] ? Z("", true) : (n(), E(D2, {
+                l(f)[r.value] ? Z("", true) : (n(), E(Ls, {
                   key: 0,
                   class: "absolute"
                 }))
               ], 544),
-              C(Y2, {
-                "file-zoom": _.value,
-                "onUpdate:fileZoom": z[10] || (z[10] = (A) => _.value = A),
+              x(sr, {
+                "file-zoom": p.value,
+                "onUpdate:fileZoom": z[10] || (z[10] = (A) => p.value = A),
                 "is-activated-fabric": h.value,
                 onCopyFabric: (_a = ot.value) == null ? void 0 : _a.copyActiveFabric,
                 onDeleteFabric: (_b = ot.value) == null ? void 0 : _b.deleteActiveFabric
@@ -28032,7 +28083,7 @@ let __tla = Promise.all([
               ])
             ])
           ]),
-          C(xe, {
+          x(xe, {
             class: "pb-2.5",
             "is-prev-disabled": !l(d),
             "is-next-disabled": !l(d),
@@ -28042,21 +28093,21 @@ let __tla = Promise.all([
             "is-prev-disabled",
             "is-next-disabled"
           ]),
-          l(w) ? (n(), E(l(P), {
+          l(k) ? (n(), E(l(P), {
             key: 0,
-            title: R.$t("warn")
+            title: q.$t("warn")
           }, {
-            default: K(() => [
-              o("p", hr, c(R.$t("prompt.sure_discard_edited_content")), 1),
-              o("div", gr, [
+            default: G(() => [
+              o("p", xr, c(q.$t("prompt.sure_discard_edited_content")), 1),
+              o("div", Pr, [
                 o("button", {
                   class: "btn btn-base",
                   onClick: z[13] || (z[13] = (A) => l(g)(false))
-                }, c(R.$t("not_yet")), 1),
+                }, c(q.$t("not_yet")), 1),
                 o("button", {
                   class: "btn btn-primary",
                   onClick: je
-                }, c(R.$t("give_up")), 1)
+                }, c(q.$t("give_up")), 1)
               ])
             ]),
             _: 1
@@ -28065,139 +28116,139 @@ let __tla = Promise.all([
           ])) : Z("", true),
           a.value ? (n(), E(l(P), {
             key: 1,
-            title: R.$t("create_file")
+            title: q.$t("create_file")
           }, {
-            default: K(() => [
-              o("p", vr, c(R.$t("prompt.sure_completed_sign")), 1),
-              o("div", kr, [
+            default: G(() => [
+              o("p", Sr, c(q.$t("prompt.sure_completed_sign")), 1),
+              o("div", $r, [
                 o("button", {
                   class: "btn btn-base",
                   onClick: z[14] || (z[14] = (A) => Et(false))
-                }, c(R.$t("wait")), 1),
+                }, c(q.$t("wait")), 1),
                 o("button", {
                   class: "btn btn-primary",
                   onClick: Q
-                }, c(R.$t("confirm")), 1)
+                }, c(q.$t("confirm")), 1)
               ])
             ]),
             _: 1
           }, 8, [
             "title"
           ])) : Z("", true),
-          C(A2, {
-            "is-show-merge-popup": u.value,
-            "cancel-merge-file": Me
+          x(Os, {
+            "is-show-merge-popup": _.value,
+            "cancel-merge-file": Be
           }, null, 8, [
             "is-show-merge-popup"
           ])
         ]);
       };
     }
-  }), yr = N(wr, [
+  }), Mr = N(Dr, [
     [
       "__scopeId",
       "data-v-e85d3743"
     ]
-  ]), xr = {
+  ]), jr = {
     class: "signature layout step"
-  }, Cr = I({
+  }, Br = I({
     __name: "index",
     setup(t) {
-      return (e, i) => (n(), p("div", xr, [
-        C(yr)
+      return (e, i) => (n(), u("div", jr, [
+        x(Mr)
       ]));
     }
-  }), Pr = "data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M27.4481%2010.7981L29.7625%2013.1125C30.0554%2013.4054%2030.0554%2013.8803%2029.7625%2014.1732L16.8025%2027.1333L11.5196%2029.0411L13.4274%2023.7582L26.3875%2010.7981C26.6803%2010.5052%2027.1552%2010.5052%2027.4481%2010.7981Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'/%3e%3c/svg%3e", Sr = {
+  }), Tr = "data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M27.4481%2010.7981L29.7625%2013.1125C30.0554%2013.4054%2030.0554%2013.8803%2029.7625%2014.1732L16.8025%2027.1333L11.5196%2029.0411L13.4274%2023.7582L26.3875%2010.7981C26.6803%2010.5052%2027.1552%2010.5052%2027.4481%2010.7981Z'%20stroke='%23B7EC5D'%20stroke-width='2.5'/%3e%3c/svg%3e", zr = {
     class: "upload-content content"
-  }, $r = {
-    class: "title text-center"
-  }, Dr = {
-    class: "upload-content-box h-[calc(100%-128px)] w-full my-5"
-  }, jr = {
-    class: "flex flex-col gap-2 items-center w-full h-fit"
-  }, Mr = {
-    class: "relative h-fit"
-  }, Br = {
-    class: "w-full text-ellipsis overflow-hidden whitespace-nowrap text-center"
-  }, Tr = {
-    class: ""
-  }, zr = {
-    class: "w-full flex flex-col gap-4 items-center"
   }, Fr = {
-    class: "w-[90%] relative max-w-[400px]"
+    class: "title text-center"
+  }, Lr = {
+    class: "upload-content-box h-[calc(100%-128px)] w-full my-5"
   }, Ar = {
+    class: "flex flex-col gap-2 items-center w-full h-fit"
+  }, Er = {
+    class: "relative h-fit"
+  }, Ir = {
+    class: "w-full text-ellipsis overflow-hidden whitespace-nowrap text-center"
+  }, Zr = {
+    class: ""
+  }, Vr = {
+    class: "w-full flex flex-col gap-4 items-center"
+  }, Hr = {
+    class: "w-[90%] relative max-w-[400px]"
+  }, Or = {
     key: 0,
     class: "border-dashed border-secondary border rounded-[20px] my-5 p-3 h-[calc(100%-128px)] w-full"
-  }, Lr = {
-    class: "btn btn-primary"
-  }, Er = {
-    class: "text-center"
-  }, Ir = {
-    class: "mb-3 hidden md:block"
-  }, Zr = {
-    class: "px-4 text-center"
-  }, Or = {
-    class: "text-center"
   }, qr = {
+    class: "btn btn-primary"
+  }, Rr = {
+    class: "text-center"
+  }, Ur = {
+    class: "mb-3 hidden md:block"
+  }, Nr = {
+    class: "px-4 text-center"
+  }, Wr = {
+    class: "text-center"
+  }, Gr = {
     class: "flex justify-between md:justify-around"
-  }, Vr = I({
+  }, Kr = I({
     __name: "UploadContent",
     setup(t) {
-      const e = S(""), i = S(""), s = S(true), r = S(false), a = S(1), { t: u, locale: b } = dt(), { createCanvas: _, deleteCanvas: v, loadFile: h } = ti({
+      const e = D(""), i = D(""), s = D(true), r = D(false), a = D(1), { t: _, locale: b } = gt(), { createCanvas: p, deleteCanvas: v, loadFile: h } = e0({
         id: "canvas"
-      }), { isShowWarnPopup: y, SignPopup: k, goBack: j, goPage: w, toggleWarnPopup: P } = ut(), { toggleLoading: M, updateFilePassword: T } = mt(), g = gt(() => vt(() => import("../chunks/UploadPassword-C5jnQgS0.js"), __vite__mapDeps([4,1,2,3]), import.meta.url)), m = /.pdf|.png|.jpg|.jpeg/;
-      let $ = null;
-      const q = U(() => !e.value);
-      async function D(V) {
-        const F = V.target, { files: Q } = F;
-        await d(Q), F.value = "";
+      }), { isShowWarnPopup: y, SignPopup: w, goBack: M, goPage: k, toggleWarnPopup: P } = ut(), { toggleLoading: j, updateFilePassword: T } = mt(), g = ht(() => vt(() => import("../chunks/UploadPassword-8EOCzOrj.js"), __vite__mapDeps([4,1,2,3]), import.meta.url)), m = /.pdf|.png|.jpg|.jpeg/;
+      let S = null;
+      const H = U(() => !e.value);
+      async function $(O) {
+        const L = O.target, { files: Q } = L;
+        await d(Q), L.value = "";
       }
-      function f(V) {
-        const { dataTransfer: F } = V, Q = F == null ? void 0 : F.files;
+      function f(O) {
+        const { dataTransfer: L } = O, Q = L == null ? void 0 : L.files;
         d(Q);
       }
-      function d(V) {
-        const F = Se(V, m);
-        if (F) return $ = F, B(F);
+      function d(O) {
+        const L = $e(O, m);
+        if (L) return S = L, B(L);
       }
-      async function B(V) {
+      async function B(O) {
         try {
-          const { setCurrentPDF: F } = Y(), { filePassword: Q } = mt();
-          M({
+          const { setCurrentPDF: L } = Y(), { filePassword: Q } = mt();
+          j({
             isShow: true,
             title: "upload_file",
             content: "file_uploading"
           }), await zt();
-          const _t2 = await h(V, Q);
+          const _t2 = await h(O, Q);
           if (!_t2) throw new Error("File content is empty");
-          F(_t2), a.value = _t2.pages, W(u("prompt.file_upload_success")), e.value = V.name, i.value = V.name.replace(m, "");
-        } catch (F) {
-          if (`${F}`.includes("PasswordException")) {
-            if (r.value = true, `${F}` != "PasswordException: Incorrect Password") return;
+          L(_t2), a.value = _t2.pages, W(_("prompt.file_upload_success")), e.value = O.name, i.value = O.name.replace(m, "");
+        } catch (L) {
+          if (`${L}`.includes("PasswordException")) {
+            if (r.value = true, `${L}` != "PasswordException: Incorrect Password") return;
             W({
-              message: u("prompt.incorrect_password"),
+              message: _("prompt.incorrect_password"),
               type: "error"
             }), T("");
             return;
           }
           W({
-            message: u("prompt.file_upload_failed"),
+            message: _("prompt.file_upload_failed"),
             type: "error"
           });
         } finally {
-          M({
+          j({
             isShow: false
           });
         }
       }
-      function x(V = false) {
-        r.value = false, !(!V || !$) && B($);
+      function C(O = false) {
+        r.value = false, !(!O || !S) && B(S);
       }
-      function H() {
+      function R() {
         e.value = "", Y().clearCurrentPDF(), T("");
       }
-      function G() {
-        H(), j();
+      function K() {
+        R(), M();
       }
       function rt() {
         s.value = false;
@@ -28205,29 +28256,29 @@ let __tla = Promise.all([
       function ot() {
         s.value = true, Y().setCurrentPDFName(i.value);
       }
-      return At(_), Kt(v), (V, F) => (n(), p("div", Sr, [
-        o("h5", $r, c(V.$t("upload_file")), 1),
-        st(o("div", Dr, [
-          o("div", jr, [
-            o("div", Mr, [
-              C(O, {
+      return Lt(p), Kt(v), (O, L) => (n(), u("div", zr, [
+        o("h5", Fr, c(O.$t("upload_file")), 1),
+        st(o("div", Lr, [
+          o("div", Ar, [
+            o("div", Er, [
+              x(V, {
                 name: "close",
                 class: "absolute -right-8 -top-2 cursor-pointer w-7 h-7 md:w-9 md:h-9 md:-right-12 md:-top-4",
-                onClick: H
+                onClick: R
               }),
-              F[6] || (F[6] = o("canvas", {
+              L[6] || (L[6] = o("canvas", {
                 id: "canvas",
                 class: "border-2 border-gray-20 w-full"
               }, null, -1))
             ]),
-            o("h5", Br, c(e.value), 1),
-            o("p", Tr, c(V.$t("page", a.value)), 1)
+            o("h5", Ir, c(e.value), 1),
+            o("p", Zr, c(O.$t("page", a.value)), 1)
           ]),
-          o("div", zr, [
-            o("p", null, c(V.$t("project_name")), 1),
-            o("label", Fr, [
+          o("div", Vr, [
+            o("p", null, c(O.$t("project_name")), 1),
+            o("label", Hr, [
               st(o("input", {
-                "onUpdate:modelValue": F[0] || (F[0] = (Q) => i.value = Q),
+                "onUpdate:modelValue": L[0] || (L[0] = (Q) => i.value = Q),
                 type: "text",
                 class: "input",
                 onFocus: rt,
@@ -28243,9 +28294,9 @@ let __tla = Promise.all([
                 ]
               ]),
               o("img", {
-                src: Pr,
+                src: Tr,
                 alt: "edit icon",
-                class: L([
+                class: F([
                   "absolute right-1 top-[2px] w-9 h-9 transition-all pointer-events-none",
                   s.value ? "opacity-100" : "opacity-0"
                 ])
@@ -28254,19 +28305,19 @@ let __tla = Promise.all([
           ])
         ], 512), [
           [
-            ct,
+            dt,
             e.value
           ]
         ]),
-        e.value ? Z("", true) : (n(), p("div", Ar, [
+        e.value ? Z("", true) : (n(), u("div", Or, [
           o("div", {
             class: "upload-content-box justify-center h-full w-full",
-            onDragover: F[1] || (F[1] = X(() => {
+            onDragover: L[1] || (L[1] = X(() => {
             }, [
               "stop",
               "prevent"
             ])),
-            onDragenter: F[2] || (F[2] = X(() => {
+            onDragenter: L[2] || (L[2] = X(() => {
             }, [
               "stop",
               "prevent"
@@ -28276,49 +28327,49 @@ let __tla = Promise.all([
               "prevent"
             ])
           }, [
-            F[7] || (F[7] = o("img", {
-              src: Pe,
+            L[7] || (L[7] = o("img", {
+              src: Se,
               alt: "photo icon"
             }, null, -1)),
-            o("button", Lr, [
+            o("button", qr, [
               o("input", {
                 type: "file",
                 accept: "application/pdf, .jpg, .png",
                 class: "opacity-0 absolute w-[131px] h-[41px] cursor-pointer",
-                onChange: D
+                onChange: $
               }, null, 32),
-              yt(c(V.$t("select_file")), 1)
+              at(c(O.$t("select_file")), 1)
             ]),
-            o("div", Er, [
-              o("h5", Ir, c(V.$t("prompt.or_drag_file")), 1),
-              o("p", Zr, c(V.$t("prompt.support_filetype", {
-                type: l(b) === "en-US" ? "PDF, JPG, and PNG" : "PDF\u3001JPG\u3001PNG"
+            o("div", Rr, [
+              o("h5", Ur, c(O.$t("prompt.or_drag_file")), 1),
+              o("p", Nr, c(O.$t("prompt.support_filetype", {
+                type: l(b) === "en-US" ? "PDF, JPG, and PNG" : "PDF, JPG, PNG"
               })), 1)
             ])
           ], 32)
         ])),
-        C(xe, {
-          "is-next-disabled": q.value,
-          onNextStep: F[3] || (F[3] = (Q) => l(w)("signature")),
-          onPrevStep: F[4] || (F[4] = (Q) => l(P)(true))
+        x(xe, {
+          "is-next-disabled": H.value,
+          onNextStep: L[3] || (L[3] = (Q) => l(k)("signature")),
+          onPrevStep: L[4] || (L[4] = (Q) => l(P)(true))
         }, null, 8, [
           "is-next-disabled"
         ]),
-        l(y) ? (n(), E(l(k), {
+        l(y) ? (n(), E(l(w), {
           key: 1,
-          title: V.$t("warn")
+          title: O.$t("warn")
         }, {
-          default: K(() => [
-            o("p", Or, c(V.$t("prompt.give_up_edit")), 1),
-            o("div", qr, [
+          default: G(() => [
+            o("p", Wr, c(O.$t("prompt.give_up_edit")), 1),
+            o("div", Gr, [
               o("button", {
                 class: "btn btn-base",
-                onClick: F[5] || (F[5] = (Q) => l(P)(false))
-              }, c(V.$t("not_yet")), 1),
+                onClick: L[5] || (L[5] = (Q) => l(P)(false))
+              }, c(O.$t("not_yet")), 1),
               o("button", {
                 class: "btn btn-primary",
-                onClick: G
-              }, c(V.$t("give_up")), 1)
+                onClick: K
+              }, c(O.$t("give_up")), 1)
             ])
           ]),
           _: 1
@@ -28327,25 +28378,25 @@ let __tla = Promise.all([
         ])) : Z("", true),
         r.value ? (n(), E(l(g), {
           key: 2,
-          onClosePassword: x
+          onClosePassword: C
         })) : Z("", true)
       ]));
     }
-  }), Rr = N(Vr, [
+  }), Yr = N(Kr, [
     [
       "__scopeId",
-      "data-v-989b52be"
+      "data-v-a0593356"
     ]
-  ]), Hr = {
+  ]), Xr = {
     class: "upload layout step"
-  }, Ur = I({
+  }, Jr = I({
     __name: "index",
     setup(t) {
-      return (e, i) => (n(), p("div", Hr, [
-        C(Rr)
+      return (e, i) => (n(), u("div", Xr, [
+        x(Yr)
       ]));
     }
-  }), Nr = [
+  }), Qr = [
     {
       path: "/:catchAll(.*)",
       redirect: "/"
@@ -28353,53 +28404,53 @@ let __tla = Promise.all([
     {
       path: "/",
       name: "home",
-      component: Z0
+      component: Wi
     },
     {
       path: "/upload",
       name: "upload",
-      component: Ur
+      component: Jr
     },
     {
       path: "/signature",
       name: "signature",
-      component: Cr
+      component: Br
     },
     {
       path: "/complete",
       name: "complete",
-      component: zs
+      component: B2
     }
-  ], de = Ke({
-    history: Ye(),
-    routes: Nr
-  }), Wr = {
+  ], de = Ye({
+    history: Xe(),
+    routes: Qr
+  }), to = {
     install(t) {
-      t.provide(we, de.currentRoute), t.use(de);
+      t.provide(ye, de.currentRoute), t.use(de);
     }
   };
   if (typeof window < "u") {
     let t = function() {
       var e = document.body, i = document.getElementById("__svg__icons__dom__");
-      i || (i = document.createElementNS("http://www.w3.org/2000/svg", "svg"), i.style.position = "absolute", i.style.width = "0", i.style.height = "0", i.id = "__svg__icons__dom__", i.setAttribute("xmlns", "http://www.w3.org/2000/svg"), i.setAttribute("xmlns:link", "http://www.w3.org/1999/xlink")), i.innerHTML = '<symbol fill="none"  viewBox="0 0 136 136" id="icon-ic_add_dark"><circle cx="68" cy="68" r="67" fill="#4D4D4D" stroke="currentColor" stroke-width="2" /><path d="M62.2 46.66c.646-5.006-.037-9.855.864-14.814.497-1.49 4.964-.993 4.964-.993s3.445.496 4.467.496c1.17 0 .439 10.153.496 11.417.233 5.125.39 6.736.39 11.878 0 3.538-.201 5.99 0 7.895 0 1.073 5.1 1.021 6.063 1.073 3.4.184 6.209.33 9.805.33s6.431-.182 10.545 0c2.326.103 3.793-.361 5.057 0 .489.14.403 4.634.403 4.634s-.354 3.57-.403 5.388c-.016.561.013 1.003-.702 1.003-6.926 0-13.878.178-20.802-.011-1.194-.033-9.966-1.58-9.966-.279 0 1.961.21 4.05-.1 5.98-.25 1.542-.101 3.173-.101 4.733 0 1.868.38 3.182.1 5.025.1 1.895-.49 4.578-.1 8.438.2 1.986.473 5.117-.39 5.98-.54.541-3.488 0-4.198 0-.812 0-1.582.201-2.405.201-.482 0-3.522.313-3.123-.646.255-.611.1-1.54.1-2.205 0-2.061-.236-4.263 0-6.308.404-3.481-.436-6.999-.1-10.485.357-3.702.1-6.989.1-10.713 0-.825-.855-1.359-1.759-1.359h-3.603c-5.612 0-8.119.045-13.731.045-2.294 0-.909-.044-3.203-.044h-7.585c-.649 0-1.968-.17-2.138-.468-.297-.52-.435-1.088-.344-1.793.2-1.545.167-3.668.2-5.512.01-.485-.135-2.606.502-2.606h6.054c2.156 0 5.088-.2 10.166-.2 4.587 0 9.286.304 13.831-.201.873-.097.401-4.564.401-5.234 0-3.496-.202-7.179.245-10.646Z" stroke="#B7EC5D" stroke-width="2.5" stroke-linecap="round" /></symbol><symbol fill="none"  viewBox="0 0 156 156" id="icon-ic_add_tint"><g filter="url(#icon-ic_add_tint_a)"><circle cx="78" cy="74" r="67" fill="#B7EC5D" stroke="currentColor" stroke-width="2" /><path d="M72.2 52.66c.646-5.006-.037-9.855.864-14.814.497-1.49 4.964-.993 4.964-.993s3.445.496 4.467.496c1.17 0 .439 10.153.496 11.417.233 5.125.39 6.736.39 11.878 0 3.538-.201 5.99 0 7.895 0 1.073 5.1 1.021 6.063 1.073 3.4.184 6.209.33 9.805.33s6.431-.182 10.545 0c2.326.103 3.793-.361 5.057 0 .489.14.403 4.634.403 4.634s-.354 3.57-.403 5.388c-.016.561.013 1.003-.702 1.003-6.926 0-13.878.178-20.802-.011-1.194-.033-9.966-1.58-9.966-.279 0 1.961.21 4.05-.1 5.98-.25 1.542-.101 3.173-.101 4.733 0 1.868.38 3.182.1 5.025.1 1.895-.49 4.578-.1 8.438.2 1.986.473 5.117-.39 5.98-.54.541-3.488 0-4.198 0-.812 0-1.582.201-2.405.201-.482 0-3.522.313-3.123-.646.255-.611.1-1.54.1-2.205 0-2.061-.237-4.263 0-6.308.404-3.481-.436-6.999-.1-10.485.357-3.702.1-6.989.1-10.713 0-.825-.855-1.359-1.759-1.359h-3.603c-5.612 0-8.119.045-13.731.045-2.294 0-.909-.044-3.203-.044h-7.585c-.649 0-1.968-.17-2.138-.468-.297-.52-.435-1.088-.344-1.793.2-1.545.167-3.668.2-5.512.01-.485-.135-2.606.502-2.606h6.054c2.156 0 5.088-.2 10.166-.2 4.587 0 9.286.304 13.831-.201.873-.097.401-4.564.401-5.234 0-3.496-.202-7.179.245-10.646Z" stroke="#4D4D4D" stroke-width="2.5" stroke-linecap="round" /></g><defs><filter id="icon-ic_add_tint_a" x="0" y="0" width="156" height="156" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix><feOffset dy="4"></feOffset><feGaussianBlur stdDeviation="5"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_73_7059"></feBlend><feBlend in="SourceGraphic" in2="effect1_dropShadow_73_7059" result="shape"></feBlend></filter></defs></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_archive"><g clip-path="url(#icon-ic_archive_a)" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M31.667 7.62H8.333a3.333 3.333 0 0 0 0 6.666h23.334a3.333 3.333 0 0 0 0-6.667Z" /><path d="M8.333 14.285v16.667a3.333 3.333 0 0 0 3.333 3.333h16.667a3.333 3.333 0 0 0 3.333-3.333V14.285M16.667 20.953h6.667" /></g><defs><clipPath id="icon-ic_archive_a"><path fill="#fff" d="M0 0h40v40H0z" /></clipPath></defs></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_archive_h"><g clip-path="url(#icon-ic_archive_h_a)" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M31.667 7.62H8.333a3.333 3.333 0 0 0 0 6.666h23.334a3.333 3.333 0 0 0 0-6.667Z" /><path d="M8.333 14.285v16.667a3.333 3.333 0 0 0 3.333 3.333h16.667a3.333 3.333 0 0 0 3.333-3.333V14.285M16.667 20.953h6.667" /></g><defs><clipPath id="icon-ic_archive_h_a"><path fill="#fff" d="M0 0h40v40H0z" /></clipPath></defs></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_card"><g clip-path="url(#icon-ic_card_a)" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6.667" y="6.666" width="10.476" height="10.476" rx="3" /><rect x="21.904" y="6.666" width="10.476" height="10.476" rx="3" /><rect x="21.904" y="21.904" width="10.476" height="10.476" rx="3" /><rect x="6.667" y="21.904" width="10.476" height="10.476" rx="3" /></g><defs><clipPath id="icon-ic_card_a"><path fill="#fff" d="M0 0h40v40H0z" /></clipPath></defs></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_close"><circle cx="20" cy="20" r="12.75" stroke="currentColor" stroke-width="2.5" /><path d="m16 24 7.778-7.778M24 24l-7.778-7.778" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_close_s"><circle cx="20" cy="20" r="10.75" stroke="currentColor" stroke-width="2.5" /><path d="m16 24 7.778-7.778M24 24l-7.778-7.778" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_close_s_white"><circle cx="20" cy="20" r="10.75" stroke="currentColor" stroke-width="2.5" /><path d="m16 24 7.778-7.778M24 24l-7.778-7.778" stroke="#fff" stroke-width="2.5" stroke-linecap="round" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_color_black"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.81 16.62c-.744.655-1.73 1.74-2.732 3.25-1.318 1.988-2.517 4.497-3.17 7.279a3.5 3.5 0 1 1-6.815-1.6c.868-3.695 2.438-6.963 4.15-9.547 1.676-2.526 3.643-4.628 5.474-5.804 2.095-1.345 5.039-1.88 7.456.128 2.048 1.7 2.665 4.447 2.665 6.944 0 1.056-.145 2.044-.286 2.85-.069.393-.128.704-.181.982-.034.176-.065.338-.094.5a25.154 25.154 0 0 0 1.714-2.268c1.176-1.73 2.263-3.646 3.067-5.16a70.98 70.98 0 0 0 1.255-2.48l.014-.03.002-.005a3.5 3.5 0 0 1 6.34 2.967l-3.17-1.483 3.17 1.484-.01.02-.02.045-.078.162a77.906 77.906 0 0 1-1.321 2.603c-.865 1.629-2.086 3.791-3.461 5.813-1.31 1.925-3.01 4.106-4.902 5.413-.954.66-2.345 1.37-4.013 1.314-1.873-.064-3.346-1.058-4.334-2.384-1.707-2.293-1.513-4.831-1.277-6.433.073-.498.188-1.107.284-1.617.047-.248.089-.472.12-.65.118-.674.181-1.193.181-1.643 0-.244-.01-.46-.027-.65Zm4.865 6.438Z" fill="#000" /></symbol><symbol fill="none"  viewBox="0 0 42 40" id="icon-ic_color_black_h"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.21 17.169c-.652.53-1.515 1.407-2.392 2.63-1.153 1.61-2.202 3.641-2.774 5.893-.386 1.523-2.035 2.468-3.681 2.11-1.647-.357-2.668-1.882-2.281-3.405.759-2.991 2.132-5.637 3.631-7.728 1.466-2.046 3.187-3.747 4.79-4.7 1.832-1.088 4.409-1.521 6.524.104 1.791 1.377 2.33 3.6 2.33 5.622 0 .855-.126 1.654-.25 2.307-.06.318-.111.57-.158.795l-.082.404a20.61 20.61 0 0 0 1.5-1.835c1.03-1.4 1.98-2.952 2.684-4.178a56.221 56.221 0 0 0 1.098-2.007l.012-.024.002-.004c.717-1.417 2.54-2.029 4.072-1.365 1.532.663 2.192 2.35 1.476 3.767l-2.774-1.201c2.774 1.2 2.773 1.2 2.773 1.201l-.008.016-.018.037a27.038 27.038 0 0 1-.319.606c-.215.403-.524.969-.905 1.633-.757 1.318-1.825 3.068-3.029 4.705-1.145 1.558-2.633 3.324-4.289 4.382-.835.534-2.052 1.11-3.511 1.063-1.639-.051-2.928-.855-3.792-1.93-1.493-1.855-1.324-3.91-1.118-5.207.065-.403.165-.896.249-1.309.04-.2.078-.382.105-.525.103-.547.158-.967.158-1.331 0-.198-.009-.373-.024-.526Zm4.256 5.21.013-.004a.079.079 0 0 1-.013.005Z" fill="#000" /><path d="M37.011 17.628a64.673 64.673 0 0 1-.95 1.713c-.786 1.368-1.916 3.225-3.213 4.988-1.184 1.611-2.942 3.76-5.09 5.133-1.092.698-2.915 1.607-5.222 1.534-2.646-.084-4.71-1.403-6.034-3.047a8.78 8.78 0 0 1-.703-1.01c-1.033 2.933-4.195 4.42-7.073 3.795-3.1-.674-5.406-3.71-4.552-7.076.865-3.408 2.42-6.39 4.1-8.737 1.62-2.259 3.627-4.3 5.696-5.53 2.463-1.464 6.455-2.332 9.885.304a8.332 8.332 0 0 1 2.3 2.73l.074-.136.536.287m10.246 5.052-10.524-5.83s0 0 0 0 0 0 0 0h0l-.008.016-.001.001-.046.09-.203.384.536.287m10.246 5.052c.114-.213.204-.384.267-.507l-.267.507Zm-10.246-5.052c.463.915 1.096 1.46 1.758 1.774 0 0 0 0 0 0-.811-.459-1.345-1.17-1.663-1.723m-.095-.051.095.05m-.095-.05s0 0 0 0m.095.05 1.884 1.007-1.884-1.006m0 0s0 0 0 0m0 0a5.19 5.19 0 0 1-.324-.668 2.338 2.338 0 0 1-.05-.138l-.009-.004a7.2 7.2 0 0 1-.015.031 5.996 5.996 0 0 0 .303.728m.095.05-.095-.05m10.618 4.341-.006.012-.003.006-.019.037-.001.003-.076.146.105-.204Zm0 0 .002-.003-.002.003Zm.003-.005.002-.003c1.565-3.095.013-6.587-2.961-7.874-2.868-1.242-6.447-.183-7.939 2.76h0l10.898 5.117Zm-10.865-5.18c1.4-.434 2.47-.231 3.272.218-1.568-.737-3.292-.18-3.296-.172l-.002.004.026-.05Zm-.036.085-.006-.003.003-.007.003.01Z" stroke="currentColor" stroke-opacity=".3" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /><path d="M36.495 16.459v-.002c1.283-2.535.028-5.425-2.465-6.505-2.423-1.049-5.417-.139-6.65 2.296l-.001.001m0 0s0 0 0 0h0Zm-9.38 4.073.002.003" fill="#000" stroke="#B7EC5D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><path d="M28.355 12.903c.098.19.287.475.596.65m-.596-.65.596.65m-.596-.65a1.589 1.589 0 0 1-.074-.165l-.014-.007m.088.172-.088-.172m.684.822c-.237-.113-.464-.314-.62-.663a1.92 1.92 0 0 1-.064-.159m.684.822-.684-.822m-2.91 4.908c-.009-2.145-.59-4.72-2.721-6.359-2.553-1.962-5.601-1.384-7.644-.17-1.758 1.045-3.575 2.86-5.092 4.976-1.56 2.177-2.993 4.935-3.787 8.065-.543 2.137.907 4.166 3.038 4.628 2.11.46 4.328-.736 4.863-2.841.536-2.113 1.525-4.032 2.617-5.556.07-.098.14-.195.211-.288-.04.209-.078.418-.108.61-.217 1.36-.446 3.789 1.326 5.99 1.017 1.265 2.565 2.24 4.54 2.303 1.741.055 3.16-.631 4.081-1.22 1.82-1.164 3.398-3.057 4.556-4.632 1.234-1.68 2.323-3.466 3.09-4.8.34-.593.625-1.11.837-1.505l.014.006.416-.822.008-.016h0v-.002c1-1.976.043-4.265-1.97-5.136-1.977-.856-4.386-.095-5.36 1.831h-.001v.001h0l-.001.002h0l-.011.021-.052.101c-.047.091-.12.23-.214.406l.882.471-.882-.471c-.19.354-.466.86-.81 1.458l.743.426-.742-.426a49.689 49.689 0 0 1-1.826 2.949Zm2.913-4.935.01.033-.013-.007-.004-.012.007-.014Zm1.102.047c-.52-.244-1.092-.06-1.098-.057l.008-.015c.466-.144.823-.077 1.09.072Z" fill="#000" stroke="#000" stroke-width="2" stroke-linecap="round" /><path fill-rule="evenodd" clip-rule="evenodd" d="M18.21 17.169c-.652.53-1.515 1.407-2.392 2.63-1.153 1.61-2.202 3.641-2.774 5.893-.386 1.523-2.035 2.468-3.681 2.11-1.647-.357-2.668-1.882-2.281-3.405.759-2.991 2.132-5.637 3.631-7.728 1.466-2.046 3.187-3.747 4.79-4.7 1.832-1.088 4.409-1.521 6.524.104 1.791 1.377 2.33 3.6 2.33 5.622 0 .855-.126 1.654-.25 2.307-.06.318-.111.57-.158.795l-.082.404a20.61 20.61 0 0 0 1.5-1.835c1.03-1.4 1.98-2.952 2.684-4.178a56.221 56.221 0 0 0 1.098-2.007l.012-.024.002-.004c.717-1.417 2.54-2.029 4.072-1.365 1.532.663 2.192 2.35 1.476 3.767l-2.774-1.201c2.774 1.2 2.773 1.2 2.773 1.201l-.008.016-.018.037a27.038 27.038 0 0 1-.319.606c-.215.403-.524.969-.905 1.633-.757 1.318-1.825 3.068-3.029 4.705-1.145 1.558-2.633 3.324-4.289 4.382-.835.534-2.052 1.11-3.511 1.063-1.639-.051-2.928-.855-3.792-1.93-1.493-1.855-1.324-3.91-1.118-5.207.065-.403.165-.896.249-1.309.04-.2.078-.382.105-.525.103-.547.158-.967.158-1.331 0-.198-.009-.373-.024-.526Zm4.256 5.21.013-.004a.079.079 0 0 1-.013.005Z" fill="#fff" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_color_blue"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.81 16.62c-.744.655-1.73 1.74-2.732 3.25-1.318 1.988-2.517 4.497-3.17 7.279a3.5 3.5 0 1 1-6.815-1.6c.868-3.695 2.438-6.963 4.15-9.547 1.676-2.526 3.643-4.628 5.474-5.804 2.095-1.345 5.039-1.88 7.456.128 2.048 1.7 2.665 4.447 2.665 6.944 0 1.056-.145 2.044-.286 2.85-.069.393-.128.704-.181.982-.034.176-.065.338-.094.5a25.154 25.154 0 0 0 1.714-2.268c1.176-1.73 2.263-3.646 3.067-5.16a70.98 70.98 0 0 0 1.255-2.48l.014-.03.002-.005a3.5 3.5 0 0 1 6.34 2.967l-3.17-1.483 3.17 1.484-.01.02-.02.045-.078.162a77.906 77.906 0 0 1-1.321 2.603c-.865 1.629-2.086 3.791-3.461 5.813-1.31 1.925-3.01 4.106-4.902 5.413-.954.66-2.345 1.37-4.013 1.314-1.873-.064-3.346-1.058-4.334-2.384-1.707-2.293-1.513-4.831-1.277-6.433.073-.498.188-1.107.284-1.617.047-.248.089-.472.12-.65.118-.674.181-1.193.181-1.643 0-.244-.01-.46-.027-.65Zm4.865 6.438Z" fill="#06F" /></symbol><symbol fill="none"  viewBox="0 0 42 40" id="icon-ic_color_blue_h"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.21 17.169c-.652.53-1.515 1.407-2.392 2.63-1.153 1.61-2.202 3.641-2.774 5.893-.386 1.523-2.035 2.468-3.681 2.11-1.647-.357-2.668-1.882-2.281-3.405.759-2.991 2.132-5.637 3.631-7.728 1.466-2.046 3.187-3.747 4.79-4.7 1.832-1.088 4.409-1.521 6.524.104 1.791 1.377 2.33 3.6 2.33 5.622 0 .855-.126 1.654-.25 2.307-.06.318-.111.57-.158.795l-.082.404a20.61 20.61 0 0 0 1.5-1.835c1.03-1.4 1.98-2.952 2.684-4.178a56.221 56.221 0 0 0 1.098-2.007l.012-.024.002-.004c.717-1.417 2.54-2.029 4.072-1.365 1.532.663 2.192 2.35 1.476 3.767l-2.774-1.201c2.774 1.2 2.773 1.2 2.773 1.201l-.008.016-.018.037a27.038 27.038 0 0 1-.319.606c-.215.403-.524.969-.905 1.633-.757 1.318-1.825 3.068-3.029 4.705-1.145 1.558-2.633 3.324-4.289 4.382-.835.534-2.052 1.11-3.511 1.063-1.639-.051-2.928-.855-3.792-1.93-1.493-1.855-1.324-3.91-1.118-5.207.065-.403.165-.896.249-1.309.04-.2.078-.382.105-.525.103-.547.158-.967.158-1.331 0-.198-.009-.373-.024-.526Zm4.256 5.21.013-.004a.079.079 0 0 1-.013.005Z" fill="#000" /><path d="M37.011 17.628a64.673 64.673 0 0 1-.95 1.713c-.786 1.368-1.916 3.225-3.213 4.988-1.184 1.611-2.942 3.76-5.09 5.133-1.092.698-2.915 1.607-5.222 1.534-2.646-.084-4.71-1.403-6.034-3.047a8.78 8.78 0 0 1-.703-1.01c-1.033 2.933-4.195 4.42-7.073 3.795-3.1-.674-5.406-3.71-4.552-7.076.865-3.408 2.42-6.39 4.1-8.737 1.62-2.259 3.627-4.3 5.696-5.53 2.463-1.464 6.455-2.332 9.885.304a8.332 8.332 0 0 1 2.3 2.73l.074-.136.536.287m10.246 5.052-10.524-5.83s0 0 0 0 0 0 0 0h0l-.008.016-.001.001-.046.09-.203.384.536.287m10.246 5.052c.114-.213.204-.384.267-.507l-.267.507Zm-10.246-5.052c.463.915 1.096 1.46 1.758 1.774 0 0 0 0 0 0-.811-.459-1.345-1.17-1.663-1.723m-.095-.051.095.05m-.095-.05s0 0 0 0m.095.05 1.884 1.007-1.884-1.006m0 0s0 0 0 0m0 0a5.19 5.19 0 0 1-.324-.668 2.338 2.338 0 0 1-.05-.138l-.009-.004a7.2 7.2 0 0 1-.015.031 5.996 5.996 0 0 0 .303.728m.095.05-.095-.05m10.618 4.341-.006.012-.003.006-.019.037-.001.003-.076.146.105-.204Zm0 0 .002-.003-.002.003Zm.003-.005.002-.003c1.565-3.095.013-6.587-2.961-7.874-2.868-1.242-6.447-.183-7.939 2.76h0l10.898 5.117Zm-10.865-5.18c1.4-.434 2.47-.231 3.272.218-1.568-.737-3.292-.18-3.296-.172l-.002.004.026-.05Zm-.036.085-.006-.003.003-.007.003.01Z" stroke="currentColor" stroke-opacity=".3" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /><path d="M36.495 16.459v-.002c1.283-2.535.028-5.425-2.465-6.505-2.423-1.049-5.417-.139-6.65 2.296l-.001.001m0 0s0 0 0 0h0Zm-9.38 4.073.002.003" fill="#000" stroke="#B7EC5D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><path d="m28.257 13.373-.264-.141.214-.406.01.005-.01-.005.052-.1s0 0 0 0l.01-.022h.001v-.002h.001c.975-1.927 3.384-2.688 5.361-1.832 2.013.871 2.97 3.16 1.97 5.136v.002h0l-.008.016-.416.822-.014-.006c-.212.395-.497.912-.837 1.505l-.867-.498.867.498c-.767 1.334-1.856 3.12-3.09 4.8-1.158 1.575-2.736 3.468-4.556 4.632-.92.589-2.34 1.275-4.082 1.22-1.974-.062-3.522-1.038-4.539-2.302-1.772-2.202-1.543-4.63-1.326-5.992.03-.191.068-.4.108-.61-.07.095-.14.19-.211.29-1.092 1.523-2.081 3.442-2.617 5.555-.535 2.105-2.752 3.3-4.863 2.841-2.131-.462-3.581-2.491-3.038-4.628.794-3.13 2.228-5.888 3.787-8.065 1.517-2.117 3.334-3.931 5.092-4.976 2.043-1.214 5.09-1.792 7.644.17 2.131 1.638 2.712 4.214 2.722 6.359a49.689 49.689 0 0 0 1.826-2.949l.867.498-.867-.498c.343-.597.62-1.104.809-1.458l.264.14Zm0 0c.012.02.026.038.041.058a1.362 1.362 0 0 1-.122-.405 1.59 1.59 0 0 0-.012.143.619.619 0 0 0 .093.204Zm-.049-.515a1.58 1.58 0 0 0-.007.022l.007-.022Zm.019-.055-.007.017.004-.01c0-.003.002-.005.003-.007Zm.01-.028-.005.015.004-.012.001-.003Zm1.34-.532c.055.044.105.094.151.147a2.935 2.935 0 0 0-.112.114 1.603 1.603 0 0 0-.61-.249c.18-.034.383-.047.572-.012Zm-1.132.214a.26.26 0 0 1 .043-.03c-.035.03-.064.057-.082.075l.039-.045Zm-.094.112a.488.488 0 0 1-.008.011l.008-.01Zm-.028.042a.27.27 0 0 1 .004-.007l-.006.01.002-.003Zm-.014.022.002-.003-.003.005.001-.002Zm7.194 3.567s0 0 0 0l-.875-.454.875.454Z" fill="#000" stroke="#06F" stroke-width="2" stroke-linecap="round" /><path fill-rule="evenodd" clip-rule="evenodd" d="M18.21 17.169c-.652.53-1.515 1.407-2.392 2.63-1.153 1.61-2.202 3.641-2.774 5.893-.386 1.523-2.035 2.468-3.681 2.11-1.647-.357-2.668-1.882-2.281-3.405.759-2.991 2.132-5.637 3.631-7.728 1.466-2.046 3.187-3.747 4.79-4.7 1.832-1.088 4.409-1.521 6.524.104 1.791 1.377 2.33 3.6 2.33 5.622 0 .855-.126 1.654-.25 2.307-.06.318-.111.57-.158.795l-.082.404a20.61 20.61 0 0 0 1.5-1.835c1.03-1.4 1.98-2.952 2.684-4.178a56.221 56.221 0 0 0 1.098-2.007l.012-.024.002-.004c.717-1.417 2.54-2.029 4.072-1.365 1.532.663 2.192 2.35 1.476 3.767l-2.774-1.201c2.774 1.2 2.773 1.2 2.773 1.201l-.008.016-.018.037a27.038 27.038 0 0 1-.319.606c-.215.403-.524.969-.905 1.633-.757 1.318-1.825 3.068-3.029 4.705-1.145 1.558-2.633 3.324-4.289 4.382-.835.534-2.052 1.11-3.511 1.063-1.639-.051-2.928-.855-3.792-1.93-1.493-1.855-1.324-3.91-1.118-5.207.065-.403.165-.896.249-1.309.04-.2.078-.382.105-.525.103-.547.158-.967.158-1.331 0-.198-.009-.373-.024-.526Zm4.256 5.21.013-.004a.079.079 0 0 1-.013.005Z" fill="#fff" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_color_red"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.811 16.62c-.745.655-1.731 1.74-2.733 3.251-1.318 1.988-2.517 4.498-3.17 7.28a3.5 3.5 0 1 1-6.815-1.601c.868-3.695 2.438-6.963 4.15-9.547 1.676-2.527 3.643-4.629 5.475-5.805 2.094-1.345 5.039-1.88 7.456.128 2.048 1.7 2.665 4.447 2.665 6.944 0 1.057-.145 2.045-.286 2.851-.069.393-.128.705-.181.982-.034.176-.065.338-.094.5a25.143 25.143 0 0 0 1.714-2.268c1.176-1.73 2.263-3.647 3.067-5.161a71.448 71.448 0 0 0 1.255-2.48l.014-.03.003-.005a3.5 3.5 0 0 1 6.34 2.968l-3.17-1.484 3.17 1.485-.01.019-.021.045a37.872 37.872 0 0 1-.364.75 78.372 78.372 0 0 1-1.035 2.017c-.865 1.628-2.085 3.79-3.461 5.813-1.309 1.924-3.01 4.106-4.902 5.413-.954.66-2.345 1.37-4.014 1.314-1.872-.064-3.345-1.058-4.333-2.384-1.707-2.293-1.513-4.832-1.277-6.433.073-.499.188-1.108.284-1.618.046-.248.089-.472.12-.65.118-.675.18-1.194.18-1.644 0-.244-.01-.46-.027-.65Zm4.865 6.439.015-.006a.082.082 0 0 1-.015.006Z" fill="#F93819" /></symbol><symbol fill="none"  viewBox="0 0 42 40" id="icon-ic_color_red_h"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.21 18.169c-.652.53-1.515 1.407-2.392 2.63-1.153 1.61-2.202 3.641-2.774 5.893-.386 1.523-2.035 2.468-3.681 2.11-1.647-.357-2.668-1.882-2.281-3.405.759-2.991 2.132-5.637 3.631-7.728 1.466-2.046 3.187-3.747 4.79-4.7 1.832-1.088 4.409-1.521 6.524.104 1.791 1.377 2.33 3.6 2.33 5.622 0 .855-.126 1.654-.25 2.307-.06.318-.111.57-.158.795l-.082.404a20.61 20.61 0 0 0 1.5-1.835c1.03-1.4 1.98-2.952 2.684-4.178a56.221 56.221 0 0 0 1.098-2.007l.012-.024.002-.004c.717-1.417 2.54-2.029 4.072-1.365 1.532.663 2.192 2.35 1.476 3.767l-2.774-1.201c2.774 1.2 2.773 1.2 2.773 1.201l-.008.016-.018.037a27.038 27.038 0 0 1-.319.606c-.215.403-.524.969-.905 1.633-.757 1.318-1.825 3.068-3.029 4.705-1.145 1.558-2.633 3.324-4.289 4.382-.835.534-2.052 1.11-3.511 1.063-1.639-.051-2.928-.855-3.792-1.93-1.493-1.855-1.324-3.91-1.118-5.207.065-.403.165-.896.249-1.309.04-.2.078-.382.105-.525.103-.547.158-.967.158-1.331 0-.198-.009-.373-.024-.526Zm4.256 5.21.013-.004a.079.079 0 0 1-.013.005Z" fill="#000" /><path d="M37.011 18.628a64.673 64.673 0 0 1-.95 1.713c-.786 1.368-1.916 3.225-3.213 4.988-1.184 1.611-2.942 3.76-5.09 5.133-1.092.698-2.915 1.607-5.222 1.534-2.646-.084-4.71-1.403-6.034-3.047a8.78 8.78 0 0 1-.703-1.01c-1.033 2.933-4.195 4.42-7.073 3.795-3.1-.674-5.406-3.71-4.552-7.076.865-3.408 2.42-6.39 4.1-8.737 1.62-2.259 3.627-4.3 5.696-5.53 2.463-1.464 6.455-2.332 9.885.303a8.332 8.332 0 0 1 2.3 2.731l.074-.136.536.287m10.246 5.052-10.524-5.83s0 0 0 0 0 0 0 0h0l-.008.016-.001.001-.046.09-.203.384.536.287m10.246 5.052c.114-.213.204-.384.267-.507l-.267.507Zm-10.246-5.052c.463.915 1.096 1.46 1.758 1.774 0 0 0 0 0 0-.811-.459-1.345-1.17-1.663-1.723m-.095-.051.095.05m-.095-.05s0 0 0 0m.095.05 1.884 1.007-1.884-1.006m0 0s0 0 0 0m0 0a5.19 5.19 0 0 1-.324-.668 2.338 2.338 0 0 1-.05-.138l-.009-.004a7.2 7.2 0 0 1-.015.031 5.996 5.996 0 0 0 .303.728m.095.05-.095-.05m10.618 4.341-.006.012-.003.006-.019.037-.001.003-.076.146.105-.204Zm0 0 .002-.003-.002.003Zm.003-.005.002-.003c1.565-3.095.013-6.587-2.961-7.874-2.868-1.242-6.447-.183-7.939 2.76h0l10.898 5.117Zm-10.865-5.18c1.4-.434 2.47-.231 3.272.218-1.568-.737-3.292-.18-3.296-.172l-.002.004.026-.05Zm-.036.085-.006-.003.003-.007.003.01Z" stroke="currentColor" stroke-opacity=".3" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /><path d="M36.495 17.459v-.002c1.283-2.535.028-5.425-2.465-6.505-2.423-1.049-5.417-.139-6.65 2.296l-.001.001m0 0s0 0 0 0h0Zm-9.38 4.073.002.003" fill="#000" stroke="#B7EC5D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><path d="M28.355 13.903c.098.19.287.475.596.65m-.596-.65.596.65m-.596-.65a1.589 1.589 0 0 1-.074-.165l-.014-.007m.088.172-.088-.172m.684.822c-.237-.113-.464-.314-.62-.663a1.92 1.92 0 0 1-.064-.159m.684.822-.684-.822m-2.91 4.908c-.009-2.145-.59-4.72-2.721-6.359-2.553-1.962-5.601-1.384-7.644-.17-1.758 1.045-3.575 2.86-5.092 4.976-1.56 2.177-2.993 4.935-3.787 8.065-.543 2.137.907 4.166 3.038 4.628 2.11.46 4.328-.736 4.863-2.841.536-2.113 1.525-4.032 2.617-5.556.07-.098.14-.195.211-.288-.04.209-.078.418-.108.61-.217 1.36-.446 3.789 1.326 5.99 1.017 1.265 2.565 2.24 4.54 2.303 1.741.055 3.16-.631 4.081-1.22 1.82-1.164 3.398-3.057 4.556-4.632 1.234-1.68 2.323-3.466 3.09-4.8.34-.593.625-1.11.837-1.505l.014.006.416-.822.008-.016h0v-.002c1-1.976.043-4.265-1.97-5.136-1.977-.856-4.386-.095-5.36 1.831h-.001v.001h0l-.001.002h0l-.011.021-.052.101c-.047.091-.12.23-.214.406l.882.471-.882-.471c-.19.354-.466.86-.81 1.458l.743.426-.742-.426a49.689 49.689 0 0 1-1.826 2.949Zm2.913-4.935.01.033-.013-.007-.004-.012.007-.014Zm1.102.047c-.52-.244-1.092-.06-1.098-.057l.008-.015c.466-.144.823-.077 1.09.072Z" fill="#000" stroke="#F93819" stroke-width="2" stroke-linecap="round" /><path fill-rule="evenodd" clip-rule="evenodd" d="M18.21 18.169c-.652.53-1.515 1.407-2.392 2.63-1.153 1.61-2.202 3.641-2.774 5.893-.386 1.523-2.035 2.468-3.681 2.11-1.647-.357-2.668-1.882-2.281-3.405.759-2.991 2.132-5.637 3.631-7.728 1.466-2.046 3.187-3.747 4.79-4.7 1.832-1.088 4.409-1.521 6.524.104 1.791 1.377 2.33 3.6 2.33 5.622 0 .855-.126 1.654-.25 2.307-.06.318-.111.57-.158.795l-.082.404a20.61 20.61 0 0 0 1.5-1.835c1.03-1.4 1.98-2.952 2.684-4.178a56.221 56.221 0 0 0 1.098-2.007l.012-.024.002-.004c.717-1.417 2.54-2.029 4.072-1.365 1.532.663 2.192 2.35 1.476 3.767l-2.774-1.201c2.774 1.2 2.773 1.2 2.773 1.201l-.008.016-.018.037a27.038 27.038 0 0 1-.319.606c-.215.403-.524.969-.905 1.633-.757 1.318-1.825 3.068-3.029 4.705-1.145 1.558-2.633 3.324-4.289 4.382-.835.534-2.052 1.11-3.511 1.063-1.639-.051-2.928-.855-3.792-1.93-1.493-1.855-1.324-3.91-1.118-5.207.065-.403.165-.896.249-1.309.04-.2.078-.382.105-.525.103-.547.158-.967.158-1.331 0-.198-.009-.373-.024-.526Zm4.256 5.21.013-.004a.079.079 0 0 1-.013.005Z" fill="#fff" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_download"><path d="M8.571 24.715v5.571a3 3 0 0 0 3 3H28.43a3 3 0 0 0 3-3v-5.571M20 7.5v17m0 0-4.762-4.349M20 24.5l4.762-4.349" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_edit"><path d="m27.448 10.798 2.314 2.315a.75.75 0 0 1 0 1.06l-12.96 12.96-5.282 1.908 1.907-5.283 12.96-12.96a.75.75 0 0 1 1.061 0Z" stroke="currentColor" stroke-width="2.5" /></symbol><symbol  viewBox="0 0 256 256" id="icon-ic_eye_closed"><path fill="none" d="M0 0h256v256H0z" /><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24" d="m201.15 127.305 22.81 39.508M154.182 149.263l7.114 40.344M101.73 149.244l-7.115 40.35M54.809 127.272l-22.92 39.699M32 104.875C48.811 125.685 79.633 152 128 152s79.188-26.314 96-47.125" /></symbol><symbol  fill="currentColor" viewBox="0 0 1792 1792" id="icon-ic_eye_open"><path d="M1664 960q-152-236-381-353 61 104 61 225 0 185-131.5 316.5T896 1280t-316.5-131.5T448 832q0-121 61-225-229 117-381 353 133 205 333.5 326.5T896 1408t434.5-121.5T1664 960zM944 576q0-20-14-34t-34-14q-125 0-214.5 89.5T592 832q0 20 14 34t34 14 34-14 14-34q0-86 61-147t147-61q20 0 34-14t14-34zm848 384q0 34-20 69-140 230-376.5 368.5T896 1536t-499.5-139T20 1029Q0 994 0 960t20-69q140-229 376.5-368T896 384t499.5 139T1772 891q20 35 20 69z" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_file"><path d="M21.952 5H15c-3.143 0-4.714 0-5.69.976-.977.977-.977 2.548-.977 5.69v16.667c0 3.143 0 4.714.976 5.69C10.286 35 11.857 35 15 35h10c3.143 0 4.715 0 5.691-.976.976-.977.976-2.548.976-5.69v-13.62c0-.681 0-1.022-.127-1.328-.126-.306-.367-.547-.849-1.029l-6.38-6.38c-.482-.482-.723-.723-1.03-.85C22.974 5 22.634 5 21.953 5Z" stroke="currentColor" stroke-width="2.5" /><path d="M15 21.666h10M15 28.334h6.667" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" /><path d="M21.667 5v6.667c0 1.571 0 2.357.488 2.845S23.43 15 25 15h6.667" stroke="currentColor" stroke-width="2.5" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_file_h"><path d="M21.952 5H15c-3.143 0-4.714 0-5.69.976-.977.977-.977 2.548-.977 5.69v16.667c0 3.143 0 4.714.976 5.69C10.286 35 11.857 35 15 35h10c3.143 0 4.715 0 5.691-.976.976-.977.976-2.548.976-5.69v-13.62c0-.681 0-1.022-.127-1.328-.126-.306-.367-.547-.849-1.029l-6.38-6.38c-.482-.482-.723-.723-1.03-.85C22.974 5 22.634 5 21.953 5Z" stroke="currentColor" stroke-width="2.5" /><path d="M15 21.666h10M15 28.334h6.667" stroke="#B7EC5D" stroke-width="2.5" stroke-linecap="round" /><path d="M21.667 5v6.667c0 1.571 0 2.357.488 2.845S23.43 15 25 15h6.667" stroke="#B7EC5D" stroke-width="2.5" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_file_item"><rect x="13" y="12" width="14" height="16" rx="2" stroke="currentColor" stroke-width="2" /><path d="M17 16h6M17 20h6M17 24h4" stroke="#4D4D4D" stroke-width="2" stroke-linecap="round" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_file_item_h"><rect x="13" y="12" width="14" height="16" rx="2" stroke="currentColor" stroke-width="2" /><path d="M17 16h6M17 20h6M17 24h4" stroke="#B7EC5D" stroke-width="2" stroke-linecap="round" /></symbol><symbol  viewBox="0 0 98 96" id="icon-ic_github"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="currentColor" /></symbol><symbol  viewBox="0 0 80 80" fill="currentColor" id="icon-ic_global"><path d="M40 5C20.701 5 5 20.701 5 40s15.701 35 35 35 35-15.701 35-35S59.299 5 40 5zM9.071 42h12.46c.132 4.655.725 9.039 1.695 13H12.883A30.773 30.773 0 0 1 9.07 42zM42 21V9.332c3.533 1.16 6.998 5.321 9.381 11.668H42zm10.653 4c1.016 3.804 1.672 8.177 1.815 13H42V25h10.653zM38 9.332V21h-9.381C31.002 14.653 34.467 10.493 38 9.332zM38 25v13H25.532c.143-4.823.799-9.196 1.815-13H38zM21.53 38H9.071a30.773 30.773 0 0 1 3.812-13h10.343c-.97 3.961-1.563 8.345-1.696 13zm4.002 4H38v13H27.347c-1.016-3.804-1.672-8.177-1.815-13zM38 59v11.668c-3.533-1.16-6.998-5.321-9.381-11.668H38zm4 11.668V59h9.381C48.998 65.347 45.533 69.507 42 70.668zM42 55V42h12.468c-.143 4.823-.799 9.196-1.815 13H42zm16.47-13h12.459a30.773 30.773 0 0 1-3.812 13H56.774c.97-3.961 1.563-8.345 1.696-13zm0-4c-.133-4.655-.726-9.039-1.696-13h10.343a30.773 30.773 0 0 1 3.812 13h-12.46zm5.999-17h-8.852c-1.373-4.085-3.181-7.57-5.315-10.233A31.125 31.125 0 0 1 64.47 21zM29.698 10.767C27.564 13.43 25.756 16.915 24.383 21h-8.852a31.125 31.125 0 0 1 14.167-10.233zM15.53 59h8.852c1.373 4.085 3.181 7.57 5.315 10.233A31.125 31.125 0 0 1 15.53 59zm34.771 10.233c2.134-2.663 3.942-6.148 5.315-10.233h8.852a31.125 31.125 0 0 1-14.167 10.233z" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_help"><path fill-rule="evenodd" clip-rule="evenodd" d="M33.5 19c0 7.456-6.044 13.5-13.5 13.5S6.5 26.456 6.5 19 12.544 5.5 20 5.5 33.5 11.544 33.5 19Zm2.5 0c0 8.837-7.163 16-16 16S4 27.837 4 19 11.163 3 20 3s16 7.163 16 16Zm-15.48 3.249a1.52 1.52 0 0 0 .426-.809c.105-.479.3-.95.584-1.415.285-.479.592-.913.921-1.302.345-.39.681-.787 1.01-1.19.33-.42.607-.884.832-1.393.225-.51.337-1.034.337-1.573 0-1.317-.42-2.343-1.258-3.077-.823-.748-1.917-1.123-3.28-1.123-1.437 0-2.724.494-3.862 1.483a.854.854 0 0 0-.293.651c0 .3.105.546.315.741.21.18.45.27.719.27h.022c.27-.015.524-.105.764-.27.629-.479 1.31-.719 2.044-.719.704 0 1.25.21 1.64.63.404.419.606.95.606 1.594 0 .42-.112.839-.337 1.258-.225.42-.502.823-.831 1.213-.315.39-.637.786-.966 1.19-.33.404-.621.869-.876 1.393-.314.644-.472 1.228-.472 1.752 0 .27.105.501.315.696.24.225.532.337.876.337.3 0 .554-.112.764-.337Zm-2 5.525c.345.345.772.517 1.28.517.495 0 .907-.172 1.236-.517.345-.344.517-.778.517-1.302 0-.54-.172-.989-.517-1.348a1.578 1.578 0 0 0-1.235-.561c-.51 0-.936.18-1.28.539-.33.359-.495.808-.495 1.347 0 .54.165.981.494 1.325Z" fill="#B7EC5D" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_help_h"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 35c8.837 0 16-7.163 16-16S28.837 3 20 3 4 10.163 4 19s7.163 16 16 16Zm.52-12.751a1.52 1.52 0 0 0 .426-.809c.105-.479.3-.95.584-1.415.285-.479.592-.913.921-1.302.345-.39.681-.787 1.01-1.19.33-.42.607-.884.832-1.393.225-.51.337-1.034.337-1.573 0-1.317-.42-2.343-1.258-3.077-.823-.748-1.917-1.123-3.28-1.123-1.437 0-2.724.494-3.862 1.483a.854.854 0 0 0-.293.651c0 .3.105.546.315.741.21.18.45.27.719.27h.022c.27-.015.524-.105.764-.27.629-.479 1.31-.719 2.044-.719.704 0 1.25.21 1.64.63.404.419.606.95.606 1.594 0 .42-.112.839-.337 1.258-.225.42-.502.823-.831 1.213-.315.39-.637.786-.966 1.19-.33.404-.621.869-.876 1.393-.314.644-.472 1.228-.472 1.752 0 .27.105.501.315.696.24.225.532.337.876.337.3 0 .554-.112.764-.337Zm-2 5.525c.345.345.772.517 1.28.517.495 0 .907-.172 1.236-.517.345-.344.517-.778.517-1.302 0-.54-.172-.989-.517-1.348a1.578 1.578 0 0 0-1.235-.561c-.51 0-.936.18-1.28.539-.33.359-.495.808-.495 1.347 0 .54.165.981.494 1.325Z" fill="#B7EC5D" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_list"><g clip-path="url(#icon-ic_list_a)" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6.667" y="7.619" width="26.667" height="9.524" rx="3" /><rect x="6.667" y="21.904" width="26.667" height="9.524" rx="3" /></g><defs><clipPath id="icon-ic_list_a"><path fill="#fff" d="M0 0h40v40H0z" /></clipPath></defs></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_more"><g clip-path="url(#icon-ic_more_a)" fill="#4D4D4D"><circle cx="20" cy="20" r="3" /><circle cx="10" cy="20" r="3" /><circle cx="30" cy="20" r="3" /></g><defs><clipPath id="icon-ic_more_a"><path fill="#fff" d="M0 0h40v40H0z" /></clipPath></defs></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_more_h"><g clip-path="url(#icon-ic_more_h_a)" fill="#B7EC5D"><circle cx="20" cy="20" r="3" /><circle cx="10" cy="20" r="3" /><circle cx="30" cy="20" r="3" /></g><defs><clipPath id="icon-ic_more_h_a"><path fill="#fff" d="M0 0h40v40H0z" /></clipPath></defs></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_page"><mask id="icon-ic_page_a" fill="#fff"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 5a4 4 0 0 0-4 4v21a4 4 0 0 0 4 4h16a4 4 0 0 0 4-4V7.593c0-1.193.805-2.197 1.9-2.5A4.014 4.014 0 0 0 32.037 5H11Z" /></mask><path d="m32.9 5.093.666 2.41-.128-4.851-.538 2.441ZM9.5 9A1.5 1.5 0 0 1 11 7.5v-5A6.5 6.5 0 0 0 4.5 9h5Zm0 10.5V9h-5v10.5h5Zm0 10.5V19.5h-5V30h5Zm1.5 1.5A1.5 1.5 0 0 1 9.5 30h-5a6.5 6.5 0 0 0 6.5 6.5v-5Zm16 0H11v5h16v-5Zm1.5-1.5a1.5 1.5 0 0 1-1.5 1.5v5a6.5 6.5 0 0 0 6.5-6.5h-5Zm5 0V17.185h-5V30h5Zm0-12.815V7.593h-5v9.592h5Zm0-9.592a.09.09 0 0 1 .005-.031.096.096 0 0 1 .062-.059l-1.333-4.82a5.094 5.094 0 0 0-3.734 4.91h5ZM32.037 7.5c.115 0 .224.012.326.035l1.075-4.883a6.514 6.514 0 0 0-1.401-.152v5ZM11 7.5h21.037v-5H11v5Z" fill="currentColor" mask="url(#icon-ic_page_a)" /><path d="M34.75 8.75V11a.75.75 0 0 1-.75.75h-4.25v-3a2.5 2.5 0 0 1 5 0Z" stroke="currentColor" stroke-width="2.5" /><path d="M13.5 12h11M13.5 19h11M13.5 26h5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_pic"><rect x="6" y="6.5" width="27" height="27" rx="4" stroke="currentColor" stroke-width="2.5" /><path d="M21.188 25.662C18.938 25.17 15 12.786 6 21.744V29.5a4 4 0 0 0 4 4h19a4 4 0 0 0 4-4v-1.598c-5.625-9.517-9.563-1.747-11.813-2.24Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" /><circle cx="24.5" cy="14.5" r="3.25" stroke="currentColor" stroke-width="2.5" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_reduction"><g clip-path="url(#icon-ic_reduction_a)"><path d="M31.756 27.134a1.25 1.25 0 0 0-2.317-.938l2.317.938ZM20 32.559c-5.621 0-10.179-4.557-10.179-10.178h-2.5c0 7.002 5.677 12.678 12.679 12.678v-2.5ZM9.821 22.38C9.821 16.758 14.38 12.2 20 12.2v-2.5c-7.002 0-12.679 5.677-12.679 12.679h2.5Zm19.618 3.816A10.182 10.182 0 0 1 20 32.558v2.5c5.323 0 9.877-3.28 11.756-7.924l-2.317-.938ZM20 12.201c4.27 0 7.928 2.63 9.44 6.362l2.316-.938C29.877 12.981 25.323 9.701 20 9.701v2.5Z" fill="currentColor" /><path d="M31.428 10.951v5.667a1 1 0 0 1-1 1h-5.666" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" /></g><defs><clipPath id="icon-ic_reduction_a"><path fill="#fff" d="M0 0h40v40H0z" /></clipPath></defs></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_search"><circle cx="19" cy="19" r="8.75" stroke="currentColor" stroke-width="2.5" /><path d="m25 26 5 5" stroke="#CCC" stroke-width="2.5" stroke-linecap="round" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_search_h"><circle cx="19" cy="19" r="8.75" stroke="currentColor" stroke-width="2.5" /><path d="m25 26 5 5" stroke="#B7EC5D" stroke-width="2.5" stroke-linecap="round" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_sign"><path d="m30.905 6.298 2.796 2.796a.75.75 0 0 1 0 1.06L19.878 23.979 13.97 26.03l2.052-5.909L29.845 6.298a.75.75 0 0 1 1.06 0Z" stroke="currentColor" stroke-width="2.5" /><path d="M18.375 6.771H10a4 4 0 0 0-4 4v19a4 4 0 0 0 4 4h19a4 4 0 0 0 4-4v-8.375" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_text"><path d="M26 7h3a4 4 0 0 1 4 4v2M7 13v-2a4 4 0 0 1 4-4h2M13 33h-2a4 4 0 0 1-4-4v-3M33 26v3a4 4 0 0 1-4 4h-3M14 14h12M20 14.453v14.548" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_trash"><mask id="icon-ic_trash_a" fill="#fff"><rect x="13.333" y="4.762" width="13.333" height="8.571" rx="2" /></mask><rect x="13.333" y="4.762" width="13.333" height="8.571" rx="2" stroke="currentColor" stroke-width="5" mask="url(#icon-ic_trash_a)" /><path d="M4.762 12.38h30.476" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /><path d="m10.734 32.313-.857-19.635h20.246l-.857 19.635a1.75 1.75 0 0 1-1.748 1.674H12.482a1.75 1.75 0 0 1-1.748-1.674Z" stroke="currentColor" stroke-width="2.5" /><path d="M17.143 19.047v9.524M22.857 19.047v9.524" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_trash_h"><mask id="icon-ic_trash_h_a" fill="#fff"><rect x="13.333" y="4.762" width="13.333" height="8.571" rx="2" /></mask><rect x="13.333" y="4.762" width="13.333" height="8.571" rx="2" stroke="currentColor" stroke-width="5" mask="url(#icon-ic_trash_h_a)" /><path d="M4.762 12.38h30.476" stroke="#B7EC5D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /><path d="m10.734 32.313-.857-19.635h20.246l-.857 19.635a1.75 1.75 0 0 1-1.748 1.674H12.482a1.75 1.75 0 0 1-1.748-1.674Z" stroke="#B7EC5D" stroke-width="2.5" /><path d="M17.143 19.047v9.524M22.857 19.047v9.524" stroke="#B7EC5D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></symbol><symbol fill="none"  viewBox="0 0 50 50" id="icon-ic_user"><circle cx="25" cy="16" r="6.75" stroke="currentColor" stroke-width="2.5" /><mask id="icon-ic_user_a" fill="#fff"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.258 45.193A14.105 14.105 0 0 1 10 42.5C10 34.492 16.716 28 25 28c8.284 0 15 6.492 15 14.5 0 .92-.089 1.82-.258 2.693A24.887 24.887 0 0 1 25 50a24.887 24.887 0 0 1-14.742-4.807Z" /></mask><path d="m10.258 45.193-2.454.477.187.962.792.58 1.475-2.019Zm29.484 0 1.475 2.018.792-.578.187-.963-2.454-.477Zm-27.03-.477A11.602 11.602 0 0 1 12.5 42.5h-5c0 1.081.104 2.141.304 3.17l4.908-.954ZM12.5 42.5c0-6.548 5.516-12 12.5-12v-5c-9.584 0-17.5 7.532-17.5 17h5Zm12.5-12c6.984 0 12.5 5.452 12.5 12h5c0-9.468-7.916-17-17.5-17v5Zm12.5 12c0 .76-.073 1.5-.212 2.216l4.908.954c.2-1.029.304-2.089.304-3.17h-5Zm.766.675A22.388 22.388 0 0 1 25 47.5v5c6.06 0 11.67-1.964 16.217-5.289l-2.951-4.036ZM25 47.5a22.388 22.388 0 0 1-13.266-4.325l-2.951 4.036A27.387 27.387 0 0 0 25 52.5v-5Z" fill="#B7EC5D" mask="url(#icon-ic_user_a)" /><circle cx="25" cy="16" r="6.75" stroke="#B7EC5D" stroke-width="2.5" /><circle cx="25" cy="25" r="23.75" stroke="#B7EC5D" stroke-width="2.5" /></symbol><symbol fill="none"  viewBox="0 0 50 50" id="icon-ic_user_h"><circle cx="25" cy="25" r="23.75" stroke="currentColor" stroke-width="2.5" /><mask id="icon-ic_user_h_a" fill="#fff"><path fill-rule="evenodd" clip-rule="evenodd" d="M50 25c0 8.294-4.04 15.645-10.258 20.193.17-.872.258-1.773.258-2.693C40 34.492 33.284 28 25 28c-8.284 0-15 6.492-15 14.5 0 .92.089 1.82.258 2.693C4.04 40.646 0 33.295 0 25 0 11.193 11.193 0 25 0s25 11.193 25 25Zm-25-1a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z" /></mask><path fill-rule="evenodd" clip-rule="evenodd" d="M50 25c0 8.294-4.04 15.645-10.258 20.193.17-.872.258-1.773.258-2.693C40 34.492 33.284 28 25 28c-8.284 0-15 6.492-15 14.5 0 .92.089 1.82.258 2.693C4.04 40.646 0 33.295 0 25 0 11.193 11.193 0 25 0s25 11.193 25 25Zm-25-1a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z" fill="#B7EC5D" /><path d="m39.742 45.193-2.454-.477-1.216 6.258 5.145-3.763-1.475-2.018Zm-29.484 0-1.475 2.018 5.145 3.763-1.216-6.258-2.454.477Zm30.96 2.018C48.051 42.213 52.5 34.126 52.5 25h-5c0 7.463-3.631 14.078-9.234 18.175l2.951 4.036ZM37.5 42.5c0 .76-.073 1.5-.212 2.216l4.908.954c.2-1.029.304-2.089.304-3.17h-5ZM25 30.5c6.984 0 12.5 5.452 12.5 12h5c0-9.468-7.916-17-17.5-17v5Zm-12.5 12c0-6.548 5.516-12 12.5-12v-5c-9.584 0-17.5 7.532-17.5 17h5Zm.212 2.216A11.602 11.602 0 0 1 12.5 42.5h-5c0 1.081.104 2.141.304 3.17l4.908-.954ZM-2.5 25c0 9.126 4.448 17.213 11.283 22.211l2.951-4.036C6.131 39.078 2.5 32.463 2.5 25h-5ZM25-2.5C9.812-2.5-2.5 9.812-2.5 25h5C2.5 12.574 12.574 2.5 25 2.5v-5ZM52.5 25C52.5 9.812 40.188-2.5 25-2.5v5c12.426 0 22.5 10.074 22.5 22.5h5Zm-22-9a5.5 5.5 0 0 1-5.5 5.5v5c5.799 0 10.5-4.701 10.5-10.5h-5ZM25 10.5a5.5 5.5 0 0 1 5.5 5.5h5c0-5.799-4.701-10.5-10.5-10.5v5ZM19.5 16a5.5 5.5 0 0 1 5.5-5.5v-5c-5.799 0-10.5 4.701-10.5 10.5h5Zm5.5 5.5a5.5 5.5 0 0 1-5.5-5.5h-5c0 5.799 4.701 10.5 10.5 10.5v-5Z" fill="#B7EC5D" mask="url(#icon-ic_user_h_a)" /></symbol>', e.insertBefore(i, e.lastChild);
+      i || (i = document.createElementNS("http://www.w3.org/2000/svg", "svg"), i.style.position = "absolute", i.style.width = "0", i.style.height = "0", i.id = "__svg__icons__dom__", i.setAttribute("xmlns", "http://www.w3.org/2000/svg"), i.setAttribute("xmlns:link", "http://www.w3.org/1999/xlink")), i.innerHTML = '<symbol viewBox="0 0 24 24" fill="none"  id="icon-add-circle-svgrepo-com"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Zm.75-13a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" fill="#1C274C" /></symbol><symbol viewBox="0 0 24 24" fill="none"  id="icon-add-folder-svgrepo-com"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.07 5.008C2 5.376 2 5.818 2 6.7v7.05c0 3.771 0 5.657 1.172 6.828C4.343 21.75 6.229 21.75 10 21.75h4c3.771 0 5.657 0 6.828-1.172C22 19.407 22 17.521 22 13.75v-2.202c0-2.632 0-3.949-.77-4.804a2.984 2.984 0 0 0-.224-.225c-.855-.769-2.172-.769-4.804-.769h-.374c-1.153 0-1.73 0-2.268-.153a4 4 0 0 1-.848-.352c-.488-.271-.896-.68-1.712-1.495l-.55-.55c-.274-.274-.41-.41-.554-.53a4 4 0 0 0-2.18-.903c-.186-.017-.38-.017-.766-.017-.883 0-1.324 0-1.692.07A4 4 0 0 0 2.07 5.007ZM12 11a.75.75 0 0 1 .75.75V13H14a.75.75 0 0 1 0 1.5h-1.25v1.25a.75.75 0 0 1-1.5 0V14.5H10a.75.75 0 0 1 0-1.5h1.25v-1.25A.75.75 0 0 1 12 11Z" fill="#1C274C" /></symbol><symbol viewBox="0 0 24 24" fill="none"  id="icon-archive-minimalistic-svgrepo-com"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.545 8.73C2 9.8 2 11.2 2 14c0 2.8 0 4.2.545 5.27a5 5 0 0 0 2.185 2.185C5.8 22 7.2 22 10 22h4c2.8 0 4.2 0 5.27-.545a5 5 0 0 0 2.185-2.185C22 18.2 22 16.8 22 14c0-2.8 0-4.2-.545-5.27a5 5 0 0 0-2.185-2.185C18.2 6 16.8 6 14 6h-4c-2.8 0-4.2 0-5.27.545A5 5 0 0 0 2.545 8.73ZM15.06 12.5a.75.75 0 0 0-1.12-1l-3.011 3.374-.87-.974a.75.75 0 0 0-1.118 1l1.428 1.6a.75.75 0 0 0 1.119 0l3.572-4Z" fill="#1C274C" /><path d="M20.535 3.464C19.07 2 16.713 2 11.999 2 7.285 2 4.93 2 3.464 3.464c-.758.758-1.123 1.754-1.3 3.192a6.5 6.5 0 0 1 1.884-1.448c.782-.398 1.619-.56 2.545-.635C7.488 4.5 8.59 4.5 9.936 4.5h4.126c1.347 0 2.448 0 3.343.073.927.076 1.764.237 2.545.635a6.499 6.499 0 0 1 1.884 1.448c-.176-1.438-.542-2.434-1.3-3.192Z" fill="#1C274C" /></symbol><symbol viewBox="0 0 24 24" fill="none"  id="icon-folder-with-files-svgrepo-com"><path d="M2 6.95c0-.883 0-1.324.07-1.692A4 4 0 0 1 5.257 2.07C5.626 2 6.068 2 6.95 2c.386 0 .58 0 .766.017a4 4 0 0 1 2.18.904c.144.119.28.255.554.529L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .848.352C14.098 6 14.675 6 15.828 6h.374c2.632 0 3.949 0 4.804.77.079.07.154.145.224.224.77.855.77 2.172.77 4.804V14c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14V6.95Z" fill="#1C274C" /><path fill-rule="evenodd" clip-rule="evenodd" d="M12.25 10a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75Z" fill="#fff" /><path d="M16.986 3.02C16.832 3 16.649 3 16.283 3H12l.37.383c.666.69.922.948 1.218 1.118.171.099.354.177.542.233.326.096.683.101 1.625.101h.334c1.002 0 1.81 0 2.45.084.16.02.313.047.461.081-.186-1.037-.996-1.84-2.014-1.98Z" fill="#1C274C" /></symbol><symbol fill="none"  viewBox="0 0 136 136" id="icon-ic_add_dark"><circle cx="68" cy="68" r="67" fill="#4D4D4D" stroke="currentColor" stroke-width="2" /><path d="M62.2 46.66c.646-5.006-.037-9.855.864-14.814.497-1.49 4.964-.993 4.964-.993s3.445.496 4.467.496c1.17 0 .439 10.153.496 11.417.233 5.125.39 6.736.39 11.878 0 3.538-.201 5.99 0 7.895 0 1.073 5.1 1.021 6.063 1.073 3.4.184 6.209.33 9.805.33s6.431-.182 10.545 0c2.326.103 3.793-.361 5.057 0 .489.14.403 4.634.403 4.634s-.354 3.57-.403 5.388c-.016.561.013 1.003-.702 1.003-6.926 0-13.878.178-20.802-.011-1.194-.033-9.966-1.58-9.966-.279 0 1.961.21 4.05-.1 5.98-.25 1.542-.101 3.173-.101 4.733 0 1.868.38 3.182.1 5.025.1 1.895-.49 4.578-.1 8.438.2 1.986.473 5.117-.39 5.98-.54.541-3.488 0-4.198 0-.812 0-1.582.201-2.405.201-.482 0-3.522.313-3.123-.646.255-.611.1-1.54.1-2.205 0-2.061-.236-4.263 0-6.308.404-3.481-.436-6.999-.1-10.485.357-3.702.1-6.989.1-10.713 0-.825-.855-1.359-1.759-1.359h-3.603c-5.612 0-8.119.045-13.731.045-2.294 0-.909-.044-3.203-.044h-7.585c-.649 0-1.968-.17-2.138-.468-.297-.52-.435-1.088-.344-1.793.2-1.545.167-3.668.2-5.512.01-.485-.135-2.606.502-2.606h6.054c2.156 0 5.088-.2 10.166-.2 4.587 0 9.286.304 13.831-.201.873-.097.401-4.564.401-5.234 0-3.496-.202-7.179.245-10.646Z" stroke="#B7EC5D" stroke-width="2.5" stroke-linecap="round" /></symbol><symbol fill="none"  viewBox="0 0 156 156" id="icon-ic_add_tint"><g filter="url(#icon-ic_add_tint_a)"><circle cx="78" cy="74" r="67" fill="#B7EC5D" stroke="currentColor" stroke-width="2" /><path d="M72.2 52.66c.646-5.006-.037-9.855.864-14.814.497-1.49 4.964-.993 4.964-.993s3.445.496 4.467.496c1.17 0 .439 10.153.496 11.417.233 5.125.39 6.736.39 11.878 0 3.538-.201 5.99 0 7.895 0 1.073 5.1 1.021 6.063 1.073 3.4.184 6.209.33 9.805.33s6.431-.182 10.545 0c2.326.103 3.793-.361 5.057 0 .489.14.403 4.634.403 4.634s-.354 3.57-.403 5.388c-.016.561.013 1.003-.702 1.003-6.926 0-13.878.178-20.802-.011-1.194-.033-9.966-1.58-9.966-.279 0 1.961.21 4.05-.1 5.98-.25 1.542-.101 3.173-.101 4.733 0 1.868.38 3.182.1 5.025.1 1.895-.49 4.578-.1 8.438.2 1.986.473 5.117-.39 5.98-.54.541-3.488 0-4.198 0-.812 0-1.582.201-2.405.201-.482 0-3.522.313-3.123-.646.255-.611.1-1.54.1-2.205 0-2.061-.237-4.263 0-6.308.404-3.481-.436-6.999-.1-10.485.357-3.702.1-6.989.1-10.713 0-.825-.855-1.359-1.759-1.359h-3.603c-5.612 0-8.119.045-13.731.045-2.294 0-.909-.044-3.203-.044h-7.585c-.649 0-1.968-.17-2.138-.468-.297-.52-.435-1.088-.344-1.793.2-1.545.167-3.668.2-5.512.01-.485-.135-2.606.502-2.606h6.054c2.156 0 5.088-.2 10.166-.2 4.587 0 9.286.304 13.831-.201.873-.097.401-4.564.401-5.234 0-3.496-.202-7.179.245-10.646Z" stroke="#4D4D4D" stroke-width="2.5" stroke-linecap="round" /></g><defs><filter id="icon-ic_add_tint_a" x="0" y="0" width="156" height="156" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix><feOffset dy="4"></feOffset><feGaussianBlur stdDeviation="5"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_73_7059"></feBlend><feBlend in="SourceGraphic" in2="effect1_dropShadow_73_7059" result="shape"></feBlend></filter></defs></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_archive"><g clip-path="url(#icon-ic_archive_a)" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M31.667 7.62H8.333a3.333 3.333 0 0 0 0 6.666h23.334a3.333 3.333 0 0 0 0-6.667Z" /><path d="M8.333 14.285v16.667a3.333 3.333 0 0 0 3.333 3.333h16.667a3.333 3.333 0 0 0 3.333-3.333V14.285M16.667 20.953h6.667" /></g><defs><clipPath id="icon-ic_archive_a"><path fill="#fff" d="M0 0h40v40H0z" /></clipPath></defs></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_archive_h"><g clip-path="url(#icon-ic_archive_h_a)" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M31.667 7.62H8.333a3.333 3.333 0 0 0 0 6.666h23.334a3.333 3.333 0 0 0 0-6.667Z" /><path d="M8.333 14.285v16.667a3.333 3.333 0 0 0 3.333 3.333h16.667a3.333 3.333 0 0 0 3.333-3.333V14.285M16.667 20.953h6.667" /></g><defs><clipPath id="icon-ic_archive_h_a"><path fill="#fff" d="M0 0h40v40H0z" /></clipPath></defs></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_card"><g clip-path="url(#icon-ic_card_a)" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6.667" y="6.666" width="10.476" height="10.476" rx="3" /><rect x="21.904" y="6.666" width="10.476" height="10.476" rx="3" /><rect x="21.904" y="21.904" width="10.476" height="10.476" rx="3" /><rect x="6.667" y="21.904" width="10.476" height="10.476" rx="3" /></g><defs><clipPath id="icon-ic_card_a"><path fill="#fff" d="M0 0h40v40H0z" /></clipPath></defs></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_close"><circle cx="20" cy="20" r="12.75" stroke="currentColor" stroke-width="2.5" /><path d="m16 24 7.778-7.778M24 24l-7.778-7.778" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_close_s"><circle cx="20" cy="20" r="10.75" stroke="currentColor" stroke-width="2.5" /><path d="m16 24 7.778-7.778M24 24l-7.778-7.778" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_close_s_white"><circle cx="20" cy="20" r="10.75" stroke="currentColor" stroke-width="2.5" /><path d="m16 24 7.778-7.778M24 24l-7.778-7.778" stroke="#fff" stroke-width="2.5" stroke-linecap="round" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_color_black"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.81 16.62c-.744.655-1.73 1.74-2.732 3.25-1.318 1.988-2.517 4.497-3.17 7.279a3.5 3.5 0 1 1-6.815-1.6c.868-3.695 2.438-6.963 4.15-9.547 1.676-2.526 3.643-4.628 5.474-5.804 2.095-1.345 5.039-1.88 7.456.128 2.048 1.7 2.665 4.447 2.665 6.944 0 1.056-.145 2.044-.286 2.85-.069.393-.128.704-.181.982-.034.176-.065.338-.094.5a25.154 25.154 0 0 0 1.714-2.268c1.176-1.73 2.263-3.646 3.067-5.16a70.98 70.98 0 0 0 1.255-2.48l.014-.03.002-.005a3.5 3.5 0 0 1 6.34 2.967l-3.17-1.483 3.17 1.484-.01.02-.02.045-.078.162a77.906 77.906 0 0 1-1.321 2.603c-.865 1.629-2.086 3.791-3.461 5.813-1.31 1.925-3.01 4.106-4.902 5.413-.954.66-2.345 1.37-4.013 1.314-1.873-.064-3.346-1.058-4.334-2.384-1.707-2.293-1.513-4.831-1.277-6.433.073-.498.188-1.107.284-1.617.047-.248.089-.472.12-.65.118-.674.181-1.193.181-1.643 0-.244-.01-.46-.027-.65Zm4.865 6.438Z" fill="#000" /></symbol><symbol fill="none"  viewBox="0 0 42 40" id="icon-ic_color_black_h"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.21 17.169c-.652.53-1.515 1.407-2.392 2.63-1.153 1.61-2.202 3.641-2.774 5.893-.386 1.523-2.035 2.468-3.681 2.11-1.647-.357-2.668-1.882-2.281-3.405.759-2.991 2.132-5.637 3.631-7.728 1.466-2.046 3.187-3.747 4.79-4.7 1.832-1.088 4.409-1.521 6.524.104 1.791 1.377 2.33 3.6 2.33 5.622 0 .855-.126 1.654-.25 2.307-.06.318-.111.57-.158.795l-.082.404a20.61 20.61 0 0 0 1.5-1.835c1.03-1.4 1.98-2.952 2.684-4.178a56.221 56.221 0 0 0 1.098-2.007l.012-.024.002-.004c.717-1.417 2.54-2.029 4.072-1.365 1.532.663 2.192 2.35 1.476 3.767l-2.774-1.201c2.774 1.2 2.773 1.2 2.773 1.201l-.008.016-.018.037a27.038 27.038 0 0 1-.319.606c-.215.403-.524.969-.905 1.633-.757 1.318-1.825 3.068-3.029 4.705-1.145 1.558-2.633 3.324-4.289 4.382-.835.534-2.052 1.11-3.511 1.063-1.639-.051-2.928-.855-3.792-1.93-1.493-1.855-1.324-3.91-1.118-5.207.065-.403.165-.896.249-1.309.04-.2.078-.382.105-.525.103-.547.158-.967.158-1.331 0-.198-.009-.373-.024-.526Zm4.256 5.21.013-.004a.079.079 0 0 1-.013.005Z" fill="#000" /><path d="M37.011 17.628a64.673 64.673 0 0 1-.95 1.713c-.786 1.368-1.916 3.225-3.213 4.988-1.184 1.611-2.942 3.76-5.09 5.133-1.092.698-2.915 1.607-5.222 1.534-2.646-.084-4.71-1.403-6.034-3.047a8.78 8.78 0 0 1-.703-1.01c-1.033 2.933-4.195 4.42-7.073 3.795-3.1-.674-5.406-3.71-4.552-7.076.865-3.408 2.42-6.39 4.1-8.737 1.62-2.259 3.627-4.3 5.696-5.53 2.463-1.464 6.455-2.332 9.885.304a8.332 8.332 0 0 1 2.3 2.73l.074-.136.536.287m10.246 5.052-10.524-5.83s0 0 0 0 0 0 0 0h0l-.008.016-.001.001-.046.09-.203.384.536.287m10.246 5.052c.114-.213.204-.384.267-.507l-.267.507Zm-10.246-5.052c.463.915 1.096 1.46 1.758 1.774 0 0 0 0 0 0-.811-.459-1.345-1.17-1.663-1.723m-.095-.051.095.05m-.095-.05s0 0 0 0m.095.05 1.884 1.007-1.884-1.006m0 0s0 0 0 0m0 0a5.19 5.19 0 0 1-.324-.668 2.338 2.338 0 0 1-.05-.138l-.009-.004a7.2 7.2 0 0 1-.015.031 5.996 5.996 0 0 0 .303.728m.095.05-.095-.05m10.618 4.341-.006.012-.003.006-.019.037-.001.003-.076.146.105-.204Zm0 0 .002-.003-.002.003Zm.003-.005.002-.003c1.565-3.095.013-6.587-2.961-7.874-2.868-1.242-6.447-.183-7.939 2.76h0l10.898 5.117Zm-10.865-5.18c1.4-.434 2.47-.231 3.272.218-1.568-.737-3.292-.18-3.296-.172l-.002.004.026-.05Zm-.036.085-.006-.003.003-.007.003.01Z" stroke="currentColor" stroke-opacity=".3" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /><path d="M36.495 16.459v-.002c1.283-2.535.028-5.425-2.465-6.505-2.423-1.049-5.417-.139-6.65 2.296l-.001.001m0 0s0 0 0 0h0Zm-9.38 4.073.002.003" fill="#000" stroke="#B7EC5D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><path d="M28.355 12.903c.098.19.287.475.596.65m-.596-.65.596.65m-.596-.65a1.589 1.589 0 0 1-.074-.165l-.014-.007m.088.172-.088-.172m.684.822c-.237-.113-.464-.314-.62-.663a1.92 1.92 0 0 1-.064-.159m.684.822-.684-.822m-2.91 4.908c-.009-2.145-.59-4.72-2.721-6.359-2.553-1.962-5.601-1.384-7.644-.17-1.758 1.045-3.575 2.86-5.092 4.976-1.56 2.177-2.993 4.935-3.787 8.065-.543 2.137.907 4.166 3.038 4.628 2.11.46 4.328-.736 4.863-2.841.536-2.113 1.525-4.032 2.617-5.556.07-.098.14-.195.211-.288-.04.209-.078.418-.108.61-.217 1.36-.446 3.789 1.326 5.99 1.017 1.265 2.565 2.24 4.54 2.303 1.741.055 3.16-.631 4.081-1.22 1.82-1.164 3.398-3.057 4.556-4.632 1.234-1.68 2.323-3.466 3.09-4.8.34-.593.625-1.11.837-1.505l.014.006.416-.822.008-.016h0v-.002c1-1.976.043-4.265-1.97-5.136-1.977-.856-4.386-.095-5.36 1.831h-.001v.001h0l-.001.002h0l-.011.021-.052.101c-.047.091-.12.23-.214.406l.882.471-.882-.471c-.19.354-.466.86-.81 1.458l.743.426-.742-.426a49.689 49.689 0 0 1-1.826 2.949Zm2.913-4.935.01.033-.013-.007-.004-.012.007-.014Zm1.102.047c-.52-.244-1.092-.06-1.098-.057l.008-.015c.466-.144.823-.077 1.09.072Z" fill="#000" stroke="#000" stroke-width="2" stroke-linecap="round" /><path fill-rule="evenodd" clip-rule="evenodd" d="M18.21 17.169c-.652.53-1.515 1.407-2.392 2.63-1.153 1.61-2.202 3.641-2.774 5.893-.386 1.523-2.035 2.468-3.681 2.11-1.647-.357-2.668-1.882-2.281-3.405.759-2.991 2.132-5.637 3.631-7.728 1.466-2.046 3.187-3.747 4.79-4.7 1.832-1.088 4.409-1.521 6.524.104 1.791 1.377 2.33 3.6 2.33 5.622 0 .855-.126 1.654-.25 2.307-.06.318-.111.57-.158.795l-.082.404a20.61 20.61 0 0 0 1.5-1.835c1.03-1.4 1.98-2.952 2.684-4.178a56.221 56.221 0 0 0 1.098-2.007l.012-.024.002-.004c.717-1.417 2.54-2.029 4.072-1.365 1.532.663 2.192 2.35 1.476 3.767l-2.774-1.201c2.774 1.2 2.773 1.2 2.773 1.201l-.008.016-.018.037a27.038 27.038 0 0 1-.319.606c-.215.403-.524.969-.905 1.633-.757 1.318-1.825 3.068-3.029 4.705-1.145 1.558-2.633 3.324-4.289 4.382-.835.534-2.052 1.11-3.511 1.063-1.639-.051-2.928-.855-3.792-1.93-1.493-1.855-1.324-3.91-1.118-5.207.065-.403.165-.896.249-1.309.04-.2.078-.382.105-.525.103-.547.158-.967.158-1.331 0-.198-.009-.373-.024-.526Zm4.256 5.21.013-.004a.079.079 0 0 1-.013.005Z" fill="#fff" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_color_blue"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.81 16.62c-.744.655-1.73 1.74-2.732 3.25-1.318 1.988-2.517 4.497-3.17 7.279a3.5 3.5 0 1 1-6.815-1.6c.868-3.695 2.438-6.963 4.15-9.547 1.676-2.526 3.643-4.628 5.474-5.804 2.095-1.345 5.039-1.88 7.456.128 2.048 1.7 2.665 4.447 2.665 6.944 0 1.056-.145 2.044-.286 2.85-.069.393-.128.704-.181.982-.034.176-.065.338-.094.5a25.154 25.154 0 0 0 1.714-2.268c1.176-1.73 2.263-3.646 3.067-5.16a70.98 70.98 0 0 0 1.255-2.48l.014-.03.002-.005a3.5 3.5 0 0 1 6.34 2.967l-3.17-1.483 3.17 1.484-.01.02-.02.045-.078.162a77.906 77.906 0 0 1-1.321 2.603c-.865 1.629-2.086 3.791-3.461 5.813-1.31 1.925-3.01 4.106-4.902 5.413-.954.66-2.345 1.37-4.013 1.314-1.873-.064-3.346-1.058-4.334-2.384-1.707-2.293-1.513-4.831-1.277-6.433.073-.498.188-1.107.284-1.617.047-.248.089-.472.12-.65.118-.674.181-1.193.181-1.643 0-.244-.01-.46-.027-.65Zm4.865 6.438Z" fill="#06F" /></symbol><symbol fill="none"  viewBox="0 0 42 40" id="icon-ic_color_blue_h"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.21 17.169c-.652.53-1.515 1.407-2.392 2.63-1.153 1.61-2.202 3.641-2.774 5.893-.386 1.523-2.035 2.468-3.681 2.11-1.647-.357-2.668-1.882-2.281-3.405.759-2.991 2.132-5.637 3.631-7.728 1.466-2.046 3.187-3.747 4.79-4.7 1.832-1.088 4.409-1.521 6.524.104 1.791 1.377 2.33 3.6 2.33 5.622 0 .855-.126 1.654-.25 2.307-.06.318-.111.57-.158.795l-.082.404a20.61 20.61 0 0 0 1.5-1.835c1.03-1.4 1.98-2.952 2.684-4.178a56.221 56.221 0 0 0 1.098-2.007l.012-.024.002-.004c.717-1.417 2.54-2.029 4.072-1.365 1.532.663 2.192 2.35 1.476 3.767l-2.774-1.201c2.774 1.2 2.773 1.2 2.773 1.201l-.008.016-.018.037a27.038 27.038 0 0 1-.319.606c-.215.403-.524.969-.905 1.633-.757 1.318-1.825 3.068-3.029 4.705-1.145 1.558-2.633 3.324-4.289 4.382-.835.534-2.052 1.11-3.511 1.063-1.639-.051-2.928-.855-3.792-1.93-1.493-1.855-1.324-3.91-1.118-5.207.065-.403.165-.896.249-1.309.04-.2.078-.382.105-.525.103-.547.158-.967.158-1.331 0-.198-.009-.373-.024-.526Zm4.256 5.21.013-.004a.079.079 0 0 1-.013.005Z" fill="#000" /><path d="M37.011 17.628a64.673 64.673 0 0 1-.95 1.713c-.786 1.368-1.916 3.225-3.213 4.988-1.184 1.611-2.942 3.76-5.09 5.133-1.092.698-2.915 1.607-5.222 1.534-2.646-.084-4.71-1.403-6.034-3.047a8.78 8.78 0 0 1-.703-1.01c-1.033 2.933-4.195 4.42-7.073 3.795-3.1-.674-5.406-3.71-4.552-7.076.865-3.408 2.42-6.39 4.1-8.737 1.62-2.259 3.627-4.3 5.696-5.53 2.463-1.464 6.455-2.332 9.885.304a8.332 8.332 0 0 1 2.3 2.73l.074-.136.536.287m10.246 5.052-10.524-5.83s0 0 0 0 0 0 0 0h0l-.008.016-.001.001-.046.09-.203.384.536.287m10.246 5.052c.114-.213.204-.384.267-.507l-.267.507Zm-10.246-5.052c.463.915 1.096 1.46 1.758 1.774 0 0 0 0 0 0-.811-.459-1.345-1.17-1.663-1.723m-.095-.051.095.05m-.095-.05s0 0 0 0m.095.05 1.884 1.007-1.884-1.006m0 0s0 0 0 0m0 0a5.19 5.19 0 0 1-.324-.668 2.338 2.338 0 0 1-.05-.138l-.009-.004a7.2 7.2 0 0 1-.015.031 5.996 5.996 0 0 0 .303.728m.095.05-.095-.05m10.618 4.341-.006.012-.003.006-.019.037-.001.003-.076.146.105-.204Zm0 0 .002-.003-.002.003Zm.003-.005.002-.003c1.565-3.095.013-6.587-2.961-7.874-2.868-1.242-6.447-.183-7.939 2.76h0l10.898 5.117Zm-10.865-5.18c1.4-.434 2.47-.231 3.272.218-1.568-.737-3.292-.18-3.296-.172l-.002.004.026-.05Zm-.036.085-.006-.003.003-.007.003.01Z" stroke="currentColor" stroke-opacity=".3" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /><path d="M36.495 16.459v-.002c1.283-2.535.028-5.425-2.465-6.505-2.423-1.049-5.417-.139-6.65 2.296l-.001.001m0 0s0 0 0 0h0Zm-9.38 4.073.002.003" fill="#000" stroke="#B7EC5D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><path d="m28.257 13.373-.264-.141.214-.406.01.005-.01-.005.052-.1s0 0 0 0l.01-.022h.001v-.002h.001c.975-1.927 3.384-2.688 5.361-1.832 2.013.871 2.97 3.16 1.97 5.136v.002h0l-.008.016-.416.822-.014-.006c-.212.395-.497.912-.837 1.505l-.867-.498.867.498c-.767 1.334-1.856 3.12-3.09 4.8-1.158 1.575-2.736 3.468-4.556 4.632-.92.589-2.34 1.275-4.082 1.22-1.974-.062-3.522-1.038-4.539-2.302-1.772-2.202-1.543-4.63-1.326-5.992.03-.191.068-.4.108-.61-.07.095-.14.19-.211.29-1.092 1.523-2.081 3.442-2.617 5.555-.535 2.105-2.752 3.3-4.863 2.841-2.131-.462-3.581-2.491-3.038-4.628.794-3.13 2.228-5.888 3.787-8.065 1.517-2.117 3.334-3.931 5.092-4.976 2.043-1.214 5.09-1.792 7.644.17 2.131 1.638 2.712 4.214 2.722 6.359a49.689 49.689 0 0 0 1.826-2.949l.867.498-.867-.498c.343-.597.62-1.104.809-1.458l.264.14Zm0 0c.012.02.026.038.041.058a1.362 1.362 0 0 1-.122-.405 1.59 1.59 0 0 0-.012.143.619.619 0 0 0 .093.204Zm-.049-.515a1.58 1.58 0 0 0-.007.022l.007-.022Zm.019-.055-.007.017.004-.01c0-.003.002-.005.003-.007Zm.01-.028-.005.015.004-.012.001-.003Zm1.34-.532c.055.044.105.094.151.147a2.935 2.935 0 0 0-.112.114 1.603 1.603 0 0 0-.61-.249c.18-.034.383-.047.572-.012Zm-1.132.214a.26.26 0 0 1 .043-.03c-.035.03-.064.057-.082.075l.039-.045Zm-.094.112a.488.488 0 0 1-.008.011l.008-.01Zm-.028.042a.27.27 0 0 1 .004-.007l-.006.01.002-.003Zm-.014.022.002-.003-.003.005.001-.002Zm7.194 3.567s0 0 0 0l-.875-.454.875.454Z" fill="#000" stroke="#06F" stroke-width="2" stroke-linecap="round" /><path fill-rule="evenodd" clip-rule="evenodd" d="M18.21 17.169c-.652.53-1.515 1.407-2.392 2.63-1.153 1.61-2.202 3.641-2.774 5.893-.386 1.523-2.035 2.468-3.681 2.11-1.647-.357-2.668-1.882-2.281-3.405.759-2.991 2.132-5.637 3.631-7.728 1.466-2.046 3.187-3.747 4.79-4.7 1.832-1.088 4.409-1.521 6.524.104 1.791 1.377 2.33 3.6 2.33 5.622 0 .855-.126 1.654-.25 2.307-.06.318-.111.57-.158.795l-.082.404a20.61 20.61 0 0 0 1.5-1.835c1.03-1.4 1.98-2.952 2.684-4.178a56.221 56.221 0 0 0 1.098-2.007l.012-.024.002-.004c.717-1.417 2.54-2.029 4.072-1.365 1.532.663 2.192 2.35 1.476 3.767l-2.774-1.201c2.774 1.2 2.773 1.2 2.773 1.201l-.008.016-.018.037a27.038 27.038 0 0 1-.319.606c-.215.403-.524.969-.905 1.633-.757 1.318-1.825 3.068-3.029 4.705-1.145 1.558-2.633 3.324-4.289 4.382-.835.534-2.052 1.11-3.511 1.063-1.639-.051-2.928-.855-3.792-1.93-1.493-1.855-1.324-3.91-1.118-5.207.065-.403.165-.896.249-1.309.04-.2.078-.382.105-.525.103-.547.158-.967.158-1.331 0-.198-.009-.373-.024-.526Zm4.256 5.21.013-.004a.079.079 0 0 1-.013.005Z" fill="#fff" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_color_red"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.811 16.62c-.745.655-1.731 1.74-2.733 3.251-1.318 1.988-2.517 4.498-3.17 7.28a3.5 3.5 0 1 1-6.815-1.601c.868-3.695 2.438-6.963 4.15-9.547 1.676-2.527 3.643-4.629 5.475-5.805 2.094-1.345 5.039-1.88 7.456.128 2.048 1.7 2.665 4.447 2.665 6.944 0 1.057-.145 2.045-.286 2.851-.069.393-.128.705-.181.982-.034.176-.065.338-.094.5a25.143 25.143 0 0 0 1.714-2.268c1.176-1.73 2.263-3.647 3.067-5.161a71.448 71.448 0 0 0 1.255-2.48l.014-.03.003-.005a3.5 3.5 0 0 1 6.34 2.968l-3.17-1.484 3.17 1.485-.01.019-.021.045a37.872 37.872 0 0 1-.364.75 78.372 78.372 0 0 1-1.035 2.017c-.865 1.628-2.085 3.79-3.461 5.813-1.309 1.924-3.01 4.106-4.902 5.413-.954.66-2.345 1.37-4.014 1.314-1.872-.064-3.345-1.058-4.333-2.384-1.707-2.293-1.513-4.832-1.277-6.433.073-.499.188-1.108.284-1.618.046-.248.089-.472.12-.65.118-.675.18-1.194.18-1.644 0-.244-.01-.46-.027-.65Zm4.865 6.439.015-.006a.082.082 0 0 1-.015.006Z" fill="#F93819" /></symbol><symbol fill="none"  viewBox="0 0 42 40" id="icon-ic_color_red_h"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.21 18.169c-.652.53-1.515 1.407-2.392 2.63-1.153 1.61-2.202 3.641-2.774 5.893-.386 1.523-2.035 2.468-3.681 2.11-1.647-.357-2.668-1.882-2.281-3.405.759-2.991 2.132-5.637 3.631-7.728 1.466-2.046 3.187-3.747 4.79-4.7 1.832-1.088 4.409-1.521 6.524.104 1.791 1.377 2.33 3.6 2.33 5.622 0 .855-.126 1.654-.25 2.307-.06.318-.111.57-.158.795l-.082.404a20.61 20.61 0 0 0 1.5-1.835c1.03-1.4 1.98-2.952 2.684-4.178a56.221 56.221 0 0 0 1.098-2.007l.012-.024.002-.004c.717-1.417 2.54-2.029 4.072-1.365 1.532.663 2.192 2.35 1.476 3.767l-2.774-1.201c2.774 1.2 2.773 1.2 2.773 1.201l-.008.016-.018.037a27.038 27.038 0 0 1-.319.606c-.215.403-.524.969-.905 1.633-.757 1.318-1.825 3.068-3.029 4.705-1.145 1.558-2.633 3.324-4.289 4.382-.835.534-2.052 1.11-3.511 1.063-1.639-.051-2.928-.855-3.792-1.93-1.493-1.855-1.324-3.91-1.118-5.207.065-.403.165-.896.249-1.309.04-.2.078-.382.105-.525.103-.547.158-.967.158-1.331 0-.198-.009-.373-.024-.526Zm4.256 5.21.013-.004a.079.079 0 0 1-.013.005Z" fill="#000" /><path d="M37.011 18.628a64.673 64.673 0 0 1-.95 1.713c-.786 1.368-1.916 3.225-3.213 4.988-1.184 1.611-2.942 3.76-5.09 5.133-1.092.698-2.915 1.607-5.222 1.534-2.646-.084-4.71-1.403-6.034-3.047a8.78 8.78 0 0 1-.703-1.01c-1.033 2.933-4.195 4.42-7.073 3.795-3.1-.674-5.406-3.71-4.552-7.076.865-3.408 2.42-6.39 4.1-8.737 1.62-2.259 3.627-4.3 5.696-5.53 2.463-1.464 6.455-2.332 9.885.303a8.332 8.332 0 0 1 2.3 2.731l.074-.136.536.287m10.246 5.052-10.524-5.83s0 0 0 0 0 0 0 0h0l-.008.016-.001.001-.046.09-.203.384.536.287m10.246 5.052c.114-.213.204-.384.267-.507l-.267.507Zm-10.246-5.052c.463.915 1.096 1.46 1.758 1.774 0 0 0 0 0 0-.811-.459-1.345-1.17-1.663-1.723m-.095-.051.095.05m-.095-.05s0 0 0 0m.095.05 1.884 1.007-1.884-1.006m0 0s0 0 0 0m0 0a5.19 5.19 0 0 1-.324-.668 2.338 2.338 0 0 1-.05-.138l-.009-.004a7.2 7.2 0 0 1-.015.031 5.996 5.996 0 0 0 .303.728m.095.05-.095-.05m10.618 4.341-.006.012-.003.006-.019.037-.001.003-.076.146.105-.204Zm0 0 .002-.003-.002.003Zm.003-.005.002-.003c1.565-3.095.013-6.587-2.961-7.874-2.868-1.242-6.447-.183-7.939 2.76h0l10.898 5.117Zm-10.865-5.18c1.4-.434 2.47-.231 3.272.218-1.568-.737-3.292-.18-3.296-.172l-.002.004.026-.05Zm-.036.085-.006-.003.003-.007.003.01Z" stroke="currentColor" stroke-opacity=".3" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" /><path d="M36.495 17.459v-.002c1.283-2.535.028-5.425-2.465-6.505-2.423-1.049-5.417-.139-6.65 2.296l-.001.001m0 0s0 0 0 0h0Zm-9.38 4.073.002.003" fill="#000" stroke="#B7EC5D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><path d="M28.355 13.903c.098.19.287.475.596.65m-.596-.65.596.65m-.596-.65a1.589 1.589 0 0 1-.074-.165l-.014-.007m.088.172-.088-.172m.684.822c-.237-.113-.464-.314-.62-.663a1.92 1.92 0 0 1-.064-.159m.684.822-.684-.822m-2.91 4.908c-.009-2.145-.59-4.72-2.721-6.359-2.553-1.962-5.601-1.384-7.644-.17-1.758 1.045-3.575 2.86-5.092 4.976-1.56 2.177-2.993 4.935-3.787 8.065-.543 2.137.907 4.166 3.038 4.628 2.11.46 4.328-.736 4.863-2.841.536-2.113 1.525-4.032 2.617-5.556.07-.098.14-.195.211-.288-.04.209-.078.418-.108.61-.217 1.36-.446 3.789 1.326 5.99 1.017 1.265 2.565 2.24 4.54 2.303 1.741.055 3.16-.631 4.081-1.22 1.82-1.164 3.398-3.057 4.556-4.632 1.234-1.68 2.323-3.466 3.09-4.8.34-.593.625-1.11.837-1.505l.014.006.416-.822.008-.016h0v-.002c1-1.976.043-4.265-1.97-5.136-1.977-.856-4.386-.095-5.36 1.831h-.001v.001h0l-.001.002h0l-.011.021-.052.101c-.047.091-.12.23-.214.406l.882.471-.882-.471c-.19.354-.466.86-.81 1.458l.743.426-.742-.426a49.689 49.689 0 0 1-1.826 2.949Zm2.913-4.935.01.033-.013-.007-.004-.012.007-.014Zm1.102.047c-.52-.244-1.092-.06-1.098-.057l.008-.015c.466-.144.823-.077 1.09.072Z" fill="#000" stroke="#F93819" stroke-width="2" stroke-linecap="round" /><path fill-rule="evenodd" clip-rule="evenodd" d="M18.21 18.169c-.652.53-1.515 1.407-2.392 2.63-1.153 1.61-2.202 3.641-2.774 5.893-.386 1.523-2.035 2.468-3.681 2.11-1.647-.357-2.668-1.882-2.281-3.405.759-2.991 2.132-5.637 3.631-7.728 1.466-2.046 3.187-3.747 4.79-4.7 1.832-1.088 4.409-1.521 6.524.104 1.791 1.377 2.33 3.6 2.33 5.622 0 .855-.126 1.654-.25 2.307-.06.318-.111.57-.158.795l-.082.404a20.61 20.61 0 0 0 1.5-1.835c1.03-1.4 1.98-2.952 2.684-4.178a56.221 56.221 0 0 0 1.098-2.007l.012-.024.002-.004c.717-1.417 2.54-2.029 4.072-1.365 1.532.663 2.192 2.35 1.476 3.767l-2.774-1.201c2.774 1.2 2.773 1.2 2.773 1.201l-.008.016-.018.037a27.038 27.038 0 0 1-.319.606c-.215.403-.524.969-.905 1.633-.757 1.318-1.825 3.068-3.029 4.705-1.145 1.558-2.633 3.324-4.289 4.382-.835.534-2.052 1.11-3.511 1.063-1.639-.051-2.928-.855-3.792-1.93-1.493-1.855-1.324-3.91-1.118-5.207.065-.403.165-.896.249-1.309.04-.2.078-.382.105-.525.103-.547.158-.967.158-1.331 0-.198-.009-.373-.024-.526Zm4.256 5.21.013-.004a.079.079 0 0 1-.013.005Z" fill="#fff" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_download"><path d="M8.571 24.715v5.571a3 3 0 0 0 3 3H28.43a3 3 0 0 0 3-3v-5.571M20 7.5v17m0 0-4.762-4.349M20 24.5l4.762-4.349" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_edit"><path d="m27.448 10.798 2.314 2.315a.75.75 0 0 1 0 1.06l-12.96 12.96-5.282 1.908 1.907-5.283 12.96-12.96a.75.75 0 0 1 1.061 0Z" stroke="currentColor" stroke-width="2.5" /></symbol><symbol  viewBox="0 0 256 256" id="icon-ic_eye_closed"><path fill="none" d="M0 0h256v256H0z" /><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24" d="m201.15 127.305 22.81 39.508M154.182 149.263l7.114 40.344M101.73 149.244l-7.115 40.35M54.809 127.272l-22.92 39.699M32 104.875C48.811 125.685 79.633 152 128 152s79.188-26.314 96-47.125" /></symbol><symbol  fill="currentColor" viewBox="0 0 1792 1792" id="icon-ic_eye_open"><path d="M1664 960q-152-236-381-353 61 104 61 225 0 185-131.5 316.5T896 1280t-316.5-131.5T448 832q0-121 61-225-229 117-381 353 133 205 333.5 326.5T896 1408t434.5-121.5T1664 960zM944 576q0-20-14-34t-34-14q-125 0-214.5 89.5T592 832q0 20 14 34t34 14 34-14 14-34q0-86 61-147t147-61q20 0 34-14t14-34zm848 384q0 34-20 69-140 230-376.5 368.5T896 1536t-499.5-139T20 1029Q0 994 0 960t20-69q140-229 376.5-368T896 384t499.5 139T1772 891q20 35 20 69z" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_file"><path d="M21.952 5H15c-3.143 0-4.714 0-5.69.976-.977.977-.977 2.548-.977 5.69v16.667c0 3.143 0 4.714.976 5.69C10.286 35 11.857 35 15 35h10c3.143 0 4.715 0 5.691-.976.976-.977.976-2.548.976-5.69v-13.62c0-.681 0-1.022-.127-1.328-.126-.306-.367-.547-.849-1.029l-6.38-6.38c-.482-.482-.723-.723-1.03-.85C22.974 5 22.634 5 21.953 5Z" stroke="currentColor" stroke-width="2.5" /><path d="M15 21.666h10M15 28.334h6.667" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" /><path d="M21.667 5v6.667c0 1.571 0 2.357.488 2.845S23.43 15 25 15h6.667" stroke="currentColor" stroke-width="2.5" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_file_h"><path d="M21.952 5H15c-3.143 0-4.714 0-5.69.976-.977.977-.977 2.548-.977 5.69v16.667c0 3.143 0 4.714.976 5.69C10.286 35 11.857 35 15 35h10c3.143 0 4.715 0 5.691-.976.976-.977.976-2.548.976-5.69v-13.62c0-.681 0-1.022-.127-1.328-.126-.306-.367-.547-.849-1.029l-6.38-6.38c-.482-.482-.723-.723-1.03-.85C22.974 5 22.634 5 21.953 5Z" stroke="currentColor" stroke-width="2.5" /><path d="M15 21.666h10M15 28.334h6.667" stroke="#B7EC5D" stroke-width="2.5" stroke-linecap="round" /><path d="M21.667 5v6.667c0 1.571 0 2.357.488 2.845S23.43 15 25 15h6.667" stroke="#B7EC5D" stroke-width="2.5" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_file_item"><rect x="13" y="12" width="14" height="16" rx="2" stroke="currentColor" stroke-width="2" /><path d="M17 16h6M17 20h6M17 24h4" stroke="#4D4D4D" stroke-width="2" stroke-linecap="round" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_file_item_h"><rect x="13" y="12" width="14" height="16" rx="2" stroke="currentColor" stroke-width="2" /><path d="M17 16h6M17 20h6M17 24h4" stroke="#B7EC5D" stroke-width="2" stroke-linecap="round" /></symbol><symbol  viewBox="0 0 98 96" id="icon-ic_github"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="currentColor" /></symbol><symbol  viewBox="0 0 80 80" fill="currentColor" id="icon-ic_global"><path d="M40 5C20.701 5 5 20.701 5 40s15.701 35 35 35 35-15.701 35-35S59.299 5 40 5zM9.071 42h12.46c.132 4.655.725 9.039 1.695 13H12.883A30.773 30.773 0 0 1 9.07 42zM42 21V9.332c3.533 1.16 6.998 5.321 9.381 11.668H42zm10.653 4c1.016 3.804 1.672 8.177 1.815 13H42V25h10.653zM38 9.332V21h-9.381C31.002 14.653 34.467 10.493 38 9.332zM38 25v13H25.532c.143-4.823.799-9.196 1.815-13H38zM21.53 38H9.071a30.773 30.773 0 0 1 3.812-13h10.343c-.97 3.961-1.563 8.345-1.696 13zm4.002 4H38v13H27.347c-1.016-3.804-1.672-8.177-1.815-13zM38 59v11.668c-3.533-1.16-6.998-5.321-9.381-11.668H38zm4 11.668V59h9.381C48.998 65.347 45.533 69.507 42 70.668zM42 55V42h12.468c-.143 4.823-.799 9.196-1.815 13H42zm16.47-13h12.459a30.773 30.773 0 0 1-3.812 13H56.774c.97-3.961 1.563-8.345 1.696-13zm0-4c-.133-4.655-.726-9.039-1.696-13h10.343a30.773 30.773 0 0 1 3.812 13h-12.46zm5.999-17h-8.852c-1.373-4.085-3.181-7.57-5.315-10.233A31.125 31.125 0 0 1 64.47 21zM29.698 10.767C27.564 13.43 25.756 16.915 24.383 21h-8.852a31.125 31.125 0 0 1 14.167-10.233zM15.53 59h8.852c1.373 4.085 3.181 7.57 5.315 10.233A31.125 31.125 0 0 1 15.53 59zm34.771 10.233c2.134-2.663 3.942-6.148 5.315-10.233h8.852a31.125 31.125 0 0 1-14.167 10.233z" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_help"><path fill-rule="evenodd" clip-rule="evenodd" d="M33.5 19c0 7.456-6.044 13.5-13.5 13.5S6.5 26.456 6.5 19 12.544 5.5 20 5.5 33.5 11.544 33.5 19Zm2.5 0c0 8.837-7.163 16-16 16S4 27.837 4 19 11.163 3 20 3s16 7.163 16 16Zm-15.48 3.249a1.52 1.52 0 0 0 .426-.809c.105-.479.3-.95.584-1.415.285-.479.592-.913.921-1.302.345-.39.681-.787 1.01-1.19.33-.42.607-.884.832-1.393.225-.51.337-1.034.337-1.573 0-1.317-.42-2.343-1.258-3.077-.823-.748-1.917-1.123-3.28-1.123-1.437 0-2.724.494-3.862 1.483a.854.854 0 0 0-.293.651c0 .3.105.546.315.741.21.18.45.27.719.27h.022c.27-.015.524-.105.764-.27.629-.479 1.31-.719 2.044-.719.704 0 1.25.21 1.64.63.404.419.606.95.606 1.594 0 .42-.112.839-.337 1.258-.225.42-.502.823-.831 1.213-.315.39-.637.786-.966 1.19-.33.404-.621.869-.876 1.393-.314.644-.472 1.228-.472 1.752 0 .27.105.501.315.696.24.225.532.337.876.337.3 0 .554-.112.764-.337Zm-2 5.525c.345.345.772.517 1.28.517.495 0 .907-.172 1.236-.517.345-.344.517-.778.517-1.302 0-.54-.172-.989-.517-1.348a1.578 1.578 0 0 0-1.235-.561c-.51 0-.936.18-1.28.539-.33.359-.495.808-.495 1.347 0 .54.165.981.494 1.325Z" fill="#B7EC5D" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_help_h"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 35c8.837 0 16-7.163 16-16S28.837 3 20 3 4 10.163 4 19s7.163 16 16 16Zm.52-12.751a1.52 1.52 0 0 0 .426-.809c.105-.479.3-.95.584-1.415.285-.479.592-.913.921-1.302.345-.39.681-.787 1.01-1.19.33-.42.607-.884.832-1.393.225-.51.337-1.034.337-1.573 0-1.317-.42-2.343-1.258-3.077-.823-.748-1.917-1.123-3.28-1.123-1.437 0-2.724.494-3.862 1.483a.854.854 0 0 0-.293.651c0 .3.105.546.315.741.21.18.45.27.719.27h.022c.27-.015.524-.105.764-.27.629-.479 1.31-.719 2.044-.719.704 0 1.25.21 1.64.63.404.419.606.95.606 1.594 0 .42-.112.839-.337 1.258-.225.42-.502.823-.831 1.213-.315.39-.637.786-.966 1.19-.33.404-.621.869-.876 1.393-.314.644-.472 1.228-.472 1.752 0 .27.105.501.315.696.24.225.532.337.876.337.3 0 .554-.112.764-.337Zm-2 5.525c.345.345.772.517 1.28.517.495 0 .907-.172 1.236-.517.345-.344.517-.778.517-1.302 0-.54-.172-.989-.517-1.348a1.578 1.578 0 0 0-1.235-.561c-.51 0-.936.18-1.28.539-.33.359-.495.808-.495 1.347 0 .54.165.981.494 1.325Z" fill="#B7EC5D" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_list"><g clip-path="url(#icon-ic_list_a)" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6.667" y="7.619" width="26.667" height="9.524" rx="3" /><rect x="6.667" y="21.904" width="26.667" height="9.524" rx="3" /></g><defs><clipPath id="icon-ic_list_a"><path fill="#fff" d="M0 0h40v40H0z" /></clipPath></defs></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_more"><g clip-path="url(#icon-ic_more_a)" fill="#4D4D4D"><circle cx="20" cy="20" r="3" /><circle cx="10" cy="20" r="3" /><circle cx="30" cy="20" r="3" /></g><defs><clipPath id="icon-ic_more_a"><path fill="#fff" d="M0 0h40v40H0z" /></clipPath></defs></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_more_h"><g clip-path="url(#icon-ic_more_h_a)" fill="#B7EC5D"><circle cx="20" cy="20" r="3" /><circle cx="10" cy="20" r="3" /><circle cx="30" cy="20" r="3" /></g><defs><clipPath id="icon-ic_more_h_a"><path fill="#fff" d="M0 0h40v40H0z" /></clipPath></defs></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_page"><mask id="icon-ic_page_a" fill="#fff"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 5a4 4 0 0 0-4 4v21a4 4 0 0 0 4 4h16a4 4 0 0 0 4-4V7.593c0-1.193.805-2.197 1.9-2.5A4.014 4.014 0 0 0 32.037 5H11Z" /></mask><path d="m32.9 5.093.666 2.41-.128-4.851-.538 2.441ZM9.5 9A1.5 1.5 0 0 1 11 7.5v-5A6.5 6.5 0 0 0 4.5 9h5Zm0 10.5V9h-5v10.5h5Zm0 10.5V19.5h-5V30h5Zm1.5 1.5A1.5 1.5 0 0 1 9.5 30h-5a6.5 6.5 0 0 0 6.5 6.5v-5Zm16 0H11v5h16v-5Zm1.5-1.5a1.5 1.5 0 0 1-1.5 1.5v5a6.5 6.5 0 0 0 6.5-6.5h-5Zm5 0V17.185h-5V30h5Zm0-12.815V7.593h-5v9.592h5Zm0-9.592a.09.09 0 0 1 .005-.031.096.096 0 0 1 .062-.059l-1.333-4.82a5.094 5.094 0 0 0-3.734 4.91h5ZM32.037 7.5c.115 0 .224.012.326.035l1.075-4.883a6.514 6.514 0 0 0-1.401-.152v5ZM11 7.5h21.037v-5H11v5Z" fill="currentColor" mask="url(#icon-ic_page_a)" /><path d="M34.75 8.75V11a.75.75 0 0 1-.75.75h-4.25v-3a2.5 2.5 0 0 1 5 0Z" stroke="currentColor" stroke-width="2.5" /><path d="M13.5 12h11M13.5 19h11M13.5 26h5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_pic"><rect x="6" y="6.5" width="27" height="27" rx="4" stroke="currentColor" stroke-width="2.5" /><path d="M21.188 25.662C18.938 25.17 15 12.786 6 21.744V29.5a4 4 0 0 0 4 4h19a4 4 0 0 0 4-4v-1.598c-5.625-9.517-9.563-1.747-11.813-2.24Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" /><circle cx="24.5" cy="14.5" r="3.25" stroke="currentColor" stroke-width="2.5" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_reduction"><g clip-path="url(#icon-ic_reduction_a)"><path d="M31.756 27.134a1.25 1.25 0 0 0-2.317-.938l2.317.938ZM20 32.559c-5.621 0-10.179-4.557-10.179-10.178h-2.5c0 7.002 5.677 12.678 12.679 12.678v-2.5ZM9.821 22.38C9.821 16.758 14.38 12.2 20 12.2v-2.5c-7.002 0-12.679 5.677-12.679 12.679h2.5Zm19.618 3.816A10.182 10.182 0 0 1 20 32.558v2.5c5.323 0 9.877-3.28 11.756-7.924l-2.317-.938ZM20 12.201c4.27 0 7.928 2.63 9.44 6.362l2.316-.938C29.877 12.981 25.323 9.701 20 9.701v2.5Z" fill="currentColor" /><path d="M31.428 10.951v5.667a1 1 0 0 1-1 1h-5.666" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" /></g><defs><clipPath id="icon-ic_reduction_a"><path fill="#fff" d="M0 0h40v40H0z" /></clipPath></defs></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_search"><circle cx="19" cy="19" r="8.75" stroke="currentColor" stroke-width="2.5" /><path d="m25 26 5 5" stroke="#CCC" stroke-width="2.5" stroke-linecap="round" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_search_h"><circle cx="19" cy="19" r="8.75" stroke="currentColor" stroke-width="2.5" /><path d="m25 26 5 5" stroke="#B7EC5D" stroke-width="2.5" stroke-linecap="round" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_sign"><path d="m30.905 6.298 2.796 2.796a.75.75 0 0 1 0 1.06L19.878 23.979 13.97 26.03l2.052-5.909L29.845 6.298a.75.75 0 0 1 1.06 0Z" stroke="currentColor" stroke-width="2.5" /><path d="M18.375 6.771H10a4 4 0 0 0-4 4v19a4 4 0 0 0 4 4h19a4 4 0 0 0 4-4v-8.375" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_text"><path d="M26 7h3a4 4 0 0 1 4 4v2M7 13v-2a4 4 0 0 1 4-4h2M13 33h-2a4 4 0 0 1-4-4v-3M33 26v3a4 4 0 0 1-4 4h-3M14 14h12M20 14.453v14.548" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_trash"><mask id="icon-ic_trash_a" fill="#fff"><rect x="13.333" y="4.762" width="13.333" height="8.571" rx="2" /></mask><rect x="13.333" y="4.762" width="13.333" height="8.571" rx="2" stroke="currentColor" stroke-width="5" mask="url(#icon-ic_trash_a)" /><path d="M4.762 12.38h30.476" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /><path d="m10.734 32.313-.857-19.635h20.246l-.857 19.635a1.75 1.75 0 0 1-1.748 1.674H12.482a1.75 1.75 0 0 1-1.748-1.674Z" stroke="currentColor" stroke-width="2.5" /><path d="M17.143 19.047v9.524M22.857 19.047v9.524" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></symbol><symbol fill="none"  viewBox="0 0 40 40" id="icon-ic_trash_h"><mask id="icon-ic_trash_h_a" fill="#fff"><rect x="13.333" y="4.762" width="13.333" height="8.571" rx="2" /></mask><rect x="13.333" y="4.762" width="13.333" height="8.571" rx="2" stroke="currentColor" stroke-width="5" mask="url(#icon-ic_trash_h_a)" /><path d="M4.762 12.38h30.476" stroke="#B7EC5D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /><path d="m10.734 32.313-.857-19.635h20.246l-.857 19.635a1.75 1.75 0 0 1-1.748 1.674H12.482a1.75 1.75 0 0 1-1.748-1.674Z" stroke="#B7EC5D" stroke-width="2.5" /><path d="M17.143 19.047v9.524M22.857 19.047v9.524" stroke="#B7EC5D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></symbol><symbol fill="none"  viewBox="0 0 50 50" id="icon-ic_user"><circle cx="25" cy="16" r="6.75" stroke="currentColor" stroke-width="2.5" /><mask id="icon-ic_user_a" fill="#fff"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.258 45.193A14.105 14.105 0 0 1 10 42.5C10 34.492 16.716 28 25 28c8.284 0 15 6.492 15 14.5 0 .92-.089 1.82-.258 2.693A24.887 24.887 0 0 1 25 50a24.887 24.887 0 0 1-14.742-4.807Z" /></mask><path d="m10.258 45.193-2.454.477.187.962.792.58 1.475-2.019Zm29.484 0 1.475 2.018.792-.578.187-.963-2.454-.477Zm-27.03-.477A11.602 11.602 0 0 1 12.5 42.5h-5c0 1.081.104 2.141.304 3.17l4.908-.954ZM12.5 42.5c0-6.548 5.516-12 12.5-12v-5c-9.584 0-17.5 7.532-17.5 17h5Zm12.5-12c6.984 0 12.5 5.452 12.5 12h5c0-9.468-7.916-17-17.5-17v5Zm12.5 12c0 .76-.073 1.5-.212 2.216l4.908.954c.2-1.029.304-2.089.304-3.17h-5Zm.766.675A22.388 22.388 0 0 1 25 47.5v5c6.06 0 11.67-1.964 16.217-5.289l-2.951-4.036ZM25 47.5a22.388 22.388 0 0 1-13.266-4.325l-2.951 4.036A27.387 27.387 0 0 0 25 52.5v-5Z" fill="#B7EC5D" mask="url(#icon-ic_user_a)" /><circle cx="25" cy="16" r="6.75" stroke="#B7EC5D" stroke-width="2.5" /><circle cx="25" cy="25" r="23.75" stroke="#B7EC5D" stroke-width="2.5" /></symbol><symbol fill="none"  viewBox="0 0 50 50" id="icon-ic_user_h"><circle cx="25" cy="25" r="23.75" stroke="currentColor" stroke-width="2.5" /><mask id="icon-ic_user_h_a" fill="#fff"><path fill-rule="evenodd" clip-rule="evenodd" d="M50 25c0 8.294-4.04 15.645-10.258 20.193.17-.872.258-1.773.258-2.693C40 34.492 33.284 28 25 28c-8.284 0-15 6.492-15 14.5 0 .92.089 1.82.258 2.693C4.04 40.646 0 33.295 0 25 0 11.193 11.193 0 25 0s25 11.193 25 25Zm-25-1a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z" /></mask><path fill-rule="evenodd" clip-rule="evenodd" d="M50 25c0 8.294-4.04 15.645-10.258 20.193.17-.872.258-1.773.258-2.693C40 34.492 33.284 28 25 28c-8.284 0-15 6.492-15 14.5 0 .92.089 1.82.258 2.693C4.04 40.646 0 33.295 0 25 0 11.193 11.193 0 25 0s25 11.193 25 25Zm-25-1a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z" fill="#B7EC5D" /><path d="m39.742 45.193-2.454-.477-1.216 6.258 5.145-3.763-1.475-2.018Zm-29.484 0-1.475 2.018 5.145 3.763-1.216-6.258-2.454.477Zm30.96 2.018C48.051 42.213 52.5 34.126 52.5 25h-5c0 7.463-3.631 14.078-9.234 18.175l2.951 4.036ZM37.5 42.5c0 .76-.073 1.5-.212 2.216l4.908.954c.2-1.029.304-2.089.304-3.17h-5ZM25 30.5c6.984 0 12.5 5.452 12.5 12h5c0-9.468-7.916-17-17.5-17v5Zm-12.5 12c0-6.548 5.516-12 12.5-12v-5c-9.584 0-17.5 7.532-17.5 17h5Zm.212 2.216A11.602 11.602 0 0 1 12.5 42.5h-5c0 1.081.104 2.141.304 3.17l4.908-.954ZM-2.5 25c0 9.126 4.448 17.213 11.283 22.211l2.951-4.036C6.131 39.078 2.5 32.463 2.5 25h-5ZM25-2.5C9.812-2.5-2.5 9.812-2.5 25h5C2.5 12.574 12.574 2.5 25 2.5v-5ZM52.5 25C52.5 9.812 40.188-2.5 25-2.5v5c12.426 0 22.5 10.074 22.5 22.5h5Zm-22-9a5.5 5.5 0 0 1-5.5 5.5v5c5.799 0 10.5-4.701 10.5-10.5h-5ZM25 10.5a5.5 5.5 0 0 1 5.5 5.5h5c0-5.799-4.701-10.5-10.5-10.5v5ZM19.5 16a5.5 5.5 0 0 1 5.5-5.5v-5c-5.799 0-10.5 4.701-10.5 10.5h5Zm5.5 5.5a5.5 5.5 0 0 1-5.5-5.5h-5c0 5.799 4.701 10.5 10.5 10.5v-5Z" fill="#B7EC5D" mask="url(#icon-ic_user_h_a)" /></symbol><symbol viewBox="0 0 24 24" fill="none"  id="icon-trash-bin-minimalistic-svgrepo-com"><g fill="#1C274C"><path d="M3 6.524c0-.395.327-.714.73-.714h4.788c.006-.842.098-1.995.932-2.793A3.68 3.68 0 0 1 12 2a3.68 3.68 0 0 1 2.55 1.017c.834.798.926 1.951.932 2.793h4.788c.403 0 .73.32.73.714a.722.722 0 0 1-.73.714H3.73A.722.722 0 0 1 3 6.524Z" /><path fill-rule="evenodd" clip-rule="evenodd" d="M11.596 22h.808c2.783 0 4.174 0 5.08-.886.904-.886.996-2.34 1.181-5.246l.267-4.187c.1-1.577.15-2.366-.303-2.866-.454-.5-1.22-.5-2.753-.5H8.124c-1.533 0-2.3 0-2.753.5-.454.5-.404 1.289-.303 2.866l.267 4.188c.185 2.906.277 4.36 1.182 5.245.905.886 2.296.886 5.079.886Zm-1.35-9.812c-.04-.433-.408-.75-.82-.707-.413.044-.713.43-.672.865l.5 5.263c.04.434.408.75.82.707.413-.044.713-.43.672-.864l-.5-5.264Zm4.329-.707c.412.044.713.43.671.865l-.5 5.263c-.04.434-.409.75-.82.707-.413-.044-.713-.43-.672-.864l.5-5.264c.04-.433.409-.75.82-.707Z" /></g></symbol>', e.insertBefore(i, e.lastChild);
     };
     document.readyState === "loading" ? document.addEventListener("DOMContentLoaded", t) : t();
   }
-  const xt = Xe(Li), $e = Je();
-  $e.use(Qe);
-  xt.use($e);
-  xt.use(Wr);
-  xt.use(ee);
-  xt.use(gs);
-  xt.use(ss);
-  xt.mount("#app");
+  const Ct = Je(F0), De = Qe();
+  De.use(t0);
+  Ct.use(De);
+  Ct.use(to);
+  Ct.use(te);
+  Ct.use(m2);
+  Ct.use(e2);
+  Ct.mount("#app");
 });
 export {
-  ve as S,
+  we as S,
   vt as _,
   __tla,
   W as a,
-  O as b,
+  V as b,
   zt as s,
   mt as u
 };
