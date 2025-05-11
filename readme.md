@@ -49,23 +49,3 @@ pnpm install
 pnpm dev       # Run development server
 pnpm build     # Build for production
 pnpm preview   # Preview production build
-
-## Usage
-
-1. `Upload PDF File`: Click the upload button to select the PDF file you want to sign. The file will be stored in the local IndexedDB.
-2. `Open Encrypted PDF`: If the PDF file is encrypted, you will be prompted to enter the password to open it.
-3. `Add Signature`: Choose the position on the PDF where you want to add your signature. Signatures, text, and images will be stored in localStorage for reuse.
-4. `Adjust Signature`: Drag and resize the signature as needed.
-5. `Set PDF Password`: After completing the signature, you can set a password to open the PDF.
-6. `Language Switch`: Select the language in the upper right corner of the header.
-7. `Download Signed PDF`: After signing, click the download button to get the signed PDF file.
-8. `Edit Signed PDF`: After signing, click the edit button to edit the signed PDF file.
-9. `Batch Operation`: Batch archive, delete and reduction files
-
-## Contribution
-
-Contributions are welcome! If you have any suggestions or improvements, please submit a Pull Request or create an Issue.
-
-## License
-
-This project is licensed under the [MIT](https://opensource.org/licenses/MIT) License - see the [LICENSE](./LICENSE) file for details.
