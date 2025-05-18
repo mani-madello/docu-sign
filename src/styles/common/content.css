@@ -16,7 +16,7 @@
   @media (min-width: 768px) {
     .content {
       padding: 1rem 1.75rem;
-      width: 75%;
+      width: 100%;
       height: calc(100dvh - 175px);
     }
   }

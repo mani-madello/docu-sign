@@ -75,8 +75,13 @@
     "text_edit_success": "Text Edited Successfully",
     "trash_shelf_life": "Items in the Trash will be permanently deleted after 30 days",
     "try_another": "Please try another search term",
-    "un_found": "No items found matching search criteria"
+    "un_found": "No items found matching search criteria",
+    "invalid_email": "Please enter a valid email address.",
+    "document_sent_success": "Signed document sent to {email} successfully!"
   },
+  "send_document": "Send Document",
+  "enter_email_address": "Enter recipient's email address",
+  "send": "Send",
   "return_home": "Return to home page",
   "select": "Select",
   "select_file": "Select File",

@@ -36,3 +36,31 @@
 
   --ease-in-page: cubic-bezier(1, 0.5, 0.8, 1);
 }
+
+
+
+/* Map custom CSS variables to Tailwind utility-like classes */
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.text-primary {
+  color: var(--color-primary);
+}
+.bg-success {
+  background-color: var(--color-success);
+}
+.text-success {
+  color: var(--color-success);
+}
+.bg-danger {
+  background-color: var(--color-danger);
+}
+.text-danger {
+  color: var(--color-danger);
+}
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+.text-secondary {
+  color: var(--color-secondary);
+}

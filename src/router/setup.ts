@@ -1,6 +1,9 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import Complete from '@/pages/complete/index.vue';
+import Dashboard from '@/pages/dashboard/index.vue';
 import Home from '@/pages/home/index.vue';
+import Login from '@/pages/login/index.vue';
+import Send from '@/pages/send/index.vue';
 import Signature from '@/pages/signature/index.vue';
 import Upload from '@/pages/upload/index.vue';
 
@@ -9,8 +12,15 @@ const routes: Array<RouteRecordRaw> = [
     path: '/:catchAll(.*)',
     redirect: '/',
   },
+  { path: '/', redirect: '/login' },
+  { path: '/login', name: 'login', component: Login },
   {
-    path: '/',
+    path: '/dashboard',
+    name: 'dashboard',
+    component: Dashboard,
+  },
+  {
+    path: '/home',
     name: 'home',
     component: Home,
   },
@@ -28,6 +38,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/complete',
     name: 'complete',
     component: Complete,
+  },
+  {
+    path: '/send',
+    name: 'send',
+    component: Send,
   },
 ];
 

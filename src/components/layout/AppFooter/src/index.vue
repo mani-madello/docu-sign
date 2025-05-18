@@ -3,10 +3,7 @@ defineOptions({ name: 'AppFooter' });
 </script>
 
 <template>
-  <div class="app-footer">
-    © 2025 Madello AI  | Madello Consulting
-  </div>
-  
+  <div class="app-footer">© 2025 Madello AI | Madello Consulting</div>
 </template>
 
 <style lang="css" scoped>
@@ -16,7 +13,7 @@ defineOptions({ name: 'AppFooter' });
   bottom: 0;
   width: 100%;
   justify-content: center;
-  z-index: -1;
+  z-index: 10;
   margin: 8px;
 
   img {

@@ -1,3 +1,4 @@
+import { useAuthStore } from '@/store/auth';
 import { useConfigStore } from '@/store/config';
 import { useImageStore } from '@/store/image';
 import { useLiteralStore } from '@/store/literal';
@@ -8,4 +9,4 @@ export type PdfStore = typeof pdfStore;
 
 export const { usePdfStore } = pdfStore;
 
-export { useConfigStore, useImageStore, useLiteralStore, useSignatureStore };
+export { useAuthStore, useConfigStore, useImageStore, useLiteralStore, useSignatureStore };

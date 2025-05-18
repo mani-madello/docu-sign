@@ -1,14 +1,18 @@
 <script setup lang="ts">
+import emailjs from '@emailjs/browser';
+
 import { storeToRefs } from 'pinia';
 import { computed, defineAsyncComponent, onBeforeMount, onBeforeUnmount, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { showToast } from '@/components/common';
 import SignIcon from '@/components/SignIcon.vue';
 import { useWarnPopup } from '@/hooks/use-warn-popup';
+
 import { useConfigStore, usePdfStore } from '@/store';
 
 type WarnType = 'archive' | 'trash';
 
+const store = usePdfStore();
 const warnType = ref<WarnType>('archive');
 const iShowEncryptPopup = ref(false);
 const { currentPDF } = storeToRefs(usePdfStore());
@@ -22,10 +26,25 @@ const warnContent = computed(() => {
   };
   return contentMap[warnType.value];
 });
-
+const isSendModalOpen = ref(false);
+const recipientEmail = ref('');
 function openWarnPopup(type: WarnType) {
   warnType.value = type;
   toggleWarnPopup(true);
+}
+
+const sentInfo = ref({
+  name: '',
+  email: '',
+  timestamp: '',
+});
+
+function updateSentInfo(name: string, email: string) {
+  sentInfo.value = {
+    name,
+    email,
+    timestamp: new Date().toISOString(),
+  };
 }
 
 function warnConfirm() {
@@ -46,6 +65,65 @@ function warnConfirm() {
 
 function toggleEncryptPopup(isShow: boolean) {
   iShowEncryptPopup.value = isShow;
+}
+
+function openSendModal() {
+  isSendModalOpen.value = true;
+}
+
+function closeSendModal() {
+  isSendModalOpen.value = false;
+  recipientEmail.value = '';
+}
+
+function sendDocument() {
+  if (!recipientEmail.value || !recipientEmail.value.includes('@')) {
+    showToast(t('prompt.invalid_email'), 'error');
+    return;
+  }
+
+  console.log(recipientEmail.value);
+  showToast(t('prompt.document_sent_success', { email: recipientEmail.value }));
+  store.setSentInfo({
+    name: recipientEmail.value.split('@')[0],
+    email: recipientEmail.value,
+    timestamp: Date.now(),
+  });
+  console.log(currentPDF)
+  // store.setCurrentPDF({
+  //   name: uploadedFile.name,
+  //   file: uploadedFile,
+  // });
+
+  closeSendModal();
+  goPage('send');
+
+  // const templateParams = {
+  //   to_email: recipientEmail.value,
+  //   to_name: recipientEmail.value.split('@')[0], // optional name
+  //   // eslint-disable-next-line sonarjs/no-clear-text-protocols
+  //   document_link: currentPDF.value.url || 'http://52.200.13.223/',
+  //   sender_name: 'Maxign - E Sign',
+  // };
+
+  // emailjs
+  //   .send(
+  //     'service_madello', // replace with your actual service ID
+  //     'template_n5cx46m', // replace with your actual template ID
+  //     templateParams,
+  //     'EIMwyDV3CvJ5_vTtk', // replace with your public key from EmailJS
+  //   )
+  //   .then(() => {
+  //     updateSentInfo(templateParams.to_name, templateParams.to_email); // ✅ Track send info
+  //     showToast(t('prompt.document_sent_success', { email: recipientEmail.value }));
+  //     closeSendModal();
+  //     goPage('send');
+  //   })
+
+  //   .catch(error => {
+  //     console.error('EmailJS error:', error);
+  //     showToast(t('prompt.email_send_failed'), 'error');
+  //   });
 }
 
 onBeforeMount(() => useConfigStore().updateFilePassword(''));
@@ -80,6 +158,13 @@ onBeforeUnmount(() => {
           name="trash"
           class="w-9 h-9"
           @click="openWarnPopup('trash')"
+        />
+      </li>
+      <li>
+        <sign-icon
+          name="send"
+          class="w-9 h-9"
+          @click="openSendModal"
         />
       </li>
     </ul>
@@ -134,6 +219,35 @@ onBeforeUnmount(() => {
       :file="currentPDF"
       @close-encrypt-popup="toggleEncryptPopup(false)"
     />
+
+    <sign-popup
+      v-if="isSendModalOpen"
+      :title="$t('send_document')"
+    >
+      <div class="flex flex-col gap-4 p-4">
+        <label class="font-semibold">{{ $t('enter_email_address') }}</label>
+        <input
+          v-model="recipientEmail"
+          type="email"
+          placeholder="name@example.com"
+          class="input input-bordered w-full"
+        />
+        <div class="flex justify-end gap-4 mt-4">
+          <button
+            class="btn btn-base"
+            @click="closeSendModal"
+          >
+            {{ $t('cancel') }}
+          </button>
+          <button
+            class="btn btn-primary"
+            @click="sendDocument"
+          >
+            {{ $t('send') }}
+          </button>
+        </div>
+      </div>
+    </sign-popup>
   </div>
 </template>
 

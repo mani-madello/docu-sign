@@ -1,19 +1,49 @@
 <script setup lang="ts">
+import { storeToRefs } from 'pinia';
+import { computed } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+import { useAuthStore } from '@/store/auth';
 import SignStep from './SignStep.vue';
-defineOptions({ name: 'AppHeader' });
+
+const router = useRouter();
+const route = useRoute();
+const authStore = useAuthStore();
+const { isAuthenticated } = storeToRefs(authStore);
+
+const logout = () => {
+  console.log('logout called');
+  authStore.logout();
+  router.push({ name: 'login' });
+};
+
+const SIGN_STEP_ROUTES = ['upload', 'signature', 'complete', 'send'];
+
+const shouldShowSignStep = computed(() => SIGN_STEP_ROUTES.includes(route.name as string));
 </script>
 
 <template>
-  <header class="app-header" >  
- <router-link to="/">
-    <img
+  <header class="app-header">
+    <router-link to="/">
+      <img
         src="@/assets/logo/logo_darkbg_horizontal.png"
         class="w-26 md:w-[228px]"
         alt="logo"
-        style="width: 170px;"
-      /> 
+        style="width: 170px"
+      />
     </router-link>
-    <sign-step />
+
+    <sign-step v-if="shouldShowSignStep" />
+
+    <div class="flex-grow"></div>
+
+    <!-- ✅ Hide logout on login page -->
+    <button
+      v-if="isAuthenticated && route.name !== 'login'"
+      class="btn btn-primary ml-auto"
+      @click="logout"
+    >
+      Logout
+    </button>
   </header>
 </template>
 
@@ -67,27 +97,20 @@ defineOptions({ name: 'AppHeader' });
   }
 }
 
-
-
-
-
-
 .router-link-exact-active {
   font-weight: 400;
 }
+
 .app-header {
   position: fixed;
   width: 100%;
   display: flex;
   justify-content: start;
   align-items: center;
-  background-color: transparent;
   padding: 8px;
   z-index: 0;
   background-color: #fff;
-    height: 6.3125rem;
-
-
+  height: 6.3125rem;
 }
 
 .app-header-icon {

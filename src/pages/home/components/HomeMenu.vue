@@ -14,9 +14,8 @@ function changeTab(tab: MenuTab) {
       :class="currentTab === 'file' ? 'bg-white' : 'bg-gray-60'"
       @click="changeTab('file')"
     >
-    
       <img
-      class="icon"
+        class="icon"
         src="@/assets/icon/ic_file_h.svg"
         alt="file icon"
         :class="currentTab === 'files' ? 'active-icon' : ''"
@@ -51,11 +50,11 @@ function changeTab(tab: MenuTab) {
   position: absolute;
   z-index: 99999;
   flex-direction: row;
-  margin-top:-6%;
+  margin-top: -6%;
 }
 .index-menu li {
-  background:#ac94fc;
-   
+  background: #ac94fc;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,7 +67,7 @@ function changeTab(tab: MenuTab) {
   border-radius: 11px; /* pill shape */
   font-size: 14px;
   font-weight: 500;
-  color: #fff; 
+  color: #fff;
 }
 
 /* .index-menu li:hover {
@@ -81,7 +80,7 @@ function changeTab(tab: MenuTab) {
 }
 
 .index-menu li.bg-white {
- /* background: radial-gradient(100% 100% at 50% 0%, rgb(76, 0, 255) 0%, rgb(38, 6, 93) 100%);
+  /* background: radial-gradient(100% 100% at 50% 0%, rgb(76, 0, 255) 0%, rgb(38, 6, 93) 100%);
  /* background:linear-gradient(
     359deg,
     rgba(109, 48, 142, 1) 0%,

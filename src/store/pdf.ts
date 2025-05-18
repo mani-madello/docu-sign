@@ -9,6 +9,13 @@ interface PDFStore {
   PDFList: PDF[];
   archiveList: PDF[];
   trashList: PDF[];
+  sentInfo?: SentInfo; // Add this
+}
+
+interface SentInfo {
+  name: string;
+  email: string;
+  timestamp: number;
 }
 
 const defaultState: PDFStore = {
@@ -25,6 +32,7 @@ const defaultState: PDFStore = {
   PDFList: [],
   archiveList: [],
   trashList: [],
+  sentInfo: undefined, // Add this
 };
 
 export const usePdfStore = defineStore('pdf_signature_pdf', {
@@ -40,6 +48,9 @@ export const usePdfStore = defineStore('pdf_signature_pdf', {
     setCurrentPDF(PDF: PDF) {
       this.currentPDF = PDF;
       return this.updateCurrentPDFIdb();
+    },
+    setSentInfo(info: SentInfo) {
+      this.sentInfo = info;
     },
     clearCurrentPDF() {
       this.currentPDF = {

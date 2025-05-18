@@ -7,6 +7,7 @@ import errorHandlerPlugin from '@/plugins/error-handler';
 import i18NPlugin from '@/plugins/i18n';
 import preloadPlugin from '@/plugins/preload';
 import router from '@/router';
+import { useAuthStore } from './store/auth';
 import 'virtual:svg-icons-register';
 import '@/styles/index.css';
 
@@ -20,3 +21,7 @@ app.use(i18NPlugin);
 app.use(preloadPlugin);
 app.use(errorHandlerPlugin);
 app.mount('#app');
+
+useAuthStore().$patch({
+  user: JSON.parse(localStorage.getItem('user') || 'null'),
+});
