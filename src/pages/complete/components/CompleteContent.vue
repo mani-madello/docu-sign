@@ -98,32 +98,32 @@ function sendDocument() {
   closeSendModal();
   goPage('send');
 
-  // const templateParams = {
-  //   to_email: recipientEmail.value,
-  //   to_name: recipientEmail.value.split('@')[0], // optional name
-  //   // eslint-disable-next-line sonarjs/no-clear-text-protocols
-  //   document_link: currentPDF.value.url || 'http://52.200.13.223/',
-  //   sender_name: 'Maxign - E Sign',
-  // };
+  const templateParams = {
+    to_email: recipientEmail.value,
+    to_name: recipientEmail.value.split('@')[0], // optional name
+    // eslint-disable-next-line sonarjs/no-clear-text-protocols
+    document_link: currentPDF.value.url || 'http://52.200.13.223/',
+    sender_name: 'Maxign - E Sign',
+  };
 
-  // emailjs
-  //   .send(
-  //     'service_madello', // replace with your actual service ID
-  //     'template_n5cx46m', // replace with your actual template ID
-  //     templateParams,
-  //     'EIMwyDV3CvJ5_vTtk', // replace with your public key from EmailJS
-  //   )
-  //   .then(() => {
-  //     updateSentInfo(templateParams.to_name, templateParams.to_email); // ✅ Track send info
-  //     showToast(t('prompt.document_sent_success', { email: recipientEmail.value }));
-  //     closeSendModal();
-  //     goPage('send');
-  //   })
+  emailjs
+    .send(
+      'service_madello', // replace with your actual service ID
+      'template_n5cx46m', // replace with your actual template ID
+      templateParams,
+      'EIMwyDV3CvJ5_vTtk', // replace with your public key from EmailJS
+    )
+    .then(() => {
+      updateSentInfo(templateParams.to_name, templateParams.to_email); // ✅ Track send info
+      showToast(t('prompt.document_sent_success', { email: recipientEmail.value }));
+      closeSendModal();
+      goPage('send');
+    })
 
-  //   .catch(error => {
-  //     console.error('EmailJS error:', error);
-  //     showToast(t('prompt.email_send_failed'), 'error');
-  //   });
+    .catch(error => {
+      console.error('EmailJS error:', error);
+      showToast(t('prompt.email_send_failed'), 'error');
+    });
 }
 
 onBeforeMount(() => useConfigStore().updateFilePassword(''));

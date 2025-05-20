@@ -10,7 +10,7 @@ const error = ref('');
 const authStore = useAuthStore();
 
 const handleLogin = () => {
-  if (email.value === 'user@example.com' && password.value === '123456') {
+  if (email.value === 'hello@madello.com' && password.value === 'madello') {
     const mockUser = {
       email: email.value,
       name: 'Madello User',
@@ -29,7 +29,7 @@ const handleLogin = () => {
     <div class="w-full max-w-md bg-white rounded-xl shadow-lg p-8 space-y-6">
       <div class="text-center">
         <h1 class="text-3xl font-bold text-gray-900">Sign in to your account</h1>
-        <p class="mt-2 text-sm text-gray-500">Use <code>user@example.com</code> / <code>123456</code></p>
+        <p class="mt-2 text-sm text-gray-500">Use <code>hello@madello.com</code> / <code>madello</code></p>
       </div>
 
       <form

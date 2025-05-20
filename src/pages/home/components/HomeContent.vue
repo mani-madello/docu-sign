@@ -31,28 +31,28 @@ const currentCom = computed(() => {
 </script>
 
 <template>
-  <div class="index-content content">
+  <div class="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03] content">
     <h5 class="title">
       <img
-       v-if="title === 'my_files'"
+        v-if="title === 'my_files'"
         src="@/assets/icon/archive-minimalistic-svgrepo-com.svg"
         alt="trash icon"
-        style="width: 30px;display: inline;"
-      /> 
+        style="width: 30px; display: inline"
+      />
       <img
-       v-if="title === 'archived_files'"
+        v-if="title === 'archived_files'"
         src="@/assets/icon/folder-with-files-svgrepo-com.svg"
         alt="trash icon"
-        style="width: 30px;display: inline;"
-      /> 
+        style="width: 30px; display: inline"
+      />
       <img
-       v-if="title === 'trash_bin'"
+        v-if="title === 'trash_bin'"
         src="@/assets/icon/trash-bin-minimalistic-svgrepo-com.svg"
         alt="trash icon"
-        style="width: 30px;display: inline;"
-      /> 
-      
-      {{ $t(title) }}  
+        style="width: 30px; display: inline"
+      />
+
+      {{ $t(title) }}
     </h5>
 
     <keep-alive>

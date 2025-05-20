@@ -90,7 +90,7 @@ router.beforeEach((to, from) => {
   flex-grow: 1;
   padding: 1rem;
   overflow-y: auto;
-  background-color: #f9f9f9;
+  background-color: #f3f4f6;
 }
 
 /* Transitions */

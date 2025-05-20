@@ -18,7 +18,7 @@ const changeTab = (tab: string) => {
 </script>
 
 <template>
-  <ul class="space-y-2">
+  <ul class="p-6 space-y-2">
     <li
       :class="currentTab === 'dashboard' ? activeClass : baseClass"
       @click="changeTab('dashboard')"
@@ -33,19 +33,19 @@ const changeTab = (tab: string) => {
 
     <li
       :class="currentTab === 'upload' ? activeClass : baseClass"
-      @click="changeTab('home')"
+      @click="changeTab('upload')"
     >
       <img
         src="@/assets/icon/ic_file.svg"
         class="w-5 h-5 mr-3"
         alt="Upload"
       />
-      Sign File / Add Signature
+      Add Signature
     </li>
 
     <li
-      :class="currentTab === 'file' ? activeClass : baseClass"
-      @click="changeTab('file')"
+      :class="currentTab === 'home' ? activeClass : baseClass"
+      @click="changeTab('home')"
     >
       <img
         src="@/assets/icon/ic_file.svg"

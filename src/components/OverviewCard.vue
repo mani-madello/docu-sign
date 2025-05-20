@@ -14,7 +14,12 @@ const iconBgClass = computed(() => `bg-${props.color}-200`);
 </script>
 
 <template>
-  <div :class="['rounded-lg p-4 shadow-sm flex items-center justify-between', bgClass]">
+  <div
+    :class="[
+      'rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03] p-4 flex items-center justify-between',
+      bgClass,
+    ]"
+  >
     <div>
       <h3 class="text-lg font-semibold text-gray-700">{{ title }}</h3>
       <p :class="['mt-1 text-2xl font-bold', textClass]">{{ count }}</p>
