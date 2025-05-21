@@ -169,7 +169,7 @@ onBeforeUnmount(() => {
       </li>
     </ul>
 
-    <div class="complete-content-file">
+    <div class="complete-content-file bg-gray-200 rounded-lg">
       <div class="w-fit h-fit py-5 px-3 scale-150 origin-top-left flex flex-col gap-5 md:scale-100 md:py-10 md:px-14">
         <template
           v-for="canvas in currentPDF.canvas"
@@ -261,8 +261,6 @@ onBeforeUnmount(() => {
 
 .complete-content-file {
   margin-bottom: 20px;
-  background-color: var(--color-gray-30);
-  border: 2px solid var(--color-gray-30);
   overflow: auto;
   width: calc(100% - 20px);
   height: calc(100% - 178px);

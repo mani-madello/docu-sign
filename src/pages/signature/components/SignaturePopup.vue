@@ -25,7 +25,9 @@ function close() {
     <h5 class="title text-center md:hidden">
       {{ title }}
     </h5>
-    <div class="signature-popup-content">
+    <div
+      class="signature-popup-content border-gray-800 dark:border-white ring-gray-300 dark:ring-gray-400 bg-gray-700 text-white dark:bg-white dark:text-black hover:bg-gray-700 dark:hover:bg-slate-100 text-sm px-3 py-"
+    >
       <slot></slot>
     </div>
     <div class="flex justify-center gap-5 md:hidden">
@@ -76,7 +78,6 @@ function close() {
   margin: 24px 0;
   height: calc(100% - 128px);
   width: 100%;
-  background-color: var(--color-secondary-tint);
   border-radius: 20px;
   overflow-y: auto;
 }

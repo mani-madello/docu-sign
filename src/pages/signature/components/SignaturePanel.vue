@@ -86,7 +86,7 @@ function changeZoom(value: number) {
 }
 
 .signature-panel .btn-small {
-  text-shadow: 0 0 0 #4C00FF;
+  text-shadow: 0 0 0 #155dfc;
   color: transparent;
 }
 

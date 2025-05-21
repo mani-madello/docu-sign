@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-const user = ref({ name: 'Hello Madello' });
+const user = ref({ name: 'Madello' });
 </script>
 
 <template>
@@ -459,7 +459,7 @@ const user = ref({ name: 'Hello Madello' });
                 <div class="justify-start items-center block md:flex">
                   <div class="flex items-center justify-center mb-6 md:mb-0">
                     <span
-                      class="inline-flex justify-center items-center w-12 h-12 rounded-full text-emerald-500 bg-gray-50 dark:bg-slate-800 md:mr-6"
+                      class="inline-flex justify-center items-center w-12 h-12 rounded-full text-emerald-500 bg-neutral-50 dark:bg-slate-800 md:mr-6"
                       ><svg
                         viewBox="0 0 24 24"
                         width="24"
@@ -503,7 +503,7 @@ const user = ref({ name: 'Hello Madello' });
                 <div class="justify-start items-center block md:flex">
                   <div class="flex items-center justify-center mb-6 md:mb-0">
                     <span
-                      class="inline-flex justify-center items-center w-12 h-12 rounded-full text-blue-500 bg-gray-50 dark:bg-slate-800 md:mr-6"
+                      class="inline-flex justify-center items-center w-12 h-12 rounded-full text-blue-500 bg-neutral-50 dark:bg-slate-800 md:mr-6"
                       ><svg
                         viewBox="0 0 24 24"
                         width="24"
@@ -547,7 +547,7 @@ const user = ref({ name: 'Hello Madello' });
                 <div class="justify-start items-center block md:flex">
                   <div class="flex items-center justify-center mb-6 md:mb-0">
                     <span
-                      class="inline-flex justify-center items-center w-12 h-12 rounded-full text-yellow-500 bg-gray-50 dark:bg-slate-800 md:mr-6"
+                      class="inline-flex justify-center items-center w-12 h-12 rounded-full text-yellow-500 bg-neutral-50 dark:bg-slate-800 md:mr-6"
                       ><svg
                         viewBox="0 0 24 24"
                         width="24"
@@ -591,7 +591,7 @@ const user = ref({ name: 'Hello Madello' });
                 <div class="justify-start items-center block md:flex">
                   <div class="flex items-center justify-center mb-6 md:mb-0">
                     <span
-                      class="inline-flex justify-center items-center w-12 h-12 rounded-full text-red-500 bg-gray-50 dark:bg-slate-800 md:mr-6"
+                      class="inline-flex justify-center items-center w-12 h-12 rounded-full text-red-500 bg-neutral-50 dark:bg-slate-800 md:mr-6"
                       ><svg
                         viewBox="0 0 24 24"
                         width="24"

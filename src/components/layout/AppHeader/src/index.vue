@@ -37,13 +37,17 @@ const shouldShowSignStep = computed(() => SIGN_STEP_ROUTES.includes(route.name a
     </router-link>
 
     <!-- Center: Search + SignStep -->
-    <div class="flex flex-col items-center justify-center flex-grow space-y-1">
-      <!-- <input
+    <div
+      v-if="isAuthenticated && route.name !== 'login'"
+      class="ml-20 flex flex-col flex-grow space-y-1"
+    >
+      <input
+        v-if="isAuthenticated && route.name !== 'login' && (route.name === 'dashboard' || route.name === 'home')"
         type="text"
         placeholder="Search (ctrl+k)"
-        class="w-[150px] px-2 py-1 h-8 border rounded-sm bg-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:placeholder-gray-400 dark:bg-slate-800 dark:border-gray-700"
-      /> -->
-      <sign-step v-if="shouldShowSignStep" />
+        class="w-[350px] px-2 py-1 h-8 border rounded-sm bg-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:placeholder-gray-400 dark:bg-slate-800 dark:border-gray-700"
+      />
+      <sign-step v-if="shouldShowSignStep && isAuthenticated" />
     </div>
 
     <!-- Right: Profile and Logout -->
@@ -54,11 +58,11 @@ const shouldShowSignStep = computed(() => SIGN_STEP_ROUTES.includes(route.name a
       <!-- Profile Avatar -->
       <img
         src="https://api.dicebear.com/7.x/avataaars/svg?seed=doe-doe-doe-example-com"
-        alt="John Doe"
+        alt="Madhavan"
         class="rounded-full w-8 h-8"
       />
       <!-- Profile Name -->
-      <span class="hidden md:inline-block text-gray-700 dark:text-gray-200 font-medium"> John Doe </span>
+      <span class="hidden md:inline-block text-gray-700 dark:text-gray-200 font-medium">Madhavan Elango </span>
       <!-- Logout Icon -->
       <div
         class="flex items-center cursor-pointer py-2 px-3 lg:w-16 justify-center hover:text-indigo-600 dark:text-white dark:hover:text-slate-400"

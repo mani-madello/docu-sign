@@ -115,7 +115,7 @@ onAfterRouteLeave(deleteCanvas);
     </h5>
     <div
       v-show="fileName"
-      class="upload-content-box h-[calc(100%-128px)] w-full my-5"
+      class="upload-content-box h-[calc(100%-128px)] w-full my-5 bg-white rounded-lg"
     >
       <div class="flex flex-col gap-2 items-center w-full h-fit">
         <div class="relative h-fit">
@@ -162,7 +162,7 @@ onAfterRouteLeave(deleteCanvas);
 
     <div
       v-if="!fileName"
-      class="border-dashed border-secondary border rounded-[20px] my-5 p-3 h-[calc(100%-128px)] w-full"
+      class="h-[calc(100%-128px)] w-full my-5 bg-white rounded-lg"
     >
       <div
         class="upload-content-box justify-center h-full w-full"
@@ -174,20 +174,37 @@ onAfterRouteLeave(deleteCanvas);
           src="@/assets/img/img_photo.svg"
           alt="photo icon"
         />
-        <button class="btn btn-primary">
-          <input
-            type="file"
-            accept="application/pdf, .jpg, .png"
-            class="opacity-0 absolute w-[131px] h-[41px] cursor-pointer"
-            @change="uploadFile"
-          />{{ $t('select_file') }}
-        </button>
+        <div
+          class="inline-flex items-center capitalize leading-none text-sm border rounded-full py-1.5 px-4 bg-blue-500 border-blue-500 text-white mr-3 last:mr-0 mb-3"
+        >
+          <span class="inline-flex justify-center items-center w-4 h-4 mr-2"
+            ><svg
+              viewBox="0 0 24 24"
+              width="16"
+              height="16"
+              class="inline-block"
+            >
+              <path
+                fill="currentColor"
+                d="M16,6L18.29,8.29L13.41,13.17L9.41,9.17L2,16.59L3.41,18L9.41,12L13.41,16L19.71,9.71L22,12V6H16Z"
+              /></svg></span
+          ><span>
+            <button>
+              <input
+                type="file"
+                accept="application/pdf, .jpg, .png"
+                class="opacity-0 absolute w-[131px] h-[41px] cursor-pointer"
+                @change="uploadFile"
+              />{{ $t('select_file') }}
+            </button></span
+          >
+        </div>
 
         <div class="text-center">
-          <h5 class=" mb-3 hidden md:block">
+          <h5 class="mb-3 hidden md:block">
             {{ $t('prompt.or_drag_file') }}
           </h5>
-          <p class=" px-4 text-center">
+          <p class="px-4 text-center">
             {{ $t('prompt.support_filetype', { type: locale === 'en-US' ? 'PDF, JPG, and PNG' : 'PDF, JPG, PNG' }) }}
           </p>
         </div>

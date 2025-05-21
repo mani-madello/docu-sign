@@ -128,13 +128,13 @@ onActivated(updateSelectAll);
           @open-warn-popup="openWarnPopup"
         />
 
-        <p :class="['text-sm', { 'opacity-0': isSelectAll }]">
+        <p :class="['text-md ', { 'opacity-0': isSelectAll }]">
           {{ isShowThread ? $t('setup_time') : $t('batch_operation') }}
         </p>
       </div>
 
       <div class="flex justify-between items-end flex-1">
-        <p :class="['text-sm h-6', { 'opacity-0': !isShowThread }]">
+        <p :class="['text-md h-6', { 'opacity-0': !isShowThread }]">
           {{ $t('project_name') }}
         </p>
         <div class="flex gap-1">

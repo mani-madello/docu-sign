@@ -217,7 +217,7 @@ onAfterRouteLeave(() => {
       >
     </h5>
 
-    <div class="flex flex-col min-h-0 flex-1 md:flex-row">
+    <div class="flex flex-col min-h-0 flex-1 md:flex-row bg-white">
       <div class="md:border-r-2 md:border-primary md:py-4 md:px-6">
         <signature-toolbar v-model:current-tool="currentTool" />
         <signature-sign
@@ -241,7 +241,7 @@ onAfterRouteLeave(() => {
         />
       </div>
 
-      <div class="signature-content-file">
+      <div class="signature-content-file bg-gray-200 rounded-lg">
         <div
           ref="fileContainer"
           class="relative w-full h-full overflow-auto touch-pan-x touch-pan-y pt-3 px-2 pb-11 md:pt-6 md:px-8"

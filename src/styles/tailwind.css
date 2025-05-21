@@ -3,14 +3,14 @@
 @theme {
   --color-bg: #fff;
 
-  --color-primary: #4C00FF;
+  --color-primary: #155dfc;
   --color-primary-dark: #b2248c;
   --color-primary-frame: rgba(183, 236, 93, 0.3);
   --color-primary-linear: #6d308e;
 
   --color-secondary: #ffffff;
   --color-secondary-dark: #222222;
-  --color-secondary-tint: #4C00FF;
+  --color-secondary-tint: #155dfc;
 
   --color-success: #b2248c;
   --color-success-dark: #b2248c;

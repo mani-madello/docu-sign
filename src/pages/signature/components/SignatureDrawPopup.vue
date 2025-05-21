@@ -128,7 +128,7 @@ function clear() {
     </ul>
     <canvas
       ref="canvasDraw"
-      class="bg-secondary-tint border-2 border-gray-30 rounded-[20px] mb-6"
+      class="border-2 border-gray-30 rounded-[20px] mb-6"
       @mousedown.prevent="startPosition"
       @mouseup="finishedPosition"
       @mouseleave="finishedPosition"

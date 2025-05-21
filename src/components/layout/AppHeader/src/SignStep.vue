@@ -123,7 +123,7 @@ const activeStep = computed(() => {
 
 .sign-step-dot-light {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 4px #4c00ff;
+  box-shadow: 0 0 0 4px #155dfc;
   transition-property: background-color, border-color, box-shadow;
   transition-delay: 300ms;
   transition-duration: 150ms;
