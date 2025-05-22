@@ -26,7 +26,7 @@ function clear() {
     <sign-icon
       v-show="isShowClose"
       name="close_s"
-      class="absolute right-1 top-0 w-10 h-10"
+      class="absolute right-1 top-0 w-8 h-8"
       @click="clear"
     />
     <input

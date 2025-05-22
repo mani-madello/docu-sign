@@ -9,7 +9,7 @@ const { PDFList } = storeToRefs(usePdfStore());
 </script>
 
 <template>
-  <div class="index-files index-container">
+  <div class="h-[calc(100%-90px)] w-full my-5 bg-white rounded-lg index-files index-container">
     <home-sign-files
       v-if="PDFList.length"
       type="file"
@@ -23,10 +23,10 @@ const { PDFList } = storeToRefs(usePdfStore());
       <img
         src="@/assets/icon/add-folder-svgrepo-com.svg"
         alt="create file"
-        class="iconScale w-[80px] h-[80] md:w-[136px] md:h-[136px]"
+        class="iconScale w-[80px] h-[80] md:w-[100px] md:h-[136px]"
         @click="goPage('upload')"
       />
-      <h3 class="text-center">
+      <h3 class="text-center p-6">
         {{ $t('prompt.create_file') }}
       </h3>
     </div>

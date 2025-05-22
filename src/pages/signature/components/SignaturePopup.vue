@@ -54,7 +54,6 @@ function close() {
   bottom: 0;
   left: 0;
   height: 70%;
-  background-color: var(--color-white);
   width: 100%;
   border-radius: 40px 40px 0 0;
   transition: translate 150ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -69,7 +68,6 @@ function close() {
     width: 236px;
     height: calc(100% - 210px);
     padding: 0;
-    background-color: var(--color-secondary-tint);
     border-radius: 40px;
   }
 }

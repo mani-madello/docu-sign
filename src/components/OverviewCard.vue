@@ -24,7 +24,7 @@ const iconBgClass = computed(() => `bg-${props.color}-200`);
       <h3 class="text-lg font-semibold text-gray-700">{{ title }}</h3>
       <p :class="['mt-1 text-2xl font-bold', textClass]">{{ count }}</p>
     </div>
-    <div :class="['w-10 h-10 rounded-full flex items-center justify-center', iconBgClass]">
+    <div :class="['w-8 h-8 rounded-full flex items-center justify-center', iconBgClass]">
       <!-- Example icon placeholder: adjust or replace with your SVG/icon -->
       <svg
         xmlns="http://www.w3.org/2000/svg"

@@ -115,7 +115,7 @@ onAfterRouteLeave(deleteCanvas);
     </h5>
     <div
       v-show="fileName"
-      class="upload-content-box h-[calc(100%-128px)] w-full my-5 bg-white rounded-lg"
+      class="upload-content-box h-[calc(100%-90px)] w-full my-5 bg-white rounded-lg"
     >
       <div class="flex flex-col gap-2 items-center w-full h-fit">
         <div class="relative h-fit">
@@ -162,7 +162,7 @@ onAfterRouteLeave(deleteCanvas);
 
     <div
       v-if="!fileName"
-      class="h-[calc(100%-128px)] w-full my-5 bg-white rounded-lg"
+      class="h-[calc(100%-90px)] w-full my-5 bg-white rounded-lg"
     >
       <div
         class="upload-content-box justify-center h-full w-full"

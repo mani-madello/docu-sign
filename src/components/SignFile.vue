@@ -137,7 +137,7 @@ watch(
           >
             <sign-icon
               :name="effect.icon"
-              class="w-10 h-10"
+              class="w-8 h-8"
               @click.stop="effect.feat"
             />
           </li>
@@ -147,13 +147,13 @@ watch(
     <sign-icon
       v-if="more.length"
       name="more"
-      :class="`absolute w-10 h-10 right-2 top-1 ${isShowMore ? 'opacity-0' : 'opacity-100'} md:hidden`"
+      :class="`absolute w-8 h-8 right-2 top-1 ${isShowMore ? 'opacity-0' : 'opacity-100'} md:hidden`"
       @click.stop="toggleMore(true)"
     />
     <sign-icon
       v-else
       name="reduction"
-      class="absolute w-10 h-10 right-2 top-1 md:hidden"
+      class="absolute w-8 h-8 right-2 top-1 md:hidden"
       @click.stop="reductionTrash"
     />
 
@@ -189,7 +189,7 @@ watch(
         >
           <sign-icon
             :name="effect.icon"
-            class="w-10 h-10"
+            class="w-8 h-8"
             @click.stop="effect.feat"
           />
         </li>
@@ -201,8 +201,8 @@ watch(
 <style lang="css" scoped>
 .sign-file {
   position: relative;
-  border: 2px solid var(--color-secondary-tint);
-  padding: 16px;
+  border: 1px solid var(--color-secondary-tint);
+  padding: 10px;
   border-radius: 20px;
   box-shadow:
     0px 2px 6px rgba(0, 0, 0, 0.12),

@@ -127,7 +127,7 @@ defineExpose({ close, offsetBottom });
 
     <img
       src="@/assets/icon/ic_close_s_white.svg"
-      class="cursor-pointer w-10 h-10"
+      class="cursor-pointer w-8 h-8"
       alt="close toast icon"
       @click="close"
     />

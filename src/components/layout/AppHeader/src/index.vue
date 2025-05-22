@@ -22,7 +22,7 @@ const shouldShowSignStep = computed(() => SIGN_STEP_ROUTES.includes(route.name a
 
 <template>
   <header
-    class="app-header fixed top-0 inset-x-0 z-30 bg-white dark:bg-slate-800 shadow flex items-center justify-between px-4 h-16 xl:pl-60"
+    class="app-header fixed top-0 inset-x-0 z-30 bg-white dark:bg-slate-800 shadow flex items-center justify-between px-4 h-16 md:h-20 xl:pl-60"
   >
     <!-- Left: Logo -->
     <router-link
@@ -32,20 +32,20 @@ const shouldShowSignStep = computed(() => SIGN_STEP_ROUTES.includes(route.name a
       <img
         src="@/assets/logo/logo_darkbg_horizontal.png"
         alt="logo"
-        class="w-[150px] h-auto object-contain"
+        class="w-[110px] md:w-[150px] h-auto object-contain"
       />
     </router-link>
 
     <!-- Center: Search + SignStep -->
     <div
       v-if="isAuthenticated && route.name !== 'login'"
-      class="ml-20 flex flex-col flex-grow space-y-1"
+      class="hidden sm:flex ml-2 sm:ml-6 flex-col flex-grow space-y-1"
     >
       <input
         v-if="isAuthenticated && route.name !== 'login' && (route.name === 'dashboard' || route.name === 'home')"
         type="text"
         placeholder="Search (ctrl+k)"
-        class="w-[350px] px-2 py-1 h-8 border rounded-sm bg-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:placeholder-gray-400 dark:bg-slate-800 dark:border-gray-700"
+        class="w-full max-w-xs md:max-w-md px-2 py-1 h-8 border rounded-sm bg-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:placeholder-gray-400 dark:bg-slate-800 dark:border-gray-700"
       />
       <sign-step v-if="shouldShowSignStep && isAuthenticated" />
     </div>
@@ -53,7 +53,7 @@ const shouldShowSignStep = computed(() => SIGN_STEP_ROUTES.includes(route.name a
     <!-- Right: Profile and Logout -->
     <div
       v-if="isAuthenticated && route.name !== 'login'"
-      class="flex items-center space-x-4 flex-shrink-0 ml-auto"
+      class="flex items-center space-x-2 sm:space-x-4 flex-shrink-0 ml-auto"
     >
       <!-- Profile Avatar -->
       <img
@@ -62,10 +62,14 @@ const shouldShowSignStep = computed(() => SIGN_STEP_ROUTES.includes(route.name a
         class="rounded-full w-8 h-8"
       />
       <!-- Profile Name -->
-      <span class="hidden md:inline-block text-gray-700 dark:text-gray-200 font-medium">Madhavan Elango </span>
+      <span
+        class="hidden sm:inline-block text-gray-700 dark:text-gray-200 font-medium truncate max-w-[100px] md:max-w-[160px]"
+        >Madhavan Elango</span
+      >
+
       <!-- Logout Icon -->
       <div
-        class="flex items-center cursor-pointer py-2 px-3 lg:w-16 justify-center hover:text-indigo-600 dark:text-white dark:hover:text-slate-400"
+        class="flex items-center cursor-pointer py-2 px-2 sm:px-3 justify-center hover:text-indigo-600 dark:text-white dark:hover:text-slate-400"
         @click="logout"
       >
         <svg
@@ -79,7 +83,7 @@ const shouldShowSignStep = computed(() => SIGN_STEP_ROUTES.includes(route.name a
             d="M17 7L15.59 8.41L18.17 11H8V13H18.17L15.59 15.58L17 17L22 12M4 5H12V3H4C2.9 3 2 3.9 2 5V19C2 20.1 2.9 21 4 21H12V19H4V5Z"
           />
         </svg>
-        <span class="lg:hidden">Logout</span>
+        <span class="sm:hidden">Logout</span>
       </div>
     </div>
   </header>

@@ -56,7 +56,7 @@ onBeforeUnmount(() => {
         :key="page"
         :class="[
           'rounded-[20px] relative w-full flex flex-shrink-0 justify-center py-3 cursor-pointer overflow-hidden min-h-32',
-          currentPage === page ? 'bg-primary opacity-70' : 'bg-white',
+          currentPage === page ? 'bg-white opacity-70' : 'bg-white',
         ]"
         @click="selectPage(page)"
       >

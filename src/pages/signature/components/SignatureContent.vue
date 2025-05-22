@@ -217,7 +217,7 @@ onAfterRouteLeave(() => {
       >
     </h5>
 
-    <div class="flex flex-col min-h-0 flex-1 md:flex-row bg-white">
+    <div class="flex flex-col min-h-0 flex-1 md:flex-row bg-white rounded-lg m-6">
       <div class="md:border-r-2 md:border-primary md:py-4 md:px-6">
         <signature-toolbar v-model:current-tool="currentTool" />
         <signature-sign

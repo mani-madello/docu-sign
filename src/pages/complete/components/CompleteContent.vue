@@ -89,7 +89,7 @@ function sendDocument() {
     email: recipientEmail.value,
     timestamp: Date.now(),
   });
-  console.log(currentPDF)
+  console.log(currentPDF);
   // store.setCurrentPDF({
   //   name: uploadedFile.name,
   //   file: uploadedFile,

@@ -106,7 +106,7 @@ onActivated(updateSelectAll);
 </script>
 
 <template>
-  <div class="sign-files">
+  <div class="sign-files bg-white">
     <home-search v-model="keyword" />
 
     <div class="hidden md:flex items-end w-full px-4 py-5">
@@ -140,12 +140,12 @@ onActivated(updateSelectAll);
         <div class="flex gap-1">
           <sign-icon
             name="list"
-            :class="['w-10 h-10', { 'text-primary': isListStatus }]"
+            :class="['w-8 h-8', { 'text-primary': isListStatus }]"
             @click="changeShowStatus('list')"
           />
           <sign-icon
             name="card"
-            :class="['w-10 h-10', { 'text-primary': showStatus === 'card' }]"
+            :class="['w-8 h-8', { 'text-primary': showStatus === 'card' }]"
             @click="changeShowStatus('card')"
           />
         </div>

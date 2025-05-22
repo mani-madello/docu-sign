@@ -24,10 +24,19 @@ function returnHome() {
 </script>
 
 <template>
-  <div class="send-content content flex flex-col items-center justify-center p-6">
-    <h2 class="text-2xl font-bold mb-4 text-center">Document Sent Successfully</h2>
-
-    <div class="bg-gray-100 rounded-lg shadow p-6 max-w-xl w-full">
+  <div class="h-[calc(100%-90px)] w-full my-5 bg-white rounded-lg p-5">
+    <div class="mx-auto w-full max-w-[274px] text-center sm:max-w-[555px]">
+      <div class="mx-auto w-full max-w-[100px] text-center sm:max-w-[160px]">
+        <img
+          src="@/assets/img/success.svg"
+          alt="success"
+          class="dark:hidden"
+        />
+      </div>
+      <h1 class="mb-2 font-bold text-gray-800 text-title-md dark:text-white/90 xl:text-title-2xl">SUCCESS !</h1>
+      <p class="mt-6 mb-6 text-base text-gray-700 dark:text-gray-400 sm:text-lg">
+        Awesome! your document has been sent successfully.
+      </p>
       <p class="mb-2">
         You’ve sent the document to:
         <span class="font-semibold">{{ sentInfo?.name || 'Recipient' }}</span>
@@ -50,13 +59,12 @@ function returnHome() {
           View Document
         </a>
       </p>
-
-      <button
-        class="btn btn-primary w-full"
-        @click="returnHome"
+      <a
+        href="/"
+        class="inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-5 py-3.5 text-sm font-medium text-gray-700 shadow-theme-xs hover:bg-gray-50 hover:text-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-white/[0.03] dark:hover:text-gray-200"
       >
-        ← Return to Home
-      </button>
+        Back to Home Page
+      </a>
     </div>
   </div>
 </template>

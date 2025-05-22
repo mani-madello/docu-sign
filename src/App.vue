@@ -78,7 +78,7 @@ router.beforeEach((to, from) => {
   flex: 1;
   overflow: hidden;
   padding-top: 6.5rem; /* header height */
-  padding-bottom: 3rem; /* footer height */
+  padding-bottom: 0; /* footer height */
 }
 
 /* Sidebar active pushes content */

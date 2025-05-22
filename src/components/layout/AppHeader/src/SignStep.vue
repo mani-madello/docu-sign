@@ -26,13 +26,16 @@ const activeStep = computed(() => {
 </script>
 
 <template>
-  <div class="sign-step" :class="{ 'opacity-0': activeStep === 0 }">
+  <div
+    class="sign-step"
+    :class="{ 'opacity-0': activeStep === 0 }"
+  >
     <!-- Step 1: Upload -->
     <div
       :class="[
         'sign-step-dot',
         { 'sign-step-dot-light': activeStep === 1 },
-        { 'sign-step-dot-complete': activeStep > 1 }
+        { 'sign-step-dot-complete': activeStep > 1 },
       ]"
     >
       <span :class="['sign-step-text', activeStep === 1 ? 'text-primary' : '']">
@@ -51,7 +54,7 @@ const activeStep = computed(() => {
       :class="[
         'sign-step-dot',
         { 'sign-step-dot-light': activeStep === 2 },
-        { 'sign-step-dot-complete': activeStep > 2 }
+        { 'sign-step-dot-complete': activeStep > 2 },
       ]"
     >
       <span :class="['sign-step-text', activeStep === 2 ? 'text-primary' : '']">
@@ -66,12 +69,7 @@ const activeStep = computed(() => {
     ></progress>
 
     <!-- Step 3: Complete -->
-    <div
-      :class="[
-        'sign-step-dot',
-        { 'sign-step-dot-light': activeStep === 3 }
-      ]"
-    >
+    <div :class="['sign-step-dot', { 'sign-step-dot-light': activeStep === 3 }]">
       <span :class="['sign-step-text', activeStep === 3 ? 'text-primary' : '']">
         {{ $t('sign_completed_lower') }}
       </span>
@@ -84,12 +82,7 @@ const activeStep = computed(() => {
     ></progress>
 
     <!-- Step 4: Send -->
-    <div
-      :class="[
-        'sign-step-dot',
-        { 'sign-step-dot-complete': activeStep === 4 }
-      ]"
-    >
+    <div :class="['sign-step-dot', { 'sign-step-dot-complete': activeStep === 4 }]">
       <span :class="['sign-step-text', activeStep === 4 ? 'text-primary' : '']">
         {{ activeStep === 4 ? 'document sent' : 'send document' }}
       </span>
