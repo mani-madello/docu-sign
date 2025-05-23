@@ -56,10 +56,16 @@ async function renderFile(file: File) {
 
     toggleLoading({ isShow: true, title: 'upload_file', content: 'file_uploading' });
     await sleep();
+
     const fileContent = await loadFile(file, filePassword);
 
     if (!fileContent) throw new Error('File content is empty');
-    setCurrentPDF(fileContent);
+    setCurrentPDF({
+      name: file.name,
+      file,
+      ...fileContent,
+    });
+
     pages.value = fileContent.pages;
     showToast(t('prompt.file_upload_success'));
     fileName.value = file.name;

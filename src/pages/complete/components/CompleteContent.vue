@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import emailjs from '@emailjs/browser';
-
+import { getDownloadURL, ref as storageRef, uploadBytes } from 'firebase/storage';
 import { storeToRefs } from 'pinia';
 import { computed, defineAsyncComponent, onBeforeMount, onBeforeUnmount, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { showToast } from '@/components/common';
 import SignIcon from '@/components/SignIcon.vue';
+import { storage } from '@/firebase';
 import { useWarnPopup } from '@/hooks/use-warn-popup';
 
 import { useConfigStore, usePdfStore } from '@/store';
@@ -89,11 +90,6 @@ function sendDocument() {
     email: recipientEmail.value,
     timestamp: Date.now(),
   });
-  console.log(currentPDF);
-  // store.setCurrentPDF({
-  //   name: uploadedFile.name,
-  //   file: uploadedFile,
-  // });
 
   closeSendModal();
   goPage('send');
@@ -125,6 +121,46 @@ function sendDocument() {
       showToast(t('prompt.email_send_failed'), 'error');
     });
 }
+
+// async function sendDocument() {
+//   if (!recipientEmail.value || !recipientEmail.value.includes('@')) {
+//     showToast(t('prompt.invalid_email'), 'error');
+//     return;
+//   }
+
+//   const file = currentPDF.value.file;
+//   if (!file) {
+//     showToast('No document file found to send!', 'error');
+//     return;
+//   }
+
+//   showToast('Uploading document...', 'info');
+
+//   try {
+//     // Step 1: Upload to Firebase
+//     const firebaseFileRef = storageRef(storage, `documents/${Date.now()}-${file.name}`);
+//     await uploadBytes(firebaseFileRef, file);
+//     const downloadURL = await getDownloadURL(firebaseFileRef);
+
+//     // Step 2: Send Email via EmailJS
+//     const templateParams = {
+//       to_email: recipientEmail.value,
+//       to_name: recipientEmail.value.split('@')[0],
+//       document_link: downloadURL,
+//       sender_name: 'Maxign - E Sign',
+//     };
+
+//     await emailjs.send('service_madello', 'template_n5cx46m', templateParams, 'EIMwyDV3CvJ5_vTtk');
+
+//     updateSentInfo(templateParams.to_name, templateParams.to_email);
+//     showToast(t('prompt.document_sent_success', { email: recipientEmail.value }));
+//     closeSendModal();
+//     goPage('send');
+//   } catch (error) {
+//     console.error('Error sending document:', error);
+//     showToast(t('prompt.email_send_failed'), 'error');
+//   }
+// }
 
 onBeforeMount(() => useConfigStore().updateFilePassword(''));
 onBeforeUnmount(() => {

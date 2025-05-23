@@ -3,7 +3,7 @@ defineOptions({ name: 'AppFooter' });
 </script>
 
 <template>
-  <footer class="w-full py-4 px-6 bg-white dark:bg-slate-800 border-t border-gray-200 dark:border-slate-700">
+  <footer class="z-[1] w-full py-4 px-6 bg-white dark:bg-slate-800 border-t border-gray-200 dark:border-slate-700">
     <div
       class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center text-center md:text-left text-sm text-gray-600 dark:text-gray-300"
     >
