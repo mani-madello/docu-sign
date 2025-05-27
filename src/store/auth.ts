@@ -1,28 +1,38 @@
-// @/store/auth.ts
+import { onAuthStateChanged, signOut, User } from 'firebase/auth';
+// store/auth.ts
 import { defineStore } from 'pinia';
-import { computed, ref } from 'vue';
+import { auth } from '@/firebase'; // Your initialized Firebase app
 
-export const useAuthStore = defineStore('auth', () => {
-  const user = ref<{ email: string; name?: string } | null>(
-    JSON.parse(localStorage.getItem('user') || 'null')
-  );
-
-  const isAuthenticated = computed(() => !!user.value);
-
-  const login = (userData: { email: string; name?: string }) => {
-    user.value = userData;
-    localStorage.setItem('user', JSON.stringify(userData));
-  };
-
-  const logout = () => {
-    user.value = null;
-    localStorage.removeItem('user');
-  };
-
-  return {
-    user,
-    isAuthenticated,
-    login,
-    logout,
-  };
+export const useAuthStore = defineStore('auth', {
+  state: () => ({
+    user: null as null | { email: string; name: string },
+    loading: true,
+  }),
+  getters: {
+    isAuthenticated: state => !!state.user,
+    getUser: state => state.user,
+  },
+  actions: {
+    init() {
+      onAuthStateChanged(auth, (firebaseUser: User | null) => {
+        if (firebaseUser) {
+          this.user = {
+            email: firebaseUser.email || '',
+            name: firebaseUser.displayName || '',
+          };
+        } else {
+          this.user = null;
+        }
+        this.loading = false;
+      });
+    },
+    login(user: { email: string; name: string }) {
+      this.user = user;
+    },
+    async logout() {
+      await signOut(auth);
+      this.user = null;
+    },
+  },
+  persist: true,
 });

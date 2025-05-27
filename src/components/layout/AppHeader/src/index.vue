@@ -8,11 +8,18 @@ import SignStep from './SignStep.vue';
 const router = useRouter();
 const route = useRoute();
 const authStore = useAuthStore();
-const { isAuthenticated } = storeToRefs(authStore);
+const { isAuthenticated, getUser } = storeToRefs(authStore);
 
-const logout = () => {
-  console.log('logout called');
-  authStore.logout();
+const userInitials = computed(() => {
+  if (!getUser.value?.name) return 'U';
+  return getUser.value.name
+    .split(' ')
+    .map(n => n[0])
+    .join('');
+});
+
+const logout = async () => {
+  await authStore.logout();
   router.push({ name: 'login' });
 };
 
@@ -55,17 +62,18 @@ const shouldShowSignStep = computed(() => SIGN_STEP_ROUTES.includes(route.name a
       v-if="isAuthenticated && route.name !== 'login'"
       class="flex items-center space-x-2 sm:space-x-4 flex-shrink-0 ml-auto"
     >
-      <!-- Profile Avatar -->
-      <img
-        src="https://api.dicebear.com/7.x/avataaars/svg?seed=doe-doe-doe-example-com"
-        alt="Madhavan"
-        class="rounded-full w-8 h-8"
-      />
-      <!-- Profile Name -->
+      <div
+        class="rounded-full w-8 h-8 bg-indigo-600 text-white flex items-center justify-center text-sm font-bold"
+        :title="getUser?.email"
+      >
+        {{ userInitials }}
+      </div>
+
       <span
         class="hidden sm:inline-block text-gray-700 dark:text-gray-200 font-medium truncate max-w-[100px] md:max-w-[160px]"
-        >Madhavan Elango</span
       >
+        {{ getUser?.name }}
+      </span>
 
       <!-- Logout Icon -->
       <div

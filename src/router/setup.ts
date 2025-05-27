@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import { auth } from '@/firebase';
 import Complete from '@/pages/complete/index.vue';
 import Dashboard from '@/pages/dashboard/index.vue';
 import Home from '@/pages/home/index.vue';
@@ -45,6 +46,13 @@ const routes: Array<RouteRecordRaw> = [
     path: '/signature',
     name: 'signature',
     component: Signature,
+    meta: { allowGuest: true },
+  },
+  {
+    path: '/:employeeName/:docId',
+    name: 'public-signature',
+    component: Signature,
+    meta: { allowGuest: true },
   },
   {
     path: '/complete',
@@ -61,4 +69,14 @@ const routes: Array<RouteRecordRaw> = [
 export const router = createRouter({
   history: createWebHistory(),
   routes,
+});
+
+router.beforeEach((to, from, next) => {
+  const user = auth.currentUser;
+
+  if (!user && to.path !== '/login' && !to.meta.allowGuest) {
+    return next('/login');
+  }
+
+  return next();
 });

@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { useFabric } from '@component-hook/pdf-canvas/vue';
+import { doc, getFirestore, serverTimestamp, setDoc } from 'firebase/firestore';
+import { getDownloadURL, getStorage, ref as storageRef, uploadBytes } from 'firebase/storage';
+import { storeToRefs } from 'pinia';
+import { v4 as uuidv4 } from 'uuid';
 import { computed, defineAsyncComponent, onMounted, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { showToast } from '@/components/common';
@@ -7,10 +11,16 @@ import SignIcon from '@/components/SignIcon.vue';
 import SignStepBtn from '@/components/SignStepBtn.vue';
 import { useWarnPopup } from '@/hooks/use-warn-popup';
 import { onAfterRouteLeave } from '@/router';
-import { useConfigStore, usePdfStore } from '@/store';
+import { useAuthStore, useConfigStore, usePdfStore } from '@/store';
 import { sleep } from '@/utils/common';
 import { checkFile } from '@/utils/reader';
 
+const authStore = useAuthStore();
+const { user, loading } = storeToRefs(authStore);
+
+const isUserLoggedIn = computed(() => !!user.value?.email);
+
+const docId = ref('');
 const fileName = ref('');
 const projectName = ref('');
 const isShowPen = ref(true);
@@ -25,8 +35,46 @@ const regexp = /.pdf|.png|.jpg|.jpeg/;
 let currentFile: File | null = null;
 
 const isNextDisabled = computed(() => !fileName.value);
+// eslint-disable-next-line @typescript-eslint/no-shadow
+async function uploadToFirebase(docId: string, file: File, userId: string, department: string) {
+  const storage = getStorage();
+  const firestore = getFirestore();
+
+  const filePath = `uploads/${userId}/${docId}/${file.name}`;
+  const fileRef = storageRef(storage, filePath);
+  const snapshot = await uploadBytes(fileRef, file);
+  const fileUrl = await getDownloadURL(snapshot.ref);
+
+  // await uploadBytes(fileRef, fileBlob);
+
+  const contractDoc = doc(firestore, 'contracts', docId);
+  await setDoc(contractDoc, {
+    docId,
+    createdBy: userId,
+    employeeEmail: '',
+    employeeName: '',
+    assignedTo: user.value?.email,
+    department,
+    status: 'pending',
+    signedByHR: false,
+    signedByEmployee: false,
+    fileName: file.name,
+    filePath,
+    fileUrl,
+    createdAt: serverTimestamp(),
+    updatedAt: serverTimestamp(),
+    signedDate: serverTimestamp(),
+  });
+
+  return { docId, filePath, fileUrl };
+}
 
 async function uploadFile(event: Event) {
+  if (!isUserLoggedIn.value) {
+    showToast({ message: t('prompt.login_required'), type: 'error' });
+    return;
+  }
+
   const target = event.target as HTMLInputElement;
   const { files } = target;
 
@@ -35,6 +83,11 @@ async function uploadFile(event: Event) {
 }
 
 function dropFile(event: DragEvent) {
+  if (!isUserLoggedIn.value) {
+    showToast({ message: t('prompt.login_required'), type: 'error' });
+    return;
+  }
+
   const { dataTransfer } = event;
   const files = dataTransfer?.files;
 
@@ -43,7 +96,6 @@ function dropFile(event: DragEvent) {
 
 function readerFile(files?: FileList | null) {
   const file = checkFile(files, regexp);
-
   if (!file) return;
   currentFile = file;
   return renderFile(file);
@@ -58,12 +110,20 @@ async function renderFile(file: File) {
     await sleep();
 
     const fileContent = await loadFile(file, filePassword);
-
     if (!fileContent) throw new Error('File content is empty');
+
+    const department = 'Engineering'; // You can make this dynamic later
+    docId.value = uuidv4(); // 🔐 generate it once here
+    const { filePath, fileUrl } = await uploadToFirebase(docId.value, file, user.value.uid, department);
+
+    console.log(docId.value);
     setCurrentPDF({
       name: file.name,
       file,
       ...fileContent,
+      filePath,
+      fileUrl,
+      docId: docId.value, // ✅ this fixes the infinite loop
     });
 
     pages.value = fileContent.pages;
@@ -115,7 +175,11 @@ onAfterRouteLeave(deleteCanvas);
 </script>
 
 <template>
-  <div class="upload-content content">
+  <div v-if="loading">Loading...</div>
+  <div
+    v-else-if="isUserLoggedIn"
+    class="upload-content content"
+  >
     <h5 class="title text-center">
       {{ $t('upload_file') }}
     </h5>
@@ -133,15 +197,12 @@ onAfterRouteLeave(deleteCanvas);
           <canvas
             id="canvas"
             class="border-2 border-gray-20 w-full"
-          >
-          </canvas>
+          ></canvas>
         </div>
         <h5 class="w-full text-ellipsis overflow-hidden whitespace-nowrap text-center">
           {{ fileName }}
         </h5>
-        <p class="">
-          {{ $t('page', pages) }}
-        </p>
+        <p>{{ $t('page', pages) }}</p>
       </div>
 
       <div class="w-full flex flex-col gap-4 items-center">
@@ -183,8 +244,8 @@ onAfterRouteLeave(deleteCanvas);
         <div
           class="inline-flex items-center capitalize leading-none text-sm border rounded-full py-1.5 px-4 bg-blue-500 border-blue-500 text-white mr-3 last:mr-0 mb-3"
         >
-          <span class="inline-flex justify-center items-center w-4 h-4 mr-2"
-            ><svg
+          <span class="inline-flex justify-center items-center w-4 h-4 mr-2">
+            <svg
               viewBox="0 0 24 24"
               width="16"
               height="16"
@@ -193,17 +254,20 @@ onAfterRouteLeave(deleteCanvas);
               <path
                 fill="currentColor"
                 d="M16,6L18.29,8.29L13.41,13.17L9.41,9.17L2,16.59L3.41,18L9.41,12L13.41,16L19.71,9.71L22,12V6H16Z"
-              /></svg></span
-          ><span>
+              />
+            </svg>
+          </span>
+          <span>
             <button>
               <input
                 type="file"
                 accept="application/pdf, .jpg, .png"
                 class="opacity-0 absolute w-[131px] h-[41px] cursor-pointer"
                 @change="uploadFile"
-              />{{ $t('select_file') }}
-            </button></span
-          >
+              />
+              {{ $t('select_file') }}
+            </button>
+          </span>
         </div>
 
         <div class="text-center">
@@ -249,6 +313,12 @@ onAfterRouteLeave(deleteCanvas);
       v-if="isShowPasswordPopup"
       @close-password="closePasswordPopup"
     />
+  </div>
+  <div
+    v-else
+    class="text-center text-red-600"
+  >
+    {{ $t('prompt.login_required') }}
   </div>
 </template>
 

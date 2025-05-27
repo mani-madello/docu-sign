@@ -20,6 +20,9 @@ app.use(router);
 app.use(i18NPlugin);
 app.use(preloadPlugin);
 app.use(errorHandlerPlugin);
+
+const authStore = useAuthStore();
+authStore.init();
 app.mount('#app');
 
 useAuthStore().$patch({

@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import { signInWithEmailAndPassword } from 'firebase/auth';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+import { auth } from '@/firebase';
 import { useAuthStore } from '@/store/auth';
 
 const router = useRouter();
@@ -9,17 +11,22 @@ const password = ref('');
 const error = ref('');
 const authStore = useAuthStore();
 
-const handleLogin = () => {
-  if (email.value === 'hello@madello.com' && password.value === 'madello') {
-    const mockUser = {
-      email: email.value,
-      name: 'Madello User',
-    };
-    authStore.login(mockUser);
+const handleLogin = async () => {
+  try {
+    const userCredential = await signInWithEmailAndPassword(auth, email.value, password.value);
+    const user = userCredential.user;
+
+    authStore.login({
+      uid: user.uid,
+      email: user.email || '',
+      name: user.displayName || 'User',
+    });
+
     error.value = '';
-    router.push({ name: 'dashboard' });
-  } else {
-    error.value = 'Invalid email or password';
+    router.push({ name: 'dashboard' }); // Adjust route name if needed
+  } catch (error_) {
+    error.value = 'Login failed: Invalid email or password';
+    console.error(error_);
   }
 };
 </script>
@@ -34,16 +41,16 @@ const handleLogin = () => {
         <div class="mb-6">
           <div class="text-center mb-4">
             <h1 class="text-3xl font-bold text-gray-900 dark:text-white">Sign in to your account</h1>
-            <p class="mt-2 text-sm text-gray-500">Use <code>hello@madello.com</code> / <code>madello</code></p>
+            <p class="mt-2 text-sm text-gray-500">Please login with your registered email and password</p>
           </div>
 
           <label class="block font-bold mb-2">Email</label>
           <div class="relative mb-4">
             <input
-              id="email"
               v-model="email"
               type="email"
               required
+              placeholder="Enter your email"
               class="px-3 py-2 focus:ring-3 border-gray-700 rounded-sm w-full dark:placeholder-gray-400 h-12 border bg-white dark:bg-slate-800 pl-10"
             />
             <span
@@ -62,17 +69,16 @@ const handleLogin = () => {
               </svg>
             </span>
           </div>
-          <div class="text-xs text-gray-500 dark:text-slate-400 mt-1">Please enter your login</div>
         </div>
 
         <div class="mb-6">
           <label class="block font-bold mb-2">Password</label>
           <div class="relative mb-4">
             <input
-              id="password"
               v-model="password"
               type="password"
               required
+              placeholder="Enter your password"
               class="px-3 py-2 focus:ring-3 border-gray-700 rounded-sm w-full dark:placeholder-gray-400 h-12 border bg-white dark:bg-slate-800 pl-10"
             />
             <span
@@ -91,7 +97,6 @@ const handleLogin = () => {
               </svg>
             </span>
           </div>
-          <div class="text-xs text-gray-500 dark:text-slate-400 mt-1">Please enter your password</div>
         </div>
 
         <label class="flex items-center space-x-2 text-sm">
@@ -100,7 +105,7 @@ const handleLogin = () => {
             name="remember"
             value="true"
           />
-          <span>Remember</span>
+          <span>Remember me</span>
         </label>
       </div>
 
@@ -114,7 +119,7 @@ const handleLogin = () => {
         <div class="flex items-center justify-start flex-wrap -mb-3">
           <button
             type="submit"
-            class="inline-flex justify-center items-center whitespace-nowrap focus:outline-none transition-colors focus:ring-3 duration-150 border cursor-pointer rounded-sm border-blue-600 dark:border-blue-500 ring-blue-300 dark:ring-blue-700 bg-blue-600 dark:bg-blue-500 text-white hover:bg-blue-700 hover:border-blue-700 dark:hover:bg-blue-600 dark:hover:border-blue-600 py-2 px-3 mr-3 mb-3"
+            class="inline-flex justify-center items-center whitespace-nowrap transition-colors focus:ring-3 duration-150 border cursor-pointer rounded-sm border-blue-600 dark:border-blue-500 ring-blue-300 dark:ring-blue-700 bg-blue-600 dark:bg-blue-500 text-white hover:bg-blue-700 hover:border-blue-700 dark:hover:bg-blue-600 dark:hover:border-blue-600 py-2 px-3 mr-3 mb-3"
           >
             <span class="px-2">Login</span>
           </button>
@@ -124,7 +129,7 @@ const handleLogin = () => {
   </div>
 </template>
 
-<style lang="css" scoped>
+<style scoped>
 .login {
   display: flex;
   flex-direction: column;

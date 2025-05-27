@@ -1,19 +1,19 @@
 <script setup lang="ts">
 import emailjs from '@emailjs/browser';
+import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { getDownloadURL, ref as storageRef, uploadBytes } from 'firebase/storage';
 import { storeToRefs } from 'pinia';
-import { computed, defineAsyncComponent, onBeforeMount, onBeforeUnmount, ref } from 'vue';
+import { computed, defineAsyncComponent, onBeforeMount, onBeforeUnmount, ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { showToast } from '@/components/common';
 import SignIcon from '@/components/SignIcon.vue';
-import { storage } from '@/firebase';
-import { useWarnPopup } from '@/hooks/use-warn-popup';
+import { db, storage } from '@/firebase';
 
+import { useWarnPopup } from '@/hooks/use-warn-popup';
 import { useConfigStore, usePdfStore } from '@/store';
 
 type WarnType = 'archive' | 'trash';
 
-const store = usePdfStore();
 const warnType = ref<WarnType>('archive');
 const iShowEncryptPopup = ref(false);
 const { currentPDF } = storeToRefs(usePdfStore());
@@ -29,6 +29,8 @@ const warnContent = computed(() => {
 });
 const isSendModalOpen = ref(false);
 const recipientEmail = ref('');
+const signedPdfUrl = ref<string | null>(null); // ✅ Signed URL state
+
 function openWarnPopup(type: WarnType) {
   warnType.value = type;
   toggleWarnPopup(true);
@@ -77,90 +79,94 @@ function closeSendModal() {
   recipientEmail.value = '';
 }
 
-function sendDocument() {
+async function sendDocument() {
   if (!recipientEmail.value || !recipientEmail.value.includes('@')) {
     showToast(t('prompt.invalid_email'), 'error');
     return;
   }
 
-  console.log(recipientEmail.value);
-  showToast(t('prompt.document_sent_success', { email: recipientEmail.value }));
-  store.setSentInfo({
-    name: recipientEmail.value.split('@')[0],
-    email: recipientEmail.value,
-    timestamp: Date.now(),
-  });
+  const file = currentPDF.value.file;
+  if (!file) {
+    showToast('No document file found to send!', 'error');
+    return;
+  }
 
-  closeSendModal();
-  goPage('send');
+  showToast('Uploading document...', 'info');
 
-  const templateParams = {
-    to_email: recipientEmail.value,
-    to_name: recipientEmail.value.split('@')[0], // optional name
-    // eslint-disable-next-line sonarjs/no-clear-text-protocols
-    document_link: currentPDF.value.url || 'http://52.200.13.223/',
-    sender_name: 'Maxign - E Sign',
-  };
+  try {
+    const fileName = `${Date.now()}-${file.name}`;
+    const firebaseFileRef = storageRef(storage, `documents/${fileName}`);
+    await uploadBytes(firebaseFileRef, file);
+    const downloadURL = await getDownloadURL(firebaseFileRef);
 
-  emailjs
-    .send(
-      'service_madello', // replace with your actual service ID
-      'template_n5cx46m', // replace with your actual template ID
-      templateParams,
-      'EIMwyDV3CvJ5_vTtk', // replace with your public key from EmailJS
-    )
-    .then(() => {
-      updateSentInfo(templateParams.to_name, templateParams.to_email); // ✅ Track send info
-      showToast(t('prompt.document_sent_success', { email: recipientEmail.value }));
-      closeSendModal();
-      goPage('send');
-    })
+    const docId = fileName.replace(/\.[^/.]+$/, '');
+    const employeeName = recipientEmail.value.split('@')[0];
 
-    .catch(error => {
-      console.error('EmailJS error:', error);
-      showToast(t('prompt.email_send_failed'), 'error');
+    await setDoc(doc(db, 'documents', docId), {
+      docId,
+      url: downloadURL,
+      status: 'pending',
+      sentTo: {
+        name: employeeName,
+        email: recipientEmail.value,
+      },
+      createdAt: new Date().toISOString(),
     });
+
+    const signLink = `http://localhost:8080/${employeeName}/${docId}`;
+
+    const templateParams = {
+      to_email: recipientEmail.value,
+      to_name: employeeName,
+      document_link: signLink,
+      sender_name: 'E Sign',
+    };
+
+    await emailjs.send('service_madello', 'template_bzrw36k', templateParams, 'vgo38fj40ywZbvn76');
+
+    updateSentInfo(employeeName, recipientEmail.value);
+    showToast(t('prompt.document_sent_success', { email: recipientEmail.value }));
+    closeSendModal();
+    goPage('send');
+  } catch (error) {
+    console.error('Error sending document:', error);
+    showToast(t('prompt.email_send_failed'), 'error');
+  }
 }
 
-// async function sendDocument() {
-//   if (!recipientEmail.value || !recipientEmail.value.includes('@')) {
-//     showToast(t('prompt.invalid_email'), 'error');
-//     return;
-//   }
+async function fetchSignedUrl(docId: string) {
+  try {
+    console.log(currentPDF.value);
+    const contractRef = doc(db, 'contracts', docId);
+    const contractSnap = await getDoc(contractRef);
 
-//   const file = currentPDF.value.file;
-//   if (!file) {
-//     showToast('No document file found to send!', 'error');
-//     return;
-//   }
+    if (!contractSnap.exists()) {
+      throw new Error('Document not found');
+    }
 
-//   showToast('Uploading document...', 'info');
+    const data = contractSnap.data();
+    if (!data.signedUrl) {
+      throw new Error('Signed URL missing');
+    }
+    console.log(signedPdfUrl.value);
+    signedPdfUrl.value = data.signedUrl;
+    console.log(signedPdfUrl.value);
+  } catch (error) {
+    console.error('Error loading signed PDF:', error);
+    showToast(t('prompt.error_loading_document'), 'error');
+  }
+}
 
-//   try {
-//     // Step 1: Upload to Firebase
-//     const firebaseFileRef = storageRef(storage, `documents/${Date.now()}-${file.name}`);
-//     await uploadBytes(firebaseFileRef, file);
-//     const downloadURL = await getDownloadURL(firebaseFileRef);
-
-//     // Step 2: Send Email via EmailJS
-//     const templateParams = {
-//       to_email: recipientEmail.value,
-//       to_name: recipientEmail.value.split('@')[0],
-//       document_link: downloadURL,
-//       sender_name: 'Maxign - E Sign',
-//     };
-
-//     await emailjs.send('service_madello', 'template_n5cx46m', templateParams, 'EIMwyDV3CvJ5_vTtk');
-
-//     updateSentInfo(templateParams.to_name, templateParams.to_email);
-//     showToast(t('prompt.document_sent_success', { email: recipientEmail.value }));
-//     closeSendModal();
-//     goPage('send');
-//   } catch (error) {
-//     console.error('Error sending document:', error);
-//     showToast(t('prompt.email_send_failed'), 'error');
-//   }
-// }
+watch(
+  currentPDF,
+  pdf => {
+    console.log(pdf);
+    if (pdf?.docId) {
+      fetchSignedUrl(pdf.docId); // this is correct
+    }
+  },
+  { immediate: true },
+);
 
 onBeforeMount(() => useConfigStore().updateFilePassword(''));
 onBeforeUnmount(() => {
@@ -175,14 +181,14 @@ onBeforeUnmount(() => {
     </h5>
 
     <ul class="toolbar md:absolute md:right-10 md:top-5">
-      <li>
+      <!-- <li>
         <sign-icon
           name="download"
           class="w-9 h-9"
           @click="toggleEncryptPopup(true)"
         />
-      </li>
-      <li>
+      </li> -->
+      <!-- <li>
         <sign-icon
           name="archive"
           class="w-9 h-9"
@@ -195,26 +201,50 @@ onBeforeUnmount(() => {
           class="w-9 h-9"
           @click="openWarnPopup('trash')"
         />
-      </li>
+      </li> -->
       <li>
-        <sign-icon
+        <!-- <sign-icon
           name="send"
           class="w-9 h-9"
           @click="openSendModal"
-        />
+        /> -->
+        <button
+          class="btn btn-primary inline-flex justify-center items-center whitespace-nowrap focus:outline-hidden transition-colors focus:ring-3 duration-150 border cursor-pointer rounded-sm border-blue-600 dark:border-blue-500 ring-blue-300 dark:ring-blue-700 bg-blue-600 dark:bg-blue-500 text-white hover:bg-blue-700 hover:border-blue-700 dark:hover:bg-blue-600 dark:hover:border-blue-600 py-2 px-3 mr-3 last:mr-0 mb-3"
+          @click="openSendModal"
+        >
+          <span class="text-4xl font-thin"
+            ><sign-icon
+              name="send"
+              class="w-9 h-9" /></span
+          >Send document
+        </button>
       </li>
     </ul>
 
     <div class="complete-content-file bg-gray-200 rounded-lg">
-      <div class="w-fit h-fit py-5 px-3 scale-150 origin-top-left flex flex-col gap-5 md:scale-100 md:py-10 md:px-14">
-        <template
-          v-for="canvas in currentPDF.canvas"
-          :key="canvas"
-        >
-          <img
-            :src="canvas"
-            alt="PDF document"
-          />
+      <div class="scale-150 origin-top-left flex flex-col gap-5 md:scale-100">
+        <template v-if="signedPdfUrl">
+          <iframe
+            :src="signedPdfUrl"
+            type="application/pdf"
+            width="100%"
+            height="800px"
+            class="border rounded-lg"
+          ></iframe>
+        </template>
+        <template v-else-if="currentPDF.canvas?.length">
+          <template
+            v-for="canvas in currentPDF.canvas"
+            :key="canvas"
+          >
+            <img
+              :src="canvas"
+              alt="PDF page"
+            />
+          </template>
+        </template>
+        <template v-else>
+          <p>{{ $t('loading') }}...</p>
         </template>
       </div>
     </div>

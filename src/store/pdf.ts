@@ -45,7 +45,7 @@ export const usePdfStore = defineStore('pdf_signature_pdf', {
       if (!currentPDF) return;
       this.currentPDF = currentPDF;
     },
-    setCurrentPDF(PDF: PDF) {
+    setCurrentPDF(PDF: PDF & { pages: number[] }) {
       this.currentPDF = PDF;
       return this.updateCurrentPDFIdb();
     },
@@ -80,6 +80,20 @@ export const usePdfStore = defineStore('pdf_signature_pdf', {
 
       if (!PDFList) return;
       this.PDFList = PDFList;
+    },
+    async generateMergedPDF(): Promise<Blob> {
+      const jsPDF = (await import('jspdf')).default;
+      const pdf = new jsPDF();
+
+      const canvasList = this.currentPDF.canvas || [];
+
+      for (const [i, base64] of canvasList.entries()) {
+        if (!base64) continue;
+        if (i > 0) pdf.addPage();
+        pdf.addImage(base64, 'JPEG', 0, 0, 210, 297); // A4 size in mm
+      }
+
+      return pdf.output('blob');
     },
     addPDF(PDF: PDF) {
       this.PDFList.unshift({ ...PDF });
