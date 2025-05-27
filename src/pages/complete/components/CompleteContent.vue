@@ -31,10 +31,10 @@ const isSendModalOpen = ref(false);
 const recipientEmail = ref('');
 const signedPdfUrl = ref<string | null>(null); // ✅ Signed URL state
 
-function openWarnPopup(type: WarnType) {
-  warnType.value = type;
-  toggleWarnPopup(true);
-}
+// function openWarnPopup(type: WarnType) {
+//   warnType.value = type;
+//   toggleWarnPopup(true);
+// }
 
 const sentInfo = ref({
   name: '',
