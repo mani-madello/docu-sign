@@ -69,7 +69,13 @@ const activeStep = computed(() => {
     ></progress>
 
     <!-- Step 3: Complete -->
-    <div :class="['sign-step-dot', { 'sign-step-dot-light': activeStep === 3 }]">
+    <div
+      :class="[
+        'sign-step-dot',
+        { 'sign-step-dot-light': activeStep === 3 },
+        { 'sign-step-dot-complete': activeStep >= 3 },
+      ]"
+    >
       <span :class="['sign-step-text', activeStep === 3 ? 'text-primary' : '']">
         {{ $t('sign_completed_lower') }}
       </span>
@@ -82,7 +88,13 @@ const activeStep = computed(() => {
     ></progress>
 
     <!-- Step 4: Send -->
-    <div :class="['sign-step-dot', { 'sign-step-dot-complete': activeStep === 4 }]">
+    <div
+      :class="[
+        'sign-step-dot',
+        { 'sign-step-dot-light': activeStep === 4 },
+        { 'sign-step-dot-complete': activeStep >= 4 },
+      ]"
+    >
       <span :class="['sign-step-text', activeStep === 4 ? 'text-primary' : '']">
         {{ activeStep === 4 ? 'document sent' : 'send document' }}
       </span>
