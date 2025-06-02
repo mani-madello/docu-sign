@@ -4,8 +4,12 @@ export function useRedirect() {
   const router = useRouter();
   const route = useRoute();
 
-  function goPage(name: string) {
-    router.push({ name });
+  function goPage(name: string, params?: Record<string, any>) {
+    if (params && Object.keys(params).length > 0) {
+      router.push({ name, params });
+    } else {
+      router.push({ name });
+    }
   }
 
   function goBack() {

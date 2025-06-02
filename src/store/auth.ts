@@ -17,6 +17,7 @@ export const useAuthStore = defineStore('auth', {
       onAuthStateChanged(auth, (firebaseUser: User | null) => {
         if (firebaseUser) {
           this.user = {
+            // uuid: firebaseUser.uid,
             email: firebaseUser.email || '',
             name: firebaseUser.displayName || '',
           };

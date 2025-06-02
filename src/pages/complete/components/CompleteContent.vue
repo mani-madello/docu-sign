@@ -1,19 +1,21 @@
 <script setup lang="ts">
 import emailjs from '@emailjs/browser';
-import { doc, getDoc, setDoc } from 'firebase/firestore';
-import { getDownloadURL, ref as storageRef, uploadBytes } from 'firebase/storage';
+import { doc, getDoc, updateDoc } from 'firebase/firestore';
+import { getDownloadURL, ref as storageRef } from 'firebase/storage';
 import { storeToRefs } from 'pinia';
 import { computed, defineAsyncComponent, onBeforeMount, onBeforeUnmount, ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
+import { useRoute } from 'vue-router';
 import { showToast } from '@/components/common';
 import SignIcon from '@/components/SignIcon.vue';
 import { db, storage } from '@/firebase';
-
 import { useWarnPopup } from '@/hooks/use-warn-popup';
 import { useConfigStore, usePdfStore } from '@/store';
 
 type WarnType = 'archive' | 'trash';
 
+const route = useRoute();
+const docId = computed(() => route.params.docId as string);
 const warnType = ref<WarnType>('archive');
 const iShowEncryptPopup = ref(false);
 const { currentPDF } = storeToRefs(usePdfStore());
@@ -29,7 +31,8 @@ const warnContent = computed(() => {
 });
 const isSendModalOpen = ref(false);
 const recipientEmail = ref('');
-const signedPdfUrl = ref<string | null>(null); // ✅ Signed URL state
+const recipientName = ref('');
+const signedPdfUrl = ref<string | null>(null);
 
 // function openWarnPopup(type: WarnType) {
 //   warnType.value = type;
@@ -77,15 +80,16 @@ function openSendModal() {
 function closeSendModal() {
   isSendModalOpen.value = false;
   recipientEmail.value = '';
+  recipientName.value = '';
 }
 
 async function sendDocument() {
-  if (!recipientEmail.value || !recipientEmail.value.includes('@')) {
+  if (!recipientName.value || !recipientEmail.value || !recipientEmail.value.includes('@')) {
     showToast(t('prompt.invalid_email'), 'error');
     return;
   }
 
-  const file = currentPDF.value.file;
+  const file = currentPDF.value.name;
   if (!file) {
     showToast('No document file found to send!', 'error');
     return;
@@ -94,37 +98,50 @@ async function sendDocument() {
   showToast('Uploading document...', 'info');
 
   try {
-    const fileName = `${Date.now()}-${file.name}`;
-    const firebaseFileRef = storageRef(storage, `documents/${fileName}`);
-    await uploadBytes(firebaseFileRef, file);
-    const downloadURL = await getDownloadURL(firebaseFileRef);
+    const docRef = doc(db, 'contracts', docId.value);
+    const docSnap = await getDoc(docRef);
+    if (!docSnap.exists()) throw new Error('Document not found');
 
-    const docId = fileName.replace(/\.[^/.]+$/, '');
-    const employeeName = recipientEmail.value.split('@')[0];
+    const data = docSnap.data();
+    const filePath = data.filePath; // e.g., 'uploads/userId/docId/filename.pdf'
+    const fileName = data.fileName;
 
-    await setDoc(doc(db, 'documents', docId), {
-      docId,
-      url: downloadURL,
+    // Step 2: Get download URL
+    const fileRef = storageRef(storage, filePath);
+    const downloadURL = await getDownloadURL(fileRef);
+    console.log(downloadURL);
+
+    // Step 3: Fetch and convert to base64
+    const response = await fetch(downloadURL);
+    const blob = await response.blob();
+    const base64 = await blobToBase64(blob);
+    console.log(base64);
+
+    await updateDoc(doc(db, 'contracts', docId.value), {
+      employeeName: recipientName.value,
+      employeeEmail: recipientEmail.value,
+      sendAt: new Date().toISOString(),
       status: 'pending',
-      sentTo: {
-        name: employeeName,
-        email: recipientEmail.value,
-      },
-      createdAt: new Date().toISOString(),
     });
+    const publicroute = 'public';
 
-    const signLink = `http://localhost:8080/${employeeName}/${docId}`;
+    // const signLink = `http://localhost:8080/${publicroute}/${docId.value}`;
+    const signLink = `https://esign.madello.com/${publicroute}/${docId.value}`;
 
     const templateParams = {
       to_email: recipientEmail.value,
-      to_name: employeeName,
+      to_name: recipientName.value,
       document_link: signLink,
       sender_name: 'E Sign',
+      file_name: fileName,
+      // file_attachment: base64,
+      document_url: downloadURL,
     };
 
+    console.log(templateParams);
     await emailjs.send('service_madello', 'template_bzrw36k', templateParams, 'vgo38fj40ywZbvn76');
 
-    updateSentInfo(employeeName, recipientEmail.value);
+    updateSentInfo(recipientName.value, recipientEmail.value);
     showToast(t('prompt.document_sent_success', { email: recipientEmail.value }));
     closeSendModal();
     goPage('send');
@@ -134,10 +151,19 @@ async function sendDocument() {
   }
 }
 
-async function fetchSignedUrl(docId: string) {
+function blobToBase64(blob: Blob): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(blob);
+    reader.onloadend = () => resolve(reader.result as string);
+    // eslint-disable-next-line unicorn/prefer-add-event-listener
+    reader.onerror = reject;
+  });
+}
+
+async function fetchSignedUrl(docuId: string) {
   try {
-    console.log(currentPDF.value);
-    const contractRef = doc(db, 'contracts', docId);
+    const contractRef = doc(db, 'contracts', docuId);
     const contractSnap = await getDoc(contractRef);
 
     if (!contractSnap.exists()) {
@@ -148,9 +174,7 @@ async function fetchSignedUrl(docId: string) {
     if (!data.signedUrl) {
       throw new Error('Signed URL missing');
     }
-    console.log(signedPdfUrl.value);
     signedPdfUrl.value = data.signedUrl;
-    console.log(signedPdfUrl.value);
   } catch (error) {
     console.error('Error loading signed PDF:', error);
     showToast(t('prompt.error_loading_document'), 'error');
@@ -160,7 +184,6 @@ async function fetchSignedUrl(docId: string) {
 watch(
   currentPDF,
   pdf => {
-    console.log(pdf);
     if (pdf?.docId) {
       fetchSignedUrl(pdf.docId); // this is correct
     }
@@ -291,6 +314,13 @@ onBeforeUnmount(() => {
       :title="$t('send_document')"
     >
       <div class="flex flex-col gap-4 p-4">
+        <label class="font-semibold">{{ $t('enter_name') }}</label>
+        <input
+          v-model="recipientName"
+          type="email"
+          placeholder="John Doe"
+          class="input input-bordered w-full"
+        />
         <label class="font-semibold">{{ $t('enter_email_address') }}</label>
         <input
           v-model="recipientEmail"

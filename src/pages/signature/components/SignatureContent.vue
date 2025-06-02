@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import emailjs from '@emailjs/browser';
 import imageCompression from 'browser-image-compression';
 import { getAuth } from 'firebase/auth';
-import { collection, doc, getDocs, limit, orderBy, query, serverTimestamp, updateDoc, where } from 'firebase/firestore';
-import { getDownloadURL, ref as storageRef, uploadBytes } from 'firebase/storage';
+import { collection, doc, getDoc, getDocs, query, serverTimestamp, updateDoc, where } from 'firebase/firestore';
+import { getDownloadURL, getStorage, ref as storageRef, uploadBytes } from 'firebase/storage';
 
 import { storeToRefs } from 'pinia';
 import { computed, defineAsyncComponent, onMounted, ref, useTemplateRef } from 'vue';
@@ -11,7 +12,7 @@ import { useRoute } from 'vue-router';
 import { showToast } from '@/components/common';
 import SignStepBtn from '@/components/SignStepBtn.vue';
 import { DRAG_MOVE_STEP } from '@/constants/common';
-import { db, storage } from '@/firebase';
+import { db } from '@/firebase';
 import { useLoadCanvas } from '@/hooks/use-load-canvas';
 import { usePointerFabric } from '@/hooks/use-pointer-fabric';
 import { useWarnPopup } from '@/hooks/use-warn-popup';
@@ -32,9 +33,11 @@ import SignatureSign from './SignatureSign.vue';
 import SignatureToolbar from './SignatureToolbar.vue';
 
 const route = useRoute();
-const docId = ref<string | null>(null);
+const storage = getStorage();
+const docId = computed(() => route.params.docId as string);
 const firestoreDocId = ref<string | null>(null);
-const isPublicSignature = ref<boolean>(!!(route.params.employeeName && route.params.docId));
+const isPublicRoute = ref<boolean>(!!(route.params.public && route.params.docId));
+
 const auth = getAuth();
 const pdfStore = usePdfStore();
 const { setCurrentPDF } = usePdfStore();
@@ -109,7 +112,7 @@ async function mergeFile() {
       const file = { ...currentPDF.value, PDFBase64: '', updateDate: Date.now() };
 
       if (!file.name) throw new Error('Missing file name in currentPDF');
-      const resolvedDocId = docId.value || currentPDF.value?.docId;
+      const resolvedDocId = docId.value || currentPDF.value?.PDFId;
       if (!resolvedDocId) throw new Error('Missing document ID');
 
       if (file.isUpdate) {
@@ -118,15 +121,14 @@ async function mergeFile() {
         addPDF(file);
       }
 
-      // Firebase upload
-      const userId = auth.currentUser?.uid;
+      const userId = auth.currentUser?.uid || 'public';
       if (!userId) {
         showToast({ message: 'User not authenticated', type: 'error' });
         return;
       }
 
-      const filePath = `uploads/${userId}/${resolvedDocId}/${file.file.name}`;
-
+      const filePath = userId !== 'public' ? `uploads/${userId}/${resolvedDocId}/${file.name}` : file?.filePath;
+      // const filePath = `uploads/${userId}/${resolvedDocId}/${file.name}`;
       const { jsPDF } = await import('jspdf');
       const pdf = new jsPDF();
 
@@ -144,17 +146,42 @@ async function mergeFile() {
       await uploadBytes(fileRef, pdfBlob);
 
       const downloadURL = await getDownloadURL(fileRef);
-      await loadPDFByUrl(downloadURL);
-      const contractDocRef = doc(db, 'contracts', firestoreDocId.value!);
+      // await loadPDFByUrl(downloadURL);
+      const contractDocRef = doc(db, 'contracts', resolvedDocId);
       await updateDoc(contractDocRef, {
-        ...(isPublicSignature.value ? { signedByEmployee: true } : { signedByHR: true }),
+        ...(isPublicRoute.value ? { signedByEmployee: true } : { signedByHR: true }),
         signedUrl: downloadURL,
         signedAt: serverTimestamp(),
         status: 'signed',
       });
 
-      showToast(t('prompt.file_created_success'));
-      goPage('complete');
+      // Public route handling
+      if (isPublicRoute.value) {
+        // Notify HR via email
+        const docSnap = await getDoc(doc(db, 'contracts', resolvedDocId));
+        if (!docSnap.exists()) throw new Error('Document not found');
+
+        const contractData = docSnap.data();
+        const hrEmail = contractData?.hrEmail || 'hr@example.com'; // fallback
+
+        const publicroute = 'public';
+        // const signLink = `http://localhost:8080/${publicroute}/${resolvedDocId}`;
+        const signLink = `https://esign.madello.com/${publicroute}/${resolvedDocId}`;
+
+        const templateParams = {
+          to_email: hrEmail,
+          to_name: 'HR',
+          document_link: signLink,
+          sender_name: contractData.employeeName || 'Employee',
+          file_name: file.name,
+          document_url: downloadURL,
+        };
+
+        await sendEmailToHR(templateParams); // Define this separately
+      } else {
+        showToast(t('prompt.file_created_success'));
+        goPage('complete', { resolvedDocId });
+      }
     } catch (error) {
       console.error('Merge error:', error);
       showToast({ message: t('prompt.operation_timed_out'), type: 'error' });
@@ -162,6 +189,25 @@ async function mergeFile() {
       toggleMergePopup(false);
     }
   });
+}
+
+async function sendEmailToHR(params: {
+  to_email: string;
+  to_name: string;
+  document_link: string;
+  sender_name: string;
+  file_name: string;
+  document_url: string;
+}) {
+  try {
+    console.log(params);
+    // await emailjs.send('service_madello', 'template_bzrw36k', params, 'vgo38fj40ywZbvn76');
+    showToast({ message: 'Notification sent to HR.', type: 'success' });
+    goPage('success');
+  } catch (error) {
+    console.error('Email send error:', error);
+    showToast({ message: 'Failed to notify HR.', type: 'error' });
+  }
 }
 
 function addFabric(value: string, type?: string) {
@@ -249,98 +295,126 @@ function cancelScrollToPerFrame() {
 }
 
 async function resolveDocIdAndLoadPDF() {
-  if (isPublicSignature.value) {
-    firestoreDocId.value = route.params.docId as string;
-    await loadPublicDocument();
-  } else {
-    await loadInternalDocument(); // <-- new logic for HR
-  }
-}
-
-async function loadPublicDocument() {
-  const routeDocId = route.params.docId as string;
-
-  if (!routeDocId) {
-    console.error('Public route but docId is missing in URL');
-    showToast({ message: 'Invalid document link', type: 'error' });
+  const resolvedDocId = docId.value;
+  if (!resolvedDocId) {
+    showToast({ message: 'Invalid document ID', type: 'error' });
     return;
   }
+  firestoreDocId.value = resolvedDocId;
+  await loadDocumentByDocId(resolvedDocId);
+}
 
+async function loadDocumentByDocId(docuid: string) {
   try {
-    const contractsRef = collection(db, 'contracts');
-    const q = query(contractsRef, where('docId', '==', routeDocId));
-    const snapshot = await getDocs(q);
+    let docData: any = null;
 
-    if (!snapshot.empty) {
-      const contractDoc = snapshot.docs[0];
-      const data = contractDoc.data();
+    if (isPublicRoute.value) {
+      // Public route: use a query to fetch by docId field
+      const contractsRef = collection(db, 'contracts');
+      const q = query(contractsRef, where('docId', '==', docuid));
+      const snapshot = await getDocs(q);
 
-      const filePath = data?.signedUrl || data?.fileUrl;
-      if (!filePath) {
-        console.error('No valid file path found.');
-        showToast({ message: 'Document missing file path', type: 'error' });
+      if (snapshot.empty) {
+        showToast({ message: 'Document not found', type: 'error' });
         return;
       }
 
-      firestoreDocId.value = contractDoc.id;
-      docId.value = data.docId;
-      await loadPDFByUrl(filePath);
+      docData = snapshot.docs[0].data();
     } else {
-      console.warn('No document found for given docId:', routeDocId);
-      showToast({ message: 'Document not found', type: 'error' });
+      // Internal route: fetch directly using document ID
+      const docRef = doc(db, 'contracts', docuid);
+      const docSnap = await getDoc(docRef);
+
+      if (!docSnap.exists()) {
+        showToast({ message: 'Document not found', type: 'error' });
+        return;
+      }
+
+      docData = docSnap.data();
     }
+    const pdfUrl = docData.signedUrl || docData.fileUrl;
+
+    if (!pdfUrl) {
+      showToast({ message: 'No PDF file found', type: 'error' });
+      return;
+    }
+
+    await loadPDFByUrl({
+      fileUrl: pdfUrl,
+      fileName: docData.fileName,
+      updatedAt: docData.updatedAt || Date.now(),
+      createdAt: docData.createdAt || Date.now(),
+      docId: docuid,
+      filePath: docData.filePath,
+    });
   } catch (error) {
-    console.error('Error fetching public document:', error);
-    showToast({ message: 'Failed to load document', type: 'error' });
+    console.error('Error loading document:', error);
   }
 }
 
-const loadInternalDocument = async () => {
-  try {
-    const user = auth.currentUser;
-    if (!user) {
-      console.warn('User not authenticated');
-      return;
-    }
-
-    const contractsRef = collection(db, 'contracts');
-    const q = query(
-      contractsRef,
-      where('createdBy', '==', user.uid),
-      where('signedByHR', '==', false),
-      orderBy('createdAt', 'desc'),
-      limit(1),
-    );
-
-    const querySnapshot = await getDocs(q);
-
-    if (!querySnapshot.empty) {
-      const docuid = querySnapshot.docs[0];
-      firestoreDocId.value = docuid.id;
-      return;
-    }
-
-    const data = doc.data();
-    if (!data.filePath) {
-      console.error('filePath missing in Firestore document');
-      return;
-    }
-
-    const fileRef = storageRef(storage, data.filePath);
-    const url = await getDownloadURL(fileRef);
-    await loadPDFByUrl(url);
-  } catch (error) {
-    console.error('Error loading internal HR document:', error);
+function arrayBufferToPdfString(buffer: ArrayBuffer): string {
+  const uint8Array = new Uint8Array(buffer);
+  let rawString = '';
+  for (const element of uint8Array) {
+    rawString += String.fromCharCode(element);
   }
-};
+  return rawString;
+}
 
-async function loadPDFByUrl(storagePath: string) {
+function estimatePageCountFromArrayBuffer(buffer: ArrayBuffer): number {
+  const text = new TextDecoder().decode(buffer);
+  const matches = text.match(/\/Type\s*\/Page\b/g);
+  return matches ? matches.length : 1;
+}
+
+async function loadPDFByUrl({
+  fileUrl,
+  fileName,
+  updatedAt,
+  createdAt,
+  // eslint-disable-next-line @typescript-eslint/no-shadow
+  docId,
+  filePath,
+}: {
+  fileUrl: string;
+  fileName: string;
+  updatedAt: number;
+  createdAt: number;
+  docId: string;
+  filePath: string;
+}) {
   try {
-    const url = storagePath; // Already a direct URL
+    const response = await fetch(fileUrl);
+    const arrayBuffer = await response.arrayBuffer();
+    const fileSize = arrayBuffer.byteLength;
+    const rawPdfString = arrayBufferToPdfString(arrayBuffer);
+    const estimatedPages = estimatePageCountFromArrayBuffer(arrayBuffer);
+    const safeTimestamp = typeof updatedAt === 'number' && !Number.isNaN(updatedAt) ? updatedAt : Date.now();
 
-    setCurrentPDF({ url, docId: firestoreDocId.value });
+    const completePDF = {
+      PDFId: `${fileName}-${Date.now()}`,
+      docId,
+      name: fileName,
+      updateDate: updatedAt,
+      createdAt,
+      fileUrl,
+      filePath,
+      url: fileUrl, // Required by your PDF type
+      file: {
+        name: fileName,
+        size: fileSize,
+        type: 'application/pdf',
+        lastModified: safeTimestamp,
+        lastModifiedDate: new Date(safeTimestamp),
+        webkitRelativePath: '',
+      },
+      pages: [estimatedPages], //Array.from({ length: pageCount }, (_, i) => i + 1),
+      PDFBase64: rawPdfString,
+    };
+
+    setCurrentPDF(completePDF);
   } catch (error) {
-    console.error('Error loading PDF from storage:', error);
+    console.error('Error loading PDF:', error);
     showToast({ message: 'Failed to load PDF', type: 'error' });
   }
 }
@@ -451,6 +525,7 @@ onAfterRouteLeave(() => {
       class="pb-2.5"
       :is-prev-disabled="!isCompleted"
       :is-next-disabled="!isCompleted"
+      :is-public="isPublicRoute"
       @next-step="toggleNextWarnPopup(true)"
       @prev-step="toggleWarnPopup(true)"
     />
@@ -493,7 +568,7 @@ onAfterRouteLeave(() => {
         </button>
         <Button
           class="btn btn-primary"
-          :disabled="signatureCanvasItems.length === 0"
+          :disabled="signatureCanvasItems?.length === 0"
           @click="mergeFile"
         >
           {{ $t('confirm') }}

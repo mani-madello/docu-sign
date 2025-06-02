@@ -3,12 +3,16 @@ import { auth } from '@/firebase';
 import Complete from '@/pages/complete/index.vue';
 import Dashboard from '@/pages/dashboard/index.vue';
 import Home from '@/pages/home/index.vue';
-import Kanban from '@/pages/kanban/index.vue';
 import Login from '@/pages/login/index.vue';
+import MultiSelect from '@/pages/multiselect/index.vue';
+import MultiUpload from '@/pages/multiupload/index.vue';
 import Profile from '@/pages/profile/index.vue';
 import Send from '@/pages/send/index.vue';
 import Signature from '@/pages/signature/index.vue';
+import Starter from '@/pages/starter/index.vue';
+import Success from '@/pages/success/index.vue';
 import Upload from '@/pages/upload/index.vue';
+import UploadToSend from '@/pages/uploadtosend/index.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -18,14 +22,14 @@ const routes: Array<RouteRecordRaw> = [
   { path: '/', redirect: '/login' },
   { path: '/login', name: 'login', component: Login },
   {
+    path: '/start',
+    name: 'start',
+    component: Starter,
+  },
+  {
     path: '/dashboard',
     name: 'dashboard',
     component: Dashboard,
-  },
-  {
-    path: '/kanban',
-    name: 'kanban',
-    component: Kanban,
   },
   {
     path: '/profile',
@@ -43,26 +47,46 @@ const routes: Array<RouteRecordRaw> = [
     component: Upload,
   },
   {
-    path: '/signature',
+    path: '/multiupload',
+    name: 'multiupload',
+    component: MultiUpload,
+  },
+  {
+    path: '/multiselect',
+    name: 'multiselect',
+    component: MultiSelect,
+  },
+  {
+    path: '/signature/:docId',
     name: 'signature',
     component: Signature,
     meta: { allowGuest: true },
   },
   {
-    path: '/:employeeName/:docId',
-    name: 'public-signature',
+    path: '/:public/:docId',
+    name: 'public',
     component: Signature,
     meta: { allowGuest: true },
   },
   {
-    path: '/complete',
+    path: '/complete/:docId',
     name: 'complete',
     component: Complete,
   },
   {
-    path: '/send',
+    path: '/send/:docId',
     name: 'send',
     component: Send,
+  },
+  {
+    path: '/success',
+    name: 'success',
+    component: Success,
+  },
+  {
+    path: '/uploadtosend',
+    name: 'uploadtosend',
+    component: UploadToSend,
   },
 ];
 

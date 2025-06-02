@@ -1,27 +1,33 @@
+<!-- eslint-disable @typescript-eslint/no-shadow -->
 <script setup lang="ts">
 import { useFabric } from '@component-hook/pdf-canvas/vue';
 import { getAuth } from 'firebase/auth';
-import { doc, getFirestore, serverTimestamp, setDoc } from 'firebase/firestore';
+import { collection, doc, getFirestore, serverTimestamp, setDoc } from 'firebase/firestore';
 import { deleteObject, getDownloadURL, getStorage, ref as storageRef, uploadBytes } from 'firebase/storage';
 import { storeToRefs } from 'pinia';
 import { v4 as uuidv4 } from 'uuid';
-import { computed, defineAsyncComponent, onMounted, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { useRoute } from 'vue-router';
 import { showToast } from '@/components/common';
 import SignIcon from '@/components/SignIcon.vue';
 import SignStepBtn from '@/components/SignStepBtn.vue';
 import { useWarnPopup } from '@/hooks/use-warn-popup';
 import { onAfterRouteLeave } from '@/router';
 import { useAuthStore, useConfigStore, usePdfStore } from '@/store';
+import { UploadedPDF } from '@/store/pdf';
 import { sleep } from '@/utils/common';
-import { checkFile } from '@/utils/reader';
+// import { checkFile } from '@/utils/reader';
 
-const route = useRoute();
-const authStore = useAuthStore();
+interface UploadedFile extends File {
+  uploadedAt: string;
+  docId: string;
+  filePath: string;
+  fileUrl: string;
+}
+
 const auth = getAuth();
-const isPublicRoute = ref<boolean>(!!(route.params.public && route.params.docId));
 const uid = auth.currentUser?.uid;
+const authStore = useAuthStore();
 const { user, loading } = storeToRefs(authStore);
 
 const isUserLoggedIn = computed(() => !!user.value?.email);
@@ -30,62 +36,88 @@ const docId = ref('');
 const fileName = ref('');
 const projectName = ref('');
 const isShowPen = ref(true);
-const isShowPasswordPopup = ref(false);
+// const isShowPasswordPopup = ref(false);
 const pages = ref(1);
 const { t, locale } = useI18n();
 const { createCanvas, deleteCanvas, loadFile } = useFabric({ id: 'canvas' });
 const { isShowWarnPopup, SignPopup, goBack, goPage, toggleWarnPopup } = useWarnPopup();
 const { toggleLoading, updateFilePassword } = useConfigStore();
-const UploadPassword = defineAsyncComponent(() => import('./UploadPassword.vue'));
+// const UploadPassword = defineAsyncComponent(() => import('./UploadPassword.vue'));
 const regexp = /.pdf|.png|.jpg|.jpeg/;
-let currentFile: File | null = null;
+
+const files = ref<UploadedFile[]>([]);
+const uploadResults = ref<{ name: string; docId: string }[]>([]);
+const uploading = ref(false);
+const progress = ref(0);
 
 const isNextDisabled = computed(() => !fileName.value);
-// eslint-disable-next-line @typescript-eslint/no-shadow
-async function uploadToFirebase(docId: string, file: File, userId: string, department: string) {
+
+async function uploadToFirebase(
+  uid: string,
+  file: File,
+  department: string,
+): Promise<{
+  filePath: string;
+  fileUrl: string;
+  docId: string;
+}> {
   const storage = getStorage();
-  const firestore = getFirestore();
-
-  const filePath = `uploads/${userId}/${docId}/${file.name}`;
+  const db = getFirestore();
+  const docId = uuidv4();
+  const filePath = `uploads/${uid}/${docId}/${file.name}`;
   const fileRef = storageRef(storage, filePath);
-  const snapshot = await uploadBytes(fileRef, file);
-  const fileUrl = await getDownloadURL(snapshot.ref);
 
-  // await uploadBytes(fileRef, fileBlob);
+  await uploadBytes(fileRef, file);
+  const fileUrl = await getDownloadURL(fileRef);
 
-  const contractDoc = doc(firestore, 'contracts', docId);
-  await setDoc(contractDoc, {
+  const docRef = doc(collection(db, 'contracts'), docId);
+  await setDoc(docRef, {
     docId,
-    createdBy: userId,
+    createdBy: uid,
     employeeEmail: '',
     employeeName: '',
-    assignedTo: user.value?.email,
-    department,
-    status: 'pending',
-    signedByHR: false,
-    signedByEmployee: false,
+    assignedTo: user.value?.email ?? '',
     fileName: file.name,
     filePath,
     fileUrl,
+    department,
+    uploadedBy: uid,
     createdAt: serverTimestamp(),
     updatedAt: serverTimestamp(),
     signedDate: serverTimestamp(),
+    status: 'pending',
+    signedByHR: false,
+    signedByEmployee: false,
+    signedAt: null,
   });
 
-  return { docId, filePath, fileUrl };
+  return { filePath, fileUrl, docId };
 }
 
-async function uploadFile(event: Event) {
+async function handleFileChange(event: Event) {
   if (!isUserLoggedIn.value) {
     showToast({ message: t('prompt.login_required'), type: 'error' });
     return;
   }
 
-  const target = event.target as HTMLInputElement;
-  const { files } = target;
+  const input = event.target as HTMLInputElement;
+  const selectedFiles = input.files;
+  if (!selectedFiles) return;
 
-  await readerFile(files);
-  target.value = '';
+  for (const file of Array.from(selectedFiles)) {
+    if (regexp.test(file.name.toLowerCase())) {
+      const uploadedFile = {
+        ...file,
+        uploadedAt: '',
+        docId: '',
+        filePath: '',
+        fileUrl: '',
+      };
+      files.value.push(uploadedFile);
+    }
+  }
+
+  input.value = ''; // reset file input
 }
 
 function dropFile(event: DragEvent) {
@@ -100,61 +132,78 @@ function dropFile(event: DragEvent) {
   readerFile(files);
 }
 
-function readerFile(files?: FileList | null) {
-  const file = checkFile(files, regexp);
-  if (!file) return;
-  currentFile = file;
-  return renderFile(file);
+function readerFile(fileList?: FileList | null) {
+  if (!fileList) return;
+
+  const selectedFiles = Array.from(fileList).filter(file => regexp.test(file.name));
+  if (!selectedFiles.length) return;
+
+  // Prepare placeholder UploadedFile objects
+  const placeholderFiles: UploadedFile[] = selectedFiles.map(file => ({
+    ...file,
+    uploadedAt: '', // Placeholder until you get real metadata
+    docId: '', // Will be updated in renderFiles
+    filePath: '',
+    fileUrl: '',
+  }));
+
+  files.value = placeholderFiles;
+  uploading.value = true;
+
+  renderFiles(placeholderFiles); // Now passes the correct type
 }
 
-async function renderFile(file: File) {
+async function renderFiles(fileList: File[]) {
+  const auth = getAuth();
+  const uid = auth.currentUser?.uid;
+  if (!uid) {
+    showToast({ message: 'User not authenticated', type: 'error' });
+    return;
+  }
+
+  const { setCurrentPDF } = usePdfStore();
+  const { filePassword } = useConfigStore();
+  const department = 'Engineering';
+
+  toggleLoading({ isShow: true, title: 'upload_file', content: 'file_uploading' });
+  await sleep();
+
   try {
-    const { setCurrentPDF } = usePdfStore();
-    const { filePassword } = useConfigStore();
+    for (let i = 0; i < fileList.length; i++) {
+      const file = fileList[i];
+      try {
+        const fileContent = await loadFile(file, filePassword);
+        if (!fileContent) throw new Error('File content is empty');
 
-    toggleLoading({ isShow: true, title: 'upload_file', content: 'file_uploading' });
-    await sleep();
+        const uploadResult = await uploadToFirebase(uid, file, department);
+        const { filePath, fileUrl, docId: uploadedDocId } = uploadResult;
 
-    const fileContent = await loadFile(file, filePassword);
-    if (!fileContent) throw new Error('File content is empty');
+        setCurrentPDF({
+          ...fileContent,
+          file,
+          name: file.name,
+          filePath,
+          fileUrl,
+          docId: uploadedDocId,
+          uploadedAt: '',
+        } as UploadedPDF);
 
-    const department = 'Engineering'; // You can make this dynamic later
-    docId.value = uuidv4(); // 🔐 generate it once here
-    const { filePath, fileUrl } = await uploadToFirebase(docId.value, file, uid!, department);
+        uploadResults.value.push({ name: file.name, docId: uploadedDocId });
+      } catch (error) {
+        console.warn(`Error uploading ${file.name}:`, error);
+      }
 
-    setCurrentPDF({
-      ...(fileContent as any),
-      file,
-      name: file.name,
-      filePath,
-      fileUrl,
-      docId: docId.value,
-      uploadedAt: new Date().toISOString(), // use string
-      pages: Array.from({ length: fileContent.pages ?? 1 }, (_, i) => i),
-    });
-
-    pages.value = fileContent.pages;
-    showToast(t('prompt.file_upload_success'));
-    fileName.value = file.name;
-    projectName.value = file.name.replace(regexp, '');
-  } catch (error) {
-    if (`${error}`.includes('PasswordException')) {
-      isShowPasswordPopup.value = true;
-      if (`${error}` !== 'PasswordException: Incorrect Password') return;
-      showToast({ message: t('prompt.incorrect_password'), type: 'error' });
-      updateFilePassword('');
-      return;
+      progress.value = Math.round(((i + 1) / fileList.length) * 100);
     }
+
+    showToast(t('prompt.file_upload_success'));
+  } catch (error) {
     showToast({ message: t('prompt.file_upload_failed'), type: 'error' });
+    console.error('Batch upload error:', error);
   } finally {
+    uploading.value = false;
     toggleLoading({ isShow: false });
   }
-}
-
-function closePasswordPopup(isEnterPassword = false) {
-  isShowPasswordPopup.value = false;
-  if (!isEnterPassword || !currentFile) return;
-  renderFile(currentFile);
 }
 
 function remove() {
@@ -164,13 +213,15 @@ function remove() {
 }
 
 async function giveUpUpload() {
-  if (docId.value && currentFile) {
+  if (docId.value && files) {
     const storage = getStorage();
-    const filePath = `uploads/${uid}/${docId.value}/${currentFile.name}`;
-    try {
-      await deleteObject(storageRef(storage, filePath));
-    } catch (error) {
-      console.warn('Failed to delete uploaded file:', error);
+    for (const file of files.value) {
+      const filePath = `uploads/${uid}/${docId.value}/${file.name}`;
+      try {
+        await deleteObject(storageRef(storage, filePath));
+      } catch (error) {
+        console.warn('Failed to delete uploaded file:', error);
+      }
     }
   }
   remove();
@@ -186,6 +237,16 @@ function blur() {
   usePdfStore().setCurrentPDFName(projectName.value);
 }
 
+function removeFile(index: number) {
+  files.value.splice(index, 1);
+}
+
+const formatDate = (timestamp: string | number | Date) => {
+  if (!timestamp) return 'N/A';
+  const date = new Date(timestamp);
+  return Number.isNaN(date.getTime()) ? 'Invalid date' : date.toLocaleString();
+};
+
 onMounted(createCanvas);
 onAfterRouteLeave(deleteCanvas);
 </script>
@@ -194,14 +255,14 @@ onAfterRouteLeave(deleteCanvas);
   <div v-if="loading">Loading...</div>
   <div
     v-else-if="isUserLoggedIn"
-    class="upload-content content"
+    class="multiupload-content content"
   >
     <h5 class="title text-center">
       {{ $t('upload_file') }}
     </h5>
     <div
       v-show="fileName"
-      class="upload-content-box h-[calc(100%-90px)] w-full my-5 bg-white rounded-lg"
+      class="multiupload-content-box h-[calc(100%-90px)] w-full my-5 bg-white rounded-lg"
     >
       <div class="flex flex-col gap-2 items-center w-full h-fit">
         <div class="relative h-fit">
@@ -248,7 +309,7 @@ onAfterRouteLeave(deleteCanvas);
       class="h-[calc(100%-90px)] w-full my-5 bg-white rounded-lg"
     >
       <div
-        class="upload-content-box justify-center h-full w-full"
+        class="multiupload-content-box justify-center h-full w-full"
         @dragover.stop.prevent
         @dragenter.stop.prevent
         @drop.stop.prevent="dropFile"
@@ -277,9 +338,10 @@ onAfterRouteLeave(deleteCanvas);
             <button>
               <input
                 type="file"
+                multiple
                 accept="application/pdf, .jpg, .png"
                 class="opacity-0 absolute w-[131px] h-[41px] cursor-pointer"
-                @change="uploadFile"
+                @change="handleFileChange"
               />
               {{ $t('select_file') }}
             </button>
@@ -294,13 +356,46 @@ onAfterRouteLeave(deleteCanvas);
             {{ $t('prompt.support_filetype', { type: locale === 'en-US' ? 'PDF' : 'PDF' }) }}
           </p>
         </div>
+        <div
+          v-if="files.length"
+          class="my-4"
+        >
+          <h5>{{ $t('selected_files') }}</h5>
+          <ul class="w-full space-y-4 px-4">
+            <li
+              v-for="(file, index) in files"
+              :key="index"
+              class="flex items-center justify-between gap-4 bg-gray-800 text-white p-4 rounded-lg"
+            >
+              <!-- File Name -->
+              <p class="flex-1 truncate">{{ file.name }}</p>
+
+              <!-- Uploaded Time -->
+              <p class="w-48 text-right text-sm text-gray-300">
+                {{ file?.uploadedAt ? formatDate(file?.uploadedAt) : 'N/A' }}
+              </p>
+
+              <!-- Trash Icon -->
+              <button
+                title="Remove"
+                @click="removeFile(index)"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="w-6 h-6 text-red-400 hover:text-red-600 transition-colors"
+                >
+                  <use href="#icon-ic_trash" />
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
     <sign-step-btn
       :is-next-disabled="isNextDisabled"
-      :is-public="false"
-      @next-step="goPage('signature', { docId })"
+      @next-step="goPage('signature')"
       @prev-step="toggleWarnPopup(true)"
     />
     <sign-popup
@@ -325,11 +420,6 @@ onAfterRouteLeave(deleteCanvas);
         </button>
       </div>
     </sign-popup>
-
-    <upload-password
-      v-if="isShowPasswordPopup"
-      @close-password="closePasswordPopup"
-    />
   </div>
   <div
     v-else
@@ -340,7 +430,7 @@ onAfterRouteLeave(deleteCanvas);
 </template>
 
 <style lang="css" scoped>
-.upload-content-box {
+.multiupload-content-box {
   padding: 12px 10px;
   display: flex;
   flex-direction: column;
@@ -350,7 +440,7 @@ onAfterRouteLeave(deleteCanvas);
 }
 
 @media (min-width: 768px) {
-  .upload-content-box {
+  .multiupload-content-box {
     padding: 48px 10px;
   }
 }

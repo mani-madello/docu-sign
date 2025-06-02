@@ -23,6 +23,9 @@ importers:
       chart.js:
         specifier: ^4.4.9
         version: 4.4.9
+      fabric:
+        specifier: ^6.6.7
+        version: 6.6.7
       firebase:
         specifier: ^11.8.1
         version: 11.8.1
@@ -69,6 +72,9 @@ importers:
       '@tailwindcss/vite':
         specifier: ^4.1.4
         version: 4.1.4(vite@6.3.2(@types/node@22.14.1)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.1))
+      '@types/fabric':
+        specifier: ^5.3.10
+        version: 5.3.10
       '@types/node':
         specifier: ^22.14.1
         version: 22.14.1
@@ -1711,6 +1717,9 @@ packages:
   '@types/estree@1.0.7':
     resolution: {integrity: sha512-w28IoSUCJpidD/TGviZwwMJckNESJZXFu7NBZ5YJ4mEUnNraUn9Pm8HSZm/jDF1pDWYKspWE7oVphigUPRakIQ==}
 
+  '@types/fabric@5.3.10':
+    resolution: {integrity: sha512-fsJIuVkU+B2AnmQh+Ml2X0ax3NmRIqLvEXmZ+squX60HaF89TvdIP6tI6Uk5srXaauswTwPOOfWE7k2QboUZCg==}
+
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
@@ -2925,8 +2934,8 @@ packages:
     resolution: {integrity: sha512-Nmb6QXkELsuBr24CJSkilo6UHHgbekK5UiZgfE6UHD3Eb27YC6oD+bhcT+tJ6cl8dmsgdQxnWlcry8ksBIBLpw==}
     engines: {node: '>=0.10.0'}
 
-  fabric@6.6.4:
-    resolution: {integrity: sha512-GJ+9CsTo4oDGO6eEsSYaxgaZnndsiVr/pl8itfLkaBuxH4ek9+hxKfpjzrIaiSGzoZ8jVxUP8pFJaCronLxukA==}
+  fabric@6.6.7:
+    resolution: {integrity: sha512-5wLf0F9PouwfgG11nsPs7mSVIGTRG3R3I4fCE9iT8fpQyG8OKHSe1N6/KVGRgAgrQN2AAh2xF+K/Gv5UVfkqlQ==}
     engines: {node: '>=16.20.0'}
 
   fast-deep-equal@3.1.3:
@@ -6402,7 +6411,7 @@ snapshots:
 
   '@component-hook/pdf-canvas@1.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vue@3.5.13(typescript@5.8.3))':
     dependencies:
-      fabric: 6.6.4
+      fabric: 6.6.7
       pdfjs-dist: 4.10.38
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -7358,6 +7367,8 @@ snapshots:
   '@types/estree@0.0.39': {}
 
   '@types/estree@1.0.7': {}
+
+  '@types/fabric@5.3.10': {}
 
   '@types/json-schema@7.0.15': {}
 
@@ -8935,7 +8946,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  fabric@6.6.4:
+  fabric@6.6.7:
     optionalDependencies:
       canvas: 2.11.2
       jsdom: 20.0.3(canvas@2.11.2)

@@ -1,28 +1,28 @@
 <script setup lang="ts">
-import { collection, getDocs } from 'firebase/firestore';
-import { computed, defineAsyncComponent, nextTick, onActivated, onMounted, ref } from 'vue';
+import { computed, defineAsyncComponent, nextTick, onActivated, ref } from 'vue';
+import { useRouter } from 'vue-router';
 import { BatchOperation, Checkbox } from '@/components/common';
 import SignFile from '@/components/SignFile.vue';
 import SignIcon from '@/components/SignIcon.vue';
-import { db } from '@/firebase';
 import { useWarnPopup } from '@/hooks/use-warn-popup';
 import { usePdfStore } from '@/store';
 import type { FileShowStatus, MenuTab } from '@/types/menu';
 import type { PDF } from '@/types/pdf';
-import HomeSearch from './HomeSearch.vue';
+import HomeSearch from './MultiSelectSearch.vue';
 
 interface Props {
   type: MenuTab;
+  list: PDF[];
 }
 
-const { type } = defineProps<Props>();
+const router = useRouter();
+const { list } = defineProps<Props>();
 const keyword = ref('');
 const showStatus = ref<FileShowStatus>('list');
 const iShowEncryptPopup = ref(false);
 const isSelectAll = ref<boolean | 'mixed'>(false);
 const currentFile = ref<PDF | null>(null);
 const batch = new Set<PDF>();
-const files = ref<PDF[]>([]); // local reactive list
 const { deleteTrash, batchDeleteTrash } = usePdfStore();
 const { isShowWarnPopup, SignPopup, toggleWarnPopup } = useWarnPopup();
 
@@ -31,8 +31,17 @@ const isListStatus = computed(() => showStatus.value === 'list');
 const isShowThread = computed(() => isListStatus.value && isSelectAll.value === false);
 const search = computed(() => {
   const target = keyword.value.toLowerCase();
-  return files.value.filter(({ name }) => (name || '').toLowerCase().includes(target));
+
+  return list.filter(({ name }) => name.toLowerCase().includes(target));
 });
+
+function goToMultiSign() {
+  const selectedDocIds = Array.from(batch).map(file => file.PDFId);
+  router.push({
+    name: 'multi-sign',
+    query: { docIds: selectedDocIds.join(',') },
+  });
+}
 
 function changeShowStatus(status: FileShowStatus) {
   showStatus.value = status;
@@ -85,19 +94,13 @@ function onCheckboxChange() {
     batch.clear();
     return;
   }
-  files.value.forEach(file => batch.add(file));
+  list.forEach(file => batch.add(file));
 }
 
 function clearBatch() {
   batch.clear();
   updateSelectAll();
 }
-
-const formatDate = (timestamp: any) => {
-  if (!timestamp) return '-';
-  const date = timestamp.toDate?.() || timestamp;
-  return new Date(date).toLocaleDateString();
-};
 
 async function updateSelectAll() {
   await nextTick();
@@ -106,33 +109,9 @@ async function updateSelectAll() {
     isSelectAll.value = false;
     return;
   }
-  isSelectAll.value = batch.size === files.value.length ? true : 'mixed';
+  isSelectAll.value = batch.size === list.length ? true : 'mixed';
 }
 
-// Fetch documents on mount
-onMounted(async () => {
-  const querySnapshot = await getDocs(collection(db, 'contracts'));
-  const docs: PDF[] = [];
-
-  querySnapshot.forEach(doc => {
-    const data = doc.data();
-    docs.push({
-      PDFId: doc.id,
-      name: data.fileName,
-      url: data.fileUrl || '',
-      updateDate: data.updateDate || Date.now(), // fallback added
-      createdAt: formatDate(data.createdAt),
-      updatedAt: formatDate(data.updatedAt), // default or fallback
-      PDFBase64: data.PDFBase64 || '', // empty string fallback
-      pages: data.pages || [], // empty array fallback
-    });
-  });
-
-  files.value = docs;
-  updateSelectAll();
-});
-
-// Recalculate on tab change
 onActivated(updateSelectAll);
 </script>
 
@@ -162,6 +141,16 @@ onActivated(updateSelectAll);
         <p :class="['text-md ', { 'opacity-0': isSelectAll }]">
           {{ isShowThread ? $t('setup_time') : $t('batch_operation') }}
         </p>
+
+        <div class="w-full px-4 py-4 flex justify-end">
+          <button
+            v-if="batch.size"
+            class="btn btn-primary"
+            @click="goToMultiSign"
+          >
+            Sign Selected ({{ batch.size }})
+          </button>
+        </div>
       </div>
 
       <div class="flex justify-between items-end flex-1">

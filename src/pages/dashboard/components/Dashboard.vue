@@ -2,13 +2,13 @@
 import { ArcElement, BarElement, CategoryScale, Chart as ChartJS, Legend, LinearScale, Title, Tooltip } from 'chart.js';
 import { collection, getDocs, getFirestore } from 'firebase/firestore';
 import { computed, onMounted, ref } from 'vue';
-import { Chart } from 'vue-chartjs';
+// import { Chart } from 'vue-chartjs';
 import { useAuthStore } from '@/store/auth';
 
 ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale, LinearScale, BarElement);
 
 const authStore = useAuthStore();
-const displayName = computed(() => authStore.user?.displayName || authStore.user?.email?.split('@')[0] || 'User');
+const displayName = computed(() => authStore.user?.name || authStore.user?.email?.split('@')[0] || 'User');
 
 const db = getFirestore();
 const contracts = ref<any[]>([]);
@@ -34,34 +34,34 @@ const employeePercentage = computed(() =>
   totalDocuments.value ? Math.round((employeeSigned.value / totalDocuments.value) * 100) : 0,
 );
 
-const pieChartData = computed(() => ({
-  labels: ['Signed by HR', 'Signed by Employee', 'Unsigned'],
-  datasets: [
-    {
-      backgroundColor: ['#3B82F6', '#8B5CF6', '#E5E7EB'],
-      data: [hrSigned.value, employeeSigned.value, totalDocuments.value - hrSigned.value - employeeSigned.value],
-    },
-  ],
-}));
+// const pieChartData = computed(() => ({
+//   labels: ['Signed by HR', 'Signed by Employee', 'Unsigned'],
+//   datasets: [
+//     {
+//       backgroundColor: ['#3B82F6', '#8B5CF6', '#E5E7EB'],
+//       data: [hrSigned.value, employeeSigned.value, totalDocuments.value - hrSigned.value - employeeSigned.value],
+//     },
+//   ],
+// }));
 
-const pieChartOptions = { responsive: true, maintainAspectRatio: false };
+// const pieChartOptions = { responsive: true, maintainAspectRatio: false };
 
-const barChartData = computed(() => ({
-  labels: ['HR', 'Employee'],
-  datasets: [
-    {
-      label: 'Signatures',
-      backgroundColor: ['#3B82F6', '#8B5CF6'],
-      data: [hrSigned.value, employeeSigned.value],
-    },
-  ],
-}));
+// const barChartData = computed(() => ({
+//   labels: ['HR', 'Employee'],
+//   datasets: [
+//     {
+//       label: 'Signatures',
+//       backgroundColor: ['#3B82F6', '#8B5CF6'],
+//       data: [hrSigned.value, employeeSigned.value],
+//     },
+//   ],
+// }));
 
-const barChartOptions = {
-  responsive: true,
-  indexAxis: 'y',
-  maintainAspectRatio: false,
-};
+// const barChartOptions = {
+//   responsive: true,
+//   indexAxis: 'y',
+//   maintainAspectRatio: false,
+// };
 
 const formatDate = (timestamp: any) => {
   if (!timestamp) return '-';

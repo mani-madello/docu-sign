@@ -4,7 +4,7 @@ import { useRouter } from 'vue-router';
 import SignIcon from '@/components/SignIcon.vue';
 import SvgList from '@/components/svg/SvgList.vue';
 import { usePdfStore } from '@/store';
-import { transformTimestamp } from '@/utils/common';
+// import { transformTimestamp } from '@/utils/common';
 import type { MenuTab } from '@/types/menu';
 import type { PDF } from '@/types/pdf';
 
@@ -24,14 +24,14 @@ const isSelected = ref(false);
 const router = useRouter();
 const { addPDF, addArchive, addTrash, deleteArchive, deleteTrash, setCurrentPDF } = usePdfStore();
 
-const localTime = computed(() => {
-  return transformTimestamp(file.updateDate);
-});
+// const localTime = computed(() => {
+//   return transformTimestamp(file.updateDate);
+// });
 
 const more = computed(() => {
   const moreMap = {
     file: [
-      { icon: 'download', feat: () => openEncryptPopup() },
+      { icon: 'download', feat: () => downloadFile() },
       { icon: 'sign', feat: () => editFile() },
       { icon: 'archive', feat: () => moveToArchive() },
       { icon: 'trash', feat: () => moveToTrash() },
@@ -48,14 +48,43 @@ const more = computed(() => {
   return moreMap[type];
 });
 
-function openEncryptPopup() {
-  toggleMore(false);
-  emit('openEncryptPopup', file);
+async function downloadFile() {
+  try {
+    toggleMore(false);
+
+    if (!file.fileUrl) {
+      throw new Error('No download URL available.');
+    }
+
+    const link = document.createElement('a');
+    link.href = file.fileUrl;
+    link.download = file.name || 'document.pdf';
+    link.target = '_blank';
+    document.body.append(link); // for Firefox
+    link.click();
+    link.remove();
+  } catch (error) {
+    console.error('Download failed:', error);
+  }
 }
 
+// function openEncryptPopup() {
+//   toggleMore(false);
+//   emit('openEncryptPopup', file);
+// }
+
 function editFile() {
-  setCurrentPDF({ ...file, isUpdate: true });
-  router.push({ name: 'signature' });
+  setCurrentPDF({
+    ...file,
+    isUpdate: true,
+    docId: file.PDFId,
+    name: file.name, // You must define or fetch a valid File object
+    fileUrl: file.url || '',
+    uploadedAt: file.updateDate || new Date().toISOString(),
+    pages: Array.from({ length: file.pages ?? 1 }, (_, i) => i),
+  });
+
+  router.push({ name: 'signature', params: { docId: file.PDFId } });
 }
 
 function moveToArchive() {
@@ -90,9 +119,9 @@ function toggleMore(isOpen: boolean) {
 }
 
 function splitName(name: string) {
-  const start = name.toLowerCase().indexOf(keyword.toLowerCase());
+  const start = (name || '').toLowerCase().indexOf(keyword.toLowerCase());
   const end = start + keyword.length;
-  const spiltName = [name.slice(0, start), name.slice(start, end), name.slice(end)];
+  const spiltName = [(name || '').slice(0, start), (name || '').slice(start, end), (name || '').slice(end)];
 
   return spiltName.reduce((html, str, index) => {
     if (!str) return html;
@@ -157,13 +186,13 @@ watch(
       @click.stop="reductionTrash"
     />
 
-    <div :class="['w-1/3 h-[150px] flex items-center justify-center', { 'md:hidden': isListStatus }]">
+    <!-- <div :class="['w-1/3 h-[150px] flex items-center justify-center', { 'md:hidden': isListStatus }]">
       <img
         :src="file.canvas?.at(0)"
         class="border-2 border-gray-20 w-full"
         alt="file"
       />
-    </div>
+    </div> -->
 
     <div
       :class="[
@@ -177,7 +206,7 @@ watch(
           v-html="splitName(file.name)"
         ></p>
         <p :class="['', { 'md:text-black md:w-[236px]': isListStatus }]">
-          {{ localTime }}
+          {{ file.createdAt }}
         </p>
 
         <svg-list v-if="isListStatus" />

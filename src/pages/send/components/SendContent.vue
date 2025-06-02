@@ -1,20 +1,36 @@
 <script setup lang="ts">
-import { storeToRefs } from 'pinia';
-import { computed } from 'vue';
-import { useRouter } from 'vue-router';
-import { usePdfStore } from '@/store';
+import { doc, getDoc } from 'firebase/firestore';
+import { computed, onMounted, ref } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+import { db } from '@/firebase';
 
 const router = useRouter();
-const store = usePdfStore();
-// const currentPDF = computed(() => store.currentPDF);
-const { currentPDF, sentInfo } = storeToRefs(usePdfStore()); // Add `sentInfo` in your store
+const route = useRoute();
 
-console.log(currentPDF);
-console.log(sentInfo);
-console.log(currentPDF);
+const employeeName = ref('');
+const employeeEmail = ref('');
+const sentAt = ref('');
+const docReferenceId = ref('');
+const fileName = ref('');
+
+onMounted(async () => {
+  const docId = route.params.docId;
+  if (docId) {
+    const docRef = doc(db, 'contracts', docId as string);
+    const docSnap = await getDoc(docRef);
+    if (docSnap.exists()) {
+      const data = docSnap.data();
+      employeeName.value = data.employeeName;
+      employeeEmail.value = data.employeeEmail || '';
+      sentAt.value = data.createdAt || '';
+      docReferenceId.value = data.docId;
+      fileName.value = data.fileName || '';
+    }
+  }
+});
 
 const sentTime = computed(() => {
-  const date = new Date(sentInfo.value?.timestamp || Date.now());
+  const date = new Date(sentAt.value || Date.now());
   return date.toLocaleString();
 });
 
@@ -33,38 +49,32 @@ function returnHome() {
           class="dark:hidden"
         />
       </div>
-      <h1 class="mb-2 font-bold text-gray-800 text-title-md dark:text-white/90 xl:text-title-2xl">SUCCESS !</h1>
+      <h3 class="mb-2 font-bold text-gray-800 text-title-md dark:text-white/90 xl:text-title-2xl">BINGO !</h3>
       <p class="mt-6 mb-6 text-base text-gray-700 dark:text-gray-400 sm:text-lg">
-        Awesome! your document has been sent successfully.
+        Awesome! document has been sent successfully.
       </p>
       <p class="mb-2">
         You’ve sent the document to:
-        <span class="font-semibold">{{ sentInfo?.name || 'Recipient' }}</span>
-        (<span class="text-blue-600">{{ sentInfo?.email }}</span
+        <span class="font-semibold">{{ employeeName }}</span>
+        (<span class="text-blue-600">{{ employeeEmail }}</span
         >)
       </p>
       <p class="mb-2">
-        File Name: <strong>{{ currentPDF?.name || 'Untitled.pdf' }}</strong>
+        File name Reference Id: <strong>{{ fileName }}</strong>
+      </p>
+      <p class="mb-2">
+        Document Reference Id: <strong>{{ docReferenceId }}</strong>
       </p>
       <p class="mb-2">
         Sent on: <strong>{{ sentTime }}</strong>
       </p>
-      <p class="mb-4">
-        Document URL:
-        <a
-          :href="currentPDF?.url"
-          target="_blank"
-          class="text-blue-500 underline"
-        >
-          View Document
-        </a>
-      </p>
-      <a
-        href="/"
-        class="inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-5 py-3.5 text-sm font-medium text-gray-700 shadow-theme-xs hover:bg-gray-50 hover:text-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-white/[0.03] dark:hover:text-gray-200"
+      <button
+        class="btn inline-flex justify-center items-center whitespace-nowrap focus:outline-hidden transition-colors focus:ring-3 duration-150 border cursor-pointer rounded-sm border-blue-600 dark:border-blue-500 ring-blue-300 dark:ring-blue-700 text-blue-600 dark:text-blue-500 hover:bg-blue-600 hover:text-white dark:hover:text-white dark:hover:border-blue-600 py-2 px-3 mr-3 last:mr-0 mb-3"
+        type="submit"
+        @click="returnHome"
       >
-        Back to Home Page
-      </a>
+        <span class="px-2">{{ $t('return_home') }}</span>
+      </button>
     </div>
   </div>
 </template>

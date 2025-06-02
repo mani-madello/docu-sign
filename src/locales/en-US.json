@@ -80,6 +80,7 @@
     "document_sent_success": "Signed document sent to {email} successfully!"
   },
   "send_document": "Send Document",
+  "enter_name": "Enter recipient's name",
   "enter_email_address": "Enter recipient's email address",
   "send": "Send",
   "return_home": "Return to home page",
@@ -100,5 +101,6 @@
   "upload_file_lower": "@.lower:upload_file",
   "use": "Use",
   "wait": "Wait",
-  "warn": "Warn"
+  "warn": "Warn",
+  "selected_files": "Multiple selected files"
 }
