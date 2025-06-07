@@ -430,12 +430,12 @@ const recentActivity = computed(() =>
           >
             <thead class="bg-gray-100 dark:bg-white/[0.05] text-left text-gray-700 dark:text-gray-300">
               <tr class="border-gray-200 border-y dark:border-gray-700">
-                <th class="px-4 py-3">Document</th>
-                <th class="px-4 py-3">Assigned To</th>
-                <th class="px-4 py-3">Employer Signed</th>
-                <th class="px-4 py-3">Employee Signed</th>
-                <th class="px-4 py-3">Uploaded</th>
-                <th class="px-4 py-3">Status</th>
+                <th class="px-4 py-4 text-base font-semibold">Document</th>
+                <th class="px-4 py-4 text-base font-semibold">Assigned To</th>
+                <th class="px-4 py-4 text-base font-semibold">Employer Signed</th>
+                <th class="px-4 py-4 text-base font-semibold">Employee Signed</th>
+                <th class="px-4 py-4 text-base font-semibold">Uploaded</th>
+                <th class="px-4 py-4 text-base font-semibold">Status</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
@@ -444,35 +444,39 @@ const recentActivity = computed(() =>
                 :key="doc.docId"
                 class="hover:bg-gray-100 dark:hover:bg-white/[0.03]"
               >
-                <td class="px-4 py-4 text-gray-800 dark:text-white">{{ doc.fileName || 'Untitled' }}</td>
-                <td class="px-4 py-4 text-gray-600 dark:text-gray-300">{{ doc.assignedTo || 'Unassigned' }}</td>
+                <td class="px-4 py-4 text-gray-800 dark:text-white text-base font-semibold">
+                  <b>{{ doc.fileName || 'Untitled' }}</b>
+                </td>
+                <td class="px-4 py-4 text-gray-600 dark:text-gray-300">
+                  <b>{{ doc.assignedTo || 'Unassigned' }}</b>
+                </td>
                 <td
-                  class="px-4 py-4 font-semibold"
+                  class="px-4 py-4 font-semibold text-center"
                   :class="doc.signedByHR ? 'text-green-600' : 'text-red-500'"
                 >
-                  {{ doc.signedByHR ? '✔' : '✖' }}
+                  <b>{{ doc.signedByHR ? '✔' : '✖' }}</b>
                 </td>
                 <td
-                  class="px-4 py-4 font-semibold"
+                  class="px-4 py-4 font-semibold text-center"
                   :class="doc.signedByEmployee ? 'text-purple-600' : 'text-red-500'"
                 >
-                  {{ doc.signedByEmployee ? '✔' : '✖' }}
+                  <b>{{ doc.signedByEmployee ? '✔' : '✖' }}</b>
                 </td>
                 <td class="px-4 py-4 text-gray-500 dark:text-gray-400">
-                  {{ formatDate(doc.createdAt) }}
+                  <b>{{ formatDate(doc.createdAt) }}</b>
                 </td>
                 <td class="px-4 py-4">
                   <span
                     v-if="isOverdue(doc)"
                     class="text-red-500 font-semibold"
                   >
-                    ⚠️ Overdue
+                    <b>Overdue</b>
                   </span>
                   <span
                     v-else
                     class="text-gray-500 dark:text-gray-400"
                   >
-                    On Time
+                    <b>On Time</b>
                   </span>
                 </td>
               </tr>
