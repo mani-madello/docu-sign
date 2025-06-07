@@ -394,6 +394,11 @@ onAfterRouteLeave(deleteCanvas);
           <!-- Header: File name and remove button -->
           <div class="flex justify-between items-center">
             <p class="font-medium truncate max-w-[80%]">{{ document.file.name }}</p>
+            <sign-icon
+              name="close"
+              class="absolute -right-8 -top-2 cursor-pointer w-7 h-7 md:w-9 md:h-9 md:-right-12 md:-top-4"
+              @click="removeFile(index)"
+            />
             <button
               class="text-red-600 font-bold hover:underline"
               aria-label="Remove file"

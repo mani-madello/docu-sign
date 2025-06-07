@@ -53,21 +53,39 @@ function returnHome() {
       <p class="mt-6 mb-6 text-base text-gray-700 dark:text-gray-400 sm:text-lg">
         Awesome! document has been sent successfully.
       </p>
-      <p class="mb-2">
+      <p
+        v-if="employeeName || employeeEmail"
+        class="mb-2"
+      >
         You’ve sent the document to:
         <span class="font-semibold">{{ employeeName }}</span>
-        (<span class="text-blue-600">{{ employeeEmail }}</span
-        >)
+        <span v-if="employeeEmail"
+          >(<span class="text-blue-600">{{ employeeEmail }}</span
+          >)</span
+        >
       </p>
-      <p class="mb-2">
+
+      <p
+        v-if="fileName"
+        class="mb-2"
+      >
         File name Reference Id: <strong>{{ fileName }}</strong>
       </p>
-      <p class="mb-2">
+
+      <p
+        v-if="docReferenceId"
+        class="mb-2"
+      >
         Document Reference Id: <strong>{{ docReferenceId }}</strong>
       </p>
-      <p class="mb-2">
+
+      <p
+        v-if="sentTime"
+        class="mb-2"
+      >
         Sent on: <strong>{{ sentTime }}</strong>
       </p>
+
       <button
         class="btn inline-flex justify-center items-center whitespace-nowrap focus:outline-hidden transition-colors focus:ring-3 duration-150 border cursor-pointer rounded-sm border-blue-600 dark:border-blue-500 ring-blue-300 dark:ring-blue-700 text-blue-600 dark:text-blue-500 hover:bg-blue-600 hover:text-white dark:hover:text-white dark:hover:border-blue-600 py-2 px-3 mr-3 last:mr-0 mb-3"
         type="submit"

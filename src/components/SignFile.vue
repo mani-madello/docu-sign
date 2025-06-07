@@ -22,8 +22,8 @@ const emit = defineEmits(['openWarnPopup', 'openEncryptPopup', 'selectFile']);
 const isShowMore = ref(false);
 const isSelected = ref(false);
 const router = useRouter();
-const { addPDF, addArchive, addTrash, deleteArchive, deleteTrash, setCurrentPDF } = usePdfStore();
-
+// const { addPDF, addArchive, addTrash, deleteArchive, deleteTrash, setCurrentPDF } = usePdfStore();
+const { addPDF, addTrash, deleteTrash, setCurrentPDF } = usePdfStore();
 // const localTime = computed(() => {
 //   return transformTimestamp(file.updateDate);
 // });
@@ -33,32 +33,33 @@ const more = computed(() => {
     file: [
       { icon: 'download', feat: () => downloadFile() },
       { icon: 'sign', feat: () => editFile() },
-      { icon: 'archive', feat: () => moveToArchive() },
+      // { icon: 'archive', feat: () => moveToArchive() },
       { icon: 'trash', feat: () => moveToTrash() },
     ],
-    archive: [
-      { icon: 'reduction', feat: () => reductionArchive() },
-      { icon: 'trash', feat: () => moveToTrash() },
-    ],
-    trash: [
-      { icon: 'reduction', feat: () => reductionTrash() },
-      { icon: 'trash', feat: () => openWarnPopup() },
-    ],
+    // archive: [
+    //   { icon: 'reduction', feat: () => reductionArchive() },
+    //   { icon: 'trash', feat: () => moveToTrash() },
+    // ],
+    // trash: [
+    //   { icon: 'reduction', feat: () => reductionTrash() },
+    //   { icon: 'trash', feat: () => openWarnPopup() },
+    // ],
   };
   return moreMap[type];
 });
 
 async function downloadFile() {
+  console.log(file);
   try {
     toggleMore(false);
 
-    if (!file.fileUrl) {
+    if (!file?.url) {
       throw new Error('No download URL available.');
     }
 
     const link = document.createElement('a');
-    link.href = file.fileUrl;
-    link.download = file.name || 'document.pdf';
+    link.href = file.url;
+    link.download = file.name;
     link.target = '_blank';
     document.body.append(link); // for Firefox
     link.click();
@@ -87,21 +88,21 @@ function editFile() {
   router.push({ name: 'signature', params: { docId: file.PDFId } });
 }
 
-function moveToArchive() {
-  addArchive(file);
-  emit('selectFile', file, false);
-}
+// function moveToArchive() {
+//   addArchive(file);
+//   emit('selectFile', file, false);
+// }
 
 function moveToTrash() {
   addTrash(file, type);
   emit('selectFile', file, false);
 }
 
-function reductionArchive() {
-  deleteArchive(file.PDFId);
-  emit('selectFile', file, false);
-  addPDF(file);
-}
+// function reductionArchive() {
+//   deleteArchive(file.PDFId);
+//   emit('selectFile', file, false);
+//   addPDF(file);
+// }
 
 function reductionTrash() {
   deleteTrash(file.PDFId);
@@ -109,10 +110,10 @@ function reductionTrash() {
   addPDF(file);
 }
 
-function openWarnPopup() {
-  toggleMore(false);
-  emit('openWarnPopup', file);
-}
+// function openWarnPopup() {
+//   toggleMore(false);
+//   emit('openWarnPopup', file);
+// }
 
 function toggleMore(isOpen: boolean) {
   isShowMore.value = isOpen;

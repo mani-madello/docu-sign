@@ -11,7 +11,8 @@ const authStore = useAuthStore();
 const { isAuthenticated, getUser } = storeToRefs(authStore);
 
 const userInitials = computed(() => {
-  if (!getUser.value?.name) return 'U';
+  console.log(getUser);
+  if (!getUser.value?.name) return 'M';
   return getUser.value.name
     .split(' ')
     .map(n => n[0])
@@ -48,12 +49,12 @@ const shouldShowSignStep = computed(() => SIGN_STEP_ROUTES.includes(route.name a
       v-if="isAuthenticated && route.name !== 'login'"
       class="hidden sm:flex ml-2 sm:ml-6 flex-col flex-grow space-y-1"
     >
-      <input
+      <!-- <input
         v-if="isAuthenticated && route.name !== 'login' && (route.name === 'dashboard' || route.name === 'home')"
         type="text"
         placeholder="Search (ctrl+k)"
         class="w-full max-w-xs md:max-w-md px-2 py-1 h-8 border rounded-sm bg-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:placeholder-gray-400 dark:bg-slate-800 dark:border-gray-700"
-      />
+      /> -->
       <sign-step v-if="shouldShowSignStep && isAuthenticated" />
     </div>
 

@@ -119,7 +119,7 @@ async function renderFile(file: File) {
     if (!fileContent) throw new Error('File content is empty');
 
     const department = 'Engineering'; // You can make this dynamic later
-    docId.value = uuidv4(); // 🔐 generate it once here
+    docId.value = uuidv4(); // generate it once here
     const { filePath, fileUrl } = await uploadToFirebase(docId.value, file, uid!, department);
 
     setCurrentPDF({
@@ -277,7 +277,7 @@ onAfterRouteLeave(deleteCanvas);
             <button>
               <input
                 type="file"
-                accept="application/pdf, .jpg, .png"
+                accept="application/pdf"
                 class="opacity-0 absolute w-[131px] h-[41px] cursor-pointer"
                 @change="uploadFile"
               />

@@ -19,6 +19,22 @@ export function checkFile(files: FileList | null | undefined, regexp: RegExp, ma
   return file;
 }
 
+export function checkSingleFile(file: File, regexp: RegExp, maxSize = MAX_SIZE) {
+  const { t } = i18n.global;
+
+  if (!regexp.test(file.type)) {
+    showToast({ message: t('prompt.file_format_not_match'), type: 'error' });
+    return false;
+  }
+
+  if (file.size > maxSize) {
+    showToast({ message: t('prompt.file_size_exceed'), type: 'error' });
+    return false;
+  }
+
+  return true;
+}
+
 export function readfile(file: File): Promise<FileReader['result']> {
   return new Promise((resolve, reject) => {
     const fileReader = new FileReader();

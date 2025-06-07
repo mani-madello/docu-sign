@@ -18,7 +18,7 @@ const handleLogin = async () => {
 
     authStore.login({
       email: user.email || '',
-      name: user.displayName || 'User',
+      name: user.displayName || 'Madhavan',
     });
 
     error.value = '';

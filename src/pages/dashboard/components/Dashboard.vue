@@ -8,7 +8,7 @@ import { useAuthStore } from '@/store/auth';
 ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale, LinearScale, BarElement);
 
 const authStore = useAuthStore();
-const displayName = computed(() => authStore.user?.name || authStore.user?.email?.split('@')[0] || 'User');
+const displayName = computed(() => authStore.user?.name || authStore.user?.email?.split('@')[0] || 'Madhavan');
 
 const db = getFirestore();
 const contracts = ref<any[]>([]);
@@ -213,7 +213,7 @@ const recentActivity = computed(() =>
           </div>
           <div class="flex justify-between items-center">
             <div>
-              <h3 class="text-lg text-gray-500 dark:text-slate-400">Signed by HR</h3>
+              <h3 class="text-lg text-gray-500 dark:text-slate-400">Employer Signed</h3>
               <h1 class="text-3xl font-semibold">{{ hrSigned }}</h1>
             </div>
             <div class="text-green-500">
@@ -252,7 +252,7 @@ const recentActivity = computed(() =>
           </div>
           <div class="flex justify-between items-center">
             <div>
-              <h3 class="text-lg text-gray-500 dark:text-slate-400">Signed by Employee</h3>
+              <h3 class="text-lg text-gray-500 dark:text-slate-400">Employee Signed</h3>
               <h1 class="text-3xl font-semibold">{{ employeeSigned }}</h1>
             </div>
             <div class="text-purple-500">
@@ -323,52 +323,55 @@ const recentActivity = computed(() =>
     </section>
     <div class="rounded-2xl flex-col dark:bg-slate-900/70 bg-white flex mb-6">
       <div class="flex-1 p-6">
-        <div
-          v-for="(doc, index) in recentActivity"
-          :key="index"
-          class="justify-between items-center block md:flex border-b last:border-b-0 py-4"
-        >
-          <!-- Left Side: Icon + Name + Date -->
-          <div class="flex items-center justify-center mb-4 md:mb-0">
-            <div class="flex items-center justify-start md:flex">
-              <div class="flex items-center justify-center mr-4">
-                <span
-                  class="inline-flex justify-center items-center w-12 h-12 rounded-full text-emerald-500 bg-neutral-50 dark:bg-slate-800"
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    width="24"
-                    height="24"
-                    class="inline-block"
+        <!-- Show list if there is data -->
+        <div v-if="recentActivity.length">
+          <div
+            v-for="(doc, index) in recentActivity"
+            :key="index"
+            class="justify-between items-center block md:flex border-b last:border-b-0 py-4"
+          >
+            <!-- Left Side: Icon + Name + Date -->
+            <div class="flex items-center justify-center mb-4 md:mb-0">
+              <div class="flex items-center justify-start md:flex">
+                <div class="flex items-center justify-center mr-4">
+                  <span
+                    class="inline-flex justify-center items-center w-12 h-12 rounded-full text-emerald-500 bg-neutral-50 dark:bg-slate-800"
                   >
-                    <path
-                      fill="currentColor"
-                      d="M15 15V17H18V20H20V17H23V15H20V12H18V15M14.97 11.61C14.85 10.28 13.59 8.97 12 9C10.3 9.03 9 10.3 9 12C9 13.7 10.3 14.94 12 15C12.38 15 12.77 14.92 13.14 14.77C13.41 13.67 13.86 12.63 14.97 11.61M13 16H7C7 14.9 6.11 14 5 14V10C6.11 10 7 9.11 7 8H17C17 9.11 17.9 10 19 10V10.06C19.67 10.06 20.34 10.18 21 10.4V6H3V18H13.32C13.1 17.33 13 16.66 13 16Z"
-                    />
-                  </svg>
-                </span>
-              </div>
-              <div class="text-center md:text-left">
-                <h4 class="text-base font-semibold">
-                  {{ doc.fileName || 'Untitled' }}
-                </h4>
-                <p class="text-gray-500 dark:text-slate-400">
-                  <b>{{ formatDate(doc.createdAt) }}</b>
-                </p>
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                      class="inline-block"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M15 15V17H18V20H20V17H23V15H20V12H18V15M14.97 11.61C14.85 10.28 13.59 8.97 12 9C10.3 9.03 9 10.3 9 12C9 13.7 10.3 14.94 12 15C12.38 15 12.77 14.92 13.14 14.77C13.41 13.67 13.86 12.63 14.97 11.61M13 16H7C7 14.9 6.11 14 5 14V10C6.11 10 7 9.11 7 8H17C17 9.11 17.9 10 19 10V10.06C19.67 10.06 20.34 10.18 21 10.4V6H3V18H13.32C13.1 17.33 13 16.66 13 16Z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div class="text-center md:text-left">
+                  <h4 class="text-base font-semibold">
+                    {{ doc.fileName || 'Untitled' }}
+                  </h4>
+                  <p class="text-gray-500 dark:text-slate-400">
+                    <b>{{ formatDate(doc.createdAt) }}</b>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Right Side: Type + Status Badge -->
-          <div class="flex items-center justify-center">
-            <div class="text-center md:text-right space-y-2">
-              <p class="text-sm text-gray-500">Document</p>
-              <div>
+            <!-- Right Side: Type + Status Badge -->
+            <div class="flex items-center justify-center">
+              <div class="text-center md:text-right space-y-2">
+                <p class="text-sm text-gray-500">Document</p>
                 <div
                   class="inline-flex items-center capitalize leading-none text-xs border rounded-full py-1 px-3"
                   :class="{
-                    'bg-emerald-500 border-emerald-500 text-white': doc.signedByHR && doc.signedByEmployee,
-                    'bg-yellow-400 border-yellow-400 text-white': doc.signedByHR || doc.signedByEmployee,
+                    'bg-emerald-500 border-emerald-500 text-white':
+                      doc.signedByHR === true && doc.signedByEmployee === true,
+                    'bg-yellow-400 border-yellow-400 text-white':
+                      (doc.signedByHR || doc.signedByEmployee) && !(doc.signedByHR && doc.signedByEmployee),
                     'bg-gray-300 border-gray-300 text-gray-800': !doc.signedByHR && !doc.signedByEmployee,
                   }"
                 >
@@ -387,6 +390,13 @@ const recentActivity = computed(() =>
               </div>
             </div>
           </div>
+        </div>
+        <!-- When no data -->
+        <div
+          v-else
+          class="text-center py-10 text-gray-500 dark:text-gray-400 text-sm"
+        >
+          No data available.
         </div>
       </div>
     </div>
@@ -414,12 +424,15 @@ const recentActivity = computed(() =>
     <div class="rounded-2xl border border-gray-200 bg-white pt-4 dark:border-gray-800 dark:bg-white/[0.03]">
       <div class="overflow-hidden">
         <div class="max-w-full px-5 overflow-x-auto">
-          <table class="min-w-full text-sm">
+          <table
+            v-if="contracts.length"
+            class="min-w-full text-sm"
+          >
             <thead class="bg-gray-100 dark:bg-white/[0.05] text-left text-gray-700 dark:text-gray-300">
               <tr class="border-gray-200 border-y dark:border-gray-700">
                 <th class="px-4 py-3">Document</th>
                 <th class="px-4 py-3">Assigned To</th>
-                <th class="px-4 py-3">HR Signed</th>
+                <th class="px-4 py-3">Employer Signed</th>
                 <th class="px-4 py-3">Employee Signed</th>
                 <th class="px-4 py-3">Uploaded</th>
                 <th class="px-4 py-3">Status</th>
@@ -465,6 +478,14 @@ const recentActivity = computed(() =>
               </tr>
             </tbody>
           </table>
+
+          <!-- Empty state -->
+          <div
+            v-else
+            class="text-center py-10 text-gray-500 dark:text-gray-400 text-sm"
+          >
+            No data available.
+          </div>
         </div>
       </div>
     </div>
