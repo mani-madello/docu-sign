@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import { onAuthStateChanged, User } from 'firebase/auth';
 import { storeToRefs } from 'pinia';
-import { computed } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+import { auth } from '@/firebase';
 import { useAuthStore } from '@/store/auth';
 import SignStep from './SignStep.vue';
 
@@ -9,6 +11,14 @@ const router = useRouter();
 const route = useRoute();
 const authStore = useAuthStore();
 const { isAuthenticated, getUser } = storeToRefs(authStore);
+
+const user = ref<User | null>(null);
+
+onMounted(() => {
+  onAuthStateChanged(auth, u => {
+    user.value = u;
+  });
+});
 
 const userInitials = computed(() => {
   console.log(getUser);
@@ -33,16 +43,13 @@ const shouldShowSignStep = computed(() => SIGN_STEP_ROUTES.includes(route.name a
     class="app-header fixed top-0 inset-x-0 z-30 bg-white dark:bg-slate-800 shadow flex items-center justify-between px-4 h-16 md:h-20 xl:pl-60"
   >
     <!-- Left: Logo -->
-    <router-link
-      to="/"
-      class="flex items-center flex-shrink-0"
-    >
+    <div class="flex items-center flex-shrink-0 cursor-pointer">
       <img
         src="@/assets/logo/logo_darkbg_horizontal.png"
         alt="logo"
         class="w-[110px] md:w-[150px] h-auto object-contain"
       />
-    </router-link>
+    </div>
 
     <!-- Center: Search + SignStep -->
     <div

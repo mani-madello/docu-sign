@@ -201,7 +201,7 @@ async function sendEmailToHR(params: {
 }) {
   try {
     console.log(params);
-    // await emailjs.send('service_madello', 'template_bzrw36k', params, 'vgo38fj40ywZbvn76');
+    await emailjs.send('service_madello', 'template_bzrw36k', params, 'vgo38fj40ywZbvn76');
     showToast({ message: 'Notification sent to HR.', type: 'success' });
     goPage('success');
   } catch (error) {
@@ -211,6 +211,7 @@ async function sendEmailToHR(params: {
 }
 
 function addFabric(value: string, type?: string) {
+  console.log(value, currentCanvasItem.value);
   const canvas = currentCanvasItem.value;
   if (!canvas) return;
   const action = type === 'text' ? canvas.addText : canvas.addImage;

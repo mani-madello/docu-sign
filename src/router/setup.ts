@@ -1,11 +1,11 @@
+import { watch } from 'vue';
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
-import { auth } from '@/firebase';
+import BulkSignature from '@/pages/bulksignature/index.vue';
+import BulkUpload from '@/pages/bulkupload/index.vue';
 import Complete from '@/pages/complete/index.vue';
 import Dashboard from '@/pages/dashboard/index.vue';
 import Home from '@/pages/home/index.vue';
 import Login from '@/pages/login/index.vue';
-import MultiSelect from '@/pages/multiselect/index.vue';
-import MultiUpload from '@/pages/multiupload/index.vue';
 import Profile from '@/pages/profile/index.vue';
 import Send from '@/pages/send/index.vue';
 import Signature from '@/pages/signature/index.vue';
@@ -13,13 +13,22 @@ import Starter from '@/pages/starter/index.vue';
 import Success from '@/pages/success/index.vue';
 import Upload from '@/pages/upload/index.vue';
 import UploadToSend from '@/pages/uploadtosend/index.vue';
+import { useAuthStore } from '@/store';
+
+// const isAuthChecked = false;
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/:catchAll(.*)',
     redirect: '/',
   },
-  { path: '/', redirect: '/login' },
+  {
+    path: '/',
+    redirect: () => {
+      const authStore = useAuthStore();
+      return authStore.isAuthenticated ? '/dashboard' : '/login';
+    },
+  },
   { path: '/login', name: 'login', component: Login },
   {
     path: '/start',
@@ -47,14 +56,14 @@ const routes: Array<RouteRecordRaw> = [
     component: Upload,
   },
   {
-    path: '/multiupload',
-    name: 'multiupload',
-    component: MultiUpload,
+    path: '/bulkupload',
+    name: 'bulkupload',
+    component: BulkUpload,
   },
   {
-    path: '/multiselect',
-    name: 'multiselect',
-    component: MultiSelect,
+    path: '/bulksignature/:docIds+',
+    name: 'bulksignature',
+    component: BulkSignature,
   },
   {
     path: '/signature/:docId',
@@ -96,11 +105,32 @@ export const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  const user = auth.currentUser;
+  const authStore = useAuthStore();
 
-  if (!user && to.path !== '/login' && !to.meta.allowGuest) {
-    return next('/login');
+  // 🔄 If auth is still loading, wait until it's finished
+  if (authStore.loading) {
+    const stop = watch(
+      () => authStore.loading,
+      loading => {
+        if (!loading) {
+          stop(); // stop the watcher once it's no longer loading
+          proceed();
+        }
+      },
+    );
+  } else {
+    proceed();
   }
 
-  return next();
+  function proceed() {
+    if (!authStore.isAuthenticated && to.path !== '/login' && !to.meta.allowGuest) {
+      return next('/login');
+    }
+
+    if (authStore.isAuthenticated && to.path === '/login') {
+      return next('/dashboard');
+    }
+
+    return next();
+  }
 });

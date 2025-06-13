@@ -98,13 +98,13 @@ const handleLogin = async () => {
       </div>
 
       <!-- Remember Me -->
-      <label class="flex items-center space-x-2 text-sm">
+      <!-- <label class="flex items-center space-x-2 text-sm">
         <input
           type="checkbox"
           name="remember"
         />
         <span>Remember me</span>
-      </label>
+      </label> -->
 
       <!-- Error Message -->
       <div

@@ -7,7 +7,7 @@ import { storeToRefs } from 'pinia';
 import { v4 as uuidv4 } from 'uuid';
 import { computed, defineAsyncComponent, onMounted, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { useRoute } from 'vue-router';
+// import { useRoute } from 'vue-router';
 import { showToast } from '@/components/common';
 import SignIcon from '@/components/SignIcon.vue';
 import SignStepBtn from '@/components/SignStepBtn.vue';
@@ -17,10 +17,10 @@ import { useAuthStore, useConfigStore, usePdfStore } from '@/store';
 import { sleep } from '@/utils/common';
 import { checkFile } from '@/utils/reader';
 
-const route = useRoute();
+// const route = useRoute();
 const authStore = useAuthStore();
 const auth = getAuth();
-const isPublicRoute = ref<boolean>(!!(route.params.public && route.params.docId));
+// const isPublicRoute = ref<boolean>(!!(route.params.public && route.params.docId));
 const uid = auth.currentUser?.uid;
 const { user, loading } = storeToRefs(authStore);
 
@@ -297,10 +297,11 @@ onAfterRouteLeave(deleteCanvas);
       </div>
     </div>
 
+    {{ console.log(docId) }}
     <sign-step-btn
       :is-next-disabled="isNextDisabled"
       :is-public="false"
-      @next-step="goPage('signature', { docId })"
+      @next-step="goPage('signature', { params: { docId } })"
       @prev-step="toggleWarnPopup(true)"
     />
     <sign-popup

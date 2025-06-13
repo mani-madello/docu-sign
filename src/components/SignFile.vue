@@ -40,10 +40,10 @@ const more = computed(() => {
     //   { icon: 'reduction', feat: () => reductionArchive() },
     //   { icon: 'trash', feat: () => moveToTrash() },
     // ],
-    // trash: [
-    //   { icon: 'reduction', feat: () => reductionTrash() },
-    //   { icon: 'trash', feat: () => openWarnPopup() },
-    // ],
+    trash: [
+      { icon: 'reduction', feat: () => reductionTrash() },
+      { icon: 'trash', feat: () => openWarnPopup() },
+    ],
   };
   return moreMap[type];
 });
@@ -143,6 +143,10 @@ watch(
     isSelected.value = isSelect;
   },
 );
+
+function openWarnPopup() {
+  throw new Error('Function not implemented.');
+}
 </script>
 
 <template>

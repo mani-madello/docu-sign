@@ -98,9 +98,11 @@
   "text_library": "Text Library",
   "trash_bin": "Trash Bin",
   "upload_file": "Upload File",
+  "bulk_upload_file": "Bulk Upload File",
   "upload_file_lower": "@.lower:upload_file",
   "use": "Use",
   "wait": "Wait",
   "warn": "Warn",
-  "selected_files": "Multiple selected files"
+  "selected_files": "Multiple selected files",
+  "uploaded_files": "Uploaded Files"
 }

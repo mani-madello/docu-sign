@@ -1,7 +1,7 @@
 <!-- eslint-disable @typescript-eslint/no-shadow -->
 <script setup lang="ts">
 import { useFabric } from '@component-hook/pdf-canvas/vue';
-// import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 
 import { getAuth } from 'firebase/auth';
 import { doc, getDoc, getFirestore, serverTimestamp, setDoc, updateDoc } from 'firebase/firestore';
@@ -309,7 +309,7 @@ async function sendDocuments() {
       };
 
       console.log(templateParams);
-      // await emailjs.send('service_madello', 'template_bzrw36k', templateParams, 'vgo38fj40ywZbvn76');
+      await emailjs.send('service_madello', 'template_bzrw36k', templateParams, 'vgo38fj40ywZbvn76');
 
       updateSentInfo(recipientName, recipientEmail); // optional custom handler
       console.log(`Document sent to: ${recipientEmail}`);
@@ -317,7 +317,7 @@ async function sendDocuments() {
 
     showToast('All documents sent successfully.', 'success');
     closeSendModal();
-    goPage('send', { docId });
+    goPage('send', { params: { docId } });
   } catch (error) {
     console.error('Error sending documents:', error);
     showToast('Some documents failed to send.', 'error');
@@ -359,7 +359,8 @@ function copyFirstEmailToAll() {
   const firstEmail = recipients.value[0]?.trim();
   if (firstEmail && firstEmail.includes('@')) {
     recipients.value = recipients.value.map(() => firstEmail);
-    showToast({ message: 'Email copied to all documents', type: 'info' });
+    // showToast({ message: 'Email copied to all documents', type: 'info' });
+    showToast('Email copied to all documents');
   } else {
     showToast({ message: 'First email is invalid', type: 'error' });
   }

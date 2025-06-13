@@ -21,7 +21,7 @@ function changeTab(tab: MenuTab) {
         :class="currentTab === 'files' ? 'active-icon' : ''"
       />My Files
     </li>
-    <li
+    <!-- <li
       :class="currentTab === 'archive' ? 'bg-white' : 'bg-gray-60'"
       @click="changeTab('archive')"
     >
@@ -29,7 +29,7 @@ function changeTab(tab: MenuTab) {
         src="@/assets/icon/ic_archive_h.svg"
         alt="archive icon"
       />Archived Files
-    </li>
+    </li> -->
     <li
       :class="currentTab === 'trash' ? 'bg-white' : 'bg-gray-60'"
       @click="changeTab('trash')"

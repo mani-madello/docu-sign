@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import type { MenuTab } from '@/types/menu';
-import HomeArchives from './HomeArchives.vue';
+// import HomeArchives from './HomeArchives.vue';
 import HomeFiles from './HomeFiles.vue';
 import HomeTrash from './HomeTrash.vue';
 
@@ -14,7 +14,7 @@ const { currentTab } = defineProps<Props>();
 const title = computed(() => {
   const titleMap = {
     file: 'my_files',
-    archive: 'archived_files',
+    // archive: 'archived_files',
     trash: 'trash_bin',
   };
   return titleMap[currentTab];
@@ -23,7 +23,7 @@ const title = computed(() => {
 const currentCom = computed(() => {
   const componentMap = {
     file: HomeFiles,
-    archive: HomeArchives,
+    // archive: HomeArchives,
     trash: HomeTrash,
   };
   return componentMap[currentTab];
@@ -69,12 +69,12 @@ const currentCom = computed(() => {
       </nav>
     </div>
     <h5 class="title">
-      <img
+      <!-- <img
         v-if="title === 'archived_files'"
         src="@/assets/icon/folder-with-files-svgrepo-com.svg"
         alt="trash icon"
         style="width: 30px; display: inline"
-      />
+      /> -->
       <img
         v-if="title === 'trash_bin'"
         src="@/assets/icon/trash-bin-minimalistic-svgrepo-com.svg"

@@ -28,7 +28,13 @@ export function useLoadCanvas(currentPDF: Ref<PDF>, isObserveResize = false) {
   async function reloadCanvas(page: number) {
     if (page >= currentPDF.value.pages) return;
 
-    await canvasItems.value?.[page].reload();
+    const canvasItem = canvasItems.value?.[page];
+    if (!canvasItem) {
+      console.warn(`Canvas item for page ${page + 1} not ready yet.`);
+      return; // or maybe wait and retry later, depending on your flow
+    }
+
+    await canvasItem.reload();
     await sleep(300);
     await reloadCanvas(page + 1);
   }

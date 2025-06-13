@@ -4,9 +4,13 @@ export function useRedirect() {
   const router = useRouter();
   const route = useRoute();
 
-  function goPage(name: string, params?: Record<string, any>) {
-    if (params && Object.keys(params).length > 0) {
-      router.push({ name, params });
+  function goPage(name: string, options?: { params?: Record<string, any>; query?: Record<string, any> }) {
+    if (options) {
+      router.push({
+        name,
+        ...(options.params ? { params: options.params } : {}),
+        ...(options.query ? { query: options.query } : {}),
+      });
     } else {
       router.push({ name });
     }
