@@ -35,7 +35,7 @@ const sentTime = computed(() => {
 });
 
 function returnHome() {
-  router.push({ name: 'home' });
+  router.push({ name: 'start' });
 }
 </script>
 

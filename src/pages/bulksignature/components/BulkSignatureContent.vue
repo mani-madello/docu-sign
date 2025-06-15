@@ -1,6 +1,6 @@
 <!-- eslint-disable @typescript-eslint/no-shadow -->
 <script setup lang="ts">
-// import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 import { getAuth } from 'firebase/auth';
 import {
   collection,
@@ -304,19 +304,19 @@ async function finalizeAndMerge() {
       if (nextSigner) {
         const signLink = `https://esign.madello.com/public/${docId}`;
         console.log(signLink);
-        // await emailjs.send(
-        //   'service_madello',
-        //   'template_bzrw36k',
-        //   {
-        //     to_email: nextSigner.email,
-        //     to_name: nextSigner.name,
-        //     document_link: signLink,
-        //     sender_name: userEmail,
-        //     file_name: file.name,
-        //     document_url: downloadURL,
-        //   },
-        //   'vgo38fj40ywZbvn76',
-        // );
+        await emailjs.send(
+          'service_madello',
+          'template_bzrw36k',
+          {
+            to_email: nextSigner.email,
+            to_name: nextSigner.name,
+            document_link: signLink,
+            sender_name: userEmail,
+            file_name: file.name,
+            document_url: downloadURL,
+          },
+          'vgo38fj40ywZbvn76',
+        );
       }
     }
 
@@ -399,48 +399,60 @@ function estimatePageCountFromArrayBuffer(buffer: ArrayBuffer): number {
 </script>
 
 <template>
-  <div class="p-6 max-w-5xl mx-auto">
-    <!-- Step 1: Select Documents -->
+  <div class="p-6 w-full mx-auto">
     <div
       v-if="step === 1"
-      class="space-y-4"
+      class="rounded-2xl flex-col dark:bg-slate-900/70 bg-white flex mb-6"
     >
-      <h2 class="text-2xl font-semibold mb-4">Select Documents to Sign</h2>
-      <div>
-        <label class="inline-flex items-center space-x-2 cursor-pointer">
-          <input
-            v-model="toggleSelectAll"
-            type="checkbox"
-          />
-          <span>Select All</span>
-        </label>
-      </div>
-      <div class="max-h-60 overflow-auto border rounded p-2">
-        <div
-          v-for="doc in documents"
-          :key="doc.id"
-          class="mb-2"
-        >
+      <div class="flex-1 p-6">
+        <h2 class="text-2xl font-semibold mb-4">Select Documents to Sign</h2>
+
+        <div class="mb-4">
           <label class="inline-flex items-center space-x-2 cursor-pointer">
             <input
-              v-model="selectedDocIds"
+              v-model="toggleSelectAll"
               type="checkbox"
-              :value="doc.id"
+              class="form-checkbox h-4 w-4"
             />
-            <span>{{ doc.fileName || doc.id }}</span>
+            <span class="text-sm font-medium">Select All</span>
           </label>
         </div>
+
+        <div class="max-h-60 overflow-auto divide-y divide-gray-200 dark:divide-gray-700 border rounded-lg">
+          <div
+            v-for="doc in documents"
+            :key="doc.id"
+            class="flex items-center justify-between p-4 hover:bg-gray-100 dark:hover:bg-slate-800 transition"
+          >
+            <div class="flex items-center space-x-4">
+              <input
+                v-model="selectedDocIds"
+                type="checkbox"
+                :value="doc.id"
+                class="form-checkbox h-4 w-4 text-blue-600"
+              />
+              <div class="text-sm">
+                <div class="font-semibold text-gray-900 dark:text-white">
+                  {{ doc.fileName || doc.id }}
+                </div>
+                <div class="text-gray-500 dark:text-slate-400 text-xs">Document ID: {{ doc.id }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 text-right">
+          <button
+            class="px-6 py-2 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+            :disabled="!selectedDocIds.length"
+            @click="goToSignatureStep"
+          >
+            Next: Provide Signature
+          </button>
+        </div>
       </div>
-      <button
-        class="btn btn-primary mt-4"
-        :disabled="!selectedDocIds.length"
-        @click="goToSignatureStep"
-      >
-        Next: Provide Signature
-      </button>
     </div>
 
-    <!-- Step 2: Provide Signature -->
     <div
       v-else-if="step === 2"
       class="flex flex-col space-y-4"
@@ -448,7 +460,7 @@ function estimatePageCountFromArrayBuffer(buffer: ArrayBuffer): number {
       <h2 class="text-xl font-semibold text-center mb-2">Provide Your Signature</h2>
 
       <div class="flex flex-col md:flex-row bg-white rounded-lg shadow p-4 space-y-4 md:space-y-0 md:space-x-6">
-        <div class="md:w-1/3 space-y-3">
+        <div class="md:w-1/2 space-y-3">
           <bulk-signature-toolbar v-model:current-tool="currentTool" />
           <bulk-signature-sign
             v-model:current-tool="currentTool"
@@ -472,7 +484,7 @@ function estimatePageCountFromArrayBuffer(buffer: ArrayBuffer): number {
           />
         </div>
 
-        <div class="signature-content-file bg-gray-200 rounded-lg">
+        <div class="signature-content-file bg-gray-200 rounded-lg w-full">
           <div
             ref="fileContainer"
             class="relative w-full h-full overflow-auto touch-pan-x touch-pan-y pt-3 px-2 pb-11 md:pt-6 md:px-8"
@@ -521,12 +533,12 @@ function estimatePageCountFromArrayBuffer(buffer: ArrayBuffer): number {
                   />
                 </div>
 
-                <!-- <bulk-signature-panel
+                <bulk-signature-panel
                   v-model:file-zoom="fileZoom"
                   :is-activated-fabric="isActivatedFabric"
                   @copy-fabric="currentCanvasItem?.copyActiveFabric"
                   @delete-fabric="currentCanvasItem?.deleteActiveFabric"
-                /> -->
+                />
 
                 <div class="p-2 flex justify-between items-center border-t mt-2">
                   <button
@@ -546,7 +558,7 @@ function estimatePageCountFromArrayBuffer(buffer: ArrayBuffer): number {
                   </button>
                 </div>
 
-                <div class="p-4 flex justify-between items-center border-t mt-4 rounded-lg">
+                <div class="p-2 flex justify-between items-center border-t mt-2">
                   <button
                     class="btn btn-secondary px-4 py-2 rounded disabled:opacity-50"
                     :disabled="currentDocIndex === 0"
@@ -571,7 +583,7 @@ function estimatePageCountFromArrayBuffer(buffer: ArrayBuffer): number {
                   </button>
                 </div>
 
-                <div class="p-2 border-t mt-4 flex justify-center">
+                <div class="p-2 border-t flex justify-center">
                   <button
                     class="btn btn-primary"
                     :disabled="!signatureImage || !signaturePosition"
@@ -587,26 +599,43 @@ function estimatePageCountFromArrayBuffer(buffer: ArrayBuffer): number {
       </div>
     </div>
 
-    <!-- Step 3: Completed -->
     <div
       v-else-if="step === 3"
-      class="text-center space-y-4"
+      class="h-[calc(100%-90px)] w-full my-5 bg-white dark:bg-slate-900 rounded-lg p-5"
     >
-      <h2 class="text-2xl font-semibold">Documents Signed Successfully!</h2>
-      <p>Signed documents are now available:</p>
-      <ul class="list-disc list-inside max-w-lg mx-auto text-left">
-        <li
-          v-for="(url, i) in signedUrls"
-          :key="i"
-        >
-          <a
-            :href="url"
-            target="_blank"
-            class="text-blue-600 underline hover:text-blue-800"
-            >Document {{ i + 1 }}</a
+      <div class="mx-auto w-full max-w-[274px] text-center sm:max-w-[555px]">
+        <div class="mx-auto w-full max-w-[100px] sm:max-w-[160px]">
+          <img
+            src="@/assets/img/success.svg"
+            alt="success"
+            class="dark:hidden"
+          />
+        </div>
+
+        <h3 class="mb-2 font-bold text-gray-800 text-title-md dark:text-white/90 xl:text-title-2xl">
+          All selected documents signed and sent successfully!
+        </h3>
+
+        <p class="mt-4 text-base text-gray-700 dark:text-gray-400 sm:text-lg">
+          The following signed documents are now available:
+        </p>
+
+        <ul class="list-disc list-inside text-left mt-4 text-sm sm:text-base text-blue-700 dark:text-blue-400">
+          <li
+            v-for="(url, i) in signedUrls"
+            :key="i"
+            class="hover:underline mb-1"
           >
-        </li>
-      </ul>
+            <a
+              :href="url"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              📄 Document {{ i + 1 }}
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -635,3 +664,159 @@ function estimatePageCountFromArrayBuffer(buffer: ArrayBuffer): number {
   cursor: not-allowed;
 }
 </style>
+<!-- 
+<script setup lang="ts">
+import { storeToRefs } from 'pinia';
+import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+import { showToast } from '@/components/common';
+import SignIcon from '@/components/SignIcon.vue';
+import { useWarnPopup } from '@/hooks/use-warn-popup';
+import { useSignatureStore } from '@/store';
+import type { DragOffset } from '@/types/drag';
+import type { SignatureTool } from '@/types/menu';
+import SignatureDrawPopup from './BulkSignatureDrawPopup.vue';
+import SignaturePopup from './BulkSignaturePopup.vue';
+
+const emit = defineEmits(['useSignature']);
+const currentTool = defineModel<SignatureTool | ''>('currentTool');
+const dragOffset = defineModel<DragOffset>('dragOffset', { required: true });
+
+const currentSelect = ref<string>('');
+const isShowDrawPopup = ref(false);
+const { signatureList } = storeToRefs(useSignatureStore());
+const { t } = useI18n();
+const { isShowWarnPopup, SignPopup, toggleWarnPopup } = useWarnPopup();
+
+function useSignature() {
+  if (currentSelect.value) {
+    emit('useSignature', {
+      image: currentSelect.value,
+      timestamp: new Date().toISOString(),
+    });
+    close();
+  }
+}
+
+function selectSignature(signature: string) {
+  currentSelect.value = signature;
+}
+
+function deleteSignature() {
+  useSignatureStore().deleteSignature(currentSelect.value);
+  showToast(t('prompt.signature_delete_success'));
+  toggleWarnPopup(false);
+  currentSelect.value = '';
+}
+
+function toggleDrawPopup(isOpen: boolean) {
+  isShowDrawPopup.value = isOpen;
+}
+
+function dragSignature(event: DragEvent) {
+  const { src, offsetHeight, offsetWidth } = event.target as HTMLImageElement;
+  const offsetX = event.offsetX / offsetWidth;
+  const offsetY = event.offsetY / offsetHeight;
+
+  event.dataTransfer?.setData('text/uri-list', src);
+  event.dataTransfer?.setData('custom/offset', JSON.stringify({ offsetX, offsetY }));
+  dragOffset.value = { x: event.offsetX, y: event.offsetY, width: offsetWidth, height: offsetHeight };
+}
+
+function close() {
+  currentTool.value = '';
+}
+</script>
+
+<template>
+  <signature-popup
+    :is-show-popup="currentTool === 'sign'"
+    :title="$t('signature_file')"
+    :is-disabled="!currentSelect"
+    @close="close"
+    @use="useSignature"
+  >
+    <ul
+      v-if="signatureList.length"
+      class="signature-list"
+    >
+      <img
+        src="@/assets/icon/ic_add_dark.svg"
+        alt="add signature"
+        width="60"
+        height="60"
+        class="iconScale mb-3"
+        @click="toggleDrawPopup(true)"
+      />
+      <li
+        v-for="signature in signatureList"
+        :key="signature"
+        :class="[
+          'rounded-[20px] relative w-full flex justify-center cursor-pointer h-[98px]',
+          currentSelect === signature ? 'bg-primary opacity-70' : 'bg-white',
+        ]"
+        @click="selectSignature(signature)"
+      >
+        <img
+          :src="signature"
+          alt="signature"
+          class="object-contain rounded-[20px]"
+          @dragstart="dragSignature"
+        />
+        <sign-icon
+          v-show="currentSelect === signature"
+          name="close_s"
+          class="absolute top-1 right-1 w-8 h-8 text-gray-80"
+          hover-color="hover:text-danger"
+          @click="toggleWarnPopup(true)"
+        />
+      </li>
+    </ul>
+
+    <div
+      v-else
+      class="signature-list justify-center"
+    >
+      <img
+        src="@/assets/icon/images.svg"
+        alt="empty signature"
+        width="80"
+        height="80"
+        class="iconScale mb-5"
+        @click="toggleDrawPopup(true)"
+      />
+      <h5 class="text-secondary text-center">
+        {{ $t('add_signature_file') }}
+      </h5>
+    </div>
+  </signature-popup>
+
+  <signature-draw-popup
+    v-if="isShowDrawPopup"
+    @close="toggleDrawPopup(false)"
+  />
+
+  <SignPopup
+    v-if="isShowWarnPopup"
+    :title="$t('warn')"
+  >
+    <p class="text-center">
+      {{ $t('prompt.sure_delete_signature') }}
+    </p>
+    <div class="flex justify-between">
+      <button
+        class="btn btn-base"
+        @click="toggleWarnPopup(false)"
+      >
+        {{ $t('not_yet') }}
+      </button>
+      <button
+        class="btn btn-primary"
+        @click="deleteSignature"
+      >
+        {{ $t('delete') }}
+      </button>
+    </div>
+  </SignPopup>
+</template>
+-->
