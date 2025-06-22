@@ -85,12 +85,12 @@ const changeTab = (tab: string) => {
                     fill="currentColor"
                     d="M21,16H3V4H21M21,2H3C1.89,2 1,2.89 1,4V16A2,2 0 0,0 3,18H10V20H8V22H16V20H14V18H21A2,2 0 0,0 23,16V4C23,2.89 22.1,2 21,2Z"
                   /></svg></span
-              ><span class="grow text-ellipsis line-clamp-1 pr-12 aside-menu-item-active font-bold">Get Started</span
+              ><span class="grow text-ellipsis line-clamp-1 pr-12">Get Started</span
               ><!----></a
             ><!---->
           </li>
-           <li
-            :class="currentTab === 'multiupload' ? activeClass : baseClass"
+          <li
+            :class="currentTab === 'bulkupload' ? activeClass : baseClass"
             @click="changeTab('bulkupload')"
           >
             <a class="flex cursor-pointer py-3 aside-menu-item dark:text-slate-300 dark:hover:text-white"
@@ -112,10 +112,8 @@ const changeTab = (tab: string) => {
             :class="currentTab === 'dashboard' ? activeClass : baseClass"
             @click="changeTab('dashboard')"
           >
-            <a
-              aria-current="page"
-              class="router-link-active router-link-exact-active flex cursor-pointer py-3 aside-menu-item dark:text-slate-300 dark:hover:text-white"
-              ><span class="inline-flex justify-center items-center w-16 h-6 flex-none aside-menu-item-active font-bold"
+            <a class="flex cursor-pointer py-3 aside-menu-item dark:text-slate-300 dark:hover:text-white"
+              ><span class="inline-flex justify-center items-center w-16 h-6 flex-none"
                 ><svg
                   viewBox="0 0 24 24"
                   width="18"
@@ -126,7 +124,7 @@ const changeTab = (tab: string) => {
                     fill="currentColor"
                     d="M21,17V5H3V17H21M21,3A2,2 0 0,1 23,5V17A2,2 0 0,1 21,19H16V21H8V19H3A2,2 0 0,1 1,17V5A2,2 0 0,1 3,3H21M5,7H11V11H5V7M5,13H11V15H5V13M13,7H19V9H13V7M13,11H19V15H13V11Z"
                   /></svg></span
-              ><span class="grow text-ellipsis line-clamp-1 pr-12 aside-menu-item-active font-bold">Dashboard</span
+              ><span class="grow text-ellipsis line-clamp-1 pr-12">Dashboard</span
               ><!----></a
             ><!---->
           </li>
@@ -150,7 +148,7 @@ const changeTab = (tab: string) => {
               ><!----></a
             ><!---->
           </li>
-         
+
           <li
             :class="currentTab === 'profile' ? activeClass : baseClass"
             @click="changeTab('profile')"

@@ -297,7 +297,6 @@ onAfterRouteLeave(deleteCanvas);
       </div>
     </div>
 
-    {{ console.log(docId) }}
     <sign-step-btn
       :is-next-disabled="isNextDisabled"
       :is-public="false"

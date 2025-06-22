@@ -3,6 +3,7 @@
         "src/locales"
     ],
     "cSpell.words": [
+        "assignsigners",
         "bulksignature",
         "bulkupload",
         "darkbg",
@@ -10,11 +11,13 @@
         "docuid",
         "Elango",
         "emailjs",
+        "fcanvas",
         "Firestore",
         "Madhavan",
         "multisign",
         "multiupload",
         "OakSans",
+        "pdfjs",
         "Persistedstate",
         "publicroute",
         "sonarjs",

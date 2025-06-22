@@ -1,5 +1,6 @@
 import { watch } from 'vue';
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import BulkAssignSigner from '@/pages/bulksignature/components/BulkAssignSigner.vue';
 import BulkSignature from '@/pages/bulksignature/index.vue';
 import BulkUpload from '@/pages/bulkupload/index.vue';
 import Complete from '@/pages/complete/index.vue';
@@ -26,7 +27,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/',
     redirect: () => {
       const authStore = useAuthStore();
-      return authStore.isAuthenticated ? '/dashboard' : '/login';
+      return authStore.isAuthenticated ? '/start' : '/login';
     },
   },
   { path: '/login', name: 'login', component: Login },
@@ -55,6 +56,12 @@ const routes: Array<RouteRecordRaw> = [
     name: 'upload',
     component: Upload,
   },
+  {
+    path: '/assign-signers',
+    name: 'assignsigners',
+    component: BulkAssignSigner,
+  },
+
   {
     path: '/bulkupload',
     name: 'bulkupload',
